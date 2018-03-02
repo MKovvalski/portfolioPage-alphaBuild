@@ -9,20 +9,21 @@ class Container extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            screenToRender: ""
+            screenToRender: "",
+            title: "PortfolioPage",
         }
     }
 
-   handleInput = (screen) => {
+   handleInput = (screen, title) => {
             this.setState ({
-                screenToRender: screen
+                screenToRender: screen,
+                title: title,
             })
     };
 
     render () {
-        console.log(this.state.screenToRender);
         return <div>
-            <Terminal renderInfo = {this.handleInput}/>
+            <Terminal lsInfo = {this.state.screenToRender} titleText = {this.state.title} renderInfo = {this.handleInput}/>
             <Content renderScreen = {this.state.screenToRender}/>
         </div>
     }

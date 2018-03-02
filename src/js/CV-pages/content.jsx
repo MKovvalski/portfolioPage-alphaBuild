@@ -19,7 +19,7 @@ class Content extends React.Component {
                 return <PersonalInfo/>;
             break;
             default:
-                return <div>base output</div>
+                return null
         }
     }
 }
