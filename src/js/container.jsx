@@ -14,18 +14,16 @@ class Container extends React.Component {
     }
 
    handleInput = (screen) => {
-        if (screen === "cd about_me") {
-            console.log(screen);
-            // this.setState ({
-            //     screenToRender: "about_me"
-            // })
-        }
+            this.setState ({
+                screenToRender: screen
+            })
     };
 
     render () {
+        console.log(this.state.screenToRender);
         return <div>
             <Terminal renderInfo = {this.handleInput}/>
-            <Content renderScreen = {this.state.screenToRender}/>
+            {/*<Content renderScreen = {this.state.screenToRender}/>*/}
         </div>
     }
 }

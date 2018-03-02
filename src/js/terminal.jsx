@@ -8,21 +8,29 @@ class Terminal extends React.Component {
         }
     }
 
-    // screenToDisplay = (input) => {
-    //   if (input === "screen1") {
-    //   }
-    // };
-
     handleChange = (event) => {
       this.setState ({
           renderScreen: event.target.value
       })
     };
+    
+    test1 = () => {
+        console.log("działam");
+       if (typeof this.props.renderInfo === "function") {
+           this.props.renderInfo(this.state.renderScreen);
+       }
+    };
+
+    test2 = (e) => {
+       if (e.key === 13) {
+         console.log("enter")
+       }
+    };
 
     render () {
-        console.log(this.props.renderInfo);
-        return <div>
-            <input type="text" value = {this.state.renderScreen} onChange={this.handleChange}/>
+        return <div onKeyUp = {e => this.test2(e)}>
+                <input type="text" value = {this.state.renderScreen} onChange={this.handleChange}/>
+                <div onKeyPress = {this.test1}>ddd</div>
         </div>
     }
 }
