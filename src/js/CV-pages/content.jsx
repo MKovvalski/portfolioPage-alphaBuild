@@ -8,11 +8,19 @@ import PersonalInfo from "./personal-info.jsx";
 
 class Content extends React.Component {
     render () {
-        return <div>
-            <AboutMe/>
-            <Projects/>
-            <PersonalInfo/>
-        </div>
+        switch(this.props.renderScreen) {
+            case "cd AboutMe":
+                return <AboutMe/>;
+            break;
+            case "cd Projects":
+                return <Projects/>;
+            break;
+            case "cd PersonalInfo":
+                return <PersonalInfo/>;
+            break;
+            default:
+                return <div>base output</div>
+        }
     }
 }
 

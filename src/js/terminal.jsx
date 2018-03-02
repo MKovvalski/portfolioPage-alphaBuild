@@ -13,24 +13,18 @@ class Terminal extends React.Component {
           renderScreen: event.target.value
       })
     };
-    
-    test1 = () => {
-        console.log("działam");
-       if (typeof this.props.renderInfo === "function") {
-           this.props.renderInfo(this.state.renderScreen);
-       }
-    };
 
-    test2 = (e) => {
-       if (e.key === 13) {
-         console.log("enter")
+    handleInfoTransfer = (e) => {
+       if (e.keyCode === 13) {
+           if (typeof this.props.renderInfo === "function") {
+               this.props.renderInfo(this.state.renderScreen);
+           }
        }
     };
 
     render () {
-        return <div onKeyUp = {e => this.test2(e)}>
-                <input type="text" value = {this.state.renderScreen} onChange={this.handleChange}/>
-                <div onKeyPress = {this.test1}>ddd</div>
+        return <div>
+                <input type="text" value = {this.state.renderScreen} onChange={this.handleChange} onKeyUp = {e => this.handleInfoTransfer(e)}/>
         </div>
     }
 }
