@@ -23,7 +23,7 @@ class Container extends React.Component {
 
     render () {
         return <div>
-            <Terminal lsInfo = {this.state.screenToRender} titleText = {this.state.title} renderInfo = {this.handleInput}/>
+            <Terminal titleText = {this.state.title} renderInfo = {this.handleInput}/>
             <Content renderScreen = {this.state.screenToRender}/>
         </div>
     }

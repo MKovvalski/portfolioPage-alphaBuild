@@ -20,6 +20,14 @@ class Terminal extends React.Component {
             case "cd PersonalInfo":
                 return "PersonalInfo";
             break;
+            case "clear":
+                return "PortfolioPage";
+            break;
+            case "cd ..":
+                if (this.state.renderScreen === "cd AboutMe" || "cd Projects" || "cd PersonalInfo") {
+                    return "PortfolioPage";
+                }
+            break;
             default:
                 return "PortfolioPage"
         }
@@ -46,26 +54,54 @@ class Terminal extends React.Component {
        }
     };
 
-    displayFiles = (lsText) => {
-        if (lsText === "ls") {
-            return <div>AboutMe <br/> Projects <br/> PersonalInfo</div>
-        } else {
-            return null
-        }
+    displayFiles = () => {
+        return <div>mateusz-kowalski: {this.props.titleText} <br/>AboutMe <br/> Projects <br/> PersonalInfo</div>
+    };
+
+    checkForRightCd = (title) => {
+      if (this.props.titleText === title) {
+          this.setState({
+              listOfCommands: [...this.state.listOfCommands, this.displayFiles()]
+          });
+      }
     };
 
     displayText = () => {
-    const a = this.state.renderScreen;
-        this.setState ({
-            listOfCommands: [...this.state.listOfCommands, a]
-        })
+    const command = this.state.renderScreen;
+        switch(command) {
+            case "AboutMe":
+
+            break;
+            case "clear":
+                this.setState({
+                    listOfCommands: []
+                });
+            break;
+            case "ls": {
+                if (this.props.titleText === "PortfolioPage") {
+                    this.setState({
+                        listOfCommands: [...this.state.listOfCommands, this.displayFiles()]
+                    });
+                }
+            }
+            break;
+            default:
+                this.setState ({
+                    listOfCommands: [...this.state.listOfCommands, "mateusz-kowalski:" + this.props.titleText + " " + command]
+                })
+        }
     };
 
     render () {
+        console.log(this.props.titleText);
+        console.log(this.state.renderScreen);
         return <div>
                 <div>MateuszKowalski -- bash --80x24</div>
-                 {this.state.listOfCommands}
-                {this.displayFiles(this.props.lsInfo)}
+                <ul>
+                    {this.state.listOfCommands.map((command, i) => {
+                        return <li key = {i}>{command}</li>
+                    })}
+                </ul>
                 <div>mateusz-kowalski:{this.props.titleText} <input type="text" value = {this.state.renderScreen} onChange={this.handleChange} onKeyUp = {e => this.handleInfoTransfer(e)}/></div>
                 {/*<div>//input "cd" and "name of the file" and confirm with "enter"<br/>*/}
                     {/*//example: cd AboutMe <br/>*/}
