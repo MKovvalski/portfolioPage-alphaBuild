@@ -58,19 +58,20 @@ class Terminal extends React.Component {
         return <div>mateusz-kowalski: {this.props.titleText} <br/>AboutMe <br/> Projects <br/> PersonalInfo</div>
     };
 
-    checkForRightCd = (title) => {
-      if (this.props.titleText === title) {
-          this.setState({
-              listOfCommands: [...this.state.listOfCommands, this.displayFiles()]
-          });
-      }
-    };
 
     displayText = () => {
     const command = this.state.renderScreen;
         switch(command) {
-            case "AboutMe":
-
+            case "cd AboutMe":
+                if(this.props.titleText === "AboutMe") {
+                    this.setState ({
+                        listOfCommands: [...this.state.listOfCommands, "-bash: cd:" + this.state.renderScreen + " No such file or Directory"]
+                    })
+                } else {
+                    this.setState ({
+                        listOfCommands: [...this.state.listOfCommands, "mateusz-kowalski:" + this.props.titleText + " " + command]
+                    })
+                }
             break;
             case "clear":
                 this.setState({
@@ -87,14 +88,13 @@ class Terminal extends React.Component {
             break;
             default:
                 this.setState ({
-                    listOfCommands: [...this.state.listOfCommands, "mateusz-kowalski:" + this.props.titleText + " " + command]
+                    listOfCommands: [...this.state.listOfCommands, "-bash: cd:" + this.state.renderScreen + " No such file or Directory"]
                 })
         }
     };
 
     render () {
         console.log(this.props.titleText);
-        console.log(this.state.renderScreen);
         return <div>
                 <div>MateuszKowalski -- bash --80x24</div>
                 <ul>
