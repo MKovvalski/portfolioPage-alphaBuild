@@ -4,7 +4,8 @@ class Terminal extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            renderScreen: ""
+            renderScreen: "",
+            listOfCommands: []
         }
     }
 
@@ -36,6 +37,10 @@ class Terminal extends React.Component {
                this.props.renderInfo(
                    this.state.renderScreen,
                    this.handleTerminalTitle(this.state.renderScreen),
+                   this.displayText(),
+                   this.setState({
+                       renderScreen: ""
+                   })
                );
            }
        }
@@ -49,15 +54,23 @@ class Terminal extends React.Component {
         }
     };
 
+    displayText = () => {
+    const a = this.state.renderScreen;
+        this.setState ({
+            listOfCommands: [...this.state.listOfCommands, a]
+        })
+    };
+
     render () {
         return <div>
                 <div>MateuszKowalski -- bash --80x24</div>
+                 {this.state.listOfCommands}
+                {this.displayFiles(this.props.lsInfo)}
                 <div>mateusz-kowalski:{this.props.titleText} <input type="text" value = {this.state.renderScreen} onChange={this.handleChange} onKeyUp = {e => this.handleInfoTransfer(e)}/></div>
-                <div>//input "cd" and "name of the file" and confirm with "enter"<br/>
-                    //example: cd AboutMe <br/>
-                    //type in "ls" to display available files
-                </div>
-            {this.displayFiles(this.props.lsInfo)}
+                {/*<div>//input "cd" and "name of the file" and confirm with "enter"<br/>*/}
+                    {/*//example: cd AboutMe <br/>*/}
+                    {/*//type in "ls" to display available files*/}
+                {/*</div>*/}
         </div>
     }
 }
