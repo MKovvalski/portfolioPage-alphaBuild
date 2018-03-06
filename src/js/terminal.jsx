@@ -23,13 +23,8 @@ class Terminal extends React.Component {
             case "clear":
                 return "PortfolioPage";
             break;
-            case "cd ..":
-                if (this.state.renderScreen === "cd AboutMe" || "cd Projects" || "cd PersonalInfo") {
-                    return "PortfolioPage";
-                }
-            break;
             default:
-                return "PortfolioPage"
+                return this.props.titleText;
         }
     };
 
@@ -54,8 +49,29 @@ class Terminal extends React.Component {
        }
     };
 
-    displayFiles = () => {
-        return <div>mateusz-kowalski: {this.props.titleText} <br/>AboutMe <br/> Projects <br/> PersonalInfo</div>
+    displayFiles = (currentPage) => {
+        console.log(currentPage);
+        const files = ["AboutMe", "Projects", "PersonalInfo"];
+        switch(currentPage) {
+            case "AboutMe":
+                return <div>mateusz-kowalski: {this.props.titleText} <br/> {files[1]} <br/> {files[2]}</div>;
+                break;
+            case "Projects":
+                return <div>mateusz-kowalski: {this.props.titleText} <br/> {files[0]} <br/> {files[2]}</div>;
+                break;
+            case "PersonalInfo":
+                return <div>mateusz-kowalski: {this.props.titleText} <br/> {files[0]} <br/> {files[1]}</div>;
+                break;
+            default:
+                return <div>mateusz-kowalski: {this.props.titleText} <br/> {files[1]} <br/> {files[2]} <br/> {files[3]}</div>;
+        }
+        // return "mateusz-kowalski:" +this.props.titleText
+    };
+
+    setCommand = (command) => {
+        this.setState ({
+            listOfCommands: [...this.state.listOfCommands, "mateusz-kowalski:" + this.props.titleText + " " + command]
+        });
     };
 
 
@@ -63,38 +79,41 @@ class Terminal extends React.Component {
     const command = this.state.renderScreen;
         switch(command) {
             case "cd AboutMe":
-                if(this.props.titleText === "AboutMe") {
-                    this.setState ({
-                        listOfCommands: [...this.state.listOfCommands, "-bash: cd:" + this.state.renderScreen + " No such file or Directory"]
-                    })
-                } else {
-                    this.setState ({
-                        listOfCommands: [...this.state.listOfCommands, "mateusz-kowalski:" + this.props.titleText + " " + command]
-                    })
-                }
-            break;
+               this.setCommand(command);
+                break;
+            case "cd Projects":
+                this.setCommand(command);
+                break;
+            case "cd PersonalInfo":
+                this.setCommand(command);
+                break;
+            case "":
+                this.setCommand(command);
+                break;
             case "clear":
                 this.setState({
                     listOfCommands: []
                 });
-            break;
-            case "ls": {
-                if (this.props.titleText === "PortfolioPage") {
+                break;
+            case "ls":
                     this.setState({
-                        listOfCommands: [...this.state.listOfCommands, this.displayFiles()]
+                        listOfCommands: [...this.state.listOfCommands, this.displayFiles(this.props.titleText)]
                     });
-                }
-            }
-            break;
+                break;
             default:
-                this.setState ({
-                    listOfCommands: [...this.state.listOfCommands, "-bash: cd:" + this.state.renderScreen + " No such file or Directory"]
-                })
+                if (this.state.renderScreen.indexOf("cd") === -1) {
+                    this.setState({
+                        listOfCommands: [...this.state.listOfCommands, "-bash:" + this.state.renderScreen + ": command not found" ]
+                    })
+                } else {
+                    this.setState ({
+                        listOfCommands: [...this.state.listOfCommands, "-bash: cd:" + this.state.renderScreen.substring("cd".length) + " no such file or directory"]
+                    })
+                }
         }
     };
 
     render () {
-        console.log(this.props.titleText);
         return <div>
                 <div>MateuszKowalski -- bash --80x24</div>
                 <ul>
