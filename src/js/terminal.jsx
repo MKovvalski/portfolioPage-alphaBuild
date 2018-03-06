@@ -50,7 +50,6 @@ class Terminal extends React.Component {
     };
 
     displayFiles = (currentPage) => {
-        console.log(currentPage);
         const files = ["AboutMe", "Projects", "PersonalInfo"];
         switch(currentPage) {
             case "AboutMe":
@@ -63,9 +62,8 @@ class Terminal extends React.Component {
                 return <div>mateusz-kowalski: {this.props.titleText} <br/> {files[0]} <br/> {files[1]}</div>;
                 break;
             default:
-                return <div>mateusz-kowalski: {this.props.titleText} <br/> {files[1]} <br/> {files[2]} <br/> {files[3]}</div>;
+                return <div>mateusz-kowalski: {this.props.titleText} <br/> {files[0]} <br/> {files[1]} <br/> {files[2]}</div>;
         }
-        // return "mateusz-kowalski:" +this.props.titleText
     };
 
     setCommand = (command) => {
@@ -73,7 +71,6 @@ class Terminal extends React.Component {
             listOfCommands: [...this.state.listOfCommands, "mateusz-kowalski:" + this.props.titleText + " " + command]
         });
     };
-
 
     displayText = () => {
     const command = this.state.renderScreen;
@@ -122,10 +119,10 @@ class Terminal extends React.Component {
                     })}
                 </ul>
                 <div>mateusz-kowalski:{this.props.titleText} <input type="text" value = {this.state.renderScreen} onChange={this.handleChange} onKeyUp = {e => this.handleInfoTransfer(e)}/></div>
-                {/*<div>//input "cd" and "name of the file" and confirm with "enter"<br/>*/}
-                    {/*//example: cd AboutMe <br/>*/}
-                    {/*//type in "ls" to display available files*/}
-                {/*</div>*/}
+                <div>//input "cd" and "name of the file" and confirm with "enter"<br/>
+                    //example: cd AboutMe <br/>
+                    //type in "ls" to display available files
+                </div>
         </div>
     }
 }
