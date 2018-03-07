@@ -11,20 +11,24 @@ class Container extends React.Component {
         this.state = {
             screenToRender: "",
             title: "PortfolioPage",
+            justifyContent: "none",
         }
     }
 
-   handleInput = (screen, title) => {
+
+
+   handleInput = (screen, title, terminal) => {
             this.setState ({
                 screenToRender: screen,
                 title: title,
+                justifyContent: terminal
             })
     };
 
     render () {
         return <div className = "main-container">
-            <Terminal titleText = {this.state.title} renderInfo = {this.handleInput}/>
-            <Content renderScreen = {this.state.title}/>
+            <Terminal style ={{animation: this.state.justifyContent}} titleText = {this.state.title} renderInfo = {this.handleInput}/>
+            {/*<Content renderScreen = {this.state.title}/>*/}
         </div>
     }
 }
