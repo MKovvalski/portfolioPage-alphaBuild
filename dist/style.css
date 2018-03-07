@@ -138,4 +138,22 @@ input[type=button] {width: auto; overflow: visible;}
 */
 
 /* let's clear some floats */
-.clearfix:after { content: " "; display: block; clear: both; }
+.clearfix:after { content: " "; display: block; clear: both; }.main-component {
+  background-color: darkorange;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.main-container {
+  background-color: white;
+  width: 165vh;
+  height: 90vh; }
+
+.terminal {
+  height: 150px;
+  width: 300px;
+  background-color: white; }
+
+.terminal-header {
+  background-color: grey; }

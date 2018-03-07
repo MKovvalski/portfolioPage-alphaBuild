@@ -111,18 +111,18 @@ class Terminal extends React.Component {
     };
 
     render () {
-        return <div>
-                <div>MateuszKowalski -- bash --80x24</div>
+        return <div className = "terminal">
+                <div className = "terminal-header">MateuszKowalski -- bash --80x24</div>
                 <ul>
                     {this.state.listOfCommands.map((command, i) => {
                         return <li key = {i}>{command}</li>
                     })}
                 </ul>
-                <div>mateusz-kowalski:{this.props.titleText} <input type="text" value = {this.state.renderScreen} onChange={this.handleChange} onKeyUp = {e => this.handleInfoTransfer(e)}/></div>
-                <div>//input "cd" and "name of the file" and confirm with "enter"<br/>
-                    //example: cd AboutMe <br/>
-                    //type in "ls" to display available files
-                </div>
+                <div>mateusz-kowalski:{this.props.titleText} <input className = "terminal-input" type="text" value = {this.state.renderScreen} onChange={this.handleChange} onKeyUp = {e => this.handleInfoTransfer(e)}/></div>
+                {/*<div>//input "cd" and "name of the file" and confirm with "enter"<br/>*/}
+                    {/*//example: cd AboutMe <br/>*/}
+                    {/*//type in "ls" to display available files*/}
+                {/*</div>*/}
         </div>
     }
 }

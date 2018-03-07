@@ -7,15 +7,23 @@ import Projects from "./projects.jsx";
 import PersonalInfo from "./personal-info.jsx";
 
 class Content extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            test: []
+        }
+
+    }
+
     render () {
         switch(this.props.renderScreen) {
-            case "cd AboutMe":
+            case "AboutMe":
                 return <AboutMe/>;
             break;
-            case "cd Projects":
+            case "Projects":
                 return <Projects/>;
             break;
-            case "cd PersonalInfo":
+            case "PersonalInfo":
                 return <PersonalInfo/>;
             break;
             default:

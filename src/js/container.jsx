@@ -22,9 +22,9 @@ class Container extends React.Component {
     };
 
     render () {
-        return <div>
+        return <div className = "main-container">
             <Terminal titleText = {this.state.title} renderInfo = {this.handleInput}/>
-            <Content renderScreen = {this.state.screenToRender}/>
+            <Content renderScreen = {this.state.title}/>
         </div>
     }
 }

@@ -12,7 +12,7 @@ class MainComponent extends React.Component {
         }
     }
     render () {
-        return <div>
+        return <div className = "main-component">
                 <Container/>
         </div>
     }
