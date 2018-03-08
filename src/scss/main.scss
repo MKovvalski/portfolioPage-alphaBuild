@@ -4,26 +4,30 @@
 // ------------ media-queries -------------- //
 // ----------------------------------------- //
 
-@media (max-width: 670px) {
+  @media (min-width: 350px) and (max-width: 670px) {
 
-  .main-container {
-    justify-content: flex-start;
-    flex-direction: row;
-    width: 100%;
-    height: 100%;
+    .main-container {
+      justify-content: flex-start;
+      flex-direction: row;
+      width: 100%;
+      height: 100%;
+    }
+
+    .terminal {
+      align-self: flex-start;
+    }
+
+    .content {
+    }
   }
 
-  .terminal {
-    background-color: red;
-    align-self: flex-start;
-  }
-
-  .content {
-  }
-}
 // ----------------------------------------- //
 // ------------ global classes ------------- //
 // ----------------------------------------- //
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
 
 // ----------------------------------------- //
 // ------------ main-component ------------- //
@@ -56,7 +60,7 @@
 // ----------------------------------------- //
 
 .content {
-  width: 69.5%;
+  width: 67.5%;
   height: 85%;
   border: 1px solid red;
   border-radius: 8px;
@@ -67,18 +71,36 @@
 // ----------------------------------------- //
 
 .terminal {
-  width: 30%;
+  font-size: 14px;
+  color: #e6e6e6;
+  width: 32%;
   height: 40%;
-  background-color: white;
-  border: 1px solid red;
-  border-radius: 8px;
-  overflow-y: scroll;
+  background-color: #404040;
+  border-radius: 6px;
   align-self: flex-end;
+  border: 1px solid #808080;
 }
 
 .terminal-header {
-  background-color: grey;
+  text-align: center;
+  color:#bfbfbf;
+  height: 9%;
+  background-color: #666666;
+  border-bottom: 1px solid #808080;
+  border-radius: 6px 6px 0 0;
+}
+
+.terminal-body {
+  height: 90%;
+  overflow-y: scroll;
 }
 
 .terminal-input {
+  color: #e6e6e6;
+  background-color: #404040;
+  border: none;
+}
+
+.terminal-explanation {
+  color: #8c8c8c;
 }
