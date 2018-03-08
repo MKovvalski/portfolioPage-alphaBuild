@@ -5,30 +5,30 @@ import React from 'react';
 import AboutMe from "./about-me.jsx";
 import Projects from "./projects.jsx";
 import PersonalInfo from "./personal-info.jsx";
+import MainPage from "./main-page.jsx";
 
 class Content extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            test: []
-        }
 
-    }
-
-    render () {
-        switch(this.props.renderScreen) {
+    handleRender = (renderScreen) => {
+        switch(renderScreen) {
             case "AboutMe":
                 return <AboutMe/>;
-            break;
+                break;
             case "Projects":
                 return <Projects/>;
-            break;
+                break;
             case "PersonalInfo":
                 return <PersonalInfo/>;
-            break;
+                break;
             default:
-                return null
+                return <MainPage/>;
         }
+    };
+
+    render () {
+       return <div className = "content">
+           {this.handleRender(this.props.renderScreen)}
+       </div>
     }
 }
 

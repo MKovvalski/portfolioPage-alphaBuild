@@ -6,25 +6,8 @@ class Terminal extends React.Component {
         this.state = {
             renderScreen: "",
             listOfCommands: [],
-            animation: "none",
-            test: "terminal"
         }
     }
-
-    handleTerminalSize = () => {
-        switch(this.state.renderScreen) {
-            case "cd AboutMe":
-                this.setState({
-                    test: "terminal1"  //lepiej zrobić osobne klasy i je dodawać
-                    // animation: "swoosh 0.3s linear 1 forwards"
-                });
-                break;
-            case "clear":
-                this.setState({
-                    animation: "swoosh 0.3s linear 1 forwards"
-                });
-        }
-    };
 
     handleTerminalTitle = (input) => {
         switch (input) {
@@ -38,7 +21,7 @@ class Terminal extends React.Component {
                 return "PersonalInfo";
             break;
             case "clear":
-                return "PortfolioPage";
+                return this.props.titleText;
             break;
             default:
                 return this.props.titleText;
@@ -57,7 +40,6 @@ class Terminal extends React.Component {
                this.props.renderInfo(
                    this.state.renderScreen,
                    this.handleTerminalTitle(this.state.renderScreen),
-                   this.handleTerminalSize()
                );
                this.displayText();
                this.setState({
@@ -129,7 +111,7 @@ class Terminal extends React.Component {
     };
 
     render () {
-        return <div className = {this.state.test}>
+        return <div className = "terminal">
                 <div className = "terminal-header">MateuszKowalski -- bash --80x24</div>
                 <ul>
                     {this.state.listOfCommands.map((command, i) => {
