@@ -138,59 +138,75 @@ input[type=button] {width: auto; overflow: visible;}
 */
 
 /* let's clear some floats */
-.clearfix:after { content: " "; display: block; clear: both; }@media (min-width: 350px) and (max-width: 670px) {
-  .main-container {
-    justify-content: flex-start;
-    flex-direction: row;
-    width: 100%;
-    height: 100%; }
-  .terminal {
-    align-self: flex-start; } }
-
-body {
+.clearfix:after { content: " "; display: block; clear: both; }body {
   font-family: 'Open Sans', sans-serif; }
 
 .main-component {
-  background-color: darkorange;
-  border: 1px solid red;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center; }
 
 .main-container {
-  background-color: white;
   width: 97%;
   height: 95%;
-  border: 1px solid red;
   display: flex;
   justify-content: space-between; }
 
 .content {
   width: 67.5%;
   height: 85%;
-  border: 1px solid red;
-  border-radius: 8px; }
+  background-color: #404040;
+  border: 1px solid #b3b3b3;
+  border-radius: 6px; }
 
 .terminal {
   font-size: 14px;
-  color: #e6e6e6;
   width: 32%;
   height: 40%;
   background-color: #404040;
   border-radius: 6px;
   align-self: flex-end;
-  border: 1px solid #808080; }
+  border: 1px solid #b3b3b3; }
 
 .terminal-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   text-align: center;
   color: #bfbfbf;
   height: 9%;
   background-color: #666666;
-  border-bottom: 1px solid #808080;
-  border-radius: 6px 6px 0 0; }
+  border-bottom: 1px solid #b3b3b3;
+  border-radius: 5px 5px 0 0; }
+
+.circle-1 {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  margin-left: 8px;
+  background-color: #ff5050;
+  box-shadow: 0.2px 0.5px #e60000; }
+
+.circle-2 {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  margin-left: 6px;
+  background-color: #ffcc00;
+  box-shadow: 0.2px 0.5px #b38f00; }
+
+.circle-3 {
+  margin-right: 8%;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  margin-left: 6px;
+  background-color: #47d147;
+  box-shadow: 0.2px 0.5px #196619; }
 
 .terminal-body {
+  color: #e6e6e6;
   height: 90%;
   overflow-y: scroll; }
 
