@@ -112,7 +112,7 @@ class Terminal extends React.Component {
 
     render () {
         return <div className = "terminal">
-                <header className = "terminal-header">
+                <header>
                     <div className = "circle-1"></div><div className = "circle-2"></div><div className = "circle-3"></div>
                     MateuszKowalski -- bash --80x24</header>
                     <div className = "terminal-body">
@@ -121,8 +121,8 @@ class Terminal extends React.Component {
                                 return <li key = {i}>{command}</li>
                             })}
                         </ul>
-                        <div>mateusz-kowalski:{this.props.titleText} <input className = "terminal-input" type="text" value = {this.state.renderScreen} onChange={this.handleChange} onKeyUp = {e => this.handleInfoTransfer(e)}/></div>
-                        <p className = "terminal-explanation">//input "cd" and "name of the file" and confirm with "enter"<br/>
+                        <div>mateusz-kowalski:{this.props.titleText} <input type="text" value = {this.state.renderScreen} onChange={this.handleChange} onKeyUp = {e => this.handleInfoTransfer(e)}/></div>
+                        <p>//input "cd" and "name of the file" and confirm with "enter"<br/>
                             //example: cd AboutMe <br/>
                             //type in "ls" to display available files <br/>
                             //type in "clear to clear Terminal history

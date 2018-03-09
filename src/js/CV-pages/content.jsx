@@ -21,12 +21,16 @@ class Content extends React.Component {
                 return <PersonalInfo/>;
                 break;
             default:
-                return <MainPage/>;
+                return <AboutMe/>;
         }
     };
 
     render () {
        return <div className = "content">
+           <header>
+               <div className = "circle-1"></div><div className = "circle-2"></div><div className = "circle-4"></div>
+               <h1>{this.props.renderScreen}</h1>
+           </header>
            {this.handleRender(this.props.renderScreen)}
        </div>
     }
