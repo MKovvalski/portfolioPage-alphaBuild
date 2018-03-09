@@ -10,6 +10,7 @@ class AboutMe extends React.Component {
                                 <img src = "../.././pictures/IMG_0414.png" alt=""/>
                                 <h1>Mateusz Kowalski</h1>
                                 <h3>contact</h3>
+                                <p>matt.kowalski.public@gmail.com</p>
 
                             </div>
                         </div>

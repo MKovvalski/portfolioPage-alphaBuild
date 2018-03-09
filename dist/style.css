@@ -148,7 +148,7 @@ input[type=button] {width: auto; overflow: visible;}
   width: 33%; }
 
 .col-2 {
-  width: 67%; }
+  width: 66%; }
 
 .main-component {
   height: 100vh;
@@ -164,7 +164,7 @@ input[type=button] {width: auto; overflow: visible;}
 
 .content {
   width: 67.5%;
-  height: 85%;
+  height: 75%;
   background-color: #404040;
   border-radius: 6px;
   border: 1px solid #333333; }
@@ -192,11 +192,13 @@ input[type=button] {width: auto; overflow: visible;}
 
 .bio {
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+  justify-content: space-between; }
 
 .bio-data {
-  height: 543px;
-  background-color: white;
+  height: 479px;
+  color: #d9d9d9;
+  border-right: 1px solid #333333;
   display: flex;
   flex-direction: column;
   align-items: center; }
@@ -204,6 +206,22 @@ input[type=button] {width: auto; overflow: visible;}
     height: 300px;
     width: 90%;
     background-color: red; }
+  .bio-data h1 {
+    color: #ffcc66; }
+
+.bio-description {
+  height: 543px;
+  color: #d9d9d9; }
+  .bio-description h1 {
+    color: #ffcc66;
+    margin-top: 25px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 900;
+    text-align: center; }
+  .bio-description p {
+    margin-top: 25px;
+    font-size: 18px; }
 
 .terminal {
   font-size: 14px;
@@ -250,12 +268,12 @@ input[type=button] {width: auto; overflow: visible;}
   box-shadow: 0.2px 0.5px #196619; }
 
 .terminal-body {
-  color: #e6e6e6;
+  color: #d9d9d9;
   height: 90%;
   overflow-y: scroll; }
   .terminal-body p {
     color: #8c8c8c; }
   .terminal-body input {
-    color: #e6e6e6;
+    color: #d9d9d9;
     background-color: #404040;
     border: none; }
