@@ -70,6 +70,10 @@ body {
   width: 66%;
 }
 
+.col-3 {
+  width: 49%;
+}
+
 
 // ----------------------------------------- //
 // ------------ main-component ------------- //
@@ -125,6 +129,7 @@ body {
 }
 
 .bio-data {
+  box-shadow: 2px 2px grey;
   @include flex(column, space-between, flex-start);
   @include baseStyles(100%, 460px, $brgColor3, $brgColor, none, 3px);
   .bio-picture {
@@ -143,6 +148,7 @@ body {
 }
 
 .bio-description {
+  box-shadow: 2px 2px grey;
   @include flex(column, flex-start, center);
   @include baseStyles(100%, 460px, $brgColor2, $brgColor, none, 3px);
   h1  {
@@ -156,6 +162,18 @@ body {
     font-size: 110%;
     margin-top: 3%;
   }
+}
+
+// ----------------------------------------- //
+// ------------- Projects ------------------ //
+// ----------------------------------------- //
+
+.projects {
+  @include flex(row, space-between, flex-start)
+}
+
+.project {
+  @include baseStyles(100%, 460px, $brgColor2, none, none, none);
 }
 
 // ----------------------------------------- //
