@@ -27,24 +27,6 @@ $radius: 6px;
   box-shadow: 0.2px 0.5px $shadowColor;
 }
 
-@mixin header ($height, $border) {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  text-align: center;
-  color:#bfbfbf;
-  height: $height;
-  background-color: #666666;
-  border-bottom: $border;
-  border-radius: 5px 5px 0 0;
-}
-
-@mixin baseStyles ($brgColor, $radius, $border){
-  background-color: $brgColor;
-  border-radius: $radius;
-  border: $border;
-}
-
 @mixin flex($direction, $justify, $align) {
   display: flex;
   flex-direction: $direction;
@@ -52,24 +34,13 @@ $radius: 6px;
   align-items: $align;
 }
 
-@mixin baseStyles2 ($width, $height, $backColor, $textColor, $border, $borderRadius) {
+@mixin baseStyles ($width, $height, $backColor, $textColor, $border, $borderRadius) {
   width: $width;
   height: $height;
   background-color: $backColor;
   color: $textColor;
   border: $border;
   border-radius: $borderRadius;
-}
-
-@mixin bioStyles ($position){
-  display: flex;
-  flex-direction: column;
-  justify-content: $position;
-  align-items: center;
-  background-color: $brgColor2;
-  height: 460px;
-  color: $brgColor;
-  border-radius: 3px;
 }
 
 @mixin headerStyles ($fontSize) {
@@ -88,7 +59,7 @@ body {
 }
 
 .container {
-  width: 97%;
+  width: 97.5%;
 }
 
 .col-1 {
@@ -105,7 +76,7 @@ body {
 // ----------------------------------------- //
 
 .main-component {
-  @include baseStyles2(100%, 100vh, $brgColor3, none, none, none);
+  @include baseStyles(100%, 100vh, none, none, none, none);
   @include flex(row, center, center);
 }
 
@@ -114,7 +85,7 @@ body {
 // ----------------------------------------- //
 
 .main-container {
-  @include baseStyles2(97%, 95%, none, none, none, none);
+  @include sizing(97%, 95%);
   @include flex(row, space-between, flex-start);
 }
 
@@ -123,10 +94,11 @@ body {
 // ----------------------------------------- //
 
 .content {
-  @include baseStyles2(67.5%, 75%, $brgColor, none, $border, $radius);
+  @include baseStyles(67.5%, 75%, $brgColor, none, $border, $radius);
   header {
     @include flex(row, flex-start, center);
-    @include baseStyles2(100%, 4%, #666666, #bfbfbf, 0 0 0 $border, 5px 5px 0 0 );
+    @include baseStyles(100%, 4%, #666666, #bfbfbf, none , 5px 5px 0 0 );
+    border-bottom: $headerBorder;
     h1 {
       text-align: center;
       width: 20%;
@@ -154,7 +126,7 @@ body {
 
 .bio-data {
   @include flex(column, space-between, flex-start);
-  @include baseStyles2(100%, 460px, $brgColor2, $brgColor, none, 3px);
+  @include baseStyles(100%, 460px, $brgColor3, $brgColor, none, 3px);
   .bio-picture {
     @include sizing(100%,70%);
     img {
@@ -163,7 +135,7 @@ body {
   }
   .bio-contact {
     @include flex( column, center, center);
-    @include baseStyles2(100%, 30%, $brgColor4, none, none, 0 0 3px 3px);
+    @include baseStyles(100%, 33%, none, none, none, 0 0 3px 3px);
     h1 {
       @include headerStyles(140%);
     }
@@ -171,12 +143,12 @@ body {
 }
 
 .bio-description {
-  @include flex(column, flex-start, flex-start);
-  @include baseStyles2(100%, 460px, $brgColor2, $brgColor, none, 3px);
+  @include flex(column, flex-start, center);
+  @include baseStyles(100%, 460px, $brgColor2, $brgColor, none, 3px);
   h1  {
     line-height: 250%;
     vertical-align: middle;
-    @include baseStyles2(100%, 15%, $brgColor4, none, none, 3px 3px 0 0);
+    @include baseStyles(100%, 15%, $brgColor4, none, none, 3px 3px 0 0);
     @include headerStyles(170%);
   }
   p {
@@ -191,17 +163,18 @@ body {
 // ----------------------------------------- //
 
 .terminal {
+  @include baseStyles(32%, 40%, $brgColor, none, $border, $radius);
   font-size: 14px;
   align-self: flex-end;
-  @include sizing(32%,40%);
-  @include baseStyles($brgColor, $radius,$border);
   header {
-    @include header(9%, $headerBorder)
+    @include flex(row, flex-start,center);
+    @include baseStyles(100%, 9%, #666666, #bfbfbf, none, 5px 5px 0 0);
+    border-bottom: $headerBorder;
   }
 }
 
 .circle-1 {
-  @include circle(#ff5050, 8px,#e60000)
+  @include circle(#ff5050, 8px, #e60000)
 }
 
 .circle-2 {
