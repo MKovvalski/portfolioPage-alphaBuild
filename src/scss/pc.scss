@@ -45,8 +45,20 @@ $radius: 6px;
   border: $border;
 }
 
-@mixin baseStyles ($width, $height, $BackColor, $TextColor, $border, $borderRadius) {
-  
+@mixin flex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin baseStyles2 ($width, $height, $backColor, $textColor, $border, $borderRadius) {
+  width: $width;
+  height: $height;
+  background-color: $backColor;
+  color: $textColor;
+  border: $border;
+  border-radius: $borderRadius;
 }
 
 @mixin bioStyles ($position){
@@ -93,11 +105,8 @@ body {
 // ----------------------------------------- //
 
 .main-component {
-  height: 100vh;
-  background-color: $brgColor3;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include baseStyles2(100%, 100vh, $brgColor3, none, none, none);
+  @include flex(row, center, center);
 }
 
 // ----------------------------------------- //
@@ -105,10 +114,8 @@ body {
 // ----------------------------------------- //
 
 .main-container {
-  @include sizing(97%, 95%);
-  display: flex;
-  justify-content: space-between;
-
+  @include baseStyles2(97%, 95%, none, none, none, none);
+  @include flex(row, space-between, flex-start);
 }
 
 // ----------------------------------------- //
@@ -116,19 +123,19 @@ body {
 // ----------------------------------------- //
 
 .content {
-  @include sizing(67.5%, 75%);
-  @include baseStyles($brgColor, $radius, $border);
+  @include baseStyles2(67.5%, 75%, $brgColor, none, $border, $radius);
   header {
-    @include header (4%, $headerBorder);
+    @include flex(row, flex-start, center);
+    @include baseStyles2(100%, 4%, #666666, #bfbfbf, 0 0 0 $border, 5px 5px 0 0 );
     h1 {
+      text-align: center;
       width: 20%;
     }
   }
 }
 
 .main-content {
-  display: flex;
-  justify-content: center;
+  @include flex(row, center, flex-start);
   margin-top: 8px;
 }
 
@@ -142,13 +149,12 @@ body {
 // ----------------------------------------- //
 
 .bio {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  @include flex(row, space-between, flex-start);
 }
 
 .bio-data {
-  @include bioStyles(space-between);
+  @include flex(column, space-between, flex-start);
+  @include baseStyles2(100%, 460px, $brgColor2, $brgColor, none, 3px);
   .bio-picture {
     @include sizing(100%,70%);
     img {
@@ -156,12 +162,8 @@ body {
     }
   }
   .bio-contact {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    @include baseStyles($brgColor4, 0 0 3px 3px, none);
-    @include sizing(100%,30%);
+    @include flex( column, center, center);
+    @include baseStyles2(100%, 30%, $brgColor4, none, none, 0 0 3px 3px);
     h1 {
       @include headerStyles(140%);
     }
@@ -169,14 +171,13 @@ body {
 }
 
 .bio-description {
-  @include bioStyles(flex-start);
+  @include flex(column, flex-start, flex-start);
+  @include baseStyles2(100%, 460px, $brgColor2, $brgColor, none, 3px);
   h1  {
     line-height: 250%;
     vertical-align: middle;
-    background-color: $brgColor4;
-    border-radius: 3px 3px 0 0;
-    @include sizing(100%,15%);
-   @include headerStyles(170%);
+    @include baseStyles2(100%, 15%, $brgColor4, none, none, 3px 3px 0 0);
+    @include headerStyles(170%);
   }
   p {
     width: 95%;
