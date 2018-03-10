@@ -10,7 +10,6 @@ class AboutMe extends React.Component {
                                 <h1>Mateusz Kowalski</h1>
                                 <h3>contact</h3>
                                 <p>matt.kowalski.public@gmail.com</p>
-
                             </div>
                         </div>
                         <div className = "col-2">

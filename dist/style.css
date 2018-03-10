@@ -142,15 +142,13 @@ input[type=button] {width: auto; overflow: visible;}
   font-family: 'Open Sans', sans-serif; }
 
 .container {
-  width: 90%; }
+  width: 97%; }
 
 .col-1 {
-  width: 30%;
-  background-color: darkorange; }
+  width: 33%; }
 
 .col-2 {
-  width: 60%;
-  background-color: yellow; }
+  width: 66%; }
 
 .main-component {
   height: 100vh;
@@ -182,12 +180,12 @@ input[type=button] {width: auto; overflow: visible;}
     border-bottom: 1px solid #808080;
     border-radius: 5px 5px 0 0; }
     .content header h1 {
-      width: 120px; }
+      width: 17%; }
 
 .main-content {
   display: flex;
   justify-content: center;
-  background-color: white; }
+  margin-top: 8px; }
 
 .circle-4 {
   margin-right: 33%;
@@ -204,32 +202,47 @@ input[type=button] {width: auto; overflow: visible;}
   justify-content: space-between; }
 
 .bio-data {
-  height: 465px;
-  color: #d9d9d9;
-  border-right: 1px solid #333333;
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  height: 460px;
+  color: #404040;
+  border-radius: 3px; }
   .bio-data img {
-    height: 300px;
-    width: 90%;
-    background-color: red; }
+    background-color: #47d147;
+    height: 65%;
+    width: 90%; }
   .bio-data h1 {
-    color: #ffcc66; }
+    font-size: 140%;
+    text-transform: uppercase;
+    font-weight: 900;
+    text-align: center; }
 
 .bio-description {
-  height: 440px;
-  color: #d9d9d9; }
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: white;
+  height: 460px;
+  color: #404040;
+  border-radius: 3px; }
   .bio-description h1 {
-    color: #ffcc66;
-    margin-top: 25px;
-    font-size: 20px;
+    line-height: 250%;
+    vertical-align: middle;
+    background-color: #ffcc00;
+    height: 15%;
+    width: 100%;
+    border-radius: 3px 3px 0 0;
+    font-size: 160%;
     text-transform: uppercase;
     font-weight: 900;
     text-align: center; }
   .bio-description p {
-    margin-top: 25px;
-    font-size: 18px; }
+    width: 95%;
+    font-size: 110%; }
 
 .terminal {
   font-size: 14px;

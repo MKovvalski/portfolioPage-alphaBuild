@@ -4,11 +4,12 @@
 // -------variables/mixins/extends --------- //
 // ----------------------------------------- //
 
-$headerColor: #ffcc66;
 $textColor: #d9d9d9;
 $border: 1px solid #333333;
 $headerBorder: 1px solid #808080;
 $brgColor: #404040;
+$brgColor2: white;
+$brgColor3: #ffcc00;
 $radius: 6px;
 
 @mixin circle ($color, $margin, $shadowColor){
@@ -38,6 +39,24 @@ $radius: 6px;
   border: $border;
 }
 
+@mixin bioStyles ($position){
+  display: flex;
+  flex-direction: column;
+  justify-content: $position;
+  align-items: center;
+  background-color: $brgColor2;
+  height: 460px;
+  color: $brgColor;
+  border-radius: 3px;
+}
+
+@mixin headerStyles ($fontSize) {
+  font-size: $fontSize;
+  text-transform: uppercase;
+  font-weight: 900;
+  text-align: center;
+}
+
 // ----------------------------------------- //
 // ------------ global classes ------------- //
 // ----------------------------------------- //
@@ -47,17 +66,15 @@ body {
 }
 
 .container {
-  width: 90%;
+  width: 97%;
 }
 
 .col-1 {
-  width: 30%;
-  background-color: darkorange;
+  width: 33%;
 }
 
 .col-2 {
-  width: 60%;
-  background-color: yellow;
+  width: 66%;
 }
 
 
@@ -67,7 +84,7 @@ body {
 
 .main-component {
   height: 100vh;
-  background-color: #ffcc00;
+  background-color: $brgColor3;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -96,7 +113,7 @@ body {
   header {
     @include header (4%, $headerBorder);
     h1 {
-      width: 120px;
+      width: 17%;
     }
   }
 }
@@ -104,8 +121,7 @@ body {
 .main-content {
   display: flex;
   justify-content: center;
-  background-color: white;
-
+  margin-top: 8px;
 }
 
 .circle-4 {
@@ -124,36 +140,31 @@ body {
 }
 
 .bio-data {
-  height: 465px;
-  color: $textColor;
-  border-right: $border;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include bioStyles(center);
   img {
-    height: 300px;
+    background-color: #47d147;
+    height: 65%;
     width: 90%;
-    background-color: red;
   }
   h1 {
-    color: $headerColor;
+    @include headerStyles(140%);
   }
 }
 
 .bio-description {
-  height: 440px;
-  color: $textColor;
+  @include bioStyles(flex-start);
   h1  {
-    color: $headerColor;
-    margin-top: 25px;
-    font-size: 20px;
-    text-transform: uppercase;
-    font-weight: 900;
-    text-align: center;
+    line-height: 250%;
+    vertical-align: middle;
+    background-color: $brgColor3;
+    height: 15%;
+    width: 100%;
+    border-radius: 3px 3px 0 0;
+   @include headerStyles(160%);
   }
   p {
-    margin-top: 25px;
-    font-size: 18px;
+    width: 95%;
+    font-size: 110%;
   }
 }
 
