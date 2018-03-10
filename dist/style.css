@@ -158,14 +158,14 @@ input[type=button] {width: auto; overflow: visible;}
   align-items: center; }
 
 .main-container {
-  width: 97%;
   height: 95%;
+  width: 97%;
   display: flex;
   justify-content: space-between; }
 
 .content {
-  width: 67.5%;
   height: 75%;
+  width: 67.5%;
   background-color: #404040;
   border-radius: 6px;
   border: 1px solid #333333; }
@@ -180,7 +180,7 @@ input[type=button] {width: auto; overflow: visible;}
     border-bottom: 1px solid #808080;
     border-radius: 5px 5px 0 0; }
     .content header h1 {
-      width: 17%; }
+      width: 20%; }
 
 .main-content {
   display: flex;
@@ -204,21 +204,33 @@ input[type=button] {width: auto; overflow: visible;}
 .bio-data {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   background-color: white;
   height: 460px;
   color: #404040;
   border-radius: 3px; }
-  .bio-data img {
+  .bio-data .bio-picture {
+    height: 70%;
+    width: 100%; }
+    .bio-data .bio-picture img {
+      height: 50px;
+      width: 50px; }
+  .bio-data .bio-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
     background-color: #47d147;
-    height: 65%;
-    width: 90%; }
-  .bio-data h1 {
-    font-size: 140%;
-    text-transform: uppercase;
-    font-weight: 900;
-    text-align: center; }
+    border-radius: 0 0 3px 3px;
+    border: none;
+    height: 30%;
+    width: 100%; }
+    .bio-data .bio-contact h1 {
+      font-size: 140%;
+      text-transform: uppercase;
+      font-weight: 900;
+      text-align: center; }
 
 .bio-description {
   display: flex;
@@ -232,23 +244,24 @@ input[type=button] {width: auto; overflow: visible;}
   .bio-description h1 {
     line-height: 250%;
     vertical-align: middle;
-    background-color: #ffcc00;
+    background-color: #47d147;
+    border-radius: 3px 3px 0 0;
     height: 15%;
     width: 100%;
-    border-radius: 3px 3px 0 0;
-    font-size: 160%;
+    font-size: 170%;
     text-transform: uppercase;
     font-weight: 900;
     text-align: center; }
   .bio-description p {
     width: 95%;
-    font-size: 110%; }
+    font-size: 110%;
+    margin-top: 3%; }
 
 .terminal {
   font-size: 14px;
-  width: 32%;
-  height: 40%;
   align-self: flex-end;
+  height: 40%;
+  width: 32%;
   background-color: #404040;
   border-radius: 6px;
   border: 1px solid #333333; }

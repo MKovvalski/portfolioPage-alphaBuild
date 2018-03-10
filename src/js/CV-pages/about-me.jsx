@@ -6,10 +6,14 @@ class AboutMe extends React.Component {
                     <div className = "bio">
                         <div className = "col-1">
                             <div className = "bio-data">
-                                <img src = "../.././pictures/IMG_0414.png" alt=""/>
-                                <h1>Mateusz Kowalski</h1>
-                                <h3>contact</h3>
-                                <p>matt.kowalski.public@gmail.com</p>
+                                <div className = "bio-picture">
+                                    <img src = "../.././pictures/IMG_0414.png" alt=""/>
+                                </div>
+                                <div className = "bio-contact">
+                                    <h1>Mateusz Kowalski</h1>
+                                    <h3>contact</h3>
+                                    <p>matt.kowalski.public@gmail.com</p>
+                                </div>
                             </div>
                         </div>
                         <div className = "col-2">
