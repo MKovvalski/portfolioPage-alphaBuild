@@ -2,8 +2,7 @@ import React from 'react';
 
 class AboutMe extends React.Component {
     render () {
-        return <div>
-                <div className = "container">
+        return <div className = "container">
                     <div className = "bio">
                         <div className = "col-1">
                             <div className = "bio-data">
@@ -24,7 +23,6 @@ class AboutMe extends React.Component {
                         </div>
                     </div>
                 </div>
-            </div>
     }
 }
 

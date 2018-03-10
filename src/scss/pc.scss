@@ -47,15 +47,17 @@ body {
 }
 
 .container {
-  width: 100%;
+  width: 90%;
 }
 
 .col-1 {
-  width: 33%;
+  width: 30%;
+  background-color: darkorange;
 }
 
 .col-2 {
-  width: 66%;
+  width: 60%;
+  background-color: yellow;
 }
 
 
@@ -65,6 +67,7 @@ body {
 
 .main-component {
   height: 100vh;
+  background-color: #ffcc00;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -98,6 +101,13 @@ body {
   }
 }
 
+.main-content {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+
+}
+
 .circle-4 {
   margin-right: 33%;
   @include circle(#47d147, 6px, #196619);
@@ -114,7 +124,7 @@ body {
 }
 
 .bio-data {
-  height: 479px;
+  height: 465px;
   color: $textColor;
   border-right: $border;
   display: flex;
@@ -131,7 +141,7 @@ body {
 }
 
 .bio-description {
-  height: 543px;
+  height: 440px;
   color: $textColor;
   h1  {
     color: $headerColor;

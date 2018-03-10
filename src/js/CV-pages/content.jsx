@@ -31,7 +31,9 @@ class Content extends React.Component {
                <div className = "circle-1"></div><div className = "circle-2"></div><div className = "circle-4"></div>
                <h1>{this.props.renderScreen}</h1>
            </header>
-           {this.handleRender(this.props.renderScreen)}
+           <div className = "main-content">
+               {this.handleRender(this.props.renderScreen)}
+           </div>
        </div>
     }
 }

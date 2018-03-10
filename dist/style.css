@@ -142,16 +142,19 @@ input[type=button] {width: auto; overflow: visible;}
   font-family: 'Open Sans', sans-serif; }
 
 .container {
-  width: 100%; }
+  width: 90%; }
 
 .col-1 {
-  width: 33%; }
+  width: 30%;
+  background-color: darkorange; }
 
 .col-2 {
-  width: 66%; }
+  width: 60%;
+  background-color: yellow; }
 
 .main-component {
   height: 100vh;
+  background-color: #ffcc00;
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -181,6 +184,11 @@ input[type=button] {width: auto; overflow: visible;}
     .content header h1 {
       width: 120px; }
 
+.main-content {
+  display: flex;
+  justify-content: center;
+  background-color: white; }
+
 .circle-4 {
   margin-right: 33%;
   width: 13px;
@@ -196,7 +204,7 @@ input[type=button] {width: auto; overflow: visible;}
   justify-content: space-between; }
 
 .bio-data {
-  height: 479px;
+  height: 465px;
   color: #d9d9d9;
   border-right: 1px solid #333333;
   display: flex;
@@ -210,7 +218,7 @@ input[type=button] {width: auto; overflow: visible;}
     color: #ffcc66; }
 
 .bio-description {
-  height: 543px;
+  height: 440px;
   color: #d9d9d9; }
   .bio-description h1 {
     color: #ffcc66;
