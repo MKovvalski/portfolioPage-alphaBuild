@@ -7,7 +7,7 @@ class AboutMe extends React.Component {
                         <div className = "col-1">
                             <div className = "bio-data">
                                 <div className = "bio-picture">
-                                    <img src = "../.././pictures/IMG_0414.png" alt=""/>
+                                    <img src = "../../scss/imgs/IMG_0414.png" alt=""/>
                                 </div>
                                 <div className = "bio-contact">
                                     <h1>Mateusz Kowalski</h1>

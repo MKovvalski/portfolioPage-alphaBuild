@@ -71,9 +71,8 @@ body {
 }
 
 .col-3 {
-  width: 49%;
+  width: 33%;
 }
-
 
 // ----------------------------------------- //
 // ------------ main-component ------------- //
@@ -173,7 +172,34 @@ body {
 }
 
 .project {
-  @include baseStyles(100%, 460px, $brgColor2, none, none, none);
+  @include baseStyles(100%, 460px, $brgColor2, none, none, $radius);
+  p {
+    background-color: #196619;
+    height: 53%;
+  }
+}
+
+.project-preview {
+  background-color: #47d147;
+  height: 35%;
+}
+
+.project-technologies {
+  @include flex(row, flex-start, flex-start);
+  @include baseStyles(100%, 12%, #ffd633, none, none, 0 0 5px 5px);
+}
+
+.small-logo {
+  @include baseStyles(50px, 50px, $brgColor2, none, none, 50%);
+}
+
+.test {
+  white-space: nowrap;
+  @include flex(row, flex-start, flex-start);
+  background-color: red;
+  width: 150px;
+  height: 100px;
+  overflow-y: scroll;
 }
 
 // ----------------------------------------- //
