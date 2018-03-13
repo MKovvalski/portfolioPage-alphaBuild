@@ -2,22 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="874f3a74-86f5-44b0-84ec-4a953047a6a6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/4e8d87dfd79abb169e63160cb55d5a7d.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/8377242b0d67bcedf9af89d6c0facc92.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/scss/imgs/CSS3_logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/scss/imgs/HTML_Logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/scss/imgs/JavaScript-logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/scss/imgs/javascript-logo-E967E87D74-seeklogo.com.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/scss/imgs/react-log.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/scss/imgs/redux-logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/scss/imgs/sass-log.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/js/CV-pages/project.jsx" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/pictures/IMG_0414.png" afterPath="$PROJECT_DIR$/src/scss/imgs/IMG_0414.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/scss/imgs/javascript-logo-E967E87D74-seeklogo.com.png" afterPath="$PROJECT_DIR$/src/scss/imgs/js-logo.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/index.html" afterPath="$PROJECT_DIR$/dist/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/main.bundle.js" afterPath="$PROJECT_DIR$/dist/main.bundle.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/style.css" afterPath="$PROJECT_DIR$/dist/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/CV-pages/about-me.jsx" afterPath="$PROJECT_DIR$/src/js/CV-pages/about-me.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/CV-pages/project.jsx" afterPath="$PROJECT_DIR$/src/js/CV-pages/project.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/CV-pages/projects.jsx" afterPath="$PROJECT_DIR$/src/js/CV-pages/projects.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/scss/pc.scss" afterPath="$PROJECT_DIR$/src/scss/pc.scss" />
     </list>
@@ -72,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="projects.jsx" pinned="false" current-in-tab="false">
+      <file leaf-file-name="projects.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/js/CV-pages/projects.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="21" column="72" lean-forward="false" selection-start-line="21" selection-start-column="72" selection-end-line="21" selection-end-column="72" />
+            <state relative-caret-position="162">
+              <caret line="9" column="47" lean-forward="false" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -87,18 +77,18 @@
       <file leaf-file-name="project.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/CV-pages/project.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="19" column="45" lean-forward="false" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
+            <state relative-caret-position="180">
+              <caret line="10" column="4" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pc.scss" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pc.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scss/pc.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="531">
-              <caret line="196" column="22" lean-forward="false" selection-start-line="196" selection-start-column="22" selection-end-line="196" selection-end-column="22" />
+            <state relative-caret-position="372">
+              <caret line="213" column="31" lean-forward="false" selection-start-line="213" selection-start-column="31" selection-end-line="213" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -132,9 +122,9 @@
         <option value="$PROJECT_DIR$/src/js/terminal.jsx" />
         <option value="$PROJECT_DIR$/src/js/CV-pages/about-me.jsx" />
         <option value="$PROJECT_DIR$/src/js/CV-pages/content.jsx" />
-        <option value="$PROJECT_DIR$/src/js/CV-pages/projects.jsx" />
         <option value="$PROJECT_DIR$/src/js/CV-pages/project.jsx" />
         <option value="$PROJECT_DIR$/src/scss/pc.scss" />
+        <option value="$PROJECT_DIR$/src/js/CV-pages/projects.jsx" />
       </list>
     </option>
   </component>
@@ -206,6 +196,13 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="scss" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="portfolioPage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="portfolioPage" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="scss" type="462c0819:PsiDirectoryNode" />
+              <item name="imgs" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -256,12 +253,12 @@
       <option name="presentableId" value="Default" />
       <updated>1519052924946</updated>
       <workItem from="1519052926586" duration="9225000" />
-      <workItem from="1519937814560" duration="78370000" />
+      <workItem from="1519937814560" duration="80835000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87595000" />
+    <option name="totallyTimeSpent" value="90060000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -515,29 +512,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/CV-pages/projects.jsx">
+    <entry file="file://$PROJECT_DIR$/src/scss/imgs/redux-logo.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scss/imgs/react-log.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scss/imgs/js-logo.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scss/pc.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="72" lean-forward="false" selection-start-line="21" selection-start-column="72" selection-end-line="21" selection-end-column="72" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="372">
+          <caret line="213" column="31" lean-forward="false" selection-start-line="213" selection-start-column="31" selection-end-line="213" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/js/CV-pages/project.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="45" lean-forward="false" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
+        <state relative-caret-position="180">
+          <caret line="10" column="4" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scss/pc.scss">
+    <entry file="file://$PROJECT_DIR$/src/js/CV-pages/projects.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="531">
-          <caret line="196" column="22" lean-forward="false" selection-start-line="196" selection-start-column="22" selection-end-line="196" selection-end-column="22" />
-          <folding />
+        <state relative-caret-position="162">
+          <caret line="9" column="47" lean-forward="false" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

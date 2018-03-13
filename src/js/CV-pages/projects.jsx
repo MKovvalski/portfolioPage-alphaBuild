@@ -5,8 +5,9 @@ class Projects extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-          pokemonLogos: ["html", "css", "js", "sass", "react", "redux"],
-          portfolioLogos: ["html", "css", "js", "sass", "react"]
+          pokemonLogos: ["react", "redux", "js", "sass"],
+          portfolioLogos: ["react", "js", "sass"],
+          sitOnChairLogos: ["js", "html", "cssd"]
         }
     }
     render () {
@@ -19,7 +20,7 @@ class Projects extends React.Component {
                             <Project logos = {this.state.portfolioLogos}/>
                         </div>
                         <div className = "col-3">
-                            <Project logos = {this.state.portfolioLogos}/>
+                            <Project logos = {this.state.sitOnChairLogos}/>
                         </div>
                     </div>
             </div>

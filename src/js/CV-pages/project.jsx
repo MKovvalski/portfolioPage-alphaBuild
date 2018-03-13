@@ -5,7 +5,7 @@ class Project extends React.Component {
     renderLogos = () => {
       return this.props.logos.map((logo) => {
           const a = "small-logo " + logo;
-          return <div key = {logo} className = {a}></div>
+          return <li key = {logo} className = {a}></li>
       })
     };
     
@@ -17,7 +17,7 @@ class Project extends React.Component {
                     <p>
                     </p>
                     <div className = "project-technologies">
-                        <ul className = "test">
+                        <ul className = "project-list-of-tech">
                             {this.renderLogos()}
                         </ul>
                     </div>

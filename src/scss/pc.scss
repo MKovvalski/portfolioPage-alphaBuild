@@ -50,6 +50,13 @@ $radius: 6px;
   text-align: center;
 }
 
+@mixin smallLogoStyles ($height, $width, $url) {
+  background-image: $url;
+  background-size: $height $width;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 // ----------------------------------------- //
 // ------------ global classes ------------- //
 // ----------------------------------------- //
@@ -185,21 +192,27 @@ body {
 }
 
 .project-technologies {
-  @include flex(row, flex-start, flex-start);
+  @include flex(row, center, center);
   @include baseStyles(100%, 12%, #ffd633, none, none, 0 0 5px 5px);
 }
 
 .small-logo {
+
   @include baseStyles(50px, 50px, $brgColor2, none, none, 50%);
 }
 
-.test {
-  white-space: nowrap;
-  @include flex(row, flex-start, flex-start);
-  background-color: red;
-  width: 150px;
-  height: 100px;
-  overflow-y: scroll;
+.project-list-of-tech {
+  width: 80%;
+  @include flex(row, space-between, center);
+  .react {
+    @include smallLogoStyles(40px, 40px, url("imgs/react-log.png"));
+  }
+  .redux {
+    @include smallLogoStyles(53px, 46px, url("imgs/redux-logo.png"));
+  }
+  .js {
+    @include smallLogoStyles(30px, 40px, url("imgs/js-logo.png"));
+  }
 }
 
 // ----------------------------------------- //
