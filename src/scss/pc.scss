@@ -179,12 +179,21 @@ body {
 }
 
 .project {
-  @include baseStyles(100%, 460px, $brgColor2, none, none, $radius);
+  @include baseStyles(100%, 460px, $brgColor2, none, 1px solid #cccccc, $radius);
+  h2 {
+    text-align: center;
+    @include baseStyles(100%, 5%, #666666, none, none, none);
+  }
 }
 
 .project-preview {
-  background-color: #47d147;
+  //background-image: url("imgs/pick-pokemon.png");
   height: 35%;
+}
+
+.pokemonGame {
+  @include baseStyles(100%, 100%, none, none, none, 4px 4px 0 0);
+  @include smallLogoStyles(100%, 105%, url("imgs/pick-pokemon2.png"));
 }
 
 .project-technologies {

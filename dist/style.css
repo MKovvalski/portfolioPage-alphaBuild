@@ -294,12 +294,31 @@ input[type=button] {width: auto; overflow: visible;}
   height: 460px;
   background-color: white;
   color: none;
-  border: none;
+  border: 1px solid #cccccc;
   border-radius: 6px; }
+  .project h2 {
+    text-align: center;
+    width: 100%;
+    height: 5%;
+    background-color: #666666;
+    color: none;
+    border: none;
+    border-radius: none; }
 
 .project-preview {
-  background-color: #47d147;
   height: 35%; }
+
+.pokemonGame {
+  width: 100%;
+  height: 100%;
+  background-color: none;
+  color: none;
+  border: none;
+  border-radius: 4px 4px 0 0;
+  background-image: url(cf60cd2b5223c7b7f376d4e98583144f.png);
+  background-size: 100% 105%;
+  background-repeat: no-repeat;
+  background-position: center; }
 
 .project-technologies {
   display: flex;

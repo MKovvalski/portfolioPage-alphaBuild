@@ -1,12 +1,6 @@
 import React from 'react';
 
 class Project extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            counter: 0
-        }
-    }
 
     renderLogos = () => {
       return this.props.logos.map((logo) => {
@@ -15,19 +9,12 @@ class Project extends React.Component {
       })
     };
 
-    projectSlider = (counter) => {
-        switch (counter) {
-            case 0:
-                return <div className = ""></div>
-            break;
-        }
-    };
-    
     render () {
         return <div className = "project">
                     <div className = "project-preview">
-                        {this.projectSlider(this.state.counter)}
+                        <div className = {this.props.project}/>
                     </div>
+                    <h2>{this.props.project}</h2>
                     <div className = "project-technologies">
                         <ul className = "project-list-of-tech">
                             {this.renderLogos()}

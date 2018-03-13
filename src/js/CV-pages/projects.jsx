@@ -7,20 +7,21 @@ class Projects extends React.Component {
         this.state = {
           pokemonLogos: ["react", "redux", "js", "sass"],
           portfolioLogos: ["react", "js", "sass"],
-          sitOnChairLogos: ["js", "html", "css"]
+          sitOnChairLogos: ["js", "html", "css"],
+          pokemonDesc: "a"
         }
     }
     render () {
         return <div className = "container">
                     <div className = "projects">
                         <div className = "col-3">
-                            <Project logos = {this.state.pokemonLogos}/>
+                            <Project project = "pokemonGame" logos = {this.state.pokemonLogos}/>
                         </div>
                         <div className = "col-3">
-                            <Project logos = {this.state.portfolioLogos}/>
+                            <Project project = "portfolioPage" logos = {this.state.portfolioLogos}/>
                         </div>
                         <div className = "col-3">
-                            <Project logos = {this.state.sitOnChairLogos}/>
+                            <Project project = "sitOnChair" logos = {this.state.sitOnChairLogos}/>
                         </div>
                     </div>
             </div>
