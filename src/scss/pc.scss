@@ -180,10 +180,6 @@ body {
 
 .project {
   @include baseStyles(100%, 460px, $brgColor2, none, none, $radius);
-  p {
-    background-color: #196619;
-    height: 53%;
-  }
 }
 
 .project-preview {
@@ -193,25 +189,32 @@ body {
 
 .project-technologies {
   @include flex(row, center, center);
-  @include baseStyles(100%, 12%, #ffd633, none, none, 0 0 5px 5px);
-}
-
-.small-logo {
-
-  @include baseStyles(50px, 50px, $brgColor2, none, none, 50%);
+  @include baseStyles(100%, 13%, #ffd633, none, none, none);
 }
 
 .project-list-of-tech {
   width: 80%;
   @include flex(row, space-between, center);
+  .small-logo {
+    @include baseStyles(50px, 50px, $brgColor2, none, $headerBorder, 50%);
+  }
   .react {
-    @include smallLogoStyles(40px, 40px, url("imgs/react-log.png"));
+    @include smallLogoStyles(39px, 36px, url("imgs/react-log.png"));
   }
   .redux {
-    @include smallLogoStyles(53px, 46px, url("imgs/redux-logo.png"));
+    @include smallLogoStyles(51px, 44px, url("imgs/redux-logo.png"));
   }
   .js {
     @include smallLogoStyles(30px, 40px, url("imgs/js-logo.png"));
+  }
+  .sass {
+    @include smallLogoStyles(35px, 30px, url("imgs/sass-log.png"));
+  }
+  .html {
+    @include smallLogoStyles(43px, 40px, url("imgs/HTML_Logo.png"));
+  }
+  .css {
+    @include smallLogoStyles(31px, 42px, url("imgs/CSS3_logo.png"));
   }
 }
 

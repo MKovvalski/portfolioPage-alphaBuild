@@ -296,9 +296,6 @@ input[type=button] {width: auto; overflow: visible;}
   color: none;
   border: none;
   border-radius: 6px; }
-  .project p {
-    background-color: #196619;
-    height: 53%; }
 
 .project-preview {
   background-color: #47d147;
@@ -310,19 +307,11 @@ input[type=button] {width: auto; overflow: visible;}
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 12%;
+  height: 13%;
   background-color: #ffd633;
   color: none;
   border: none;
-  border-radius: 0 0 5px 5px; }
-
-.small-logo {
-  width: 50px;
-  height: 50px;
-  background-color: white;
-  color: none;
-  border: none;
-  border-radius: 50%; }
+  border-radius: none; }
 
 .project-list-of-tech {
   width: 80%;
@@ -330,19 +319,41 @@ input[type=button] {width: auto; overflow: visible;}
   flex-direction: row;
   justify-content: space-between;
   align-items: center; }
+  .project-list-of-tech .small-logo {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    color: none;
+    border: 1px solid #808080;
+    border-radius: 50%; }
   .project-list-of-tech .react {
     background-image: url(4e8d87dfd79abb169e63160cb55d5a7d.png);
-    background-size: 40px 40px;
+    background-size: 39px 36px;
     background-repeat: no-repeat;
     background-position: center; }
   .project-list-of-tech .redux {
     background-image: url(684c6918971092d91b495ea5d00b76f3.png);
-    background-size: 53px 46px;
+    background-size: 51px 44px;
     background-repeat: no-repeat;
     background-position: center; }
   .project-list-of-tech .js {
     background-image: url(afb47678875386aa6e81b65aa0640563.png);
     background-size: 30px 40px;
+    background-repeat: no-repeat;
+    background-position: center; }
+  .project-list-of-tech .sass {
+    background-image: url(74c362907475d0d7f0d59d0fb662135c.png);
+    background-size: 35px 30px;
+    background-repeat: no-repeat;
+    background-position: center; }
+  .project-list-of-tech .html {
+    background-image: url(8377242b0d67bcedf9af89d6c0facc92.png);
+    background-size: 43px 40px;
+    background-repeat: no-repeat;
+    background-position: center; }
+  .project-list-of-tech .css {
+    background-image: url(1651ac0d07bb9054124d93b16971d341.png);
+    background-size: 31px 42px;
     background-repeat: no-repeat;
     background-position: center; }
 

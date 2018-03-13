@@ -7,7 +7,7 @@ class Projects extends React.Component {
         this.state = {
           pokemonLogos: ["react", "redux", "js", "sass"],
           portfolioLogos: ["react", "js", "sass"],
-          sitOnChairLogos: ["js", "html", "cssd"]
+          sitOnChairLogos: ["js", "html", "css"]
         }
     }
     render () {
