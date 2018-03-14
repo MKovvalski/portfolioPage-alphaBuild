@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="874f3a74-86f5-44b0-84ec-4a953047a6a6" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/scss/imgs/Zrzut ekranu 2018-03-13 o 16.22.10.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/scss/imgs/pokemonGame/Zrzut ekranu 2018-03-13 o 15.58.30.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/scss/imgs/pokemonGame/Zrzut ekranu 2018-03-13 o 15.59.17.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/scss/imgs/pokemonGame/Zrzut ekranu 2018-03-13 o 16.21.05.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/index.html" afterPath="$PROJECT_DIR$/dist/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/main.bundle.js" afterPath="$PROJECT_DIR$/dist/main.bundle.js" />
@@ -65,11 +61,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="projects.jsx" pinned="false" current-in-tab="false">
+      <file leaf-file-name="projects.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/js/CV-pages/projects.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="10" column="26" lean-forward="false" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+            <state relative-caret-position="185">
+              <caret line="11" column="190" lean-forward="false" selection-start-line="11" selection-start-column="190" selection-end-line="11" selection-end-column="190" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -80,18 +76,18 @@
       <file leaf-file-name="project.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/CV-pages/project.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="16" column="47" lean-forward="false" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
+            <state relative-caret-position="414">
+              <caret line="23" column="26" lean-forward="false" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pc.scss" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pc.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scss/pc.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
-              <caret line="181" column="70" lean-forward="false" selection-start-line="181" selection-start-column="70" selection-end-line="181" selection-end-column="70" />
+            <state relative-caret-position="490">
+              <caret line="235" column="20" lean-forward="false" selection-start-line="235" selection-start-column="20" selection-end-line="235" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -126,8 +122,8 @@
         <option value="$PROJECT_DIR$/src/js/CV-pages/about-me.jsx" />
         <option value="$PROJECT_DIR$/src/js/CV-pages/content.jsx" />
         <option value="$PROJECT_DIR$/src/js/CV-pages/project.jsx" />
-        <option value="$PROJECT_DIR$/src/js/CV-pages/projects.jsx" />
         <option value="$PROJECT_DIR$/src/scss/pc.scss" />
+        <option value="$PROJECT_DIR$/src/js/CV-pages/projects.jsx" />
       </list>
     </option>
   </component>
@@ -257,12 +253,12 @@
       <option name="presentableId" value="Default" />
       <updated>1519052924946</updated>
       <workItem from="1519052926586" duration="9225000" />
-      <workItem from="1519937814560" duration="92400000" />
+      <workItem from="1519937814560" duration="96860000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101625000" />
+    <option name="totallyTimeSpent" value="106085000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -561,29 +557,29 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/CV-pages/projects.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="26" lean-forward="false" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/CV-pages/project.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="47" lean-forward="false" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
+        <state relative-caret-position="414">
+          <caret line="23" column="26" lean-forward="false" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/scss/pc.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="181" column="70" lean-forward="false" selection-start-line="181" selection-start-column="70" selection-end-line="181" selection-end-column="70" />
+        <state relative-caret-position="490">
+          <caret line="235" column="20" lean-forward="false" selection-start-line="235" selection-start-column="20" selection-end-line="235" selection-end-column="20" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/CV-pages/projects.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="11" column="190" lean-forward="false" selection-start-line="11" selection-start-column="190" selection-end-line="11" selection-end-column="190" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

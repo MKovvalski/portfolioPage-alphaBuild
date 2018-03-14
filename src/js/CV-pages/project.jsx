@@ -20,8 +20,11 @@ class Project extends React.Component {
                             {this.renderLogos()}
                         </ul>
                     </div>
-                    <p className = "project-description">
-                    </p>
+                    <div className = "project-description">
+                        <p>
+                            {this.props.desc}
+                        </p>
+                    </div>
         </div>
     }
 }
