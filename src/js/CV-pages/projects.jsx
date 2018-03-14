@@ -8,9 +8,9 @@ class Projects extends React.Component {
           pokemonLogos: ["react", "redux", "js", "sass"],
           portfolioLogos: ["react", "js", "sass"],
           sitOnChairLogos: ["js", "html", "css"],
-          pokemonDesc: "The Pokemon-Game recreates turn based battles of Pokemon, including all attack mechanics. The game bases on JS and was build in react framework with support of redux library. In the future, I am palnning to add more seperate animations for all pokemon moves.",
-          portfolioDesc: "My Portfolio Page serves dual purpose - to allow potential employer to know be better as well as showcase my skills and projects. Site's navigation revolves around Website was build with React framework and Sass style sheet language.",
-          sitOnChairDesc: ""
+          pokemonDesc: "The Pokemon-Game recreates turn based battles of Pokemon, including all attack mechanics. The game bases on JS and was build in react framework with support of redux library. In the future, I am planning to add separate animations for all pokemon moves and expand battle mechanics.",
+          portfolioDesc: "My Portfolio Page serves dual purpose - to allow potential employer to know be better as well as showcase my skills and projects. Site's navigation revolves around recreation of terminal and commands used in it. Main tech used in website was React framework and Sass style language.",
+          sitOnChairDesc: "Sit-on-Chair was the first project during Coders-Lab Boot Camp. The Website was build entirely in HTML, pure CSS and JS. Despite it being so simple, it allowed me to, for the first time, used combine skills of all mentioned before languages. I was planning to rewrite site's JS script and implement Sass."
 
         }
     }
@@ -21,10 +21,10 @@ class Projects extends React.Component {
                             <Project desc = {this.state.pokemonDesc} project = "Pokemon-Game" logos = {this.state.pokemonLogos}/>
                         </div>
                         <div className = "col-3">
-                            <Project desc = {this.state.portfolioDesc} project = "portfolio-Page" logos = {this.state.portfolioLogos}/>
+                            <Project desc = {this.state.portfolioDesc} project = "Portfolio-Page" logos = {this.state.portfolioLogos}/>
                         </div>
                         <div className = "col-3">
-                            <Project project = "sitOnChair" logos = {this.state.sitOnChairLogos}/>
+                            <Project desc = {this.state.sitOnChairDesc} project = "Sit-On-Chair" logos = {this.state.sitOnChairLogos}/>
                         </div>
                     </div>
             </div>

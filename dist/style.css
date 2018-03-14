@@ -294,8 +294,8 @@ input[type=button] {width: auto; overflow: visible;}
   height: 460px;
   background-color: white;
   color: none;
-  border: 1px solid #cccccc;
-  border-radius: 6px; }
+  border: none;
+  border-radius: 10px; }
   .project h2 {
     text-align: center;
     width: 100%;
@@ -314,7 +314,7 @@ input[type=button] {width: auto; overflow: visible;}
   background-color: none;
   color: none;
   border: none;
-  border-radius: 4px 4px 0 0;
+  border-radius: 9px 9px 0 0;
   background-image: url(cf60cd2b5223c7b7f376d4e98583144f.png);
   background-size: 100% 105%;
   background-repeat: no-repeat;
@@ -380,10 +380,11 @@ input[type=button] {width: auto; overflow: visible;}
   display: flex;
   flex-direction: none;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   height: 47%;
   width: 100%; }
   .project-description p {
+    font-size: 15px;
     width: 90%;
     font-weight: 500;
     color: #404040; }

@@ -179,7 +179,7 @@ body {
 }
 
 .project {
-  @include baseStyles(100%, 460px, $brgColor2, none, 1px solid #cccccc, $radius);
+  @include baseStyles(100%, 460px, $brgColor2, none, none, 10px);
   h2 {
     text-align: center;
     @include baseStyles(100%, 5%, $brgColor4, white, none, none);
@@ -192,7 +192,7 @@ body {
 }
 
 .Pokemon-Game {
-  @include baseStyles(100%, 100%, none, none, none, 4px 4px 0 0);
+  @include baseStyles(100%, 100%, none, none, none, 9px 9px 0 0);
   @include smallLogoStyles(100%, 105%, url("imgs/pick-pokemon2.png"));
 }
 
@@ -228,9 +228,10 @@ body {
 }
 
 .project-description {
-  @include flex(none, center, center);
+  @include flex(none, center, flex-start);
   @include sizing(100%, 47%);
   p {
+    font-size: 15px;
     width: 90%;
     font-weight: 500;
     color: $brgColor;
