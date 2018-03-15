@@ -8,6 +8,7 @@ $textColor: #d9d9d9;
 $border: 1px solid #333333;
 $headerBorder: 1px solid #808080;
 $projectRadius: 9px 9px 0 0;
+$columnRadius: 10px;
 $brgColor: #404040;
 $brgColor2: white;
 $brgColor3: #ffcc00;
@@ -136,18 +137,26 @@ body {
 }
 
 .bio-data {
-  box-shadow: 2px 2px grey;
   @include flex(column, space-between, flex-start);
-  @include baseStyles(100%, 460px, $brgColor3, $brgColor, none, 3px);
+  @include baseStyles(100%, 460px, $brgColor2, $brgColor, none, $columnRadius);
   .bio-picture {
-    @include sizing(100%,70%);
-    img {
-      @include sizing(50px, 50px);
+    @include flex(row, center, center);
+    @include sizing(100%,72%);
+    .picture {
+      @include baseStyles(95%, 95%, none, none, $headerBorder, $columnRadius);
+      @include smallLogoStyles(100%, 100%, url("imgs/IMG_0414.png"));
     }
   }
   .bio-contact {
     @include flex( column, center, center);
-    @include baseStyles(100%, 33%, none, none, none, 0 0 3px 3px);
+    @include baseStyles(100%, 28%, $brgColor3, none, none, 0 0 9px 9px);
+    .contact-list {
+      @include sizing(60%, 15%);
+      @include flex(row, space-between, flex-start);
+      .contact-logo {
+        @include baseStyles(35px, 35px, $brgColor2, none, none, 50%);
+      }
+    }
     h1 {
       @include headerStyles(140%);
     }
@@ -155,13 +164,12 @@ body {
 }
 
 .bio-description {
-  box-shadow: 2px 2px grey;
   @include flex(column, flex-start, center);
-  @include baseStyles(100%, 460px, $brgColor2, $brgColor, none, 3px);
+  @include baseStyles(100%, 460px, $brgColor2, $brgColor, none, $columnRadius);
   h1  {
     line-height: 250%;
     vertical-align: middle;
-    @include baseStyles(100%, 15%, $brgColor4, none, none, 3px 3px 0 0);
+    @include baseStyles(100%, 15%, $brgColor4, none, none, 9px 9px 0 0);
     @include headerStyles(170%);
   }
   p {
@@ -180,11 +188,23 @@ body {
 }
 
 .project {
-  @include baseStyles(100%, 460px, $brgColor2, none, none, 10px);
+  @include baseStyles(100%, 460px, $brgColor2, none, none, $projectRadius);
   h2 {
     text-align: center;
     @include baseStyles(100%, 5%, $brgColor4, white, none, none);
+    position: relative;
   }
+}
+
+.github-link {
+  top: -20px;
+  right: 10px;
+  position: absolute;
+}
+
+.github-logo {
+  @include baseStyles(37px, 37px, none, none, 1px solid black, 50%);
+  @include smallLogoStyles(100%, 100%, url("imgs/GitHub-logo.png"));
 }
 
 .project-preview {

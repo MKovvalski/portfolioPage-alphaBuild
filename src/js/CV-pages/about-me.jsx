@@ -1,18 +1,46 @@
 import React from 'react';
 
 class AboutMe extends React.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            mailDisplay: "none"
+        }
+    }
+
+    handleMailContact = () => {
+        if (this.state.mailDisplay === "none") {
+            this.setState({
+                mailDisplay: "block"
+            })
+        } else {
+            this.setState ({
+               mailDisplay: "none"
+            })
+        }
+    };
+
     render () {
+        console.log(this.state.mailDisplay);
         return <div className = "container">
                     <div className = "bio">
                         <div className = "col-1">
                             <div className = "bio-data">
                                 <div className = "bio-picture">
-                                    <img src = "../../scss/imgs/IMG_0414.png" alt=""/>
+                                    <div className = "picture"/>
                                 </div>
                                 <div className = "bio-contact">
                                     <h1>Mateusz Kowalski</h1>
                                     <h3>contact</h3>
-                                    <p>matt.kowalski.public@gmail.com</p>
+                                    <div className = "contact-list">
+                                        <div onClick = {() => this.handleMailContact()} className = "contact-logo mail"><span style = {{display: this.state.mailDisplay}}>matt.kowalski.public@gmail.com</span></div>
+                                        <a href="">
+                                            <div className = "contact-logo linkedin"/>
+                                        </a>
+                                        <a href="">
+                                            <div className = "contact-logo github"/>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
