@@ -173,18 +173,22 @@ body {
 }
 
 .bio-description {
-  @include flex(column, flex-start, center);
-  @include baseStyles(100%, 460px, $brgColor2, $brgColor, none, $columnRadius);
+  @include flex(column, flex-start, flex-start);
+  @include baseStyles(100%, 460px, $brgColor4, $brgColor, none, $columnRadius);
+  .bio-text {
+    @include flex(row, center, flex-start);
+    @include baseStyles(100%, 100%, $brgColor2, none, none, $columnRadius);
+    p {
+      width: 95%;
+      font-size: 110%;
+      margin-top: 3%;
+    }
+  }
   h1  {
     line-height: 250%;
     vertical-align: middle;
-    @include baseStyles(100%, 15%, $brgColor4, none, none, 9px 9px 0 0);
+    @include baseStyles(100%, 15%, none, none, none, 9px 9px 0 0);
     @include headerStyles(170%);
-  }
-  p {
-    width: 95%;
-    font-size: 110%;
-    margin-top: 3%;
   }
 }
 
@@ -197,10 +201,10 @@ body {
 }
 
 .project {
-  @include baseStyles(100%, 460px, $brgColor2, none, none, $projectRadius);
+  @include baseStyles(100%, 460px, $brgColor2, none, none, $columnRadius);
   h2 {
     text-align: center;
-    @include baseStyles(100%, 5%, $brgColor4, white, none, none);
+    @include baseStyles(100%, 5%, $brgColor4, white, none, 0 0 10px 10px);
     position: relative;
   }
 }
@@ -217,27 +221,27 @@ body {
 }
 
 .project-preview {
-  height: 35%;
+  @include baseStyles(100%, 35%, $brgColor4, none, none, 10px 10px 0 0);
 }
 
 .Pokemon-Game {
-  @include baseStyles(100%, 100%, none, none, none, $projectRadius);
+  @include baseStyles(100%, 100%, none, none, $headerBorder, $columnRadius);
   @include smallLogoStyles(100%, 105%, url("imgs/pick-pokemon2.png"));
 }
 
 .Portfolio-Page {
-  @include baseStyles(100%, 100%, none, none, none, $projectRadius);
+  @include baseStyles(100%, 100%, none, none, $headerBorder, $columnRadius);
   @include smallLogoStyles(100%, 100%, url("imgs/terminal-kopia.png"));
 }
 
 .Sit-On-Chair {
-  @include baseStyles(100%, 100%, none, none, none, $projectRadius);
+  @include baseStyles(100%, 100%, none, none, $headerBorder, $columnRadius);
   @include smallLogoStyles(100%, 100%, url("imgs/sitOnChair.png"));
 }
 
 .project-technologies {
   @include flex(row, center, center);
-  @include baseStyles(100%, 13%, #ffd633, none, none, none);
+  @include baseStyles(100%, 13%, #ffd633, none, none, 0 0 10px 10px);
 }
 
 .project-list-of-tech {

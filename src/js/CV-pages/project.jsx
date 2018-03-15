@@ -16,17 +16,17 @@ class Project extends React.Component {
                             <div className = {this.props.project}/>
                         </a>
                     </div>
-                    <h2>
-                        {this.props.project}
-                        <a className = "github-link" href = {this.props.hubLink} target = "_blank">
-                            <div className = "github-logo"></div>
-                        </a>
-                    </h2>
-                    <div className = "project-technologies">
-                        <ul className = "project-list-of-tech">
-                            {this.renderLogos()}
-                        </ul>
-                    </div>
+                        <h2>
+                            {this.props.project}
+                            <a className = "github-link" href = {this.props.hubLink} target = "_blank">
+                                <div className = "github-logo"/>
+                            </a>
+                        </h2>
+                        <div className = "project-technologies">
+                            <ul className = "project-list-of-tech">
+                                {this.renderLogos()}
+                            </ul>
+                        </div>
                     <div className = "project-description">
                         <p>
                             {this.props.desc}
