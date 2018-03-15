@@ -138,10 +138,10 @@ body {
 
 .bio-data {
   @include flex(column, space-between, flex-start);
-  @include baseStyles(100%, 460px, $brgColor2, $brgColor, none, $columnRadius);
+  @include baseStyles(100%, 460px, $brgColor3, $brgColor, none, $columnRadius);
   .bio-picture {
     @include flex(row, center, center);
-    @include sizing(100%,72%);
+    @include baseStyles(100%,72%, $brgColor2, none, none, $columnRadius);
     .picture {
       @include baseStyles(95%, 95%, none, none, $headerBorder, $columnRadius);
       @include smallLogoStyles(100%, 100%, url("imgs/IMG_0414.png"));
@@ -149,12 +149,21 @@ body {
   }
   .bio-contact {
     @include flex( column, center, center);
-    @include baseStyles(100%, 28%, $brgColor3, none, none, 0 0 9px 9px);
+    @include baseStyles(100%, 28%, none, none, none, 0 0 9px 9px);
     .contact-list {
       @include sizing(60%, 15%);
       @include flex(row, space-between, flex-start);
       .contact-logo {
         @include baseStyles(35px, 35px, $brgColor2, none, none, 50%);
+      }
+      .github {
+        @include smallLogoStyles(99%, 99.5%, url("imgs/gitHub-logo2.png"));
+      }
+      .linkedin {
+        @include smallLogoStyles(102.5%, 100%, url("imgs/linkedin-logo.png"));
+      }
+      .gmail {
+        @include smallLogoStyles(100%, 100%, url("imgs/gmail-logo.png"));
       }
     }
     h1 {
@@ -204,7 +213,7 @@ body {
 
 .github-logo {
   @include baseStyles(37px, 37px, none, none, 1px solid black, 50%);
-  @include smallLogoStyles(100%, 100%, url("imgs/GitHub-logo.png"));
+  @include smallLogoStyles(100%, 100%, url("imgs/gitHub-logo.png"));
 }
 
 .project-preview {

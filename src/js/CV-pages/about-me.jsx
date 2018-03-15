@@ -33,11 +33,11 @@ class AboutMe extends React.Component {
                                     <h1>Mateusz Kowalski</h1>
                                     <h3>contact</h3>
                                     <div className = "contact-list">
-                                        <div onClick = {() => this.handleMailContact()} className = "contact-logo mail"><span style = {{display: this.state.mailDisplay}}>matt.kowalski.public@gmail.com</span></div>
-                                        <a href="">
+                                        <div onClick = {() => this.handleMailContact()} className = "contact-logo gmail"><span style = {{display: this.state.mailDisplay}}>matt.kowalski.public@gmail.com</span></div>
+                                        <a target = "_blank" href="https://www.linkedin.com/in/mateusz-kowalski-62b758113/">
                                             <div className = "contact-logo linkedin"/>
                                         </a>
-                                        <a href="">
+                                        <a target = "_blank" href="https://github.com/MateuszKowalskiCL">
                                             <div className = "contact-logo github"/>
                                         </a>
                                     </div>
