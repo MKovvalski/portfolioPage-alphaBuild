@@ -11,7 +11,7 @@ $projectRadius: 9px 9px 0 0;
 $columnRadius: 10px;
 $brgColor: #404040;
 $brgColor2: white;
-$brgColor3: #ffcc00;
+$brgColor3: #ffd633;
 $brgColor4: #47d147;
 $radius: 6px;
 
@@ -132,6 +132,12 @@ body {
 // -------------- AboutMe ------------------ //
 // ----------------------------------------- //
 
+.test {
+  font-size: 14px;
+  width: 100px;
+  background-color: white;
+}
+
 .bio {
   @include flex(row, space-between, flex-start);
 }
@@ -149,9 +155,9 @@ body {
   }
   .bio-contact {
     @include flex( column, center, center);
-    @include baseStyles(100%, 28%, none, none, none, 0 0 9px 9px);
+    @include baseStyles(100%, 28%, $brgColor3, none, none, 0 0 9px 9px);
     .contact-list {
-      @include sizing(60%, 15%);
+      @include sizing(60%, 27%);
       @include flex(row, space-between, flex-start);
       .contact-logo {
         @include baseStyles(35px, 35px, $brgColor2, none, none, 50%);
@@ -207,6 +213,10 @@ body {
     @include baseStyles(100%, 5%, $brgColor4, white, none, 0 0 10px 10px);
     position: relative;
   }
+}
+
+.wrapper {
+  background-color: #ffd633;
 }
 
 .github-link {

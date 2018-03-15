@@ -4,7 +4,8 @@ class AboutMe extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            mailDisplay: "none"
+            mailDisplay: "none",
+            testAnimation: "none"
         }
     }
 
@@ -21,7 +22,6 @@ class AboutMe extends React.Component {
     };
 
     render () {
-        console.log(this.state.mailDisplay);
         return <div className = "container">
                     <div className = "bio">
                         <div className = "col-1">
@@ -33,7 +33,7 @@ class AboutMe extends React.Component {
                                     <h1>Mateusz Kowalski</h1>
                                     <h3>contact</h3>
                                     <div className = "contact-list">
-                                        <div onClick = {() => this.handleMailContact()} className = "contact-logo gmail"><span style = {{display: this.state.mailDisplay}}>matt.kowalski.public@gmail.com</span></div>
+                                        <div onClick = {() => this.handleMailContact()} className = "contact-logo gmail"><div className = "test" style = {{display: this.state.mailDisplay}}>matt.kowalski.public@gmail.com</div></div>
                                         <a target = "_blank" href="https://www.linkedin.com/in/mateusz-kowalski-62b758113/">
                                             <div className = "contact-logo linkedin"/>
                                         </a>
