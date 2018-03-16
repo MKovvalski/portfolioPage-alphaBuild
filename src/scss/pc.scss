@@ -264,7 +264,7 @@ body {
   @include baseStyles(100%, 460px, $brgColor2, none, none, $columnRadius);
   h2 {
     text-align: center;
-    @include baseStyles(100%, 5%, $brgColor4, white, none, 0 0 10px 10px);
+    @include baseStyles(100%, 5%, #ff5050, white, none, 0 0 10px 10px);
     position: relative;
   }
 }
@@ -285,7 +285,7 @@ body {
 }
 
 .project-preview {
-  @include baseStyles(100%, 35%, $brgColor4, none, none, 10px 10px 0 0);
+  @include baseStyles(100%, 35%, #ff5050, none, none, 10px 10px 0 0);
 }
 
 .Pokemon-Game {
@@ -365,8 +365,31 @@ body {
   }
 }
 
-.category-info {
-  @include baseStyles(100%, 90%, $brgColor2, none, none, $columnRadius);
+.category-info-border {
+  @include baseStyles(100%, 90%, #ff5050, none, none, $columnRadius);
+  .category-info-inner-border {
+    @include flex(column, flex-end, flex-start);
+    @include baseStyles(100%, 100%, #ff5050, none, none, $columnRadius);
+  }
+  .category-info {
+    @include flex(row, center, center);
+    @include baseStyles(100%, 98%, $brgColor2, none, none, $columnRadius);
+    .category-info-wrapper {
+      @include sizing(95%, 94%);
+    }
+  }
+}
+
+.category-skill {
+  @include sizing(100%, 17%);
+  h3 {
+    font-weight: 700;
+    font-size: 18px;
+    color: $brgColor;
+  }
+  p {
+    color:#808080;
+  }
 }
 
 // ----------------------------------------- //
