@@ -59,6 +59,12 @@ $radius: 6px;
   background-position: center;
 }
 
+@mixin categoryContent ($weight, $size, $color) {
+  font-weight: $weight;
+  font-size: $size;
+  color: $color;
+}
+
 // ----------------------------------------- //
 // ------------ global classes ------------- //
 // ----------------------------------------- //
@@ -383,11 +389,24 @@ body {
 .category-skill {
   @include sizing(100%, 17%);
   h3 {
-    font-weight: 700;
-    font-size: 18px;
-    color: $brgColor;
+    @include categoryContent(700, 18px, $brgColor);
   }
   p {
+    color:#808080;
+  }
+}
+
+.category-step {
+  @include sizing(100%, 35%);
+  h3 {
+    @include categoryContent(700, 18px, $brgColor);
+  }
+  h4 {
+    color: #404040;
+    font-size: 15px;
+  }
+  p {
+    font-size: 14px;
     color:#808080;
   }
 }

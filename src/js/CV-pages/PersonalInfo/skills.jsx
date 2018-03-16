@@ -1,5 +1,5 @@
 import React from 'react';
-import Skill from "./text.jsx";
+import Skill from "./category-content.jsx";
 
 class Skills extends React.Component {
     render () {
@@ -9,11 +9,11 @@ class Skills extends React.Component {
                         <div className = "category-info-inner-border">
                             <div className = "category-info">
                                 <div className = "category-info-wrapper">
-                                    <Skill skillName = "Programming Languages" skillText = "JavaScript, ES6, HTML5, CSS3"/>
-                                    <Skill skillName = "Frameworks/Libraries" skillText = "React, Redux, JQuery"/>
-                                    <Skill skillName = "Toolkits/Module-bundlers" skillText = "Gulp,Webpack"/>
-                                    <Skill skillName = "IDE" skillText = "WebStorm"/>
-                                    <Skill skillName = "Others" skillText = "Sass, RWD"/>
+                                    <Skill class = "category-skill" skillName = "Programming Languages" skillText = "JavaScript, ES6, HTML5, CSS3"/>
+                                    <Skill class = "category-skill" skillName = "Frameworks/Libraries" skillText = "React, Redux, JQuery"/>
+                                    <Skill class = "category-skill" skillName = "Toolkits/Module-bundlers" skillText = "Gulp,Webpack"/>
+                                    <Skill class = "category-skill" skillName = "IDE" skillText = "WebStorm"/>
+                                    <Skill class = "category-skill" skillName = "Others" skillText = "Sass, RWD"/>
                                 </div>
                             </div>
                         </div>

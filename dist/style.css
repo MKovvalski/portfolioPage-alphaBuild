@@ -608,6 +608,20 @@ input[type=button] {width: auto; overflow: visible;}
   .category-skill p {
     color: #808080; }
 
+.category-step {
+  height: 35%;
+  width: 100%; }
+  .category-step h3 {
+    font-weight: 700;
+    font-size: 18px;
+    color: #404040; }
+  .category-step h4 {
+    color: #404040;
+    font-size: 15px; }
+  .category-step p {
+    font-size: 14px;
+    color: #808080; }
+
 .terminal {
   width: 32%;
   height: 40%;
