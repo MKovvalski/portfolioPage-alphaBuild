@@ -203,7 +203,7 @@ body {
         .mail {
           position: absolute;
           top: 7px;
-          right: -220px;
+          right: -216px;
         }
 
       }
@@ -251,7 +251,6 @@ body {
     width: 260px;
   }
 }
-
 
 // ----------------------------------------- //
 // ------------- Projects ------------------ //
@@ -344,6 +343,30 @@ body {
     font-weight: 500;
     color: $brgColor;
   }
+}
+
+// ----------------------------------------- //
+// ------------- PersonalInfo -------------- //
+// ----------------------------------------- //
+
+.personalInfo {
+  @include flex(row, space-between, flex-start);
+}
+
+.category {
+  @include baseStyles(100%, 460px, $brgColor3, none, none, $columnRadius);
+  h2 {
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 45px;
+    vertical-align: middle;
+    text-align: center;
+    @include baseStyles(100%, 10%, $brgColor3, $brgColor, none, 10px 10px 0 0);
+  }
+}
+
+.category-info {
+  @include baseStyles(100%, 90%, $brgColor2, none, none, $columnRadius);
 }
 
 // ----------------------------------------- //

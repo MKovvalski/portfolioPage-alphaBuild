@@ -32,7 +32,7 @@ class Projects extends React.Component {
                             <Project webLink = {this.state.sitOnChairWebLink} hubLink = {this.state.sitOnChairLink} desc = {this.state.sitOnChairDesc} project = "Sit-On-Chair" logos = {this.state.sitOnChairLogos}/>
                         </div>
                     </div>
-            </div>
+        </div>
     }
 }
 

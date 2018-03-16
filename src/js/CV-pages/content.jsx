@@ -4,7 +4,7 @@ import React from 'react';
 //importing components
 import AboutMe from "./about-me.jsx";
 import Projects from "./projects.jsx";
-import PersonalInfo from "./personal-info.jsx";
+import PersonalInfo from "./PersonalInfo/personal-info.jsx";
 import MainPage from "./main-page.jsx";
 
 class Content extends React.Component {
@@ -21,7 +21,7 @@ class Content extends React.Component {
                 return <PersonalInfo/>;
                 break;
             default:
-                return <AboutMe/>;
+                return <PersonalInfo/>;
         }
     };
 
