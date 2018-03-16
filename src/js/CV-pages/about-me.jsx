@@ -1,31 +1,7 @@
 import React from 'react';
+import ContactList from "./contact-list.jsx";
 
 class AboutMe extends React.Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            mailDisplay: "none",
-            animationID: "none",
-        }
-    }
-
-    handleAnimationLaunch = () => {
-       if (this.state.animationID === "slide-out-animation") {
-           this.setState({
-               animationID: "slide-in-animation",
-               mailDisplay: "none"
-           });
-       } else {
-           this.setState({
-               animationID: "slide-out-animation"
-           });
-           setTimeout(() => {
-               this.setState ({
-                   mailDisplay: "block"
-               })
-           },300)
-       }
-    };
 
     render () {
         return <div className = "container">
@@ -38,20 +14,7 @@ class AboutMe extends React.Component {
                                 <div className = "bio-contact">
                                     <h1>Mateusz Kowalski</h1>
                                     <h3>contact</h3>
-                                    <div className = "contact-list">
-                                        <div onClick = {() => this.handleAnimationLaunch()} className = "contact-logo gmail" id = {this.state.animationID}>
-                                            <div className = "mail-expander" style = {{display: this.state.mailDisplay}}>
-                                                <div className = "logo-gmail-doubler"/>
-                                                <div className = "test4">matt.kowalski.public@gmail.com</div>
-                                            </div>
-                                        </div>
-                                        <a target = "_blank" href="https://www.linkedin.com/in/mateusz-kowalski-62b758113/">
-                                            <div className = "contact-logo linkedin"/>
-                                        </a>
-                                        <a target = "_blank" href="https://github.com/MateuszKowalskiCL">
-                                            <div className = "contact-logo github"/>
-                                        </a>
-                                    </div>
+                                    <ContactList/>
                                 </div>
                             </div>
                         </div>

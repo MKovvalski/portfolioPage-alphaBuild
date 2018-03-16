@@ -132,54 +132,6 @@ body {
 // -------------- AboutMe ------------------ //
 // ----------------------------------------- //
 
-.test4 {
-  background-color: white;
-}
-
-.test3 {
-  @include flex(row, flex-start, space-between);
-}
-
-#slide-out-animation {
-  animation: slide-left 0.3s linear 1 forwards;
-}
-
-#slide-in-animation {
-  animation: slide-right 0.3s linear 1 forwards;
-}
-
-@keyframes slide-right {
-  100%{
-    transform: translate(0, 0);
-  }
-}
-@keyframes slide-left {
-  100% {
-    transform: translate(-48px, 0);
-  }
-}
-
-@keyframes expand {
-  0% {
-   width: 35px;
-  }
-  30% {
-  }
-  100% {
-    width: 260px;
-  }
-}
-
-.mail-expander {
-  @include flex(row, flex-start, space-between);
-  text-align: right;
-  border-radius: 50px;
-  font-size: 14px;
-  height: 100%;
-  background-color: white;
-  animation: expand 0.3s linear 1 forwards;
-}
-
 .bio {
   @include flex(row, space-between, flex-start);
 }
@@ -193,34 +145,6 @@ body {
     .picture {
       @include baseStyles(95%, 95%, none, none, $headerBorder, $columnRadius);
       @include smallLogoStyles(100%, 100%, url("imgs/IMG_0414.png"));
-    }
-  }
-  .bio-contact {
-    @include flex( column, center, center);
-    @include baseStyles(100%, 28%, $brgColor3, none, none, 0 0 9px 9px);
-    .contact-list {
-      @include sizing(60%, 27%);
-      @include flex(row, space-between, flex-start);
-      .contact-logo {
-        @include baseStyles(35px, 35px, $brgColor2, none, none, 50%);
-      }
-      .github {
-        @include smallLogoStyles(99%, 99.5%, url("imgs/gitHub-logo2.png"));
-      }
-      .linkedin {
-        @include smallLogoStyles(102.5%, 100%, url("imgs/linkedin-logo.png"));
-      }
-      .gmail {
-        z-index: 1;
-        @include smallLogoStyles(100%, 100%, url("imgs/gmail-logo.png"));
-        .logo-gmail-doubler {
-          @include sizing(35px, 35px);
-          @include smallLogoStyles(100%, 100%, url("imgs/gmail-logo.png"));
-        }
-      }
-    }
-    h1 {
-      @include headerStyles(140%);
     }
   }
 }
@@ -244,6 +168,90 @@ body {
     @include headerStyles(170%);
   }
 }
+
+// ----------------------------------------- //
+// -------------- ContactList -------------- //
+// ----------------------------------------- //
+
+.bio-contact {
+  @include flex( column, center, center);
+  @include baseStyles(100%, 28%, $brgColor3, none, none, 0 0 9px 9px);
+  .contact-list {
+    @include sizing(60%, 27%);
+    @include flex(row, space-between, flex-start);
+    .contact-logo {
+      @include baseStyles(35px, 35px, $brgColor2, none, none, 50%);
+    }
+    .github {
+      @include smallLogoStyles(99%, 99.5%, url("imgs/gitHub-logo2.png"));
+    }
+    .linkedin {
+      @include smallLogoStyles(102.5%, 100%, url("imgs/linkedin-logo.png"));
+    }
+    .gmail {
+      .mail-expander {
+        @include baseStyles(300px, 100%, white, none, none, 50px);
+        font-size: 14px;
+        animation: expand 0.3s linear 1 forwards;
+      }
+      z-index: 1;
+      @include smallLogoStyles(100%, 100%, url("imgs/gmail-logo.png"));
+      .logo-gmail-doubler {
+        position: relative;
+        @include sizing(35px, 35px);
+        @include smallLogoStyles(100%, 100%, url("imgs/gmail-logo.png"));
+        .mail {
+          position: absolute;
+          top: 7px;
+          right: -220px;
+        }
+
+      }
+    }
+  }
+  h1 {
+    @include headerStyles(140%);
+  }
+}
+
+#slide-out-animation {
+  animation: slide-left 0.3s linear 1 forwards;
+}
+
+#slide-in-animation {
+  animation: slide-right 0.3s linear 1 forwards;
+}
+
+#display-block {
+  display: block;
+}
+
+#display-none {
+  display: none;
+}
+
+@keyframes slide-right {
+  100%{
+    transform: translate(0, 0);
+  }
+}
+@keyframes slide-left {
+  100% {
+    transform: translate(-48px, 0);
+  }
+}
+
+@keyframes expand {
+  0% {
+    width: 35px;
+  }
+  30% {
+  }
+  100% {
+    width: 260px;
+  }
+}
+
 
 // ----------------------------------------- //
 // ------------- Projects ------------------ //
