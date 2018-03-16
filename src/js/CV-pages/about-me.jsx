@@ -5,20 +5,26 @@ class AboutMe extends React.Component {
         super(props);
         this.state = {
             mailDisplay: "none",
-            testAnimation: "none"
+            animationID: "none",
         }
     }
 
-    handleMailContact = () => {
-        if (this.state.mailDisplay === "none") {
-            this.setState({
-                mailDisplay: "block"
-            })
-        } else {
-            this.setState ({
+    handleAnimationLaunch = () => {
+       if (this.state.animationID === "slide-out-animation") {
+           this.setState({
+               animationID: "slide-in-animation",
                mailDisplay: "none"
-            })
-        }
+           });
+       } else {
+           this.setState({
+               animationID: "slide-out-animation"
+           });
+           setTimeout(() => {
+               this.setState ({
+                   mailDisplay: "block"
+               })
+           },300)
+       }
     };
 
     render () {
@@ -33,7 +39,12 @@ class AboutMe extends React.Component {
                                     <h1>Mateusz Kowalski</h1>
                                     <h3>contact</h3>
                                     <div className = "contact-list">
-                                        <div onClick = {() => this.handleMailContact()} className = "contact-logo gmail"><div className = "test" style = {{display: this.state.mailDisplay}}>matt.kowalski.public@gmail.com</div></div>
+                                        <div onClick = {() => this.handleAnimationLaunch()} className = "contact-logo gmail" id = {this.state.animationID}>
+                                            <div className = "mail-expander" style = {{display: this.state.mailDisplay}}>
+                                                <div className = "logo-gmail-doubler"/>
+                                                <div className = "test4">matt.kowalski.public@gmail.com</div>
+                                            </div>
+                                        </div>
                                         <a target = "_blank" href="https://www.linkedin.com/in/mateusz-kowalski-62b758113/">
                                             <div className = "contact-logo linkedin"/>
                                         </a>

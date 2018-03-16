@@ -113,7 +113,9 @@ class Terminal extends React.Component {
     render () {
         return <div className = "terminal">
                 <header>
-                    <div className = "circle-1"></div><div className = "circle-2"></div><div className = "circle-3"></div>
+                    <div className = "circle-1"/>
+                    <div className = "circle-2"/>
+                    <div className = "circle-3"/>
                     MateuszKowalski -- bash --80x24</header>
                     <div className = "terminal-body">
                         <ul>
