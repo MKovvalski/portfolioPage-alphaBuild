@@ -327,16 +327,16 @@ body {
     @include smallLogoStyles(41px, 34px, url("imgs/redux-logo.png"));
   }
   .js {
-    @include smallLogoStyles(20px, 30px, url("imgs/js-logo.png"));
+    @include smallLogoStyles(23px, 31px, url("imgs/js-logo.png"));
   }
   .sass {
     @include smallLogoStyles(25px, 20px, url("imgs/sass-log.png"));
   }
   .html {
-    @include smallLogoStyles(33px, 30px, url("imgs/HTML_Logo.png"));
+    @include smallLogoStyles(31.5px, 30px, url("imgs/HTML_Logo.png"));
   }
   .css {
-    @include smallLogoStyles(21px, 32px, url("imgs/CSS3_logo.png"));
+    @include smallLogoStyles(22px, 31px, url("imgs/CSS3_logo.png"));
   }
 }
 
