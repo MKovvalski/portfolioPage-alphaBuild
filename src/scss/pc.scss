@@ -295,48 +295,48 @@ body {
 }
 
 .Pokemon-Game {
-  @include baseStyles(100%, 100%, none, none, $headerBorder, $columnRadius);
+  @include baseStyles(100%, 100%, none, none, none, $columnRadius);
   @include smallLogoStyles(100%, 105%, url("imgs/pick-pokemon2.png"));
 }
 
 .Portfolio-Page {
-  @include baseStyles(100%, 100%, none, none, $headerBorder, $columnRadius);
+  @include baseStyles(100%, 100%, none, none, none, $columnRadius);
   @include smallLogoStyles(100%, 100%, url("imgs/terminal-kopia.png"));
 }
 
 .Sit-On-Chair {
-  @include baseStyles(100%, 100%, none, none, $headerBorder, $columnRadius);
+  @include baseStyles(100%, 100%, none, none, none, $columnRadius);
   @include smallLogoStyles(100%, 100%, url("imgs/sitOnChair.png"));
 }
 
 .project-technologies {
   @include flex(row, center, center);
-  @include baseStyles(100%, 13%, #ffd633, none, none, 0 0 10px 10px);
+  @include baseStyles(100%, 10%, #ffd633, none, none, 0 0 10px 10px);
 }
 
 .project-list-of-tech {
   width: 80%;
   @include flex(row, space-between, center);
   .small-logo {
-    @include baseStyles(50px, 50px, $brgColor2, none, $headerBorder, 50%);
+    @include baseStyles(40px, 40px, $brgColor2, none, $headerBorder, 50%);
   }
   .react {
-    @include smallLogoStyles(39px, 36px, url("imgs/react-log.png"));
+    @include smallLogoStyles(31px, 28px, url("imgs/react-log.png"));
   }
   .redux {
-    @include smallLogoStyles(51px, 44px, url("imgs/redux-logo.png"));
+    @include smallLogoStyles(41px, 34px, url("imgs/redux-logo.png"));
   }
   .js {
-    @include smallLogoStyles(30px, 40px, url("imgs/js-logo.png"));
+    @include smallLogoStyles(20px, 30px, url("imgs/js-logo.png"));
   }
   .sass {
-    @include smallLogoStyles(35px, 30px, url("imgs/sass-log.png"));
+    @include smallLogoStyles(25px, 20px, url("imgs/sass-log.png"));
   }
   .html {
-    @include smallLogoStyles(43px, 40px, url("imgs/HTML_Logo.png"));
+    @include smallLogoStyles(33px, 30px, url("imgs/HTML_Logo.png"));
   }
   .css {
-    @include smallLogoStyles(31px, 42px, url("imgs/CSS3_logo.png"));
+    @include smallLogoStyles(21px, 32px, url("imgs/CSS3_logo.png"));
   }
 }
 
