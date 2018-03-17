@@ -7,9 +7,12 @@ require('./scss/pc.scss');
 //importing components
 import MainComponent from "./js/main-component.jsx";
 
-ReactDOM.render(
-    <div>
-        <MainComponent/>
-    </div>,
-    document.getElementById("app")
-);
+document.addEventListener("DOMContentLoaded", function() {
+    ReactDOM.render(
+        <div>
+            <MainComponent/>
+        </div>,
+        document.getElementById("app")
+    );
+
+});

@@ -1107,11 +1107,13 @@ __webpack_require__(42);
 //importing components
 
 
-_reactDom2.default.render(_react2.default.createElement(
-    'div',
-    null,
-    _react2.default.createElement(_mainComponent2.default, null)
-), document.getElementById("app"));
+document.addEventListener("DOMContentLoaded", function () {
+    _reactDom2.default.render(_react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(_mainComponent2.default, null)
+    ), document.getElementById("app"));
+});
 
 /***/ }),
 /* 17 */
