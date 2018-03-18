@@ -1102,7 +1102,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 //importing presets
 
-__webpack_require__(42);
+__webpack_require__(46);
 
 //importing components
 
@@ -18459,13 +18459,10 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var MainComponent = function (_React$Component) {
     _inherits(MainComponent, _React$Component);
 
-    function MainComponent(props) {
+    function MainComponent() {
         _classCallCheck(this, MainComponent);
 
-        var _this = _possibleConstructorReturn(this, (MainComponent.__proto__ || Object.getPrototypeOf(MainComponent)).call(this, props));
-
-        _this.state = {};
-        return _this;
+        return _possibleConstructorReturn(this, (MainComponent.__proto__ || Object.getPrototypeOf(MainComponent)).apply(this, arguments));
     }
 
     _createClass(MainComponent, [{
@@ -18846,10 +18843,6 @@ var _personalInfo = __webpack_require__(37);
 
 var _personalInfo2 = _interopRequireDefault(_personalInfo);
 
-var _mainPage = __webpack_require__(41);
-
-var _mainPage2 = _interopRequireDefault(_mainPage);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -18888,7 +18881,7 @@ var Content = function (_React$Component) {
                     return _react2.default.createElement(_personalInfo2.default, null);
                     break;
                 default:
-                    return _react2.default.createElement(_mainPage2.default, null);
+                    return _react2.default.createElement(_aboutMe2.default, null);
             }
         }, _temp), _possibleConstructorReturn(_this, _ret);
     }
@@ -19647,102 +19640,9 @@ var Experience = function (_React$Component) {
 exports.default = Experience;
 
 /***/ }),
-/* 41 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var MainPage = function (_React$Component) {
-    _inherits(MainPage, _React$Component);
-
-    function MainPage() {
-        _classCallCheck(this, MainPage);
-
-        return _possibleConstructorReturn(this, (MainPage.__proto__ || Object.getPrototypeOf(MainPage)).apply(this, arguments));
-    }
-
-    _createClass(MainPage, [{
-        key: 'render',
-        value: function render() {
-            return _react2.default.createElement(
-                'div',
-                null,
-                'MainPage dzia\u0142a'
-            );
-        }
-    }]);
-
-    return MainPage;
-}(_react2.default.Component);
-
-exports.default = MainPage;
-
-/***/ }),
-/* 42 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(43);
-if(typeof content === 'string') content = [[module.i, content, '']];
-// Prepare cssTransformation
-var transform;
-
-var options = {"hmr":true}
-options.transform = transform
-// add the styles to the DOM
-var update = __webpack_require__(45)(content, options);
-if(content.locals) module.exports = content.locals;
-// Hot Module Replacement
-if(false) {
-	// When the styles change, update the <style> tags
-	if(!content.locals) {
-		module.hot.accept("!!../../node_modules/css-loader/index.js?url=false!../../node_modules/sass-loader/lib/loader.js!./pc.scss", function() {
-			var newContent = require("!!../../node_modules/css-loader/index.js?url=false!../../node_modules/sass-loader/lib/loader.js!./pc.scss");
-			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-			update(newContent);
-		});
-	}
-	// When the module is disposed, remove the <style> tags
-	module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
+/* 41 */,
+/* 42 */,
 /* 43 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(15)(false);
-// imports
-exports.i(__webpack_require__(44), "");
-
-// module
-exports.push([module.i, "body {\n  font-family: 'Open Sans', sans-serif; }\n\n.container {\n  width: 97.5%; }\n\n.col-1 {\n  width: 33%; }\n\n.col-2 {\n  width: 66%; }\n\n.col-3 {\n  width: 32.5%; }\n\n.main-component {\n  height: 100vh;\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center; }\n\n.main-container {\n  height: 95%;\n  width: 97%;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  align-items: flex-start; }\n\n.content {\n  width: 67.5%;\n  height: 75%;\n  background-color: #404040;\n  color: none;\n  border: 1px solid #333333;\n  border-radius: 6px; }\n  .content header {\n    display: flex;\n    flex-direction: row;\n    justify-content: flex-start;\n    align-items: center;\n    width: 100%;\n    height: 4%;\n    background-color: #666666;\n    color: #bfbfbf;\n    border: none;\n    border-radius: 5px 5px 0 0;\n    border-bottom: 1px solid #808080; }\n    .content header h1 {\n      text-align: center;\n      width: 20%; }\n\n.main-content {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: flex-start;\n  margin-top: 8px; }\n\n.circle-4 {\n  margin-right: 33%;\n  width: 13px;\n  height: 13px;\n  border-radius: 50%;\n  margin-left: 6px;\n  background-color: #47d147;\n  box-shadow: 0.2px 0.5px #196619; }\n\n.bio {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  align-items: flex-start; }\n\n.bio-data {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  align-items: flex-start;\n  width: 100%;\n  height: 460px;\n  background-color: #ffd633;\n  color: #404040;\n  border: none;\n  border-radius: 10px; }\n  .bio-data .bio-picture {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center;\n    width: 100%;\n    height: 72%;\n    background-color: white;\n    color: none;\n    border: none;\n    border-radius: 10px; }\n    .bio-data .bio-picture .picture {\n      width: 95%;\n      height: 95%;\n      background-color: none;\n      color: none;\n      border: 1px solid #808080;\n      border-radius: 10px;\n      background-image: url(\"imgs/IMG_0414.png\");\n      background-size: 100% 100%;\n      background-repeat: no-repeat;\n      background-position: center; }\n\n.bio-description {\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-start;\n  align-items: flex-start;\n  width: 100%;\n  height: 460px;\n  background-color: #47d147;\n  color: #404040;\n  border: none;\n  border-radius: 10px; }\n  .bio-description .bio-text {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: flex-start;\n    width: 100%;\n    height: 100%;\n    background-color: white;\n    color: none;\n    border: none;\n    border-radius: 10px; }\n    .bio-description .bio-text p {\n      width: 95%;\n      font-size: 110%;\n      margin-top: 3%; }\n  .bio-description h1 {\n    line-height: 250%;\n    vertical-align: middle;\n    width: 100%;\n    height: 15%;\n    background-color: none;\n    color: none;\n    border: none;\n    border-radius: 9px 9px 0 0;\n    font-size: 170%;\n    text-transform: uppercase;\n    font-weight: 900;\n    text-align: center; }\n\n.bio-contact {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  width: 100%;\n  height: 28%;\n  background-color: #ffd633;\n  color: none;\n  border: none;\n  border-radius: 0 0 9px 9px; }\n  .bio-contact .contact-list {\n    height: 27%;\n    width: 60%;\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n    align-items: flex-start; }\n    .bio-contact .contact-list .contact-logo {\n      width: 35px;\n      height: 35px;\n      background-color: white;\n      color: none;\n      border: none;\n      border-radius: 50%; }\n    .bio-contact .contact-list .github {\n      background-image: url(\"imgs/gitHub-logo2.png\");\n      background-size: 99% 99.5%;\n      background-repeat: no-repeat;\n      background-position: center; }\n    .bio-contact .contact-list .linkedin {\n      background-image: url(\"imgs/linkedin-logo.png\");\n      background-size: 102.5% 100%;\n      background-repeat: no-repeat;\n      background-position: center; }\n    .bio-contact .contact-list .gmail {\n      z-index: 1;\n      background-image: url(\"imgs/gmail-logo.png\");\n      background-size: 100% 100%;\n      background-repeat: no-repeat;\n      background-position: center; }\n      .bio-contact .contact-list .gmail .mail-expander {\n        width: 300px;\n        height: 100%;\n        background-color: white;\n        color: none;\n        border: none;\n        border-radius: 50px;\n        font-size: 14px;\n        animation: expand 0.3s linear 1 forwards; }\n      .bio-contact .contact-list .gmail .logo-gmail-doubler {\n        position: relative;\n        height: 35px;\n        width: 35px;\n        background-image: url(\"imgs/gmail-logo.png\");\n        background-size: 100% 100%;\n        background-repeat: no-repeat;\n        background-position: center; }\n        .bio-contact .contact-list .gmail .logo-gmail-doubler .mail {\n          position: absolute;\n          top: 7px;\n          right: -216px; }\n  .bio-contact h1 {\n    font-size: 140%;\n    text-transform: uppercase;\n    font-weight: 900;\n    text-align: center; }\n\n#slide-out-animation {\n  animation: slide-left 0.3s linear 1 forwards; }\n\n#slide-in-animation {\n  animation: slide-right 0.3s linear 1 forwards; }\n\n#display-block {\n  display: block; }\n\n#display-none {\n  display: none; }\n\n@keyframes slide-right {\n  100% {\n    transform: translate(0, 0); } }\n\n@keyframes slide-left {\n  100% {\n    transform: translate(-48px, 0); } }\n\n@keyframes expand {\n  0% {\n    width: 35px; }\n  30% { }\n  100% {\n    width: 260px; } }\n\n.projects {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  align-items: flex-start; }\n\n.project {\n  width: 100%;\n  height: 460px;\n  background-color: white;\n  color: none;\n  border: none;\n  border-radius: 10px; }\n  .project h2 {\n    text-align: center;\n    width: 100%;\n    height: 5%;\n    background-color: #ff5050;\n    color: white;\n    border: none;\n    border-radius: 0 0 10px 10px;\n    position: relative; }\n\n.wrapper {\n  background-color: #ffd633; }\n\n.github-link {\n  top: -20px;\n  right: 10px;\n  position: absolute; }\n\n.github-logo {\n  width: 37px;\n  height: 37px;\n  background-color: none;\n  color: none;\n  border: 1px solid black;\n  border-radius: 50%;\n  background-image: url(\"imgs/gitHub-logo.png\");\n  background-size: 100% 100%;\n  background-repeat: no-repeat;\n  background-position: center; }\n\n.project-preview {\n  width: 100%;\n  height: 35%;\n  background-color: #ff5050;\n  color: none;\n  border: none;\n  border-radius: 10px 10px 0 0; }\n\n.Pokemon-Game {\n  width: 100%;\n  height: 100%;\n  background-color: none;\n  color: none;\n  border: none;\n  border-radius: 10px;\n  background-image: url(\"imgs/pick-pokemon2.png\");\n  background-size: 100% 105%;\n  background-repeat: no-repeat;\n  background-position: center; }\n\n.Portfolio-Page {\n  width: 100%;\n  height: 100%;\n  background-color: none;\n  color: none;\n  border: none;\n  border-radius: 10px;\n  background-image: url(\"imgs/terminal-kopia.png\");\n  background-size: 100% 100%;\n  background-repeat: no-repeat;\n  background-position: center; }\n\n.Sit-On-Chair {\n  width: 100%;\n  height: 100%;\n  background-color: none;\n  color: none;\n  border: none;\n  border-radius: 10px;\n  background-image: url(\"imgs/sitOnChair.png\");\n  background-size: 100% 100%;\n  background-repeat: no-repeat;\n  background-position: center; }\n\n.project-technologies {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  width: 100%;\n  height: 10%;\n  background-color: #ffd633;\n  color: none;\n  border: none;\n  border-radius: 0 0 10px 10px; }\n\n.project-list-of-tech {\n  width: 80%;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  align-items: center; }\n  .project-list-of-tech .small-logo {\n    width: 40px;\n    height: 40px;\n    background-color: white;\n    color: none;\n    border: 1px solid #808080;\n    border-radius: 50%; }\n  .project-list-of-tech .react {\n    background-image: url(\"imgs/react-log.png\");\n    background-size: 31px 28px;\n    background-repeat: no-repeat;\n    background-position: center; }\n  .project-list-of-tech .redux {\n    background-image: url(\"imgs/redux-logo.png\");\n    background-size: 41px 34px;\n    background-repeat: no-repeat;\n    background-position: center; }\n  .project-list-of-tech .js {\n    background-image: url(\"imgs/js-logo.png\");\n    background-size: 23px 31px;\n    background-repeat: no-repeat;\n    background-position: center; }\n  .project-list-of-tech .sass {\n    background-image: url(\"imgs/sass-log.png\");\n    background-size: 25px 20px;\n    background-repeat: no-repeat;\n    background-position: center; }\n  .project-list-of-tech .html {\n    background-image: url(\"imgs/HTML_Logo.png\");\n    background-size: 31.5px 30px;\n    background-repeat: no-repeat;\n    background-position: center; }\n  .project-list-of-tech .css {\n    background-image: url(\"imgs/CSS3_logo.png\");\n    background-size: 22px 31px;\n    background-repeat: no-repeat;\n    background-position: center; }\n\n.project-description {\n  display: flex;\n  flex-direction: none;\n  justify-content: center;\n  align-items: flex-start;\n  height: 47%;\n  width: 100%; }\n  .project-description p {\n    font-size: 15px;\n    width: 90%;\n    font-weight: 500;\n    color: #404040; }\n\n.personalInfo {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  align-items: flex-start; }\n\n.category {\n  width: 100%;\n  height: 460px;\n  background-color: #ffd633;\n  color: none;\n  border: none;\n  border-radius: 10px; }\n  .category h2 {\n    font-size: 20px;\n    font-weight: 900;\n    line-height: 45px;\n    vertical-align: middle;\n    text-align: center;\n    width: 100%;\n    height: 10%;\n    background-color: #ffd633;\n    color: #404040;\n    border: none;\n    border-radius: 10px 10px 0 0; }\n\n.category-info-border {\n  width: 100%;\n  height: 90%;\n  background-color: #ff5050;\n  color: none;\n  border: none;\n  border-radius: 10px; }\n  .category-info-border .category-info-inner-border {\n    display: flex;\n    flex-direction: column;\n    justify-content: flex-end;\n    align-items: flex-start;\n    width: 100%;\n    height: 100%;\n    background-color: #ff5050;\n    color: none;\n    border: none;\n    border-radius: 10px; }\n  .category-info-border .category-info {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center;\n    width: 100%;\n    height: 98%;\n    background-color: white;\n    color: none;\n    border: none;\n    border-radius: 10px; }\n    .category-info-border .category-info .category-info-wrapper {\n      height: 94%;\n      width: 95%; }\n\n.category-skill {\n  height: 17%;\n  width: 100%; }\n  .category-skill h3 {\n    font-weight: 700;\n    font-size: 18px;\n    color: #404040; }\n  .category-skill p {\n    color: #808080; }\n\n.category-step {\n  height: 35%;\n  width: 100%; }\n  .category-step h3 {\n    font-weight: 700;\n    font-size: 18px;\n    color: #404040; }\n  .category-step h4 {\n    color: #404040;\n    font-size: 15px; }\n  .category-step p {\n    font-size: 14px;\n    color: #808080; }\n\n.terminal {\n  width: 32%;\n  height: 40%;\n  background-color: #404040;\n  color: none;\n  border: 1px solid #333333;\n  border-radius: 6px;\n  font-size: 14px;\n  align-self: flex-end; }\n  .terminal header {\n    display: flex;\n    flex-direction: row;\n    justify-content: flex-start;\n    align-items: center;\n    width: 100%;\n    height: 9%;\n    background-color: #666666;\n    color: #bfbfbf;\n    border: none;\n    border-radius: 5px 5px 0 0;\n    border-bottom: 1px solid #808080; }\n\n.circle-1 {\n  width: 13px;\n  height: 13px;\n  border-radius: 50%;\n  margin-left: 8px;\n  background-color: #ff5050;\n  box-shadow: 0.2px 0.5px #e60000; }\n\n.circle-2 {\n  width: 13px;\n  height: 13px;\n  border-radius: 50%;\n  margin-left: 6px;\n  background-color: #ffcc00;\n  box-shadow: 0.2px 0.5px #b38f00; }\n\n.circle-3 {\n  margin-right: 7%;\n  width: 13px;\n  height: 13px;\n  border-radius: 50%;\n  margin-left: 6px;\n  background-color: #47d147;\n  box-shadow: 0.2px 0.5px #196619; }\n\n.terminal-body {\n  color: #d9d9d9;\n  height: 90%;\n  overflow-y: scroll; }\n  .terminal-body p {\n    color: #8c8c8c; }\n  .terminal-body input {\n    color: #d9d9d9;\n    background-color: #404040;\n    border: none; }\n", ""]);
-
-// exports
-
-
-/***/ }),
-/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(15)(false);
@@ -19756,7 +19656,7 @@ exports.push([module.i, "/*\n\tHTML5 Reset :: style.css\n\t---------------------
 
 
 /***/ }),
-/* 45 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -19812,7 +19712,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(46);
+var	fixUrls = __webpack_require__(45);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -20128,7 +20028,7 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 46 */
+/* 45 */
 /***/ (function(module, exports) {
 
 
@@ -20220,6 +20120,51 @@ module.exports = function (css) {
 	// send back the fixed css
 	return fixedCss;
 };
+
+
+/***/ }),
+/* 46 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(47);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {"hmr":true}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(44)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../node_modules/css-loader/index.js?url=false!../../node_modules/sass-loader/lib/loader.js!./mobile.scss", function() {
+			var newContent = require("!!../../node_modules/css-loader/index.js?url=false!../../node_modules/sass-loader/lib/loader.js!./mobile.scss");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 47 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(15)(false);
+// imports
+exports.i(__webpack_require__(43), "");
+
+// module
+exports.push([module.i, "body {\n  font-family: 'Open Sans', sans-serif; }\n\n.container {\n  width: 97.5%; }\n\n.col-1 {\n  width: 33%; }\n\n.col-2 {\n  width: 66%; }\n\n.col-3 {\n  width: 32.5%; }\n\n.main-component {\n  height: 100vh;\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-start;\n  align-items: center; }\n\n.main-container {\n  height: 100%;\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-start;\n  align-items: flex-start; }\n\n.content {\n  width: 100%;\n  height: 95%;\n  background-color: #404040;\n  color: none;\n  border: none;\n  border-radius: none; }\n  .content header {\n    display: flex;\n    flex-direction: row;\n    justify-content: flex-start;\n    align-items: center;\n    width: 100%;\n    height: 6%;\n    background-color: #666666;\n    color: #bfbfbf;\n    border: none;\n    border-radius: 5px 5px 0 0;\n    border-bottom: 1px solid #808080; }\n    .content header h1 {\n      font-size: 280%;\n      text-align: center;\n      width: 20%; }\n\n.main-content {\n  display: flex;\n  flex-direction: coulmn;\n  justify-content: center;\n  align-items: flex-start;\n  margin-top: 8px; }\n\n.circle-4 {\n  margin-right: 33%;\n  width: 13px;\n  height: 13px;\n  border-radius: 50%;\n  margin-left: 6px;\n  background-color: #47d147;\n  box-shadow: 0.2px 0.5px #196619; }\n\n.bio {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  align-items: flex-start; }\n\n.bio-data {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  align-items: flex-start;\n  width: 100%;\n  height: 460px;\n  background-color: #ffd633;\n  color: #404040;\n  border: none;\n  border-radius: 10px; }\n  .bio-data .bio-picture {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center;\n    width: 100%;\n    height: 72%;\n    background-color: white;\n    color: none;\n    border: none;\n    border-radius: 10px; }\n    .bio-data .bio-picture .picture {\n      width: 95%;\n      height: 95%;\n      background-color: none;\n      color: none;\n      border: 1px solid #808080;\n      border-radius: 10px;\n      background-image: url(\"imgs/IMG_0414.png\");\n      background-size: 100% 100%;\n      background-repeat: no-repeat;\n      background-position: center; }\n\n.bio-description {\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-start;\n  align-items: flex-start;\n  width: 100%;\n  height: 460px;\n  background-color: #47d147;\n  color: #404040;\n  border: none;\n  border-radius: 10px; }\n  .bio-description .bio-text {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: flex-start;\n    width: 100%;\n    height: 100%;\n    background-color: white;\n    color: none;\n    border: none;\n    border-radius: 10px; }\n    .bio-description .bio-text p {\n      width: 95%;\n      font-size: 110%;\n      margin-top: 3%; }\n  .bio-description h1 {\n    line-height: 250%;\n    vertical-align: middle;\n    width: 100%;\n    height: 15%;\n    background-color: none;\n    color: none;\n    border: none;\n    border-radius: 9px 9px 0 0;\n    font-size: 170%;\n    text-transform: uppercase;\n    font-weight: 900;\n    text-align: center; }\n\n.bio-contact {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  width: 100%;\n  height: 28%;\n  background-color: #ffd633;\n  color: none;\n  border: none;\n  border-radius: 0 0 9px 9px; }\n  .bio-contact .contact-list {\n    height: 27%;\n    width: 60%;\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n    align-items: flex-start; }\n    .bio-contact .contact-list .contact-logo {\n      width: 35px;\n      height: 35px;\n      background-color: white;\n      color: none;\n      border: none;\n      border-radius: 50%; }\n    .bio-contact .contact-list .github {\n      background-image: url(\"imgs/gitHub-logo2.png\");\n      background-size: 99% 99.5%;\n      background-repeat: no-repeat;\n      background-position: center; }\n    .bio-contact .contact-list .linkedin {\n      background-image: url(\"imgs/linkedin-logo.png\");\n      background-size: 102.5% 100%;\n      background-repeat: no-repeat;\n      background-position: center; }\n    .bio-contact .contact-list .gmail {\n      z-index: 1;\n      background-image: url(\"imgs/gmail-logo.png\");\n      background-size: 100% 100%;\n      background-repeat: no-repeat;\n      background-position: center; }\n      .bio-contact .contact-list .gmail .mail-expander {\n        width: 300px;\n        height: 100%;\n        background-color: white;\n        color: none;\n        border: none;\n        border-radius: 50px;\n        font-size: 14px;\n        animation: expand 0.3s linear 1 forwards; }\n      .bio-contact .contact-list .gmail .logo-gmail-doubler {\n        position: relative;\n        height: 35px;\n        width: 35px;\n        background-image: url(\"imgs/gmail-logo.png\");\n        background-size: 100% 100%;\n        background-repeat: no-repeat;\n        background-position: center; }\n        .bio-contact .contact-list .gmail .logo-gmail-doubler .mail {\n          position: absolute;\n          top: 7px;\n          right: -216px; }\n  .bio-contact h1 {\n    font-size: 140%;\n    text-transform: uppercase;\n    font-weight: 900;\n    text-align: center; }\n\n#slide-out-animation {\n  animation: slide-left 0.3s linear 1 forwards; }\n\n#slide-in-animation {\n  animation: slide-right 0.3s linear 1 forwards; }\n\n#display-block {\n  display: block; }\n\n#display-none {\n  display: none; }\n\n@keyframes slide-right {\n  100% {\n    transform: translate(0, 0); } }\n\n@keyframes slide-left {\n  100% {\n    transform: translate(-48px, 0); } }\n\n@keyframes expand {\n  0% {\n    width: 35px; }\n  30% { }\n  100% {\n    width: 260px; } }\n\n.projects {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  align-items: flex-start; }\n\n.project {\n  width: 100%;\n  height: 460px;\n  background-color: white;\n  color: none;\n  border: none;\n  border-radius: 10px; }\n  .project h2 {\n    text-align: center;\n    width: 100%;\n    height: 5%;\n    background-color: #ff5050;\n    color: white;\n    border: none;\n    border-radius: 0 0 10px 10px;\n    position: relative; }\n\n.wrapper {\n  background-color: #ffd633; }\n\n.github-link {\n  top: -20px;\n  right: 10px;\n  position: absolute; }\n\n.github-logo {\n  width: 37px;\n  height: 37px;\n  background-color: none;\n  color: none;\n  border: 1px solid black;\n  border-radius: 50%;\n  background-image: url(\"imgs/gitHub-logo.png\");\n  background-size: 100% 100%;\n  background-repeat: no-repeat;\n  background-position: center; }\n\n.project-preview {\n  width: 100%;\n  height: 35%;\n  background-color: #ff5050;\n  color: none;\n  border: none;\n  border-radius: 10px 10px 0 0; }\n\n.Pokemon-Game {\n  width: 100%;\n  height: 100%;\n  background-color: none;\n  color: none;\n  border: none;\n  border-radius: 10px;\n  background-image: url(\"imgs/pick-pokemon2.png\");\n  background-size: 100% 105%;\n  background-repeat: no-repeat;\n  background-position: center; }\n\n.Portfolio-Page {\n  width: 100%;\n  height: 100%;\n  background-color: none;\n  color: none;\n  border: none;\n  border-radius: 10px;\n  background-image: url(\"imgs/terminal-kopia.png\");\n  background-size: 100% 100%;\n  background-repeat: no-repeat;\n  background-position: center; }\n\n.Sit-On-Chair {\n  width: 100%;\n  height: 100%;\n  background-color: none;\n  color: none;\n  border: none;\n  border-radius: 10px;\n  background-image: url(\"imgs/sitOnChair.png\");\n  background-size: 100% 100%;\n  background-repeat: no-repeat;\n  background-position: center; }\n\n.project-technologies {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  width: 100%;\n  height: 10%;\n  background-color: #ffd633;\n  color: none;\n  border: none;\n  border-radius: 0 0 10px 10px; }\n\n.project-list-of-tech {\n  width: 80%;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  align-items: center; }\n  .project-list-of-tech .small-logo {\n    width: 40px;\n    height: 40px;\n    background-color: white;\n    color: none;\n    border: 1px solid #808080;\n    border-radius: 50%; }\n  .project-list-of-tech .react {\n    background-image: url(\"imgs/react-log.png\");\n    background-size: 31px 28px;\n    background-repeat: no-repeat;\n    background-position: center; }\n  .project-list-of-tech .redux {\n    background-image: url(\"imgs/redux-logo.png\");\n    background-size: 41px 34px;\n    background-repeat: no-repeat;\n    background-position: center; }\n  .project-list-of-tech .js {\n    background-image: url(\"imgs/js-logo.png\");\n    background-size: 23px 31px;\n    background-repeat: no-repeat;\n    background-position: center; }\n  .project-list-of-tech .sass {\n    background-image: url(\"imgs/sass-log.png\");\n    background-size: 25px 20px;\n    background-repeat: no-repeat;\n    background-position: center; }\n  .project-list-of-tech .html {\n    background-image: url(\"imgs/HTML_Logo.png\");\n    background-size: 31.5px 30px;\n    background-repeat: no-repeat;\n    background-position: center; }\n  .project-list-of-tech .css {\n    background-image: url(\"imgs/CSS3_logo.png\");\n    background-size: 22px 31px;\n    background-repeat: no-repeat;\n    background-position: center; }\n\n.project-description {\n  display: flex;\n  flex-direction: none;\n  justify-content: center;\n  align-items: flex-start;\n  height: 47%;\n  width: 100%; }\n  .project-description p {\n    font-size: 15px;\n    width: 90%;\n    font-weight: 500;\n    color: #404040; }\n\n.personalInfo {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  align-items: flex-start; }\n\n.category {\n  width: 100%;\n  height: 460px;\n  background-color: #ffd633;\n  color: none;\n  border: none;\n  border-radius: 10px; }\n  .category h2 {\n    font-size: 20px;\n    font-weight: 900;\n    line-height: 45px;\n    vertical-align: middle;\n    text-align: center;\n    width: 100%;\n    height: 10%;\n    background-color: #ffd633;\n    color: #404040;\n    border: none;\n    border-radius: 10px 10px 0 0; }\n\n.category-info-border {\n  width: 100%;\n  height: 90%;\n  background-color: #ff5050;\n  color: none;\n  border: none;\n  border-radius: 10px; }\n  .category-info-border .category-info-inner-border {\n    display: flex;\n    flex-direction: column;\n    justify-content: flex-end;\n    align-items: flex-start;\n    width: 100%;\n    height: 100%;\n    background-color: #ff5050;\n    color: none;\n    border: none;\n    border-radius: 10px; }\n  .category-info-border .category-info {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center;\n    width: 100%;\n    height: 98%;\n    background-color: white;\n    color: none;\n    border: none;\n    border-radius: 10px; }\n    .category-info-border .category-info .category-info-wrapper {\n      height: 94%;\n      width: 95%; }\n\n.category-skill {\n  height: 17%;\n  width: 100%; }\n  .category-skill h3 {\n    font-weight: 700;\n    font-size: 18px;\n    color: #404040; }\n  .category-skill p {\n    color: #808080; }\n\n.category-step {\n  height: 35%;\n  width: 100%; }\n  .category-step h3 {\n    font-weight: 700;\n    font-size: 18px;\n    color: #404040; }\n  .category-step h4 {\n    color: #404040;\n    font-size: 15px; }\n  .category-step p {\n    font-size: 14px;\n    color: #808080; }\n\n.terminal {\n  width: 32%;\n  height: 40%;\n  background-color: #404040;\n  color: none;\n  border: 1px solid #333333;\n  border-radius: 6px;\n  font-size: 14px;\n  align-self: flex-end; }\n  .terminal header {\n    display: flex;\n    flex-direction: row;\n    justify-content: flex-start;\n    align-items: center;\n    width: 100%;\n    height: 9%;\n    background-color: #666666;\n    color: #bfbfbf;\n    border: none;\n    border-radius: 5px 5px 0 0;\n    border-bottom: 1px solid #808080; }\n\n.circle-1 {\n  width: 13px;\n  height: 13px;\n  border-radius: 50%;\n  margin-left: 8px;\n  background-color: #ff5050;\n  box-shadow: 0.2px 0.5px #e60000; }\n\n.circle-2 {\n  width: 13px;\n  height: 13px;\n  border-radius: 50%;\n  margin-left: 6px;\n  background-color: #ffcc00;\n  box-shadow: 0.2px 0.5px #b38f00; }\n\n.circle-3 {\n  margin-right: 7%;\n  width: 13px;\n  height: 13px;\n  border-radius: 50%;\n  margin-left: 6px;\n  background-color: #47d147;\n  box-shadow: 0.2px 0.5px #196619; }\n\n.terminal-body {\n  color: #d9d9d9;\n  height: 90%;\n  overflow-y: scroll; }\n  .terminal-body p {\n    color: #8c8c8c; }\n  .terminal-body input {\n    color: #d9d9d9;\n    background-color: #404040;\n    border: none; }\n", ""]);
+
+// exports
 
 
 /***/ })

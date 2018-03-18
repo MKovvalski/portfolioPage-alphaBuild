@@ -3,7 +3,7 @@ import React from 'react';
 
 //importing components
 import Terminal from "./terminal.jsx";
-import Content from "./CV-pages/content.jsx";
+import Content from "./content.jsx";
 
 class Container extends React.Component {
     constructor(props) {

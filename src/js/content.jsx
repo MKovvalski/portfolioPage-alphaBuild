@@ -2,10 +2,9 @@
 import React from 'react';
 
 //importing components
-import AboutMe from "./about-me.jsx";
-import Projects from "./projects.jsx";
-import PersonalInfo from "./PersonalInfo/personal-info.jsx";
-import MainPage from "./main-page.jsx";
+import AboutMe from "./CV-pages/AboutMe/about-me.jsx";
+import Projects from "./CV-pages/Projects/projects.jsx";
+import PersonalInfo from "./CV-pages/PersonalInfo/personal-info.jsx";
 
 class Content extends React.Component {
 
@@ -21,7 +20,7 @@ class Content extends React.Component {
                 return <PersonalInfo/>;
                 break;
             default:
-                return <MainPage/>;
+                return <AboutMe/>;
         }
     };
 
