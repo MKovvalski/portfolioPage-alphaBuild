@@ -114,13 +114,11 @@ body {
 .content {
   @include baseStyles(100%, 95%, $brgColor, none, none, none);
   header {
-    @include flex(row, flex-start, center);
-    @include baseStyles(100%, 6%, #666666, #bfbfbf, none , 5px 5px 0 0 );
+    @include flex(column, center, center);
+    @include baseStyles(100%, 8%, #666666, #bfbfbf, none, 5px 5px 0 0);
     border-bottom: $headerBorder;
     h1 {
-      font-size: 280%;
-      text-align: center;
-      width: 20%;
+      font-size: 400%;
     }
   }
 }
@@ -128,11 +126,11 @@ body {
 .main-content {
   @include flex(column, center, center);
 }
-
-.circle-4 {
-  margin-right: 28%;
-  @include circle(#47d147, 6px, #196619);
-}
+//
+//.circle-4 {
+//  margin-right: 25%;
+//  @include circle(#47d147, 6px, #196619);
+//}
 
 // ----------------------------------------- //
 // -------------- AboutMe ------------------ //
@@ -159,21 +157,22 @@ body {
 
 .bio-description {
   @include flex(column, flex-start, flex-start);
-  @include baseStyles(100%, 1305px, $brgColor4, $brgColor, none, $columnRadius);
+  @include baseStyles(100%, 100%, $brgColor4, $brgColor, none, $columnRadius);
   .bio-text {
     @include flex(row, center, flex-start);
     @include baseStyles(100%, 100%, $brgColor2, none, none, $columnRadius);
     p {
       width: 95%;
-      font-size: 110%;
+      font-size: 350%;
       margin-top: 3%;
+      margin-bottom: 3%;
     }
   }
   h1  {
-    line-height: 250%;
+    line-height: 300%;
     vertical-align: middle;
-    @include baseStyles(100%, 10%, none, none, none, 20px 20px 0 0);
-    @include headerStyles(340%);
+    @include baseStyles(100%, 100%, none, none, none, 20px 20px 0 0);
+    @include headerStyles(360%);
   }
 }
 
@@ -419,33 +418,34 @@ body {
 
 .terminal {
   @include baseStyles(100%, 20%, $brgColor, none, none, none);
-  align-self: flex-end;
   header {
-    font-size: 250%;
-    @include flex(row, flex-start,center);
-    @include baseStyles(100%, 25%, #666666, #bfbfbf, none, none);
+    font-size: 320%;
+    @include flex(column, center,center);
+    @include baseStyles(100%, 33%, #666666, #bfbfbf, none, none);
     border-bottom: $headerBorder;
   }
 }
 
-.circle-1 {
-  @include circle(#ff5050, 8px, #e60000)
-}
-
-.circle-2 {
-  @include circle(#ffcc00, 6px, #b38f00)
-}
-
-.circle-3 {
-  margin-right: 7%;
-  @include circle(#47d147, 6px, #196619)
-}
+//.circle-1 {
+//  @include circle(#ff5050, 8px, #e60000)
+//}
+//
+//.circle-2 {
+//  @include circle(#ffcc00, 6px, #b38f00)
+//}
+//
+//.circle-3 {
+//  margin-right: 7%;
+//  @include circle(#47d147, 6px, #196619)
+//}
 
 .terminal-body {
+  font-size: 350%;
   color: $textColor;
   height: 90%;
   overflow-y: scroll;
   p {
+    font-size: 100%;
     color: #8c8c8c;
   }
   input {
