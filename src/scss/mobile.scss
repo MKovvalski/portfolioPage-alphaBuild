@@ -8,7 +8,7 @@ $textColor: #d9d9d9;
 $border: 1px solid #333333;
 $headerBorder: 1px solid #808080;
 $projectRadius: 9px 9px 0 0;
-$columnRadius: 10px;
+$columnRadius: 20px;
 $brgColor: #404040;
 $brgColor2: white;
 $brgColor3: #ffd633;
@@ -21,8 +21,8 @@ $radius: 6px;
 }
 
 @mixin circle ($color, $margin, $shadowColor){
-  width: 13px;
-  height: 13px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   margin-left: $margin;
   background-color: $color;
@@ -74,15 +74,15 @@ body {
 }
 
 .container {
-  width: 97.5%;
+  width: 98%;
 }
 
 .col-1 {
-  width: 33%;
+  width: 99%;
 }
 
 .col-2 {
-  width: 66%;
+  width: 99%;
 }
 
 .col-3 {
@@ -126,12 +126,11 @@ body {
 }
 
 .main-content {
-  @include flex(coulmn, center, flex-start);
-  margin-top: 8px;
+  @include flex(column, center, center);
 }
 
 .circle-4 {
-  margin-right: 33%;
+  margin-right: 28%;
   @include circle(#47d147, 6px, #196619);
 }
 
@@ -140,12 +139,14 @@ body {
 // ----------------------------------------- //
 
 .bio {
-  @include flex(row, space-between, flex-start);
+  overflow-y: scroll;
+  @include sizing(100%, 1308px);
+  @include flex(column, center, center);
 }
 
 .bio-data {
   @include flex(column, space-between, flex-start);
-  @include baseStyles(100%, 460px, $brgColor3, $brgColor, none, $columnRadius);
+  @include baseStyles(100%, 1300px, $brgColor3, $brgColor, none, $columnRadius);
   .bio-picture {
     @include flex(row, center, center);
     @include baseStyles(100%,72%, $brgColor2, none, none, $columnRadius);
@@ -158,7 +159,7 @@ body {
 
 .bio-description {
   @include flex(column, flex-start, flex-start);
-  @include baseStyles(100%, 460px, $brgColor4, $brgColor, none, $columnRadius);
+  @include baseStyles(100%, 1305px, $brgColor4, $brgColor, none, $columnRadius);
   .bio-text {
     @include flex(row, center, flex-start);
     @include baseStyles(100%, 100%, $brgColor2, none, none, $columnRadius);
@@ -171,8 +172,8 @@ body {
   h1  {
     line-height: 250%;
     vertical-align: middle;
-    @include baseStyles(100%, 15%, none, none, none, 9px 9px 0 0);
-    @include headerStyles(170%);
+    @include baseStyles(100%, 10%, none, none, none, 20px 20px 0 0);
+    @include headerStyles(340%);
   }
 }
 
@@ -417,12 +418,12 @@ body {
 // ----------------------------------------- //
 
 .terminal {
-  @include baseStyles(32%, 40%, $brgColor, none, $border, $radius);
-  font-size: 14px;
+  @include baseStyles(100%, 20%, $brgColor, none, none, none);
   align-self: flex-end;
   header {
+    font-size: 250%;
     @include flex(row, flex-start,center);
-    @include baseStyles(100%, 9%, #666666, #bfbfbf, none, 5px 5px 0 0);
+    @include baseStyles(100%, 25%, #666666, #bfbfbf, none, none);
     border-bottom: $headerBorder;
   }
 }
