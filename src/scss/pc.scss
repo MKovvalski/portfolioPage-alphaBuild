@@ -286,8 +286,8 @@ body {
 }
 
 .github-logo {
-  @include baseStyles(37px, 37px, none, none, 1px solid black, 50%);
-  @include smallLogoStyles(100%, 100%, url("./imgs/gitHub-logo.png"));
+  @include baseStyles(37px, 37px, white, none, $headerBorder, 50%);
+  @include smallLogoStyles(99%, 99%, url("./imgs/gitHub-logo2.png"));
 }
 
 .project-preview {

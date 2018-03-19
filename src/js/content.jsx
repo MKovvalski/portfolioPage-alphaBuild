@@ -20,7 +20,7 @@ class Content extends React.Component {
                 return <PersonalInfo/>;
                 break;
             default:
-                return <AboutMe/>;
+                return <Projects/>;
         }
     };
 
