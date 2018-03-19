@@ -1101,7 +1101,6 @@ var _mainComponent2 = _interopRequireDefault(_mainComponent);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 //importing presets
-
 __webpack_require__(41);
 
 //importing components

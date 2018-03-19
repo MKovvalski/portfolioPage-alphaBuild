@@ -1,5 +1,4 @@
 //importing presets
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 require('./scss/pc.scss');
