@@ -190,10 +190,10 @@ body {
       @include baseStyles(35px, 35px, $brgColor2, none, none, 50%);
     }
     .github {
-      @include smallLogoStyles(99%, 99.5%, url("../../imgs/gitHub-logo2.png"));
+      @include smallLogoStyles(99%, 99.5%, url("./imgs/gitHub-logo2.png"));
     }
     .linkedin {
-      @include smallLogoStyles(102.5%, 100%, url("../../imgs/linkedin-logo.png"));
+      @include smallLogoStyles(102.5%, 100%, url("./imgs/linkedin-logo.png"));
     }
     .gmail {
       .mail-expander {
@@ -202,11 +202,11 @@ body {
         animation: expand 0.3s linear 1 forwards;
       }
       z-index: 1;
-      @include smallLogoStyles(100%, 100%, url("../../imgs/gmail-logo.png"));
+      @include smallLogoStyles(100%, 100%, url("./imgs/gmail-logo.png"));
       .logo-gmail-doubler {
         position: relative;
         @include sizing(35px, 35px);
-        @include smallLogoStyles(100%, 100%, url("../../imgs/gmail-logo.png"));
+        @include smallLogoStyles(100%, 100%, url("./imgs/gmail-logo.png"));
         .mail {
           position: absolute;
           top: 7px;

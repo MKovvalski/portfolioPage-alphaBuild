@@ -27,7 +27,7 @@ class Content extends React.Component {
     render () {
        return <div className = "content">
            <header>
-               <div className = "circle-1"></div><div className = "circle-2"></div><div className = "circle-4"></div>
+               <div className = "circle-1"/><div className = "circle-2"/><div className = "circle-4"/>
                <h1>{this.props.renderScreen}</h1>
            </header>
            <div className = "main-content">

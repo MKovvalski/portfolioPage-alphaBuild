@@ -123,7 +123,7 @@ class Terminal extends React.Component {
                                 return <li key = {i}>{command}</li>
                             })}
                         </ul>
-                        <div>mateusz-kowalski:{this.props.titleText} <input type="text" value = {this.state.renderScreen} onChange={this.handleChange} onKeyUp = {e => this.handleInfoTransfer(e)}/></div>
+                        <div>mateusz-kowalski:{this.props.titleText} <input placeholder = "type here..." type="text" value = {this.state.renderScreen} onChange={this.handleChange} onKeyUp = {e => this.handleInfoTransfer(e)}/></div>
                         <p>//input "cd" and "name of the file" and confirm with "enter"<br/>
                             //example: cd AboutMe <br/>
                             //type in "ls" to display available files <br/>
