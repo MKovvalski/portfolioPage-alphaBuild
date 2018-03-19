@@ -43,12 +43,12 @@ class ContactList extends React.Component {
                     </div>
                 </div>
             </div>
-            <a target = "_blank" href="https://www.linkedin.com/in/mateusz-kowalski-62b758113/">
-                <div className = "contact-logo linkedin"/>
-            </a>
-            <a target = "_blank" href="https://github.com/MateuszKowalskiCL">
-                <div className = "contact-logo github"/>
-            </a>
+            {/*<a target = "_blank" href="http://www.linkedin.com/in/mateusz-kowalski-62b758113/">*/}
+                {/*<div className = "contact-logo linkedin"/>*/}
+            {/*</a>*/}
+            {/*<a target = "_blank" href="http://github.com/MateuszKowalskiCL">*/}
+                {/*<div className = "contact-logo github"/>*/}
+            {/*</a>*/}
         </div>
     }
 
