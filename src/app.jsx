@@ -2,7 +2,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-require('./scss/mobile.scss');
+require('./scss/pc.scss');
 
 //importing components
 import MainComponent from "./js/main-component.jsx";

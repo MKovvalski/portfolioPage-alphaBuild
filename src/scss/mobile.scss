@@ -150,7 +150,7 @@ body {
     @include baseStyles(100%,72%, $brgColor2, none, none, $columnRadius);
     .picture {
       @include baseStyles(95%, 95%, none, none, $headerBorder, $columnRadius);
-      @include smallLogoStyles(100%, 100%, url("imgs/IMG_0414.png"));
+      @include smallLogoStyles(100%, 100%, url("../../imgs/IMG_0414.png"));
     }
   }
 }
@@ -190,10 +190,10 @@ body {
       @include baseStyles(35px, 35px, $brgColor2, none, none, 50%);
     }
     .github {
-      @include smallLogoStyles(99%, 99.5%, url("imgs/gitHub-logo2.png"));
+      @include smallLogoStyles(99%, 99.5%, url("../../imgs/gitHub-logo2.png"));
     }
     .linkedin {
-      @include smallLogoStyles(102.5%, 100%, url("imgs/linkedin-logo.png"));
+      @include smallLogoStyles(102.5%, 100%, url("../../imgs/linkedin-logo.png"));
     }
     .gmail {
       .mail-expander {
@@ -202,11 +202,11 @@ body {
         animation: expand 0.3s linear 1 forwards;
       }
       z-index: 1;
-      @include smallLogoStyles(100%, 100%, url("imgs/gmail-logo.png"));
+      @include smallLogoStyles(100%, 100%, url("../../imgs/gmail-logo.png"));
       .logo-gmail-doubler {
         position: relative;
         @include sizing(35px, 35px);
-        @include smallLogoStyles(100%, 100%, url("imgs/gmail-logo.png"));
+        @include smallLogoStyles(100%, 100%, url("../../imgs/gmail-logo.png"));
         .mail {
           position: absolute;
           top: 7px;
@@ -288,7 +288,7 @@ body {
 
 .github-logo {
   @include baseStyles(37px, 37px, none, none, 1px solid black, 50%);
-  @include smallLogoStyles(100%, 100%, url("imgs/gitHub-logo.png"));
+  @include smallLogoStyles(100%, 100%, url("../../imgs/gitHub-logo.png"));
 }
 
 .project-preview {
@@ -297,17 +297,17 @@ body {
 
 .Pokemon-Game {
   @include baseStyles(100%, 100%, none, none, none, $columnRadius);
-  @include smallLogoStyles(100%, 105%, url("imgs/pick-pokemon2.png"));
+  @include smallLogoStyles(100%, 105%, url("../../imgs/pick-pokemon2.png"));
 }
 
 .Portfolio-Page {
   @include baseStyles(100%, 100%, none, none, none, $columnRadius);
-  @include smallLogoStyles(100%, 100%, url("imgs/terminal-kopia.png"));
+  @include smallLogoStyles(100%, 100%, url("../../imgs/terminal-kopia.png"));
 }
 
 .Sit-On-Chair {
   @include baseStyles(100%, 100%, none, none, none, $columnRadius);
-  @include smallLogoStyles(100%, 100%, url("imgs/sitOnChair.png"));
+  @include smallLogoStyles(100%, 100%, url("../../imgs/sitOnChair.png"));
 }
 
 .project-technologies {
@@ -322,22 +322,22 @@ body {
     @include baseStyles(40px, 40px, $brgColor2, none, $headerBorder, 50%);
   }
   .react {
-    @include smallLogoStyles(31px, 28px, url("imgs/react-log.png"));
+    @include smallLogoStyles(31px, 28px, url("../../imgs/react-log.png"));
   }
   .redux {
-    @include smallLogoStyles(41px, 34px, url("imgs/redux-logo.png"));
+    @include smallLogoStyles(41px, 34px, url("../../imgs/redux-logo.png"));
   }
   .js {
-    @include smallLogoStyles(23px, 31px, url("imgs/js-logo.png"));
+    @include smallLogoStyles(23px, 31px, url("../../imgs/js-logo.png"));
   }
   .sass {
-    @include smallLogoStyles(25px, 20px, url("imgs/sass-log.png"));
+    @include smallLogoStyles(25px, 20px, url("../../imgs/sass-log.png"));
   }
   .html {
-    @include smallLogoStyles(31.5px, 30px, url("imgs/HTML_Logo.png"));
+    @include smallLogoStyles(31.5px, 30px, url("../../imgs/HTML_Logo.png"));
   }
   .css {
-    @include smallLogoStyles(22px, 31px, url("imgs/CSS3_logo.png"));
+    @include smallLogoStyles(22px, 31px, url("../../imgs/CSS3_logo.png"));
   }
 }
 
