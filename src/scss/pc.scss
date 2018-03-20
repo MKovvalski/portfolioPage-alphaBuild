@@ -14,6 +14,7 @@ $brgColor2: white;
 $brgColor3: #ffd633;
 $brgColor4: #47d147;
 $radius: 6px;
+$mobileWidth: 400px;
 
 @mixin sizing ($width, $height){
   height: $height;
@@ -79,14 +80,23 @@ body {
 
 .col-1 {
   width: 33%;
+  @media (max-width: $mobileWidth) {
+    width: 100%;
+  }
 }
 
 .col-2 {
   width: 66%;
+  @media (max-width: $mobileWidth) {
+    width: 100%;
+  }
 }
 
 .col-3 {
   width: 32.5%;
+  @media (max-width: $mobileWidth) {
+    width: 100%;
+  }
 }
 
 // ----------------------------------------- //
@@ -105,6 +115,14 @@ body {
 .main-container {
   @include sizing(97%, 95%);
   @include flex(row, space-between, flex-start);
+  @media (max-width: $mobileWidth) {
+    @include sizing(100%, 100%);
+    @include flex (column, flex-start, flex-start);
+  }
+}
+
+.mobile-menu {
+
 }
 
 // ----------------------------------------- //
@@ -117,10 +135,18 @@ body {
     @include flex(row, flex-start, center);
     @include baseStyles(100%, 4%, #666666, #bfbfbf, none , 5px 5px 0 0 );
     border-bottom: $headerBorder;
+    @media (max-width: $mobileWidth) {
+      border-radius: 0;
+    }
     h1 {
       text-align: center;
       width: 20%;
     }
+  }
+  @media (max-width: $mobileWidth) {
+    @include sizing(100%, 98%);
+    border-radius: 0;
+    overflow-x: scroll;
   }
 }
 
@@ -140,14 +166,20 @@ body {
 
 .bio {
   @include flex(row, space-between, flex-start);
+  @media (max-width: $mobileWidth) {
+    @include flex (column, flex-start, center);
+  }
 }
 
 .bio-data {
   @include flex(column, space-between, flex-start);
   @include baseStyles(100%, 460px, $brgColor3, $brgColor, none, $columnRadius);
+  @media (max-width: $mobileWidth) {
+    @include sizing(100%, 100%);
+  }
   .bio-picture {
     @include flex(row, center, center);
-    @include baseStyles(100%,72%, $brgColor2, none, none, $columnRadius);
+    @include baseStyles(100%,400px, $brgColor2, none, none, $columnRadius);
     .picture {
       @include baseStyles(95%, 95%, none, none, $headerBorder, $columnRadius);
       @include smallLogoStyles(100%, 100%, url("./imgs/IMG_0414.png"));
@@ -182,6 +214,9 @@ body {
 .bio-contact {
   @include flex( column, center, center);
   @include baseStyles(100%, 28%, $brgColor3, none, none, 0 0 9px 9px);
+  @media (max-width: $mobileWidth) {
+    
+  }
   .contact-list {
     @include sizing(60%, 27%);
     @include flex(row, space-between, flex-start);
@@ -213,6 +248,9 @@ body {
         }
 
       }
+    }
+    @media (max-width: $mobileWidth) {
+     margin: 5px 0 10px 0;
     }
   }
   h1 {
@@ -423,6 +461,9 @@ body {
     @include flex(row, flex-start,center);
     @include baseStyles(100%, 9%, #666666, #bfbfbf, none, 5px 5px 0 0);
     border-bottom: $headerBorder;
+  }
+  @media (max-width: 400px) {
+    display: none;
   }
 }
 

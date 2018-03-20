@@ -10,13 +10,40 @@ class Container extends React.Component {
         super(props);
         this.state = {
             screenToRender: "",
-            title: "MainPage",
+            title: "AboutMe",
+            titlesArray: ["AboutMe", "Projects", "PersonalInfo"]
         }
     }
 
+    handleMenuClick = (page) => {
+      switch(page) {
+          case "AboutMe":
+              this.setState({
+                  title: page
+              });
+          break;
+          case "Projects":
+              this.setState({
+                  title: page
+              });
+              break;
+          case "PersonalInfo":
+              this.setState({
+                  title: page
+              });
+              break;
+          default:
+              return null
+      }
+    };
 
+    generateMenuList = () => {
+     return this.state.titlesArray.map((page) => {
+         return <li key = {page} onClick = {() => {this.handleMenuClick(page)}}>{page}</li>
+     })
+   };
 
-   handleInput = (screen, title) => {
+    handleInput = (screen, title) => {
             this.setState ({
                 screenToRender: screen,
                 title: title,
@@ -25,8 +52,11 @@ class Container extends React.Component {
 
     render () {
         return <div className = "main-container">
+                <ul className = "mobile-menu">
+                    {this.generateMenuList()}
+                </ul>
             <Content renderScreen = {this.state.title}/>
-            <Terminal style ={{animation: this.state.justifyContent}} titleText = {this.state.title} renderInfo = {this.handleInput}/>
+            <Terminal titleText = {this.state.title} renderInfo = {this.handleInput}/>
         </div>
     }
 }
