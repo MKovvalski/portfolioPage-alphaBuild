@@ -5,7 +5,7 @@ class Project extends React.Component {
     renderLogos = () => {
       return this.props.logos.map((logo) => {
           const a = "small-logo " + logo;
-          return <li key = {logo} className = {a}></li>
+          return <li key = {logo} className = {a}/>
       })
     };
 

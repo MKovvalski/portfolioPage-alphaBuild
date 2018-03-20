@@ -192,7 +192,7 @@ body {
 
 .bio-data {
   @include flex(column, space-between, flex-start);
-  @include baseStyles(100%, 460px, $brgColor3, $brgColor, none, $columnRadius);
+  @include baseStyles(100%, 100%, $brgColor3, $brgColor, none, $columnRadius);
   @media (max-width: $mobileWidth) {
     @include sizing(100%, 100%);
   }
@@ -246,10 +246,13 @@ body {
 
 .bio-contact {
   @include flex( column, center, center);
-  @include baseStyles(100%, 28%, $brgColor3, none, none, 0 0 9px 9px);
+  @include baseStyles(100%, 100%, $brgColor3, none, none, 0 0 9px 9px);
   @media (max-width: $mobileWidth) {
     margin-top: 8px;
     font-size: 23px;
+    h3 {
+      margin-top: 12px;
+    }
   }
   .contact-list {
     @include sizing(60%, 27%);
@@ -378,35 +381,55 @@ body {
 // ----------------------------------------- //
 
 .projects {
-  @include flex(row, space-between, flex-start)
+  @include flex(row, space-between, flex-start);
+  @media (max-width: $mobileWidth) {
+    @include flex(column, flex-start, flex-start);
+  }
 }
 
 .project {
-  @include baseStyles(100%, 460px, $brgColor2, none, none, $columnRadius);
+  @include baseStyles(100%, 100%, $brgColor2, none, none, $columnRadius);
   h2 {
     text-align: center;
     @include baseStyles(100%, 5%, #ff5050, white, none, 0 0 10px 10px);
     position: relative;
   }
+  @media (max-width: $mobileWidth) {
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
 }
 
 .wrapper {
   background-color: #ffd633;
+  @media (max-width: $mobileWidth) {
+    font-size: 25px;
+  }
 }
 
 .github-link {
   top: -20px;
   right: 10px;
   position: absolute;
+  @media (max-width: $mobileWidth) {
+    top: - 26px;
+    right: 15px;
+  }
 }
 
 .github-logo {
   @include baseStyles(37px, 37px, white, none, $headerBorder, 50%);
+  @media (max-width: $mobileWidth) {
+    @include sizing(50px, 50px);
+  }
   @include smallLogoStyles(99%, 99%, url("./imgs/gitHub-logo2.png"));
 }
 
 .project-preview {
-  @include baseStyles(100%, 35%, #ff5050, none, none, 10px 10px 0 0);
+  @include baseStyles(100%, 180px, #ff5050, none, none, 10px 10px 0 0);
+  @media (max-width: $mobileWidth) {
+    @include sizing(100%, 220px);
+  }
 }
 
 .Pokemon-Game {
@@ -431,27 +454,32 @@ body {
 
 .project-list-of-tech {
   width: 80%;
+  margin-top: 3px;
+  margin-bottom: 3px;
   @include flex(row, space-between, center);
   .small-logo {
     @include baseStyles(40px, 40px, $brgColor2, none, $headerBorder, 50%);
+    @media (max-width: $mobileWidth) {
+      @include sizing(50px, 50px);
+    }
   }
   .react {
-    @include smallLogoStyles(31px, 28px, url("./imgs/react-log.png"));
+    @include smallLogoStyles(80%, 70%, url("./imgs/react-log.png"));
   }
   .redux {
-    @include smallLogoStyles(41px, 34px, url("./imgs/redux-logo.png"));
+    @include smallLogoStyles(104%, 92%, url("./imgs/redux-logo.png"));
   }
   .js {
-    @include smallLogoStyles(23px, 31px, url("./imgs/js-logo.png"));
+    @include smallLogoStyles(65%, 80%, url("./imgs/js-logo.png"));
   }
   .sass {
-    @include smallLogoStyles(25px, 20px, url("./imgs/sass-log.png"));
+    @include smallLogoStyles(72.5%, 50%, url("./imgs/sass-log.png"));
   }
   .html {
-    @include smallLogoStyles(31.5px, 30px, url("./imgs/HTML_Logo.png"));
+    @include smallLogoStyles(79%, 75%, url("./imgs/HTML_Logo.png"));
   }
   .css {
-    @include smallLogoStyles(22px, 31px, url("./imgs/CSS3_logo.png"));
+    @include smallLogoStyles(56%, 78%, url("./imgs/CSS3_logo.png"));
   }
 }
 
@@ -460,9 +488,14 @@ body {
   p {
     margin-top: 5px;
     font-size: 15px;
+    height: 210px;
     width: 90%;
     font-weight: 500;
     color: $brgColor;
+    @media (max-width: $mobileWidth) {
+      height: 292px;
+      font-size: 21px;
+    }
   }
 }
 

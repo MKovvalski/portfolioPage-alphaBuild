@@ -10,7 +10,7 @@ class Container extends React.Component {
         super(props);
         this.state = {
             screenToRender: "",
-            title: "Projects",
+            title: "PersonalInfo",
             titlesArray: ["AboutMe", "Projects", "PersonalInfo"],
             menuDisplay: "display-none"
         }
