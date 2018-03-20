@@ -153,6 +153,7 @@ body {
       width: 20%;
       @media (max-width: $mobileWidth) {
         font-size: 140%;
+        width: 50%;
       }
     }
   }
@@ -175,7 +176,7 @@ body {
   margin-right: 33%;
   @include circle(#47d147, 6px, #196619);
   @media (max-width: $mobileWidth) {
-    margin-right: 21%;
+    margin-right: 8%;
   }
 }
 
