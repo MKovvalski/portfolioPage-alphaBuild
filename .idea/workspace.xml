@@ -4,9 +4,6 @@
     <list default="true" id="874f3a74-86f5-44b0-84ec-4a953047a6a6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/js/app.js" afterPath="$PROJECT_DIR$/build/js/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/js/app.js.map" afterPath="$PROJECT_DIR$/build/js/app.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/container.jsx" afterPath="$PROJECT_DIR$/src/js/container.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/content.jsx" afterPath="$PROJECT_DIR$/src/js/content.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/scss/pc.scss" afterPath="$PROJECT_DIR$/src/scss/pc.scss" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -63,7 +60,7 @@
       <file leaf-file-name="contact-list.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/CV-pages/AboutMe/contact-list.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="409">
+            <state relative-caret-position="400">
               <caret line="47" column="16" lean-forward="false" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
               <folding>
                 <element signature="e#311#1022#0" expanded="false" />
@@ -75,8 +72,8 @@
       <file leaf-file-name="pc.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/scss/pc.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="217" column="4" lean-forward="false" selection-start-line="217" selection-start-column="4" selection-end-line="217" selection-end-column="4" />
+            <state relative-caret-position="538">
+              <caret line="259" column="19" lean-forward="false" selection-start-line="259" selection-start-column="19" selection-end-line="259" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -264,12 +261,12 @@
       <option name="presentableId" value="Default" />
       <updated>1519052924946</updated>
       <workItem from="1519052926586" duration="9225000" />
-      <workItem from="1519937814560" duration="152010000" />
+      <workItem from="1519937814560" duration="153387000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="161235000" />
+    <option name="totallyTimeSpent" value="162612000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -686,7 +683,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/js/CV-pages/AboutMe/contact-list.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
+        <state relative-caret-position="400">
           <caret line="47" column="16" lean-forward="false" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
           <folding>
             <element signature="e#311#1022#0" expanded="false" />
@@ -696,8 +693,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/scss/pc.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="217" column="4" lean-forward="false" selection-start-line="217" selection-start-column="4" selection-end-line="217" selection-end-column="4" />
+        <state relative-caret-position="538">
+          <caret line="259" column="19" lean-forward="false" selection-start-line="259" selection-start-column="19" selection-end-line="259" selection-end-column="19" />
           <folding />
         </state>
       </provider>

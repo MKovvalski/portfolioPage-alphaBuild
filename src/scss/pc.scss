@@ -215,13 +215,20 @@ body {
   @include flex( column, center, center);
   @include baseStyles(100%, 28%, $brgColor3, none, none, 0 0 9px 9px);
   @media (max-width: $mobileWidth) {
-    
+    margin-top: 8px;
+    font-size: 23px;
   }
   .contact-list {
     @include sizing(60%, 27%);
     @include flex(row, space-between, flex-start);
+    @media (max-width: $mobileWidth) {
+      @include sizing(85%, 100%);
+    }
     .contact-logo {
       @include baseStyles(35px, 35px, $brgColor2, none, none, 50%);
+      @media (max-width: $mobileWidth) {
+        @include sizing(60px, 60px);
+      }
     }
     .github {
       @include smallLogoStyles(99%, 99.5%, url("./imgs/gitHub-logo2.png"));
@@ -234,6 +241,9 @@ body {
         @include baseStyles(300px, 100%, white, none, none, 50px);
         font-size: 14px;
         animation: expand 0.3s linear 1 forwards;
+        @media (max-width: $mobileWidth) {
+          animation: expand-mobile 0.2s linear 1 forwards;
+        }
       }
       z-index: 1;
       @include smallLogoStyles(100%, 100%, url("./imgs/gmail-logo.png"));
@@ -245,8 +255,15 @@ body {
           position: absolute;
           top: 7px;
           right: -216px;
+          @media (max-width: $mobileWidth) {
+            font-size: 19px;
+            top: 16px;
+            right: -290px;
+          }
         }
-
+        @media (max-width: $mobileWidth) {
+          @include sizing(60px, 60px);
+        }
       }
     }
     @media (max-width: $mobileWidth) {
@@ -260,6 +277,9 @@ body {
 
 #slide-out-animation {
   animation: slide-left 0.3s linear 1 forwards;
+  @media (max-width: $mobileWidth) {
+    animation: slide-left-mobile 0.3s linear 1 forwards;
+  }
 }
 
 #slide-in-animation {
@@ -279,9 +299,22 @@ body {
     transform: translate(0, 0);
   }
 }
+
 @keyframes slide-left {
   100% {
     transform: translate(-48px, 0);
+  }
+}
+
+@keyframes slide-left-mobile {
+  100% {
+    transform: translate(-23px, 0);
+  }
+}
+
+@keyframes slide-right-mobile {
+  100%{
+    transform: translate(0, 0);
   }
 }
 
@@ -293,6 +326,17 @@ body {
   }
   100% {
     width: 260px;
+  }
+}
+
+@keyframes expand-mobile {
+  0% {
+    width: 57px;
+  }
+  30% {
+  }
+  100% {
+    width: 355px;
   }
 }
 
