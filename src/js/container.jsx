@@ -10,8 +10,9 @@ class Container extends React.Component {
         super(props);
         this.state = {
             screenToRender: "",
-            title: "AboutMe",
-            titlesArray: ["AboutMe", "Projects", "PersonalInfo"]
+            title: "Projects",
+            titlesArray: ["AboutMe", "Projects", "PersonalInfo"],
+            menuDisplay: "display-none"
         }
     }
 
@@ -50,11 +51,32 @@ class Container extends React.Component {
             })
     };
 
+    handleMenuDisplay = () => {
+      switch (this.state.menuDisplay) {
+          case "display-none":
+              this.setState({
+                  menuDisplay: "display-block"
+              });
+              break;
+          case "display-block":
+              this.setState({
+                  menuDisplay: "display-none"
+              });
+              break;
+
+          default:
+              return null;
+      }
+    };
+
     render () {
         return <div className = "main-container">
-                <ul className = "mobile-menu">
+            <nav className = "mobile-menu" onClick = {() => this.handleMenuDisplay()}>
+                MENU
+                <ul className = "mobile-menu-list" id = {this.state.menuDisplay} >
                     {this.generateMenuList()}
                 </ul>
+            </nav>
             <Content renderScreen = {this.state.title}/>
             <Terminal titleText = {this.state.title} renderInfo = {this.handleInput}/>
         </div>

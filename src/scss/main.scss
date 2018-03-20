@@ -122,7 +122,17 @@ body {
 }
 
 .mobile-menu {
+  display: none;
+  @media (max-width: $mobileWidth) {
+    display: block;
+    //transition: all 0.3s;
+  }
+}
 
+.mobile-menu-list {
+  @media (max-width: $mobileWidth) {
+    transition: display 1s;
+  }
 }
 
 // ----------------------------------------- //
@@ -141,10 +151,13 @@ body {
     h1 {
       text-align: center;
       width: 20%;
+      @media (max-width: $mobileWidth) {
+        font-size: 140%;
+      }
     }
   }
   @media (max-width: $mobileWidth) {
-    @include sizing(100%, 98%);
+    @include sizing(100%, 100%);
     border-radius: 0;
     overflow-x: scroll;
   }
@@ -153,11 +166,17 @@ body {
 .main-content {
   @include flex(row, center, flex-start);
   margin-top: 8px;
+  @media (max-width: $mobileWidth) {
+    margin-top: 4px;
+  }
 }
 
 .circle-4 {
   margin-right: 33%;
   @include circle(#47d147, 6px, #196619);
+  @media (max-width: $mobileWidth) {
+    margin-right: 21%;
+  }
 }
 
 // ----------------------------------------- //
@@ -180,6 +199,9 @@ body {
   .bio-picture {
     @include flex(row, center, center);
     @include baseStyles(100%,400px, $brgColor2, none, none, $columnRadius);
+    @media (max-width: $mobileWidth) {
+      @include sizing(100%, 440px);
+    }
     .picture {
       @include baseStyles(95%, 95%, none, none, $headerBorder, $columnRadius);
       @include smallLogoStyles(100%, 100%, url("./imgs/IMG_0414.png"));
@@ -190,6 +212,11 @@ body {
 .bio-description {
   @include flex(column, flex-start, flex-start);
   @include baseStyles(100%, 460px, $brgColor4, $brgColor, none, $columnRadius);
+  @media (max-width: $mobileWidth) {
+    @include sizing(100%, 100%);
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
   .bio-text {
     @include flex(row, center, flex-start);
     @include baseStyles(100%, 100%, $brgColor2, none, none, $columnRadius);
@@ -197,6 +224,9 @@ body {
       width: 95%;
       font-size: 110%;
       margin-top: 3%;
+      @media (max-width: $mobileWidth) {
+        font-size: 150%;
+      }
     }
   }
   h1  {
@@ -204,6 +234,9 @@ body {
     vertical-align: middle;
     @include baseStyles(100%, 15%, none, none, none, 9px 9px 0 0);
     @include headerStyles(170%);
+    @media (max-width: $mobileWidth) {
+      line-height: 140%;
+    }
   }
 }
 
