@@ -34,8 +34,8 @@
       <file leaf-file-name="container.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/container.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="79" column="23" lean-forward="false" selection-start-line="79" selection-start-column="23" selection-end-line="79" selection-end-column="23" />
+            <state relative-caret-position="423">
+              <caret line="85" column="53" lean-forward="false" selection-start-line="85" selection-start-column="53" selection-end-line="85" selection-end-column="53" />
               <folding>
                 <element signature="e#61#99#0" expanded="true" />
                 <element signature="e#467#925#0" expanded="false" />
@@ -50,8 +50,8 @@
       <file leaf-file-name="main.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/scss/main.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="130" column="24" lean-forward="false" selection-start-line="130" selection-start-column="24" selection-end-line="130" selection-end-column="24" />
+            <state relative-caret-position="173">
+              <caret line="126" column="32" lean-forward="false" selection-start-line="126" selection-start-column="32" selection-end-line="126" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -238,12 +238,12 @@
       <option name="presentableId" value="Default" />
       <updated>1519052924946</updated>
       <workItem from="1519052926586" duration="9225000" />
-      <workItem from="1519937814560" duration="163250000" />
+      <workItem from="1519937814560" duration="164786000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="172475000" />
+    <option name="totallyTimeSpent" value="174011000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -656,8 +656,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/js/container.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="79" column="23" lean-forward="false" selection-start-line="79" selection-start-column="23" selection-end-line="79" selection-end-column="23" />
+        <state relative-caret-position="423">
+          <caret line="85" column="53" lean-forward="false" selection-start-line="85" selection-start-column="53" selection-end-line="85" selection-end-column="53" />
           <folding>
             <element signature="e#61#99#0" expanded="true" />
             <element signature="e#467#925#0" expanded="false" />
@@ -670,8 +670,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/scss/main.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="130" column="24" lean-forward="false" selection-start-line="130" selection-start-column="24" selection-end-line="130" selection-end-column="24" />
+        <state relative-caret-position="173">
+          <caret line="126" column="32" lean-forward="false" selection-start-line="126" selection-start-column="32" selection-end-line="126" selection-end-column="32" />
           <folding />
         </state>
       </provider>

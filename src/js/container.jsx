@@ -81,7 +81,9 @@ class Container extends React.Component {
                         {this.state.title}
                     </h3>
                     <div className = "menu-click" onClick = {() => this.handleMenuDisplay()}>
-                        Menu
+                        <div className = "menu-bar"/>
+                        <div className = "menu-bar"/>
+                        <div className = "menu-bar"/>
                     </div>
             </nav>
             <ul className = "mobile-menu-list" id = {this.state.menuDisplay} >

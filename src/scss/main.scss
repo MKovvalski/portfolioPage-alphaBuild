@@ -128,17 +128,30 @@ body {
     display: block;
     @include flex(row, space-between, center);
     h3 {
+      @include baseStyles(40%, 100%, none, #bfbfbf, none, none);
       text-align: center;
-      width: 140px;
-      font-size: 23px;
-      background-color: greenyellow;
+      font-size: 25px;
+      font-weight: 500;
     }
     .mac-circles {
-      background-color: yellow;
-      @include flex (row, space-between, space-between);
+      @include sizing(30%, 100%);
+      @include flex (row, flex-start, center);
+      .circle-1 {
+        @include sizing(23px, 23px);
+      }
+      .circle-2 {
+        @include sizing(23px, 23px);
+      }
+      .circle-4 {
+        @include sizing(23px, 23px);
+      }
     }
     .menu-click {
-      background-color: #8c8c8c;
+      @include sizing(30%, 100%);
+      @include flex (column, space-between, center);
+      .menu-bar {
+        @include baseStyles(60px, 9px, black, none, none, 50px);
+      }
     }
   }
 }
