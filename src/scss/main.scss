@@ -237,7 +237,7 @@ body {
   }
   .bio-picture {
     @include flex(row, center, center);
-    @include baseStyles(100%,400px, $brgColor2, none, none, $columnRadius);
+    @include baseStyles(100%,350px, $brgColor2, none, none, $columnRadius);
     @media (max-width: $mobileWidth) {
       @include sizing(100%, 440px);
     }
@@ -286,6 +286,7 @@ body {
 .bio-contact {
   @include flex( column, center, center);
   @include baseStyles(100%, 100%, $brgColor3, none, none, 0 0 9px 9px);
+  margin-top: 12px;
   @media (max-width: $mobileWidth) {
     margin-top: 8px;
     font-size: 23px;
@@ -294,6 +295,8 @@ body {
     }
   }
   .contact-list {
+    margin-top: 5px;
+    margin-bottom: 5px;
     @include sizing(60%, 27%);
     @include flex(row, space-between, flex-start);
     @media (max-width: $mobileWidth) {
@@ -667,6 +670,7 @@ body {
     color: $textColor;
     background-color: $brgColor;
     border: none;
+    margin-bottom: 1.8px;
   }
   input:focus {
     outline: none;

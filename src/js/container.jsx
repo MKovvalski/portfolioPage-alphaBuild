@@ -16,25 +16,23 @@ class Container extends React.Component {
         }
     }
 
+    MenuClickSetState = (page) => {
+        this.setState({
+            title: page,
+            menuDisplay: "display-none"
+        });
+    };
+
     handleMenuClick = (page) => {
       switch(page) {
           case "AboutMe":
-              this.setState({
-                  title: page,
-                  menuDisplay: "display-none"
-              });
+             this.MenuClickSetState(page);
           break;
           case "Projects":
-              this.setState({
-                  title: page,
-                  menuDisplay: "display-none"
-              });
+              this.MenuClickSetState(page);
               break;
           case "PersonalInfo":
-              this.setState({
-                  title: page,
-                  menuDisplay: "display-none"
-              });
+              this.MenuClickSetState(page);
               break;
           default:
               return null
