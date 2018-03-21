@@ -124,11 +124,12 @@ body {
 .mobile-menu {
   display: none;
   @media (max-width: $mobileWidth) {
-    @include baseStyles(100%, 6%, #666666, none, 0 0 0 4px solid #bfbfbf, none);
+    @include baseStyles(100%, 7%, #666666, none, 0 0 0 4px solid #bfbfbf, none);
     display: block;
     @include flex(row, space-between, center);
     h3 {
       @include baseStyles(40%, 100%, none, #bfbfbf, none, none);
+      line-height: 42px;
       text-align: center;
       font-size: 25px;
       font-weight: 500;
@@ -146,11 +147,12 @@ body {
         @include sizing(23px, 23px);
       }
     }
-    .menu-click {
-      @include sizing(30%, 100%);
-      @include flex (column, space-between, center);
+    .menu-burger {
+      @include sizing(30%, 75%);
+      @include flex (column, space-between, flex-end);
       .menu-bar {
-        @include baseStyles(60px, 9px, black, none, none, 50px);
+        margin-right: 7px;
+        @include baseStyles(60px, 7px, $brgColor, none, none, 50px);
       }
     }
   }
@@ -158,9 +160,12 @@ body {
 
 .mobile-menu-list {
   @media (max-width: $mobileWidth) {
-    width: 100%;
-    background-color: green;
-    transition: display 1s;
+   width: 100%;
+    .mobile-menu-list-position {
+      font-size: 21px;
+      text-align: center;
+      @include baseStyles(100%, 31px, #666666, #bfbfbf, none, none);
+    }
   }
 }
 
@@ -188,6 +193,7 @@ body {
   }
   @media (max-width: $mobileWidth) {
     @include sizing(100%, 100%);
+    border: none;
     border-radius: 0;
     overflow-x: scroll;
     header {

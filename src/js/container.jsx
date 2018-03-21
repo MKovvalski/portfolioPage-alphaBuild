@@ -20,17 +20,20 @@ class Container extends React.Component {
       switch(page) {
           case "AboutMe":
               this.setState({
-                  title: page
+                  title: page,
+                  menuDisplay: "display-none"
               });
           break;
           case "Projects":
               this.setState({
-                  title: page
+                  title: page,
+                  menuDisplay: "display-none"
               });
               break;
           case "PersonalInfo":
               this.setState({
-                  title: page
+                  title: page,
+                  menuDisplay: "display-none"
               });
               break;
           default:
@@ -40,7 +43,7 @@ class Container extends React.Component {
 
     generateMenuList = () => {
      return this.state.titlesArray.map((page) => {
-         return <li key = {page} onClick = {() => {this.handleMenuClick(page)}}>{page}</li>
+         return <li className = "mobile-menu-list-position" key = {page} onClick = {() => {this.handleMenuClick(page)}}>{page}</li>
      })
    };
 
@@ -80,7 +83,7 @@ class Container extends React.Component {
                     <h3>
                         {this.state.title}
                     </h3>
-                    <div className = "menu-click" onClick = {() => this.handleMenuDisplay()}>
+                    <div className = "menu-burger" onClick = {() => this.handleMenuDisplay()}>
                         <div className = "menu-bar"/>
                         <div className = "menu-bar"/>
                         <div className = "menu-bar"/>
