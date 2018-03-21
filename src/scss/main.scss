@@ -14,7 +14,7 @@ $brgColor2: white;
 $brgColor3: #ffd633;
 $brgColor4: #47d147;
 $radius: 6px;
-$mobileWidth: 400px;
+$mobileWidth: 450px;
 
 @mixin sizing ($width, $height){
   height: $height;
@@ -124,13 +124,29 @@ body {
 .mobile-menu {
   display: none;
   @media (max-width: $mobileWidth) {
+    @include baseStyles(100%, 6%, #666666, none, 0 0 0 4px solid #bfbfbf, none);
     display: block;
-    //transition: all 0.3s;
+    @include flex(row, space-between, center);
+    h3 {
+      text-align: center;
+      width: 140px;
+      font-size: 23px;
+      background-color: greenyellow;
+    }
+    .mac-circles {
+      background-color: yellow;
+      @include flex (row, space-between, space-between);
+    }
+    .menu-click {
+      background-color: #8c8c8c;
+    }
   }
 }
 
 .mobile-menu-list {
   @media (max-width: $mobileWidth) {
+    width: 100%;
+    background-color: green;
     transition: display 1s;
   }
 }
@@ -161,6 +177,9 @@ body {
     @include sizing(100%, 100%);
     border-radius: 0;
     overflow-x: scroll;
+    header {
+      display: none;
+    }
   }
 }
 
@@ -600,7 +619,7 @@ body {
     @include baseStyles(100%, 9%, #666666, #bfbfbf, none, 5px 5px 0 0);
     border-bottom: $headerBorder;
   }
-  @media (max-width: 400px) {
+  @media (max-width: $mobileWidth) {
     display: none;
   }
 }

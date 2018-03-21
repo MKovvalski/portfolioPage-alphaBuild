@@ -71,12 +71,22 @@ class Container extends React.Component {
 
     render () {
         return <div className = "main-container">
-            <nav className = "mobile-menu" onClick = {() => this.handleMenuDisplay()}>
-                MENU
-                <ul className = "mobile-menu-list" id = {this.state.menuDisplay} >
-                    {this.generateMenuList()}
-                </ul>
+            <nav className = "mobile-menu">
+                    <div className = "mac-circles">
+                        <div className = "circle-1"/>
+                        <div className = "circle-2"/>
+                        <div className = "circle-4"/>
+                    </div>
+                    <h3>
+                        {this.state.title}
+                    </h3>
+                    <div className = "menu-click" onClick = {() => this.handleMenuDisplay()}>
+                        Menu
+                    </div>
             </nav>
+            <ul className = "mobile-menu-list" id = {this.state.menuDisplay} >
+                {this.generateMenuList()}
+            </ul>
             <Content renderScreen = {this.state.title}/>
             <Terminal titleText = {this.state.title} renderInfo = {this.handleInput}/>
         </div>
