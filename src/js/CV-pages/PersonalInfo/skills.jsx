@@ -14,6 +14,7 @@ class Skills extends React.Component {
                                     <Skill class = "category-skill" skillName = "Toolkits/Module-bundlers" skillText = "Gulp,Webpack"/>
                                     <Skill class = "category-skill" skillName = "IDE" skillText = "WebStorm"/>
                                     <Skill class = "category-skill" skillName = "Others" skillText = "Sass, RWD"/>
+                                    <Skill class = "category-skill" skillName = "Currently Learning" skillText = "React-Morph,VUE.JS "/>
                                 </div>
                             </div>
                         </div>

@@ -668,6 +668,9 @@ body {
     color: #8c8c8c;
   }
   input {
+    width: auto;
+    margin-top: 2px;
+    margin-left: 3px;
     color: $textColor;
     background-color: $brgColor;
     border: none;
@@ -676,4 +679,8 @@ body {
   input:focus {
     outline: none;
   }
+}
+
+.terminal-input {
+  @include flex(row, flex-start, center);
 }

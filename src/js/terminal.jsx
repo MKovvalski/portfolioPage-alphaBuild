@@ -5,7 +5,28 @@ class Terminal extends React.Component {
         super(props);
         this.state = {
             renderScreen: "",
+            placeholder: "type here...",
             listOfCommands: [],
+        }
+    }
+
+    componentDidMount () {
+        this.timoutId = setInterval(() => {
+            if (this.state.placeholder === "type here...") {
+                this.setState({
+                    placeholder: ""
+                })
+            } else {
+                this.setState({
+                    placeholder: "type here..."
+                })
+            }
+        },800)
+    }
+
+    componentDidUpdate () {
+        if (this.state.listOfCommands.length >= 1) {
+            clearInterval(this.timoutId);
         }
     }
 
@@ -111,6 +132,7 @@ class Terminal extends React.Component {
     };
 
     render () {
+        const a = "penis";
         return <div className = "terminal">
                 <header>
                     <div className = "circle-1"/>
@@ -123,7 +145,7 @@ class Terminal extends React.Component {
                                 return <li key = {i}>{command}</li>
                             })}
                         </ul>
-                        <div>mateusz-kowalski:{this.props.titleText} <input placeholder = "type here..." type="text" value = {this.state.renderScreen} onChange={this.handleChange} onKeyUp = {e => this.handleInfoTransfer(e)}/></div>
+                        <div className = "terminal-input">mateusz-kowalski: {this.props.titleText} <input placeholder = {this.state.placeholder} type="text" value = {this.state.renderScreen} onChange={this.handleChange} onKeyUp = {e => this.handleInfoTransfer(e)}/></div>
                         <p>//input "cd" and "name of the file" and confirm with "enter"<br/>
                             //example: cd AboutMe <br/>
                             //type in "ls" to display available files <br/>
