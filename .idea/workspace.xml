@@ -5,7 +5,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/js/app.js" afterPath="$PROJECT_DIR$/build/js/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/js/app.js.map" afterPath="$PROJECT_DIR$/build/js/app.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/terminal.jsx" afterPath="$PROJECT_DIR$/src/js/terminal.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/scss/main.scss" afterPath="$PROJECT_DIR$/src/scss/main.scss" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -54,8 +53,8 @@
       <file leaf-file-name="main.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/scss/main.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="190" column="0" lean-forward="true" selection-start-line="190" selection-start-column="0" selection-end-line="190" selection-end-column="0" />
+            <state relative-caret-position="323">
+              <caret line="205" column="45" lean-forward="false" selection-start-line="205" selection-start-column="45" selection-end-line="205" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -248,12 +247,12 @@
       <option name="presentableId" value="Default" />
       <updated>1519052924946</updated>
       <workItem from="1519052926586" duration="9225000" />
-      <workItem from="1519937814560" duration="177368000" />
+      <workItem from="1519937814560" duration="178598000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="186593000" />
+    <option name="totallyTimeSpent" value="187823000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -676,8 +675,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/scss/main.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="190" column="0" lean-forward="true" selection-start-line="190" selection-start-column="0" selection-end-line="190" selection-end-column="0" />
+        <state relative-caret-position="323">
+          <caret line="205" column="45" lean-forward="false" selection-start-line="205" selection-start-column="45" selection-end-line="205" selection-end-column="45" />
           <folding />
         </state>
       </provider>

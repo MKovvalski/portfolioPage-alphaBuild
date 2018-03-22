@@ -180,12 +180,22 @@ body {
   0% {
     width: 0;
     height: 0;
-    transform: translate(50px, 50px);
   }
   100% {
     width: 67.5%;
-    height: none;
-    transform: translate(100px, 100px);
+    height: 500px;
+  }
+}
+
+@keyframes release2 {
+  0% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -193,6 +203,7 @@ body {
   animation: release 3s linear 1 forwards;
   @include baseStyles(67.5%, none, $brgColor, none, $border, $radius);
   header {
+    animation: release2 5s linear 1 forwards;
     @include flex(row, flex-start, center);
     @include baseStyles(100%, 4%, #666666, #bfbfbf, none , 5px 5px 0 0 );
     border-bottom: $headerBorder;
@@ -219,6 +230,7 @@ body {
 }
 
 .main-content {
+  animation: release2 5s linear 1 forwards;
   @include flex(row, center, flex-start);
   margin-top: 8px;
   margin-bottom: 8px;
