@@ -256,7 +256,6 @@ body {
   @media (max-width: $mobileWidth) {
     @include sizing(100%, 100%);
     margin-top: 4px;
-    margin-bottom: 4px;
   }
   .bio-text {
     @include flex(row, center, flex-start);

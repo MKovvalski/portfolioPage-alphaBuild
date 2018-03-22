@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="874f3a74-86f5-44b0-84ec-4a953047a6a6" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/scss/mobile.scss" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/js/app.js" afterPath="$PROJECT_DIR$/build/js/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/js/app.js.map" afterPath="$PROJECT_DIR$/build/js/app.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/container.jsx" afterPath="$PROJECT_DIR$/src/js/container.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/content.jsx" afterPath="$PROJECT_DIR$/src/js/content.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/scss/main.scss" afterPath="$PROJECT_DIR$/src/scss/main.scss" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -34,7 +35,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="content.jsx" pinned="false" current-in-tab="true">
+      <file leaf-file-name="content.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/content.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="439">
@@ -48,11 +49,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="5" column="3" lean-forward="false" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="87" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="main.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scss/main.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="401">
-              <caret line="168" column="60" lean-forward="false" selection-start-line="168" selection-start-column="60" selection-end-line="168" selection-end-column="60" />
+            <state relative-caret-position="193">
+              <caret line="257" column="20" lean-forward="false" selection-start-line="257" selection-start-column="20" selection-end-line="257" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -101,13 +112,13 @@
         <option value="$PROJECT_DIR$/src/js/CV-pages/AboutMe/contact-list.jsx" />
         <option value="$PROJECT_DIR$/src/scss/mobile.scss" />
         <option value="$PROJECT_DIR$/src/js/CV-pages/Projects/projects.jsx" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/src/scss/pc.scss" />
         <option value="$PROJECT_DIR$/src/js/CV-pages/Projects/project.jsx" />
         <option value="$PROJECT_DIR$/src/js/terminal.jsx" />
-        <option value="$PROJECT_DIR$/src/scss/main.scss" />
         <option value="$PROJECT_DIR$/src/js/container.jsx" />
         <option value="$PROJECT_DIR$/src/js/content.jsx" />
+        <option value="$PROJECT_DIR$/src/scss/main.scss" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -231,12 +242,12 @@
       <option name="presentableId" value="Default" />
       <updated>1519052924946</updated>
       <workItem from="1519052926586" duration="9225000" />
-      <workItem from="1519937814560" duration="171673000" />
+      <workItem from="1519937814560" duration="172021000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="180898000" />
+    <option name="totallyTimeSpent" value="181246000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -534,14 +545,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scss/mobile.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="208" column="50" lean-forward="false" selection-start-line="208" selection-start-column="50" selection-end-line="208" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/imgs/github-logo.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -550,14 +553,6 @@
     <entry file="file://$PROJECT_DIR$/imgs/github-logo2.png">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="74" lean-forward="false" selection-start-line="7" selection-start-column="74" selection-end-line="7" selection-end-column="74" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/js/CV-pages/Projects/projects.jsx">
@@ -634,11 +629,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scss/main.scss">
+    <entry file="file://$PROJECT_DIR$/src/js/content.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="168" column="60" lean-forward="false" selection-start-line="168" selection-start-column="60" selection-end-line="168" selection-end-column="60" />
-          <folding />
+        <state relative-caret-position="439">
+          <caret line="27" column="21" lean-forward="false" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
+          <folding>
+            <element signature="e#61#115#0" expanded="true" />
+            <element signature="e#705#1022#0" expanded="false" />
+            <element signature="e#1297#1671#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -654,15 +653,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/content.jsx">
+    <entry file="file://$PROJECT_DIR$/src/scss/mobile.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="27" column="21" lean-forward="false" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
-          <folding>
-            <element signature="e#61#115#0" expanded="true" />
-            <element signature="e#705#1022#0" expanded="false" />
-            <element signature="e#1297#1671#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="597">
+          <caret line="208" column="50" lean-forward="false" selection-start-line="208" selection-start-column="50" selection-end-line="208" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scss/main.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="257" column="20" lean-forward="false" selection-start-line="257" selection-start-column="20" selection-end-line="257" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="3" lean-forward="false" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="87" />
+          <folding />
         </state>
       </provider>
     </entry>
