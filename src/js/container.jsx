@@ -38,13 +38,7 @@ class Container extends React.Component {
               return null
       }
     };
-
-    generateMenuList = () => {
-     return this.state.titlesArray.map((page) => {
-         return <li className = "mobile-menu-list-position" key = {page} onClick = {() => {this.handleMenuClick(page)}}>{page}</li>
-     })
-   };
-
+    
     handleInput = (screen, title) => {
             this.setState ({
                 screenToRender: screen,

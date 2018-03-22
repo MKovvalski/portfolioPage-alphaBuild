@@ -7,6 +7,19 @@ import Projects from "./CV-pages/Projects/projects.jsx";
 import PersonalInfo from "./CV-pages/PersonalInfo/personal-info.jsx";
 
 class Content extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            titlesArray: ["AboutMe", "Projects", "PersonalInfo"]
+        }
+
+    }
+
+    generateMenuList = () => {
+        return this.state.titlesArray.map((page) => {
+            return <li className = "mobile-menu-list-position" key = {page} onClick = {() => {this.handleMenuClick(page)}}>{page}</li>
+        })
+    };
 
     handleRender = (renderScreen) => {
         switch(renderScreen) {
@@ -26,11 +39,29 @@ class Content extends React.Component {
 
     render () {
        return <div className = "content">
+           <nav className = "mobile-menu">
+               <div className = "mac-circles">
+                   <div className = "circle-1"/>
+                   <div className = "circle-2"/>
+                   <div className = "circle-4"/>
+               </div>
+               <h3>
+                   {/*{this.state.title}*/}
+               </h3>
+               <div className = "menu-burger">
+                   <div className = "menu-bar"/>
+                   <div className = "menu-bar"/>
+                   <div className = "menu-bar"/>
+               </div>
+           </nav>
+           <ul className = "mobile-menu-list">
+               {/*{this.generateMenuList()}*/}
+           </ul>
            <header>
                <div className = "circle-1"/>
                <div className = "circle-2"/>
                <div className = "circle-4"/>
-               <h1>{this.props.renderScreen}</h1>
+               {/*<h1>{this.props.renderScreen}</h1>*/}
            </header>
            <div className = "main-content">
                {this.handleRender(this.props.renderScreen)}
@@ -40,3 +71,6 @@ class Content extends React.Component {
 }
 
 export default Content;
+
+// onClick = {() => this.handleMenuDisplay()}
+// id = {this.state.menuDisplay}
