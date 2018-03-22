@@ -12,14 +12,12 @@ class Container extends React.Component {
             screenToRender: "",
             title: "AboutMe",
             titlesArray: ["AboutMe", "Projects", "PersonalInfo"],
-            menuDisplay: "display-none"
         }
     }
 
     MenuClickSetState = (page) => {
         this.setState({
             title: page,
-            menuDisplay: "display-none"
         });
     };
 
@@ -38,7 +36,7 @@ class Container extends React.Component {
               return null
       }
     };
-    
+
     handleInput = (screen, title) => {
             this.setState ({
                 screenToRender: screen,
@@ -46,45 +44,9 @@ class Container extends React.Component {
             })
     };
 
-    handleMenuDisplay = () => {
-      switch (this.state.menuDisplay) {
-          case "display-none":
-              this.setState({
-                  menuDisplay: "display-block"
-              });
-              break;
-          case "display-block":
-              this.setState({
-                  menuDisplay: "display-none"
-              });
-              break;
-
-          default:
-              return null;
-      }
-    };
-
     render () {
         return <div className = "main-container">
-            <nav className = "mobile-menu">
-                    <div className = "mac-circles">
-                        <div className = "circle-1"/>
-                        <div className = "circle-2"/>
-                        <div className = "circle-4"/>
-                    </div>
-                    <h3>
-                        {this.state.title}
-                    </h3>
-                    <div className = "menu-burger" onClick = {() => this.handleMenuDisplay()}>
-                        <div className = "menu-bar"/>
-                        <div className = "menu-bar"/>
-                        <div className = "menu-bar"/>
-                    </div>
-            </nav>
-            <ul className = "mobile-menu-list" id = {this.state.menuDisplay} >
-                {this.generateMenuList()}
-            </ul>
-            <Content renderScreen = {this.state.title}/>
+            <Content MenuClick = {this.handleMenuClick} renderScreen = {this.state.title}/>
             <Terminal titleText = {this.state.title} renderInfo = {this.handleInput}/>
         </div>
     }
