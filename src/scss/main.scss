@@ -14,7 +14,7 @@ $brgColor2: white;
 $brgColor3: #ffd633;
 $brgColor4: #47d147;
 $radius: 6px;
-$mobileWidth: 450px;
+$mobileWidth: 420px;
 
 @mixin sizing ($width, $height){
   height: $height;
@@ -106,6 +106,7 @@ body {
 .main-component {
   @include sizing(100%, 100vh);
   @include flex(row, center, center);
+  background: linear-gradient(#141e30, #243B55);
 }
 
 // ----------------------------------------- //
@@ -175,7 +176,21 @@ body {
 // -------------- content ------------------ //
 // ----------------------------------------- //
 
+@keyframes release {
+  0% {
+    width: 0;
+    height: 0;
+    transform: translate(50px, 50px);
+  }
+  100% {
+    width: 67.5%;
+    height: none;
+    transform: translate(100px, 100px);
+  }
+}
+
 .content {
+  animation: release 3s linear 1 forwards;
   @include baseStyles(67.5%, none, $brgColor, none, $border, $radius);
   header {
     @include flex(row, flex-start, center);
@@ -416,6 +431,17 @@ body {
   }
   100% {
     width: 355px;
+  }
+}
+
+@keyframes expand-mobile-large {
+  0% {
+    width: 57px;
+  }
+  30% {
+  }
+  100% {
+    width: 385px;
   }
 }
 

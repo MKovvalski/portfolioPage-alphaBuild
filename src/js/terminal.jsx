@@ -21,7 +21,7 @@ class Terminal extends React.Component {
                     placeholder: "type here..."
                 })
             }
-        },800)
+        },700)
     }
 
     componentDidUpdate () {
