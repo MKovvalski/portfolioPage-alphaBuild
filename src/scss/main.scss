@@ -106,7 +106,7 @@ body {
 .main-component {
   @include sizing(100%, 100vh);
   @include flex(row, center, center);
-  background: linear-gradient(#141e30, #243B55);
+  background: linear-gradient(#e7c697, #d5ac76);
 }
 
 // ----------------------------------------- //
@@ -114,6 +114,7 @@ body {
 // ----------------------------------------- //
 
 .main-container {
+  border: 3px solid red;
   @include sizing(99%, 99%);
   @include flex(row, space-between, flex-start);
   @media (max-width: $mobileWidth) {
@@ -200,10 +201,10 @@ body {
 }
 
 .content {
-  animation: release 3s linear 1 forwards;
+  //animation: release 3s linear 1 forwards;
   @include baseStyles(67.5%, none, $brgColor, none, $border, $radius);
   header {
-    animation: release2 5s linear 1 forwards;
+    //animation: release2 5s linear 1 forwards;
     @include flex(row, flex-start, center);
     @include baseStyles(100%, 4%, #666666, #bfbfbf, none , 5px 5px 0 0 );
     border-bottom: $headerBorder;
@@ -230,7 +231,6 @@ body {
 }
 
 .main-content {
-  animation: release2 5s linear 1 forwards;
   @include flex(row, center, flex-start);
   margin-top: 8px;
   margin-bottom: 8px;
@@ -443,17 +443,6 @@ body {
   }
   100% {
     width: 355px;
-  }
-}
-
-@keyframes expand-mobile-large {
-  0% {
-    width: 57px;
-  }
-  30% {
-  }
-  100% {
-    width: 385px;
   }
 }
 
@@ -712,7 +701,7 @@ body {
     color: $textColor;
     background-color: $brgColor;
     border: none;
-    margin-bottom: 1.8px;
+    margin-bottom: 2px;
   }
   input:focus {
     outline: none;
