@@ -124,9 +124,17 @@ body {
 }
 
 .animation-wrapper {
+  border: 3px solid red;
   @include sizing(400px, 200px);
-  background-color: grey;
   @include flex(row, center, center);
+  animation: circle-appear 3s linear 1 forwards;
+  //rot 0.4s 1.7s linear 1 forwards;
+}
+
+@keyframes rot {
+  100% {
+    transform: rotate(90deg);
+  }
 }
 
 .S1 {
@@ -134,15 +142,15 @@ body {
   background-color: $brgColor;
   border-bottom-left-radius: 60px;
   border-top-left-radius: 60px;
-  animation: circle-slide-left 0.5s linear 1 forwards,
-  test 0.5s 0.5s linear forwards;
-  //move 0.5s 1s linear 1 forwards;
+  //animation: circle-slide-left 0.3s 0.7s ease-in 1 forwards,
+  //shape-and-move-left 0.3s 0.9s linear forwards;
 }
 
 .S2 {
   @include sizing(0, 60px);
   background-color: $brgColor;
-  animation: circle-middle-appear 0.5s linear 1 forwards, test3 0.5s 0.5s linear forwards;
+  //animation: circle-middle-appear 0.3s 0.7s ease-in 1 forwards,
+  //shape-middle 0.3s 0.9s linear 1 forwards;
 }
 
 .S3 {
@@ -150,7 +158,42 @@ body {
   background-color: $brgColor;
   border-bottom-right-radius: 60px;
   border-top-right-radius: 60px;
-  animation: circle-slide-right 0.5s linear 1 forwards, test2 0.5s 0.5s linear forwards;
+  //animation: circle-slide-right 0.3s 0.7s ease-in 1 forwards,
+  //shape-and-move-right 0.3s 0.9s linear 1 forwards;
+}
+
+@keyframes circle-appear {
+  0% {
+    transform: translate(0,-450px);
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  65% {
+    opacity: 1;
+  }
+  50% {
+    transform: translate(0, 0);
+  }
+  60% {
+    transform: translate(0, -30px);
+  }
+  70% {
+    transform: translate(0, 0);
+  }
+  77% {
+    transform: translate(0, -20px);
+  }
+  84% {
+    transform: translate(0, 0);
+  }
+  95% {
+    transform: translate(0, -15px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }
 
 @keyframes circle-slide-left {
@@ -173,47 +216,39 @@ body {
   }
 }
 
-@keyframes test {
+@keyframes shape-and-move-left {
   0% {
     border-radius: 100px 0 0 100px;
     @include sizing(100px, 60px);
   }
   100% {
-    background-color: indianred;
+    background-color: #ff5050;
+    box-shadow: 1px 1px #e60000;
     @include sizing(60px, 60px);
     border-radius: 50%;
     transform: translate(-80px, 0);
   }
 }
 
-@keyframes test2 {
+@keyframes shape-and-move-right {
   0% {
     border-radius: 0 100px 100px 0;
     @include sizing(100px, 60px);
   }
   100% {
     background-color: #47d147;
+    box-shadow: 1px 1px #196619;
     @include sizing(60px, 60px);
     border-radius: 50%;
     transform: translate(80px, 0);
   }
 }
 
-@keyframes test3 {
+@keyframes shape-middle {
   100% {
-    background-color: yellow;
+    background-color: #ffcc00;
+    box-shadow: 1px 1px #b38f00;
     border-radius: 50%;
-  }
-}
-
-@keyframes move {
-  0% {
-    @include sizing(60px, 60px);
-    transform: translate(-80px, 0);
-  }
-  100% {
-    @include sizing(25px, 25px);
-    transform: translate(-40px, 40px);
   }
 }
 
