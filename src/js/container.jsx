@@ -46,10 +46,10 @@ class Container extends React.Component {
 
     render () {
         return <div className = "main-container">
-            <div>
-                <div/>
-                <div/>
-                <div/>
+            <div className = "animation-wrapper">
+                <div className = "S1"/>
+                <div className = "S2"/>
+                <div className = "S3"/>
             </div>
             {/*<Content MenuClick = {this.handleMenuClick} renderScreen = {this.state.title}/>*/}
             {/*<Terminal titleText = {this.state.title} renderInfo = {this.handleInput}/>*/}
