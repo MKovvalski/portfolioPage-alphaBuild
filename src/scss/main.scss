@@ -121,7 +121,6 @@ body {
 }
 
 .main-container {
-  border: 3px solid red;
   @include sizing(99%, 99%);
   @media (max-width: $mobileWidth) {
     @include sizing(100%, 100%);
@@ -134,7 +133,6 @@ body {
 }
 
 .animation-wrapper {
-  border: 3px solid red;
   @include sizing(700px, 700px);
   @include flex(column, center, center);
   animation: circle-appear 1.5s linear 1 forwards,
@@ -608,6 +606,9 @@ body {
 
 #slide-in-animation {
   animation: slide-right 0.3s linear 1 forwards;
+  @media (max-width: $mobileWidth) {
+    animation: slide-right-mobile 0.3s linear 1 forwards;
+  }
 }
 
 #display-block {
@@ -619,6 +620,9 @@ body {
 }
 
 @keyframes slide-right {
+  0%{
+    transform: translate(-48px,0);
+  }
   100%{
     transform: translate(0, 0);
   }
@@ -637,8 +641,11 @@ body {
 }
 
 @keyframes slide-right-mobile {
+  0% {
+    transform: translate(-23px, 0);
+  }
   100%{
-    transform: translate(0, 0);
+    transform: translate(-0, 0);
   }
 }
 

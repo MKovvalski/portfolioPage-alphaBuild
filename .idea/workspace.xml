@@ -4,7 +4,6 @@
     <list default="true" id="874f3a74-86f5-44b0-84ec-4a953047a6a6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/js/app.js" afterPath="$PROJECT_DIR$/build/js/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/js/app.js.map" afterPath="$PROJECT_DIR$/build/js/app.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/container.jsx" afterPath="$PROJECT_DIR$/src/js/container.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/scss/main.scss" afterPath="$PROJECT_DIR$/src/scss/main.scss" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -22,7 +21,7 @@
       <file leaf-file-name="contact-list.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/CV-pages/AboutMe/contact-list.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
+            <state relative-caret-position="450">
               <caret line="47" column="16" lean-forward="false" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
               <folding>
                 <element signature="e#311#1022#0" expanded="false" />
@@ -31,10 +30,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="container.jsx" pinned="false" current-in-tab="true">
+      <file leaf-file-name="container.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/container.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="553">
+            <state relative-caret-position="462">
               <caret line="72" column="0" lean-forward="true" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
               <folding>
                 <element signature="e#61#99#0" expanded="true" />
@@ -45,28 +44,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.scss" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/scss/main.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="132" column="30" lean-forward="false" selection-start-line="132" selection-start-column="30" selection-end-line="132" selection-end-column="30" />
+            <state relative-caret-position="453">
+              <caret line="639" column="3" lean-forward="true" selection-start-line="639" selection-start-column="3" selection-end-line="639" selection-end-column="3" />
               <folding>
-                <element signature="e#4477#5036#0" expanded="false" />
-                <element signature="e#5038#5149#0" expanded="false" />
-                <element signature="e#5151#5267#0" expanded="false" />
-                <element signature="e#5269#5350#0" expanded="false" />
-                <element signature="e#5352#5604#0" expanded="false" />
-                <element signature="e#5473#5602#0" expanded="false" />
-                <element signature="e#5606#5858#0" expanded="false" />
-                <element signature="e#5860#5955#0" expanded="false" />
-                <element signature="e#5957#6157#0" expanded="false" />
-                <element signature="e#6159#6353#0" expanded="false" />
-                <element signature="e#6355#6554#0" expanded="false" />
-                <element signature="e#6556#6666#0" expanded="false" />
-                <element signature="e#6668#6889#0" expanded="false" />
-                <element signature="e#6891#7110#0" expanded="false" />
-                <element signature="e#7125#8044#0" expanded="false" />
-                <element signature="e#8064#8337#0" expanded="false" />
+                <element signature="e#4427#4986#0" expanded="false" />
+                <element signature="e#4988#5099#0" expanded="false" />
+                <element signature="e#5101#5217#0" expanded="false" />
+                <element signature="e#5219#5300#0" expanded="false" />
+                <element signature="e#5302#5554#0" expanded="false" />
+                <element signature="e#5423#5552#0" expanded="false" />
+                <element signature="e#5556#5808#0" expanded="false" />
+                <element signature="e#5810#5905#0" expanded="false" />
+                <element signature="e#5907#6107#0" expanded="false" />
+                <element signature="e#6109#6303#0" expanded="false" />
+                <element signature="e#6305#6504#0" expanded="false" />
+                <element signature="e#6506#6616#0" expanded="false" />
+                <element signature="e#6618#6839#0" expanded="false" />
+                <element signature="e#6841#7060#0" expanded="false" />
+                <element signature="e#7075#7994#0" expanded="false" />
+                <element signature="e#8014#8287#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -120,8 +119,8 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/src/js/CV-pages/PersonalInfo/skills.jsx" />
         <option value="$PROJECT_DIR$/src/js/terminal.jsx" />
-        <option value="$PROJECT_DIR$/src/scss/main.scss" />
         <option value="$PROJECT_DIR$/src/js/container.jsx" />
+        <option value="$PROJECT_DIR$/src/scss/main.scss" />
       </list>
     </option>
   </component>
@@ -246,12 +245,12 @@
       <option name="presentableId" value="Default" />
       <updated>1519052924946</updated>
       <workItem from="1519052926586" duration="9225000" />
-      <workItem from="1519937814560" duration="198448000" />
+      <workItem from="1519937814560" duration="199702000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="207673000" />
+    <option name="totallyTimeSpent" value="208927000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -640,16 +639,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/CV-pages/AboutMe/contact-list.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="47" column="16" lean-forward="false" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
-          <folding>
-            <element signature="e#311#1022#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/CV-pages/AboutMe/about-me.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
@@ -660,39 +649,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scss/main.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="132" column="30" lean-forward="false" selection-start-line="132" selection-start-column="30" selection-end-line="132" selection-end-column="30" />
-          <folding>
-            <element signature="e#4477#5036#0" expanded="false" />
-            <element signature="e#5038#5149#0" expanded="false" />
-            <element signature="e#5151#5267#0" expanded="false" />
-            <element signature="e#5269#5350#0" expanded="false" />
-            <element signature="e#5352#5604#0" expanded="false" />
-            <element signature="e#5473#5602#0" expanded="false" />
-            <element signature="e#5606#5858#0" expanded="false" />
-            <element signature="e#5860#5955#0" expanded="false" />
-            <element signature="e#5957#6157#0" expanded="false" />
-            <element signature="e#6159#6353#0" expanded="false" />
-            <element signature="e#6355#6554#0" expanded="false" />
-            <element signature="e#6556#6666#0" expanded="false" />
-            <element signature="e#6668#6889#0" expanded="false" />
-            <element signature="e#6891#7110#0" expanded="false" />
-            <element signature="e#7125#8044#0" expanded="false" />
-            <element signature="e#8064#8337#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/container.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="553">
+        <state relative-caret-position="462">
           <caret line="72" column="0" lean-forward="true" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
           <folding>
             <element signature="e#61#99#0" expanded="true" />
             <element signature="e#580#935#0" expanded="false" />
             <element signature="e#975#1096#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/CV-pages/AboutMe/contact-list.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="47" column="16" lean-forward="false" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
+          <folding>
+            <element signature="e#311#1022#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scss/main.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="453">
+          <caret line="639" column="3" lean-forward="true" selection-start-line="639" selection-start-column="3" selection-end-line="639" selection-end-column="3" />
+          <folding>
+            <element signature="e#4427#4986#0" expanded="false" />
+            <element signature="e#4988#5099#0" expanded="false" />
+            <element signature="e#5101#5217#0" expanded="false" />
+            <element signature="e#5219#5300#0" expanded="false" />
+            <element signature="e#5302#5554#0" expanded="false" />
+            <element signature="e#5423#5552#0" expanded="false" />
+            <element signature="e#5556#5808#0" expanded="false" />
+            <element signature="e#5810#5905#0" expanded="false" />
+            <element signature="e#5907#6107#0" expanded="false" />
+            <element signature="e#6109#6303#0" expanded="false" />
+            <element signature="e#6305#6504#0" expanded="false" />
+            <element signature="e#6506#6616#0" expanded="false" />
+            <element signature="e#6618#6839#0" expanded="false" />
+            <element signature="e#6841#7060#0" expanded="false" />
+            <element signature="e#7075#7994#0" expanded="false" />
+            <element signature="e#8014#8287#0" expanded="false" />
           </folding>
         </state>
       </provider>
