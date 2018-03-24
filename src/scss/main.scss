@@ -112,26 +112,60 @@ body {
 // ----------------------------------------- //
 // -------------- container ---------------- //
 // ----------------------------------------- //
+#container-animation-flex {
+  @include flex(column, center, center);
+}
 
-.main-container { //tu będzie trzeba zrobić zmiennego flexa
+#container-website-flex {
+  @include flex(row, space-between, flex-start);
+}
+
+.main-container {
+  border: 3px solid red;
   @include sizing(99%, 99%);
-  @include flex(row, center, center);
-  //@include flex(row, space-between, flex-start);
   @media (max-width: $mobileWidth) {
     @include sizing(100%, 100%);
     @include flex (column, flex-start, flex-start);
   }
 }
 
-.animation-wrapper {
-  border: 3px solid red;
-  @include sizing(400px, 200px);
-  @include flex(row, center, center);
-  animation: circle-appear 3s linear 1 forwards;
-  //rot 0.4s 1.7s linear 1 forwards;
+.container-wrapper {
+  @include sizing(100%, 100%);
 }
 
-@keyframes rot {
+.animation-wrapper {
+  border: 3px solid red;
+  @include sizing(700px, 700px);
+  @include flex(column, center, center);
+  animation: circle-appear 1.5s linear 1 forwards,
+  rotate 0.4s 2.4s linear 1 forwards;
+}
+
+.animation-circles {
+  @include flex(row, center, center);
+}
+
+.name {
+  position: absolute;
+  font-size: 40px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: $brgColor;
+  opacity: 0;
+  animation: name-position 1s 4.7s linear 1 forwards;
+}
+
+.title {
+  position: absolute;
+  font-size: 40px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: $brgColor;
+  opacity: 0;
+  animation: title-position 1s 5s linear 1 forwards;
+}
+
+@keyframes rotate {
   100% {
     transform: rotate(90deg);
   }
@@ -142,15 +176,15 @@ body {
   background-color: $brgColor;
   border-bottom-left-radius: 60px;
   border-top-left-radius: 60px;
-  //animation: circle-slide-left 0.3s 0.7s ease-in 1 forwards,
-  //shape-and-move-left 0.3s 0.9s linear forwards;
+  animation: circle-slide-left 0.3s 1.7s ease-in 1 forwards,
+  shape-and-move-left 0.3s 2s linear 1 forwards, final-position-left 0.3s 4s linear 1 forwards;
 }
 
 .S2 {
   @include sizing(0, 60px);
   background-color: $brgColor;
-  //animation: circle-middle-appear 0.3s 0.7s ease-in 1 forwards,
-  //shape-middle 0.3s 0.9s linear 1 forwards;
+  animation: circle-middle-appear 0.3s 1.7s ease-in 1 forwards,
+  shape-middle 0.3s 2s linear 1 forwards, final-position-center 0.3s 4s linear 1 forwards;
 }
 
 .S3 {
@@ -158,19 +192,27 @@ body {
   background-color: $brgColor;
   border-bottom-right-radius: 60px;
   border-top-right-radius: 60px;
-  //animation: circle-slide-right 0.3s 0.7s ease-in 1 forwards,
-  //shape-and-move-right 0.3s 0.9s linear 1 forwards;
+  animation: circle-slide-right 0.3s 1.7s ease-in 1 forwards,
+  shape-and-move-right 0.3s 2s linear 1 forwards, final-position-right 0.3s 4s linear 1 forwards;
+}
+
+.line {
+  opacity: 0;
+  width: 20px;
+  height: 7px;
+  background-color: $brgColor;
+  animation: line-position 0.3s 4.5s linear 1 forwards;
 }
 
 @keyframes circle-appear {
   0% {
-    transform: translate(0,-450px);
+    transform: translate(0,-400px);
     opacity: 0;
   }
   30% {
     opacity: 0;
   }
-  65% {
+  40% {
     opacity: 1;
   }
   50% {
@@ -188,8 +230,14 @@ body {
   84% {
     transform: translate(0, 0);
   }
-  95% {
-    transform: translate(0, -15px);
+  89% {
+    transform: translate(0, -10px);
+  }
+  94% {
+    transform: translate(0, 0);
+  }
+  97% {
+    transform: translate(0, -5px);
   }
   100% {
     transform: translate(0, 0);
@@ -223,7 +271,6 @@ body {
   }
   100% {
     background-color: #ff5050;
-    box-shadow: 1px 1px #e60000;
     @include sizing(60px, 60px);
     border-radius: 50%;
     transform: translate(-80px, 0);
@@ -237,7 +284,6 @@ body {
   }
   100% {
     background-color: #47d147;
-    box-shadow: 1px 1px #196619;
     @include sizing(60px, 60px);
     border-radius: 50%;
     transform: translate(80px, 0);
@@ -247,8 +293,76 @@ body {
 @keyframes shape-middle {
   100% {
     background-color: #ffcc00;
-    box-shadow: 1px 1px #b38f00;
     border-radius: 50%;
+  }
+}
+
+@keyframes final-position-left {
+  0% {
+    @include sizing(60px, 60px);
+    transform: translate(-80px, 0);
+  }
+  100% {
+    @include sizing(40px, 40px);
+    transform: translate(-27px, 280px);
+  }
+}
+
+@keyframes final-position-center {
+  0% {
+    @include sizing(60px, 60px);
+    transform: translate(0, 0);
+  }
+  100% {
+    @include sizing(40px, 40px);
+    transform: translate(0, 280px);
+  }
+}
+
+@keyframes final-position-right {
+  0% {
+    @include sizing(60px, 60px);
+    transform: translate(80px, 0);
+  }
+  100% {
+    @include sizing(40px, 40px);
+    transform: translate(27px, 280px);
+  }
+}
+
+@keyframes line-position {
+  100%{
+    opacity: 1;
+    transform: translate(0, 265px);
+    width: 190px;
+  }
+}
+
+@keyframes name-position {
+  0%{
+    opacity: 0;
+    transform: rotate(-90deg) translate(350px, -35px);
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(-90deg) translate(-36px, -35px);
+  }
+}
+
+@keyframes title-position {
+  0%{
+    opacity: 0;
+    transform: rotate(-90deg) translate(450px, 28px);
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(-90deg) translate(71px, 28px);
   }
 }
 
@@ -306,34 +420,9 @@ body {
 // -------------- content ------------------ //
 // ----------------------------------------- //
 
-@keyframes release {
-  0% {
-    width: 0;
-    height: 0;
-  }
-  100% {
-    width: 67.5%;
-    height: 500px;
-  }
-}
-
-@keyframes release2 {
-  0% {
-    opacity: 0;
-  }
-  99% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 .content {
-  //animation: release 3s linear 1 forwards;
   @include baseStyles(67.5%, none, $brgColor, none, $border, $radius);
   header {
-    //animation: release2 5s linear 1 forwards;
     @include flex(row, flex-start, center);
     @include baseStyles(100%, 4%, #666666, #bfbfbf, none , 5px 5px 0 0 );
     border-bottom: $headerBorder;

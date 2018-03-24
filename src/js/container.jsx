@@ -12,6 +12,7 @@ class Container extends React.Component {
             screenToRender: "",
             title: "AboutMe",
             titlesArray: ["AboutMe", "Projects", "PersonalInfo"],
+            flexID: "container-animation-flex",
         }
     }
 
@@ -44,15 +45,35 @@ class Container extends React.Component {
             })
     };
 
-    render () {
-        return <div className = "main-container">
-            <div className = "animation-wrapper">
-                <div className = "S1"/>
-                <div className = "S2"/>
-                <div className = "S3"/>
+    timeoutID = setTimeout(() => {
+        this.setState ({
+            flexID: "container-website-flex"
+        })
+    },7000);
+
+    ContainerRender = () => {
+        if (this.state.flexID === "container-animation-flex") {
+            return  <div className = "animation-wrapper">
+                    <div className = "line"/>
+                    <h1 className = "name" >mateusz kowalski</h1>
+                    <h1 className = "title">Junior Front-End Developer</h1>
+                    <div className = "animation-circles">
+                        <div className = "S1"/>
+                        <div className = "S2"/>
+                        <div className = "S3"/>
+                    </div>
+                </div>
+        } else {
+            return <div className = "container-wrapper" id ={this.state.flexID}>
+                <Content MenuClick = {this.handleMenuClick} renderScreen = {this.state.title}/>
+                <Terminal titleText = {this.state.title} renderInfo = {this.handleInput}/>
             </div>
-            {/*<Content MenuClick = {this.handleMenuClick} renderScreen = {this.state.title}/>*/}
-            {/*<Terminal titleText = {this.state.title} renderInfo = {this.handleInput}/>*/}
+        }
+    };
+
+    render () {
+        return <div className = "main-container" id = {this.state.flexID}>
+            {this.ContainerRender()}
         </div>
     }
 }
