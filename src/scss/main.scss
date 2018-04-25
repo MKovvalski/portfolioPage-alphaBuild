@@ -106,12 +106,13 @@ body {
 .main-component {
   @include sizing(100%, 100vh);
   @include flex(row, center, center);
-  background: linear-gradient(#e7c697, #d5ac76);
+  background: linear-gradient(#eef2f3, #8e9eab);
 }
 
 // ----------------------------------------- //
 // -------------- container ---------------- //
 // ----------------------------------------- //
+
 #container-animation-flex {
   @include flex(column, center, center);
 }
@@ -419,7 +420,8 @@ body {
 // ----------------------------------------- //
 
 .content {
-  @include baseStyles(67.5%, none, $brgColor, none, $border, $radius);
+  @include baseStyles(67.5%, none, $brgColor, none, none, $radius);
+  max-width: 1400px;
   header {
     @include flex(row, flex-start, center);
     @include baseStyles(100%, 4%, #666666, #bfbfbf, none , 5px 5px 0 0 );
@@ -886,7 +888,8 @@ body {
 // ----------------------------------------- //
 
 .terminal {
-  @include baseStyles(32%, 40%, $brgColor, none, $border, $radius);
+  @include baseStyles(32%, 40%, $brgColor, none, none, $radius);
+  max-width: 400px;
   font-size: 14px;
   align-self: flex-end;
   header {
@@ -917,6 +920,7 @@ body {
   height: 90%;
   overflow-y: scroll;
   p {
+    margin-left: 5px;
     color: #8c8c8c;
   }
   input {
@@ -935,4 +939,5 @@ body {
 
 .terminal-input {
   @include flex(row, flex-start, center);
+  margin-left: 3px;
 }

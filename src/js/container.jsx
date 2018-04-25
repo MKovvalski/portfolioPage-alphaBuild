@@ -49,7 +49,7 @@ class Container extends React.Component {
         this.setState ({
             flexID: "container-website-flex"
         })
-    },7000);
+    },8500);
 
     ContainerRender = () => {
         if (this.state.flexID === "container-animation-flex") {
