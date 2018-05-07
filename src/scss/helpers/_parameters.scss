@@ -1,14 +1,17 @@
+// Colors
+$color-primary: #42C997;
+$color-secondary: white;
+$color-tertiary: #595959;
 
+// Font-colors
+$color-font-title: #595959;
+$color-font-subtitle: white;
+$color-font-text: #595959;
+$color-font-text-links: #333333;
 
-$textColor: #d9d9d9;
-$border: 1px solid #333333;
-$headerBorder: 1px solid #808080;
-$projectRadius: 9px 9px 0 0;
-$columnRadius: 10px;
-$brgColor: #404040;
-$brgColor2: white;
-$brgColor3: #ffd633;
-$brgColor4: #47d147;
-$radius: 6px;
-$mobileWidth: 420px;
+// Font-family
+$Open-sans: 'Open Sans', sans-serif;
 
+//Shadows
+$box-shadow-resting: 0px 13px 21px -7px rgba(0, 0, 0, 0.3);
+$box-shadow-hover: 0px 13px 21px 5px rgba(0, 0, 0, 0.3);

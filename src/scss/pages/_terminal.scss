@@ -1,56 +1,60 @@
-
-//terminal styling
-.terminal {
-  @include baseStyles(32%, 40%, $brgColor, none, none, $radius);
-  max-width: 400px;
-  font-size: 14px;
-  align-self: flex-end;
-  header {
-    @include flex(row, flex-start,center);
-    @include baseStyles(100%, 9%, #666666, #bfbfbf, none, 5px 5px 0 0);
-    border-bottom: $headerBorder;
-  }
-  @media (max-width: $mobileWidth) {
-    display: none;
-  }
-}
-
-.circle-1 {
-  @include circle(#ff5050, 8px, #e60000)
-}
-
-.circle-2 {
-  @include circle(#ffcc00, 6px, #b38f00)
-}
-
-.circle-3 {
-  margin-right: 7%;
-  @include circle(#47d147, 6px, #196619)
-}
-
-.terminal-body {
-  color: $textColor;
-  height: 90%;
-  overflow-y: scroll;
-  p {
-    margin-left: 5px;
-    color: #8c8c8c;
-  }
-  input {
-    width: auto;
-    margin-top: 2px;
-    margin-left: 3px;
-    color: $textColor;
-    background-color: $brgColor;
-    border: none;
-    margin-bottom: 2px;
-  }
-  input:focus {
-    outline: none;
-  }
-}
-
-.terminal-input {
-  @include flex(row, flex-start, center);
-  margin-left: 3px;
-}
+//
+////terminal styling
+//.terminal {
+//  opacity: 0.3;
+//  position: fixed;
+//  top: 59%;
+//  left: 68%;
+//  @include baseStyles(32%, 40%, $brgColor, none, none, $radius);
+//  max-width: 400px;
+//  font-size: 14px;
+//  align-self: flex-end;
+//  header {
+//    @include flex-box(row, flex-start,center);
+//    @include baseStyles(100%, 9%, #666666, #bfbfbf, none, 5px 5px 0 0);
+//    border-bottom: $headerBorder;
+//  }
+//  @media (max-width: $mobileWidth) {
+//    display: none;
+//  }
+//}
+//
+//.circle-1 {
+//  @include circle(#ff5050, 8px, #e60000)
+//}
+//
+//.circle-2 {
+//  @include circle(#ffcc00, 6px, #b38f00)
+//}
+//
+//.circle-3 {
+//  margin-right: 7%;
+//  @include circle(#47d147, 6px, #196619)
+//}
+//
+//.terminal-body {
+//  color: $textColor;
+//  height: 90%;
+//  overflow-y: scroll;
+//  p {
+//    margin-left: 5px;
+//    color: #8c8c8c;
+//  }
+//  input {
+//    width: auto;
+//    margin-top: 2px;
+//    margin-left: 3px;
+//    color: $textColor;
+//    background-color: $brgColor;
+//    border: none;
+//    margin-bottom: 2px;
+//  }
+//  input:focus {
+//    outline: none;
+//  }
+//}
+//
+//.terminal-input {
+//  @include flex-box(row, flex-start, center);
+//  margin-left: 3px;
+//}

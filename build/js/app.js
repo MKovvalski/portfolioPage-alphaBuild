@@ -19005,12 +19005,8 @@ var Content = function (_React$Component) {
         value: function render() {
             return _react2.default.createElement(
                 "div",
-                { className: "content" },
-                _react2.default.createElement(
-                    "div",
-                    { className: "main-content" },
-                    this.handleRender(this.props.renderScreen)
-                )
+                { className: "main-content" },
+                this.handleRender(this.props.renderScreen)
             );
         }
     }]);
@@ -19061,7 +19057,30 @@ var AboutMe = function (_React$Component) {
     _createClass(AboutMe, [{
         key: "render",
         value: function render() {
-            return _react2.default.createElement("div", { className: "main-about-me" });
+            return _react2.default.createElement(
+                "header",
+                { className: "main-about-me" },
+                _react2.default.createElement(
+                    "section",
+                    { className: "name-and-title" },
+                    _react2.default.createElement("img", { className: "big-icon", src: "../../../../imgs/light.svg", alt: "logo" }),
+                    _react2.default.createElement(
+                        "div",
+                        { className: "name-wrapper" },
+                        _react2.default.createElement(
+                            "h1",
+                            { className: "name-and-surname" },
+                            "Mateusz Kowalski"
+                        ),
+                        _react2.default.createElement(
+                            "span",
+                            { className: "position" },
+                            "Junior Front-End Developer"
+                        )
+                    )
+                ),
+                _react2.default.createElement(_contactList2.default, null)
+            );
         }
     }]);
 
@@ -19103,74 +19122,44 @@ var ContactList = function (_React$Component) {
 
         var _this = _possibleConstructorReturn(this, (ContactList.__proto__ || Object.getPrototypeOf(ContactList)).call(this, props));
 
-        _this.handleAnimationLaunch = function () {
-            if (_this.state.animationID === "slide-out-animation") {
-                _this.setState({
-                    animationID: "slide-in-animation",
-                    mailDisplay: "display-none",
-                    mailTextDisplay: "display-none"
-                });
-            } else {
-                _this.setState({
-                    animationID: "slide-out-animation"
-                });
-                setTimeout(function () {
-                    _this.setState({
-                        mailDisplay: "display-block"
-                    });
-                    setTimeout(function () {
-                        _this.setState({
-                            mailTextDisplay: "display-block"
-                        });
-                    }, 400);
-                }, 300);
-            }
-        };
-
-        _this.state = {
-            mailDisplay: "display-none",
-            animationID: "none",
-            mailTextDisplay: "display-none"
-        };
+        _this.state = {};
         return _this;
     }
 
     _createClass(ContactList, [{
         key: "render",
         value: function render() {
-            var _this2 = this;
-
             return _react2.default.createElement(
-                "div",
-                { className: "contact-list" },
+                "section",
+                { className: "main-contact-list" },
                 _react2.default.createElement(
-                    "div",
-                    { onClick: function onClick() {
-                            return _this2.handleAnimationLaunch();
-                        }, className: "contact-logo gmail", id: this.state.animationID },
+                    "ul",
+                    { className: "contact-list" },
                     _react2.default.createElement(
-                        "div",
-                        { className: "mail-expander", id: this.state.mailDisplay },
-                        _react2.default.createElement(
-                            "div",
-                            { className: "logo-gmail-doubler" },
-                            _react2.default.createElement(
-                                "div",
-                                { className: "mail", id: this.state.mailTextDisplay },
-                                "matt.kowalski.public@gmail.com"
-                            )
-                        )
+                        "li",
+                        { className: "contact-logo" },
+                        _react2.default.createElement("img", { src: "", alt: "gmail" })
+                    ),
+                    _react2.default.createElement(
+                        "li",
+                        { className: "contact-logo" },
+                        _react2.default.createElement("img", { src: "", alt: "linkedin" })
+                    ),
+                    _react2.default.createElement(
+                        "li",
+                        { className: "contact-logo" },
+                        _react2.default.createElement("img", { src: "", alt: "github" })
+                    ),
+                    _react2.default.createElement(
+                        "li",
+                        { className: "contact-logo" },
+                        _react2.default.createElement("img", { src: "", alt: "resume" })
                     )
                 ),
                 _react2.default.createElement(
-                    "a",
-                    { target: "_blank", href: "http://www.linkedin.com/in/mateusz-kowalski-62b758113/" },
-                    _react2.default.createElement("div", { className: "contact-logo linkedin" })
-                ),
-                _react2.default.createElement(
-                    "a",
-                    { target: "_blank", href: "http://github.com/MateuszKowalskiCL" },
-                    _react2.default.createElement("div", { className: "contact-logo github" })
+                    "p",
+                    { className: "short-bio" },
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur cum cumque fugit in voluptatem. Alias consequatur deleniti doloremque, dolores ea fuga inventore itaque, nisi officia provident, quod temporibus vitae voluptate?"
                 )
             );
         }
@@ -19722,16 +19711,29 @@ if(false) {
 
 exports = module.exports = __webpack_require__(15)(false);
 // imports
-exports.i(__webpack_require__(46), "");
+exports.i(__webpack_require__(43), "");
 
 // module
-exports.push([module.i, ".terminal {\n  width: 32%;\n  height: 40%;\n  background-color: #404040;\n  color: none;\n  border: none;\n  border-radius: 6px;\n  max-width: 400px;\n  font-size: 14px;\n  align-self: flex-end; }\n  .terminal header {\n    display: flex;\n    flex-direction: row;\n    justify-content: flex-start;\n    align-items: center;\n    width: 100%;\n    height: 9%;\n    background-color: #666666;\n    color: #bfbfbf;\n    border: none;\n    border-radius: 5px 5px 0 0;\n    border-bottom: 1px solid #808080; }\n  @media (max-width: 420px) {\n    .terminal {\n      display: none; } }\n\n.circle-1 {\n  width: 13px;\n  height: 13px;\n  border-radius: 50%;\n  margin-left: 8px;\n  background-color: #ff5050;\n  box-shadow: 0.2px 0.5px #e60000; }\n\n.circle-2 {\n  width: 13px;\n  height: 13px;\n  border-radius: 50%;\n  margin-left: 6px;\n  background-color: #ffcc00;\n  box-shadow: 0.2px 0.5px #b38f00; }\n\n.circle-3 {\n  margin-right: 7%;\n  width: 13px;\n  height: 13px;\n  border-radius: 50%;\n  margin-left: 6px;\n  background-color: #47d147;\n  box-shadow: 0.2px 0.5px #196619; }\n\n.terminal-body {\n  color: #d9d9d9;\n  height: 90%;\n  overflow-y: scroll; }\n  .terminal-body p {\n    margin-left: 5px;\n    color: #8c8c8c; }\n  .terminal-body input {\n    width: auto;\n    margin-top: 2px;\n    margin-left: 3px;\n    color: #d9d9d9;\n    background-color: #404040;\n    border: none;\n    margin-bottom: 2px; }\n  .terminal-body input:focus {\n    outline: none; }\n\n.terminal-input {\n  display: flex;\n  flex-direction: row;\n  justify-content: flex-start;\n  align-items: center;\n  margin-left: 3px; }\n\nbody {\n  font-family: 'Open Sans', sans-serif; }\n\n.container {\n  width: 100vw;\n  height: 100vh;\n  background-color: #42C997; }\n\nbody {\n  font-family: 'Open Sans', sans-serif; }\n", ""]);
+exports.push([module.i, ".main-about-me {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center; }\n\n.name-and-title {\n  width: 100%;\n  height: 65%;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: flex-end; }\n\n.big-icon {\n  width: 85px;\n  height: 85px;\n  margin-right: 10px;\n  margin-bottom: 127px;\n  background-color: #cccccc; }\n\n.name-wrapper {\n  margin-bottom: 110px;\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-start;\n  align-items: flex-start; }\n\n.name-and-surname {\n  font-size: 60px;\n  font-weight: 900;\n  color: #595959;\n  letter-spacing: 1px;\n  text-transform: uppercase; }\n\n.position {\n  margin-top: -15px;\n  font-size: 44px;\n  font-weight: 700;\n  color: white;\n  letter-spacing: 0.5px;\n  text-transform: uppercase; }\n\n.main-contact-list {\n  width: 100%;\n  height: 35%;\n  background-color: white;\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-start;\n  align-items: center; }\n\n.contact-list {\n  width: 50%;\n  margin-top: 20px;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: center; }\n\n.contact-logo {\n  width: 65px;\n  height: 65px;\n  background-color: #595959;\n  border-radius: 50%; }\n\n.short-bio {\n  width: 68%;\n  margin-top: 30px;\n  text-align: center; }\n\nbody {\n  font-family: \"Open Sans\", sans-serif; }\n\n.container {\n  width: 100vw;\n  height: 100vh;\n  background-color: #42C997; }\n\n.main-content {\n  width: 100%;\n  height: 100%; }\n\nbody {\n  font-family: 'Open Sans', sans-serif; }\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 43 */,
+/* 43 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(15)(false);
+// imports
+
+
+// module
+exports.push([module.i, "/*\n\tHTML5 Reset :: style.css\n\t----------------------------------------------------------\n\tWe have learned much from/been inspired by/taken code where offered from:\n\n\tEric Meyer\t\t\t\t\t:: http://meyerweb.com\n\tHTML5 Doctor\t\t\t\t:: http://html5doctor.com\n\tand the HTML5 Boilerplate\t:: http://html5boilerplate.com\n\n-------------------------------------------------------------------------------*/\n\n/* Let's default this puppy out\n-------------------------------------------------------------------------------*/\n\nhtml, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {\n    margin: 0;\n    padding: 0;\n    border: 0;\n    font-size: 100%;\n    font-weight: normal;\n    vertical-align: baseline;\n    background: transparent;\n}\n\nmain, article, aside, figure, footer, header, nav, section, details, summary {display: block;}\n\n/* Handle box-sizing while better addressing child elements:\n   http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */\nhtml {\n    box-sizing: border-box;\n}\n\n*,\n*:before,\n*:after {\n    box-sizing: inherit;\n}\n\n/* consider resetting the default cursor: https://gist.github.com/murtaugh/5247154 */\n\n/* Responsive images and other embedded objects */\n/* if you don't have full control over `img` tags (if you have to overcome attributes), consider adding height: auto */\nimg,\nobject,\nembed {max-width: 100%;}\n\n/*\n   Note: keeping IMG here will cause problems if you're using foreground images as sprites.\n\tIn fact, it *will* cause problems with Google Maps' controls at small size.\n\tIf this is the case for you, try uncommenting the following:\n\n#map img {\n\t\tmax-width: none;\n}\n*/\n\n/* force a vertical scrollbar to prevent a jumpy page */\nhtml {overflow-y: scroll;}\n\n/* we use a lot of ULs that aren't bulleted.\n\tyou'll have to restore the bullets within content,\n\twhich is fine because they're probably customized anyway */\nul {list-style: none;}\n\nblockquote, q {quotes: none;}\n\nblockquote:before,\nblockquote:after,\nq:before,\nq:after {content: ''; content: none;}\n\na {margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent;}\n\ndel {text-decoration: line-through;}\n\nabbr[title], dfn[title] {border-bottom: 1px dotted #000; cursor: help;}\n\n/* tables still need cellspacing=\"0\" in the markup */\ntable {border-collapse: separate; border-spacing: 0;}\nth {font-weight: bold; vertical-align: bottom;}\ntd {font-weight: normal; vertical-align: top;}\n\nhr {display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0;}\n\ninput, select {vertical-align: middle;}\n\npre {\n    white-space: pre; /* CSS2 */\n    white-space: pre-wrap; /* CSS 2.1 */\n    white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */\n    word-wrap: break-word; /* IE */\n}\n\ninput[type=\"radio\"] {vertical-align: text-bottom;}\ninput[type=\"checkbox\"] {vertical-align: bottom;}\n.ie7 input[type=\"checkbox\"] {vertical-align: baseline;}\n.ie6 input {vertical-align: text-bottom;}\n\nselect, input, textarea {font: 99% sans-serif;}\n\ntable {font-size: inherit; font: 100%;}\n\nsmall {font-size: 85%;}\n\nstrong {font-weight: bold;}\n\ntd, td img {vertical-align: top;}\n\n/* Make sure sup and sub don't mess with your line-heights http://gist.github.com/413930 */\nsub, sup {font-size: 75%; line-height: 0; position: relative;}\nsup {top: -0.5em;}\nsub {bottom: -0.25em;}\n\n/* standardize any monospaced elements */\npre, code, kbd, samp {font-family: monospace, sans-serif;}\n\n/* hand cursor on clickable elements */\n.clickable,\nlabel,\ninput[type=button],\ninput[type=submit],\ninput[type=file],\nbutton {cursor: pointer;}\n\n/* Webkit browsers add a 2px margin outside the chrome of form elements */\nbutton, input, select, textarea {margin: 0;}\n\n/* make buttons play nice in IE */\nbutton,\ninput[type=button] {width: auto; overflow: visible;}\n\n/* scale images in IE7 more attractively */\n.ie7 img {-ms-interpolation-mode: bicubic;}\n\n/* prevent BG image flicker upon hover\n   (commented out as usage is rare, and the filter syntax messes with some pre-processors)\n.ie6 html {filter: expression(document.execCommand(\"BackgroundImageCache\", false, true));}\n*/\n\n/* let's clear some floats */\n.clearfix:after { content: \" \"; display: block; clear: both; }", ""]);
+
+// exports
+
+
+/***/ }),
 /* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -20196,20 +20198,6 @@ module.exports = function (css) {
 	// send back the fixed css
 	return fixedCss;
 };
-
-
-/***/ }),
-/* 46 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(15)(false);
-// imports
-
-
-// module
-exports.push([module.i, "/*\n\tHTML5 Reset :: style.css\n\t----------------------------------------------------------\n\tWe have learned much from/been inspired by/taken code where offered from:\n\n\tEric Meyer\t\t\t\t\t:: http://meyerweb.com\n\tHTML5 Doctor\t\t\t\t:: http://html5doctor.com\n\tand the HTML5 Boilerplate\t:: http://html5boilerplate.com\n\n-------------------------------------------------------------------------------*/\n\n/* Let's default this puppy out\n-------------------------------------------------------------------------------*/\n\nhtml, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {\n    margin: 0;\n    padding: 0;\n    border: 0;\n    font-size: 100%;\n    font-weight: normal;\n    vertical-align: baseline;\n    background: transparent;\n}\n\nmain, article, aside, figure, footer, header, nav, section, details, summary {display: block;}\n\n/* Handle box-sizing while better addressing child elements:\n   http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */\nhtml {\n    box-sizing: border-box;\n}\n\n*,\n*:before,\n*:after {\n    box-sizing: inherit;\n}\n\n/* consider resetting the default cursor: https://gist.github.com/murtaugh/5247154 */\n\n/* Responsive images and other embedded objects */\n/* if you don't have full control over `img` tags (if you have to overcome attributes), consider adding height: auto */\nimg,\nobject,\nembed {max-width: 100%;}\n\n/*\n   Note: keeping IMG here will cause problems if you're using foreground images as sprites.\n\tIn fact, it *will* cause problems with Google Maps' controls at small size.\n\tIf this is the case for you, try uncommenting the following:\n\n#map img {\n\t\tmax-width: none;\n}\n*/\n\n/* force a vertical scrollbar to prevent a jumpy page */\nhtml {overflow-y: scroll;}\n\n/* we use a lot of ULs that aren't bulleted.\n\tyou'll have to restore the bullets within content,\n\twhich is fine because they're probably customized anyway */\nul {list-style: none;}\n\nblockquote, q {quotes: none;}\n\nblockquote:before,\nblockquote:after,\nq:before,\nq:after {content: ''; content: none;}\n\na {margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent;}\n\ndel {text-decoration: line-through;}\n\nabbr[title], dfn[title] {border-bottom: 1px dotted #000; cursor: help;}\n\n/* tables still need cellspacing=\"0\" in the markup */\ntable {border-collapse: separate; border-spacing: 0;}\nth {font-weight: bold; vertical-align: bottom;}\ntd {font-weight: normal; vertical-align: top;}\n\nhr {display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0;}\n\ninput, select {vertical-align: middle;}\n\npre {\n    white-space: pre; /* CSS2 */\n    white-space: pre-wrap; /* CSS 2.1 */\n    white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */\n    word-wrap: break-word; /* IE */\n}\n\ninput[type=\"radio\"] {vertical-align: text-bottom;}\ninput[type=\"checkbox\"] {vertical-align: bottom;}\n.ie7 input[type=\"checkbox\"] {vertical-align: baseline;}\n.ie6 input {vertical-align: text-bottom;}\n\nselect, input, textarea {font: 99% sans-serif;}\n\ntable {font-size: inherit; font: 100%;}\n\nsmall {font-size: 85%;}\n\nstrong {font-weight: bold;}\n\ntd, td img {vertical-align: top;}\n\n/* Make sure sup and sub don't mess with your line-heights http://gist.github.com/413930 */\nsub, sup {font-size: 75%; line-height: 0; position: relative;}\nsup {top: -0.5em;}\nsub {bottom: -0.25em;}\n\n/* standardize any monospaced elements */\npre, code, kbd, samp {font-family: monospace, sans-serif;}\n\n/* hand cursor on clickable elements */\n.clickable,\nlabel,\ninput[type=button],\ninput[type=submit],\ninput[type=file],\nbutton {cursor: pointer;}\n\n/* Webkit browsers add a 2px margin outside the chrome of form elements */\nbutton, input, select, textarea {margin: 0;}\n\n/* make buttons play nice in IE */\nbutton,\ninput[type=button] {width: auto; overflow: visible;}\n\n/* scale images in IE7 more attractively */\n.ie7 img {-ms-interpolation-mode: bicubic;}\n\n/* prevent BG image flicker upon hover\n   (commented out as usage is rare, and the filter syntax messes with some pre-processors)\n.ie6 html {filter: expression(document.execCommand(\"BackgroundImageCache\", false, true));}\n*/\n\n/* let's clear some floats */\n.clearfix:after { content: \" \"; display: block; clear: both; }", ""]);
-
-// exports
 
 
 /***/ })

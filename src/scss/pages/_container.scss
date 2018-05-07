@@ -1,11 +1,15 @@
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: $Open-sans;
 }
 
 .container {
   width: 100vw;
   height: 100vh;
-  background-color: #42C997;
+  background-color: $color-primary;
 }
 
+.main-content {
+  width: 100%;
+  height: 100%;
+}
