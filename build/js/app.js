@@ -18554,46 +18554,6 @@ var Container = function (_React$Component) {
             });
         };
 
-        _this.timeoutID = setTimeout(function () {
-            _this.setState({
-                flexID: "container-website-flex"
-            });
-        }, 8500);
-
-        _this.ContainerRender = function () {
-            if (_this.state.flexID === "container-animation-flex") {
-                return _react2.default.createElement(
-                    "div",
-                    { className: "animation-wrapper" },
-                    _react2.default.createElement("div", { className: "line" }),
-                    _react2.default.createElement(
-                        "h1",
-                        { className: "name" },
-                        "mateusz kowalski"
-                    ),
-                    _react2.default.createElement(
-                        "h1",
-                        { className: "title" },
-                        "Junior Front-End Developer"
-                    ),
-                    _react2.default.createElement(
-                        "div",
-                        { className: "animation-circles" },
-                        _react2.default.createElement("div", { className: "S1" }),
-                        _react2.default.createElement("div", { className: "S2" }),
-                        _react2.default.createElement("div", { className: "S3" })
-                    )
-                );
-            } else {
-                return _react2.default.createElement(
-                    "div",
-                    { className: "container-wrapper", id: _this.state.flexID },
-                    _react2.default.createElement(_content2.default, { MenuClick: _this.handleMenuClick, renderScreen: _this.state.title }),
-                    _react2.default.createElement(_terminal2.default, { titleText: _this.state.title, renderInfo: _this.handleInput })
-                );
-            }
-        };
-
         _this.state = {
             screenToRender: "",
             title: "AboutMe",
@@ -18605,11 +18565,40 @@ var Container = function (_React$Component) {
 
     _createClass(Container, [{
         key: "render",
+
+
+        // timeoutID = setTimeout(() => {
+        //     this.setState ({
+        //         flexID: "container-website-flex"
+        //     })
+        // },8500);
+
+        // ContainerRender = () => {
+        //     if (this.state.flexID === "container-animation-flex") {
+        //         return  <div className = "animation-wrapper">
+        //                 <div className = "line"/>
+        //                 <h1 className = "name" >mateusz kowalski</h1>
+        //                 <h1 className = "title">Junior Front-End Developer</h1>
+        //                 <div className = "animation-circles">
+        //                     <div className = "S1"/>
+        //                     <div className = "S2"/>
+        //                     <div className = "S3"/>
+        //                 </div>
+        //             </div>
+        //     } else {
+        //         return <div className = "container-wrapper" id ={this.state.flexID}>
+        //             <Content MenuClick = {this.handleMenuClick} renderScreen = {this.state.title}/>
+        //             <Terminal titleText = {this.state.title} renderInfo = {this.handleInput}/>
+        //         </div>
+        //     }
+        // };
+
         value: function render() {
             return _react2.default.createElement(
                 "div",
-                { className: "main-container", id: this.state.flexID },
-                this.ContainerRender()
+                { className: "container", id: this.state.flexID },
+                _react2.default.createElement(_content2.default, { MenuClick: this.handleMenuClick, renderScreen: this.state.title }),
+                _react2.default.createElement(_terminal2.default, { titleText: this.state.title, renderInfo: this.handleInput })
             );
         }
     }]);
@@ -19014,53 +19003,9 @@ var Content = function (_React$Component) {
     _createClass(Content, [{
         key: "render",
         value: function render() {
-            var _this2 = this;
-
             return _react2.default.createElement(
                 "div",
                 { className: "content" },
-                _react2.default.createElement(
-                    "nav",
-                    { className: "mobile-menu" },
-                    _react2.default.createElement(
-                        "div",
-                        { className: "mac-circles" },
-                        _react2.default.createElement("div", { className: "circle-1" }),
-                        _react2.default.createElement("div", { className: "circle-2" }),
-                        _react2.default.createElement("div", { className: "circle-4" })
-                    ),
-                    _react2.default.createElement(
-                        "h3",
-                        null,
-                        this.props.renderScreen
-                    ),
-                    _react2.default.createElement(
-                        "div",
-                        { className: "menu-burger", onClick: function onClick() {
-                                return _this2.handleMenuDisplay();
-                            } },
-                        _react2.default.createElement("div", { className: "menu-bar" }),
-                        _react2.default.createElement("div", { className: "menu-bar" }),
-                        _react2.default.createElement("div", { className: "menu-bar" })
-                    )
-                ),
-                _react2.default.createElement(
-                    "ul",
-                    { className: "mobile-menu-list", style: { display: this.state.menuDisplay } },
-                    this.generateMenuList()
-                ),
-                _react2.default.createElement(
-                    "header",
-                    null,
-                    _react2.default.createElement("div", { className: "circle-1" }),
-                    _react2.default.createElement("div", { className: "circle-2" }),
-                    _react2.default.createElement("div", { className: "circle-4" }),
-                    _react2.default.createElement(
-                        "h1",
-                        null,
-                        this.props.renderScreen
-                    )
-                ),
                 _react2.default.createElement(
                     "div",
                     { className: "main-content" },
@@ -19116,64 +19061,7 @@ var AboutMe = function (_React$Component) {
     _createClass(AboutMe, [{
         key: "render",
         value: function render() {
-            return _react2.default.createElement(
-                "div",
-                { className: "container" },
-                _react2.default.createElement(
-                    "div",
-                    { className: "bio" },
-                    _react2.default.createElement(
-                        "div",
-                        { className: "col-1" },
-                        _react2.default.createElement(
-                            "div",
-                            { className: "bio-data" },
-                            _react2.default.createElement(
-                                "div",
-                                { className: "bio-picture" },
-                                _react2.default.createElement("div", { className: "picture" })
-                            ),
-                            _react2.default.createElement(
-                                "div",
-                                { className: "bio-contact" },
-                                _react2.default.createElement(
-                                    "h1",
-                                    null,
-                                    "Mateusz Kowalski"
-                                ),
-                                _react2.default.createElement(
-                                    "h3",
-                                    null,
-                                    "contact"
-                                ),
-                                _react2.default.createElement(_contactList2.default, null)
-                            )
-                        )
-                    ),
-                    _react2.default.createElement(
-                        "div",
-                        { className: "col-2" },
-                        _react2.default.createElement(
-                            "div",
-                            { className: "bio-description" },
-                            _react2.default.createElement(
-                                "h1",
-                                null,
-                                "Junior Front-End Developer"
-                            ),
-                            _react2.default.createElement(
-                                "div",
-                                { className: "bio-text" },
-                                _react2.default.createElement(
-                                    "p",
-                                    null,
-                                    "During last three years my time was mostly occupied by working toward obtaining my business management bachelor, as well as working as a personal assistant of an event manager and lately as an event manager myself. The idea of becoming a Web- Dev came to my mind during the last year of studying, when I had my first contact with HTML and CSS at one of extra courses offered by University. Structuring information and shaping their design got me hooked immediately. Since then, I knew that someday I want to combine my managerial education with perfected knowledge of programming into position of Project Manager/Senior Developer. I believe that my work in Your company will be a stepping stone in that direction."
-                                )
-                            )
-                        )
-                    )
-                )
-            );
+            return _react2.default.createElement("div", { className: "main-about-me" });
         }
     }]);
 
@@ -19834,29 +19722,16 @@ if(false) {
 
 exports = module.exports = __webpack_require__(15)(false);
 // imports
-exports.i(__webpack_require__(43), "");
+exports.i(__webpack_require__(46), "");
 
 // module
-exports.push([module.i, "body {\n  font-family: 'Open Sans', sans-serif; }\n\n.container {\n  width: 97.5%; }\n\n.col-1 {\n  width: 33%; }\n  @media (max-width: 420px) {\n    .col-1 {\n      width: 100%; } }\n\n.col-2 {\n  width: 66%; }\n  @media (max-width: 420px) {\n    .col-2 {\n      width: 100%; } }\n\n.col-3 {\n  width: 32.5%; }\n  @media (max-width: 420px) {\n    .col-3 {\n      width: 100%; } }\n\n.main-component {\n  height: 100vh;\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  background: linear-gradient(#eef2f3, #8e9eab); }\n\n#container-animation-flex {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center; }\n\n#container-website-flex {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  align-items: flex-start; }\n\n.main-container {\n  height: 99%;\n  width: 99%; }\n  @media (max-width: 420px) {\n    .main-container {\n      height: 100%;\n      width: 100%;\n      display: flex;\n      flex-direction: column;\n      justify-content: flex-start;\n      align-items: flex-start; } }\n\n.container-wrapper {\n  height: 100%;\n  width: 100%; }\n\n.animation-wrapper {\n  height: 700px;\n  width: 700px;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  animation: circle-appear 1.5s linear 1 forwards, rotate 0.4s 2.4s linear 1 forwards; }\n\n.animation-circles {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center; }\n\n.name {\n  position: absolute;\n  font-size: 40px;\n  font-weight: 900;\n  text-transform: uppercase;\n  color: #404040;\n  opacity: 0;\n  animation: name-position 1s 4.7s linear 1 forwards; }\n\n.title {\n  position: absolute;\n  font-size: 40px;\n  font-weight: 900;\n  text-transform: uppercase;\n  color: #404040;\n  opacity: 0;\n  animation: title-position 1s 5s linear 1 forwards; }\n\n@keyframes rotate {\n  100% {\n    transform: rotate(90deg); } }\n\n.S1 {\n  height: 60px;\n  width: 30px;\n  background-color: #404040;\n  border-bottom-left-radius: 60px;\n  border-top-left-radius: 60px;\n  animation: circle-slide-left 0.3s 1.7s ease-in 1 forwards, shape-and-move-left 0.3s 2s linear 1 forwards, final-position-left 0.3s 4s linear 1 forwards; }\n\n.S2 {\n  height: 60px;\n  width: 0;\n  background-color: #404040;\n  animation: circle-middle-appear 0.3s 1.7s ease-in 1 forwards, shape-middle 0.3s 2s linear 1 forwards, final-position-center 0.3s 4s linear 1 forwards; }\n\n.S3 {\n  height: 60px;\n  width: 30px;\n  background-color: #404040;\n  border-bottom-right-radius: 60px;\n  border-top-right-radius: 60px;\n  animation: circle-slide-right 0.3s 1.7s ease-in 1 forwards, shape-and-move-right 0.3s 2s linear 1 forwards, final-position-right 0.3s 4s linear 1 forwards; }\n\n.line {\n  opacity: 0;\n  width: 20px;\n  height: 7px;\n  background-color: #404040;\n  animation: line-position 0.3s 4.5s linear 1 forwards; }\n\n@keyframes circle-appear {\n  0% {\n    transform: translate(0, -400px);\n    opacity: 0; }\n  30% {\n    opacity: 0; }\n  40% {\n    opacity: 1; }\n  50% {\n    transform: translate(0, 0); }\n  60% {\n    transform: translate(0, -30px); }\n  70% {\n    transform: translate(0, 0); }\n  77% {\n    transform: translate(0, -20px); }\n  84% {\n    transform: translate(0, 0); }\n  89% {\n    transform: translate(0, -10px); }\n  94% {\n    transform: translate(0, 0); }\n  97% {\n    transform: translate(0, -5px); }\n  100% {\n    transform: translate(0, 0); } }\n\n@keyframes circle-slide-left {\n  100% {\n    border-radius: 100px 0 0 100px;\n    height: 60px;\n    width: 100px; } }\n\n@keyframes circle-slide-right {\n  100% {\n    border-radius: 0 100px 100px 0;\n    height: 60px;\n    width: 100px; } }\n\n@keyframes circle-middle-appear {\n  100% {\n    height: 60px;\n    width: 60px; } }\n\n@keyframes shape-and-move-left {\n  0% {\n    border-radius: 100px 0 0 100px;\n    height: 60px;\n    width: 100px; }\n  100% {\n    background-color: #ff5050;\n    height: 60px;\n    width: 60px;\n    border-radius: 50%;\n    transform: translate(-80px, 0); } }\n\n@keyframes shape-and-move-right {\n  0% {\n    border-radius: 0 100px 100px 0;\n    height: 60px;\n    width: 100px; }\n  100% {\n    background-color: #47d147;\n    height: 60px;\n    width: 60px;\n    border-radius: 50%;\n    transform: translate(80px, 0); } }\n\n@keyframes shape-middle {\n  100% {\n    background-color: #ffcc00;\n    border-radius: 50%; } }\n\n@keyframes final-position-left {\n  0% {\n    height: 60px;\n    width: 60px;\n    transform: translate(-80px, 0); }\n  100% {\n    height: 40px;\n    width: 40px;\n    transform: translate(-27px, 280px); } }\n\n@keyframes final-position-center {\n  0% {\n    height: 60px;\n    width: 60px;\n    transform: translate(0, 0); }\n  100% {\n    height: 40px;\n    width: 40px;\n    transform: translate(0, 280px); } }\n\n@keyframes final-position-right {\n  0% {\n    height: 60px;\n    width: 60px;\n    transform: translate(80px, 0); }\n  100% {\n    height: 40px;\n    width: 40px;\n    transform: translate(27px, 280px); } }\n\n@keyframes line-position {\n  100% {\n    opacity: 1;\n    transform: translate(0, 265px);\n    width: 190px; } }\n\n@keyframes name-position {\n  0% {\n    opacity: 0;\n    transform: rotate(-90deg) translate(350px, -35px); }\n  70% {\n    opacity: 0; }\n  100% {\n    opacity: 1;\n    transform: rotate(-90deg) translate(-36px, -35px); } }\n\n@keyframes title-position {\n  0% {\n    opacity: 0;\n    transform: rotate(-90deg) translate(450px, 28px); }\n  70% {\n    opacity: 0; }\n  100% {\n    opacity: 1;\n    transform: rotate(-90deg) translate(71px, 28px); } }\n\n.mobile-menu {\n  display: none; }\n  @media (max-width: 420px) {\n    .mobile-menu {\n      display: block;\n      width: 100%;\n      height: 50px;\n      background-color: #666666;\n      color: none;\n      border: 0 0 0 4px solid #bfbfbf;\n      border-radius: none;\n      display: flex;\n      flex-direction: row;\n      justify-content: space-between;\n      align-items: center; }\n      .mobile-menu h3 {\n        width: 40%;\n        height: 100%;\n        background-color: none;\n        color: #bfbfbf;\n        border: none;\n        border-radius: none;\n        line-height: 50px;\n        text-align: center;\n        font-size: 25px;\n        font-weight: 500; }\n      .mobile-menu .mac-circles {\n        height: 100%;\n        width: 30%;\n        display: flex;\n        flex-direction: row;\n        justify-content: flex-start;\n        align-items: center; }\n        .mobile-menu .mac-circles .circle-1 {\n          height: 23px;\n          width: 23px; }\n        .mobile-menu .mac-circles .circle-2 {\n          height: 23px;\n          width: 23px; }\n        .mobile-menu .mac-circles .circle-4 {\n          height: 23px;\n          width: 23px; }\n      .mobile-menu .menu-burger {\n        height: 75%;\n        width: 30%;\n        display: flex;\n        flex-direction: column;\n        justify-content: space-between;\n        align-items: flex-end; }\n        .mobile-menu .menu-burger .menu-bar {\n          margin-right: 7px;\n          width: 60px;\n          height: 7px;\n          background-color: #404040;\n          color: none;\n          border: none;\n          border-radius: 50px; } }\n\n@media (max-width: 420px) {\n  .mobile-menu-list {\n    width: 100%; }\n    .mobile-menu-list .mobile-menu-list-position {\n      font-size: 21px;\n      text-align: center;\n      line-height: 36px;\n      vertical-align: middle;\n      width: 100%;\n      height: 35px;\n      background-color: #666666;\n      color: #bfbfbf;\n      border: none;\n      border-radius: none; } }\n\n.content {\n  width: 67.5%;\n  height: none;\n  background-color: #404040;\n  color: none;\n  border: none;\n  border-radius: 6px; }\n  .content header {\n    display: flex;\n    flex-direction: row;\n    justify-content: flex-start;\n    align-items: center;\n    width: 100%;\n    height: 4%;\n    background-color: #666666;\n    color: #bfbfbf;\n    border: none;\n    border-radius: 5px 5px 0 0;\n    border-bottom: 1px solid #808080; }\n    @media (max-width: 420px) {\n      .content header {\n        border-radius: 0; } }\n    .content header h1 {\n      text-align: center;\n      width: 20%; }\n      @media (max-width: 420px) {\n        .content header h1 {\n          font-size: 140%;\n          width: 50%; } }\n  @media (max-width: 420px) {\n    .content {\n      height: none;\n      width: 100%;\n      border: none;\n      border-radius: 0; }\n      .content header {\n        display: none; } }\n\n.main-content {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: flex-start;\n  margin-top: 8px;\n  margin-bottom: 8px; }\n  @media (max-width: 420px) {\n    .main-content {\n      margin-top: 4px; } }\n\n.circle-4 {\n  margin-right: 33%;\n  width: 13px;\n  height: 13px;\n  border-radius: 50%;\n  margin-left: 6px;\n  background-color: #47d147;\n  box-shadow: 0.2px 0.5px #196619; }\n  @media (max-width: 420px) {\n    .circle-4 {\n      margin-right: 8%; } }\n\n.bio {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  align-items: flex-start; }\n  @media (max-width: 420px) {\n    .bio {\n      display: flex;\n      flex-direction: column;\n      justify-content: flex-start;\n      align-items: center; } }\n\n.bio-data {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  align-items: flex-start;\n  width: 100%;\n  height: none;\n  background-color: #ffd633;\n  color: #404040;\n  border: none;\n  border-radius: 10px; }\n  @media (max-width: 420px) {\n    .bio-data {\n      height: none;\n      width: 100%; } }\n  .bio-data .bio-picture {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center;\n    width: 100%;\n    height: 350px;\n    background-color: white;\n    color: none;\n    border: none;\n    border-radius: 10px; }\n    @media (max-width: 420px) {\n      .bio-data .bio-picture {\n        height: 440px;\n        width: 100%; } }\n    .bio-data .bio-picture .picture {\n      width: 95%;\n      height: 95%;\n      background-color: none;\n      color: none;\n      border: 1px solid #808080;\n      border-radius: 10px;\n      background-image: url(\"./imgs/IMG_0414.png\");\n      background-size: 100% 100%;\n      background-repeat: no-repeat;\n      background-position: center; }\n\n.bio-description {\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-start;\n  align-items: flex-start;\n  width: 100%;\n  height: 460px;\n  background-color: #47d147;\n  color: #404040;\n  border: none;\n  border-radius: 10px; }\n  @media (max-width: 420px) {\n    .bio-description {\n      height: 100%;\n      width: 100%;\n      margin-top: 4px; } }\n  .bio-description .bio-text {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: flex-start;\n    width: 100%;\n    height: 100%;\n    background-color: white;\n    color: none;\n    border: none;\n    border-radius: 10px; }\n    .bio-description .bio-text p {\n      width: 95%;\n      font-size: 110%;\n      margin-top: 3%; }\n      @media (max-width: 420px) {\n        .bio-description .bio-text p {\n          font-size: 150%; } }\n  .bio-description h1 {\n    line-height: 250%;\n    vertical-align: middle;\n    width: 100%;\n    height: 15%;\n    background-color: none;\n    color: none;\n    border: none;\n    border-radius: 9px 9px 0 0;\n    font-size: 170%;\n    text-transform: uppercase;\n    font-weight: 900;\n    text-align: center; }\n    @media (max-width: 420px) {\n      .bio-description h1 {\n        line-height: 140%; } }\n\n.bio-contact {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  width: 100%;\n  height: 100%;\n  background-color: #ffd633;\n  color: none;\n  border: none;\n  border-radius: 0 0 9px 9px;\n  margin-top: 12px; }\n  @media (max-width: 420px) {\n    .bio-contact {\n      margin-top: 8px;\n      font-size: 23px; }\n      .bio-contact h3 {\n        margin-top: 12px; } }\n  .bio-contact .contact-list {\n    margin-top: 5px;\n    margin-bottom: 5px;\n    height: 27%;\n    width: 60%;\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n    align-items: flex-start; }\n    @media (max-width: 420px) {\n      .bio-contact .contact-list {\n        height: 100%;\n        width: 85%; } }\n    .bio-contact .contact-list .contact-logo {\n      width: 35px;\n      height: 35px;\n      background-color: white;\n      color: none;\n      border: none;\n      border-radius: 50%; }\n      @media (max-width: 420px) {\n        .bio-contact .contact-list .contact-logo {\n          height: 60px;\n          width: 60px; } }\n    .bio-contact .contact-list .github {\n      background-image: url(\"./imgs/gitHub-logo2.png\");\n      background-size: 99% 99.5%;\n      background-repeat: no-repeat;\n      background-position: center; }\n    .bio-contact .contact-list .linkedin {\n      background-image: url(\"./imgs/linkedin-logo.png\");\n      background-size: 102.5% 100%;\n      background-repeat: no-repeat;\n      background-position: center; }\n    .bio-contact .contact-list .gmail {\n      z-index: 1;\n      background-image: url(\"./imgs/gmail-logo.png\");\n      background-size: 100% 100%;\n      background-repeat: no-repeat;\n      background-position: center; }\n      .bio-contact .contact-list .gmail .mail-expander {\n        width: 300px;\n        height: 100%;\n        background-color: white;\n        color: none;\n        border: none;\n        border-radius: 50px;\n        font-size: 14px;\n        animation: expand 0.3s linear 1 forwards; }\n        @media (max-width: 420px) {\n          .bio-contact .contact-list .gmail .mail-expander {\n            animation: expand-mobile 0.2s linear 1 forwards; } }\n      .bio-contact .contact-list .gmail .logo-gmail-doubler {\n        position: relative;\n        height: 35px;\n        width: 35px;\n        background-image: url(\"./imgs/gmail-logo.png\");\n        background-size: 100% 100%;\n        background-repeat: no-repeat;\n        background-position: center; }\n        .bio-contact .contact-list .gmail .logo-gmail-doubler .mail {\n          position: absolute;\n          top: 7px;\n          right: -216px; }\n          @media (max-width: 420px) {\n            .bio-contact .contact-list .gmail .logo-gmail-doubler .mail {\n              font-size: 19px;\n              top: 16px;\n              right: -290px; } }\n        @media (max-width: 420px) {\n          .bio-contact .contact-list .gmail .logo-gmail-doubler {\n            height: 60px;\n            width: 60px; } }\n    @media (max-width: 420px) {\n      .bio-contact .contact-list {\n        margin: 5px 0 10px 0; } }\n  .bio-contact h1 {\n    font-size: 140%;\n    text-transform: uppercase;\n    font-weight: 900;\n    text-align: center; }\n\n#slide-out-animation {\n  animation: slide-left 0.3s linear 1 forwards; }\n  @media (max-width: 420px) {\n    #slide-out-animation {\n      animation: slide-left-mobile 0.3s linear 1 forwards; } }\n\n#slide-in-animation {\n  animation: slide-right 0.3s linear 1 forwards; }\n  @media (max-width: 420px) {\n    #slide-in-animation {\n      animation: slide-right-mobile 0.3s linear 1 forwards; } }\n\n#display-block {\n  display: block; }\n\n#display-none {\n  display: none; }\n\n@keyframes slide-right {\n  0% {\n    transform: translate(-48px, 0); }\n  100% {\n    transform: translate(0, 0); } }\n\n@keyframes slide-left {\n  100% {\n    transform: translate(-48px, 0); } }\n\n@keyframes slide-left-mobile {\n  100% {\n    transform: translate(-23px, 0); } }\n\n@keyframes slide-right-mobile {\n  0% {\n    transform: translate(-23px, 0); }\n  100% {\n    transform: translate(0, 0); } }\n\n@keyframes expand {\n  0% {\n    width: 35px; }\n  30% { }\n  100% {\n    width: 260px; } }\n\n@keyframes expand-mobile {\n  0% {\n    width: 57px; }\n  30% { }\n  100% {\n    width: 355px; } }\n\n.projects {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  align-items: flex-start; }\n  @media (max-width: 420px) {\n    .projects {\n      display: flex;\n      flex-direction: column;\n      justify-content: flex-start;\n      align-items: flex-start; } }\n\n.project {\n  width: 100%;\n  height: 100%;\n  background-color: white;\n  color: none;\n  border: none;\n  border-radius: 10px; }\n  .project h2 {\n    text-align: center;\n    width: 100%;\n    height: 5%;\n    background-color: #ff5050;\n    color: white;\n    border: none;\n    border-radius: 0 0 10px 10px;\n    position: relative; }\n  @media (max-width: 420px) {\n    .project {\n      margin-top: 2px;\n      margin-bottom: 2px; } }\n\n.wrapper {\n  background-color: #ffd633; }\n  @media (max-width: 420px) {\n    .wrapper {\n      font-size: 25px; } }\n\n.github-link {\n  top: -20px;\n  right: 10px;\n  position: absolute; }\n  @media (max-width: 420px) {\n    .github-link {\n      top: -26px;\n      right: 15px; } }\n\n.github-logo {\n  width: 37px;\n  height: 37px;\n  background-color: white;\n  color: none;\n  border: 1px solid #808080;\n  border-radius: 50%;\n  background-image: url(\"./imgs/gitHub-logo2.png\");\n  background-size: 99% 99%;\n  background-repeat: no-repeat;\n  background-position: center; }\n  @media (max-width: 420px) {\n    .github-logo {\n      height: 50px;\n      width: 50px; } }\n\n.project-preview {\n  width: 100%;\n  height: 180px;\n  background-color: #ff5050;\n  color: none;\n  border: none;\n  border-radius: 10px 10px 0 0; }\n  @media (max-width: 420px) {\n    .project-preview {\n      height: 220px;\n      width: 100%; } }\n\n.Pokemon-Game {\n  width: 100%;\n  height: 100%;\n  background-color: none;\n  color: none;\n  border: none;\n  border-radius: 10px;\n  background-image: url(\"./imgs/pick-pokemon2.png\");\n  background-size: 100% 105%;\n  background-repeat: no-repeat;\n  background-position: center; }\n\n.Portfolio-Page {\n  width: 100%;\n  height: 100%;\n  background-color: none;\n  color: none;\n  border: none;\n  border-radius: 10px;\n  background-image: url(\"./imgs/terminal-kopia.png\");\n  background-size: 100% 100%;\n  background-repeat: no-repeat;\n  background-position: center; }\n\n.Sit-On-Chair {\n  width: 100%;\n  height: 100%;\n  background-color: none;\n  color: none;\n  border: none;\n  border-radius: 10px;\n  background-image: url(\"./imgs/sitOnChair.png\");\n  background-size: 100% 100%;\n  background-repeat: no-repeat;\n  background-position: center; }\n\n.project-technologies {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  width: 100%;\n  height: 10%;\n  background-color: #ffd633;\n  color: none;\n  border: none;\n  border-radius: 0 0 10px 10px; }\n\n.project-list-of-tech {\n  width: 80%;\n  margin-top: 3px;\n  margin-bottom: 3px;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  align-items: center; }\n  .project-list-of-tech .small-logo {\n    width: 40px;\n    height: 40px;\n    background-color: white;\n    color: none;\n    border: 1px solid #808080;\n    border-radius: 50%; }\n    @media (max-width: 420px) {\n      .project-list-of-tech .small-logo {\n        height: 50px;\n        width: 50px; } }\n  .project-list-of-tech .react {\n    background-image: url(\"./imgs/react-log.png\");\n    background-size: 80% 70%;\n    background-repeat: no-repeat;\n    background-position: center; }\n  .project-list-of-tech .redux {\n    background-image: url(\"./imgs/redux-logo.png\");\n    background-size: 104% 92%;\n    background-repeat: no-repeat;\n    background-position: center; }\n  .project-list-of-tech .js {\n    background-image: url(\"./imgs/js-logo.png\");\n    background-size: 65% 80%;\n    background-repeat: no-repeat;\n    background-position: center; }\n  .project-list-of-tech .sass {\n    background-image: url(\"./imgs/sass-log.png\");\n    background-size: 72.5% 50%;\n    background-repeat: no-repeat;\n    background-position: center; }\n  .project-list-of-tech .html {\n    background-image: url(\"./imgs/HTML_Logo.png\");\n    background-size: 79% 75%;\n    background-repeat: no-repeat;\n    background-position: center; }\n  .project-list-of-tech .css {\n    background-image: url(\"./imgs/CSS3_logo.png\");\n    background-size: 56% 78%;\n    background-repeat: no-repeat;\n    background-position: center; }\n\n.project-description {\n  display: flex;\n  flex-direction: none;\n  justify-content: center;\n  align-items: flex-start; }\n  .project-description p {\n    margin-top: 5px;\n    font-size: 15px;\n    height: 210px;\n    width: 90%;\n    font-weight: 500;\n    color: #404040; }\n    @media (max-width: 420px) {\n      .project-description p {\n        height: 292px;\n        font-size: 21px; } }\n\n.personalInfo {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  align-items: flex-start; }\n  @media (max-width: 420px) {\n    .personalInfo {\n      display: flex;\n      flex-direction: column;\n      justify-content: flext-start;\n      align-items: flex-start; } }\n\n.category {\n  width: 100%;\n  height: 460px;\n  background-color: #ffd633;\n  color: none;\n  border: none;\n  border-radius: 10px; }\n  @media (max-width: 420px) {\n    .category {\n      margin-top: 2px;\n      margin-bottom: 2px;\n      height: 580px; } }\n  .category h2 {\n    font-size: 20px;\n    font-weight: 900;\n    line-height: 45px;\n    vertical-align: middle;\n    text-align: center;\n    width: 100%;\n    height: 10%;\n    background-color: #ffd633;\n    color: #404040;\n    border: none;\n    border-radius: 10px 10px 0 0; }\n    @media (max-width: 420px) {\n      .category h2 {\n        font-size: 36px;\n        line-height: 55px; } }\n\n.category-info-border {\n  width: 100%;\n  height: 90%;\n  background-color: #ff5050;\n  color: none;\n  border: none;\n  border-radius: 10px; }\n  .category-info-border .category-info-inner-border {\n    display: flex;\n    flex-direction: column;\n    justify-content: flex-end;\n    align-items: flex-start;\n    width: 100%;\n    height: 100%;\n    background-color: #ff5050;\n    color: none;\n    border: none;\n    border-radius: 10px; }\n  .category-info-border .category-info {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center;\n    width: 100%;\n    height: 98%;\n    background-color: white;\n    color: none;\n    border: none;\n    border-radius: 10px; }\n    .category-info-border .category-info .category-info-wrapper {\n      height: 94%;\n      width: 95%; }\n\n.category-skill {\n  height: 17%;\n  width: 100%; }\n  .category-skill h3 {\n    font-weight: 700;\n    font-size: 18px;\n    color: #404040; }\n    @media (max-width: 420px) {\n      .category-skill h3 {\n        font-size: 26px; } }\n  .category-skill p {\n    color: #808080; }\n    @media (max-width: 420px) {\n      .category-skill p {\n        font-size: 20px; } }\n\n.category-step {\n  height: 35%;\n  width: 100%; }\n  .category-step h3 {\n    font-weight: 700;\n    font-size: 18px;\n    color: #404040; }\n    @media (max-width: 420px) {\n      .category-step h3 {\n        font-size: 26px; } }\n  .category-step h4 {\n    color: #404040;\n    font-size: 15px; }\n    @media (max-width: 420px) {\n      .category-step h4 {\n        font-size: 19px; } }\n  .category-step p {\n    font-size: 14px;\n    color: #808080; }\n    @media (max-width: 420px) {\n      .category-step p {\n        font-size: 17px; } }\n\n.terminal {\n  width: 32%;\n  height: 40%;\n  background-color: #404040;\n  color: none;\n  border: none;\n  border-radius: 6px;\n  font-size: 14px;\n  align-self: flex-end; }\n  .terminal header {\n    display: flex;\n    flex-direction: row;\n    justify-content: flex-start;\n    align-items: center;\n    width: 100%;\n    height: 9%;\n    background-color: #666666;\n    color: #bfbfbf;\n    border: none;\n    border-radius: 5px 5px 0 0;\n    border-bottom: 1px solid #808080; }\n  @media (max-width: 420px) {\n    .terminal {\n      display: none; } }\n\n.circle-1 {\n  width: 13px;\n  height: 13px;\n  border-radius: 50%;\n  margin-left: 8px;\n  background-color: #ff5050;\n  box-shadow: 0.2px 0.5px #e60000; }\n\n.circle-2 {\n  width: 13px;\n  height: 13px;\n  border-radius: 50%;\n  margin-left: 6px;\n  background-color: #ffcc00;\n  box-shadow: 0.2px 0.5px #b38f00; }\n\n.circle-3 {\n  margin-right: 7%;\n  width: 13px;\n  height: 13px;\n  border-radius: 50%;\n  margin-left: 6px;\n  background-color: #47d147;\n  box-shadow: 0.2px 0.5px #196619; }\n\n.terminal-body {\n  color: #d9d9d9;\n  height: 90%;\n  overflow-y: scroll; }\n  .terminal-body p {\n    margin-left: 5px;\n    color: #8c8c8c; }\n  .terminal-body input {\n    width: auto;\n    margin-top: 2px;\n    margin-left: 3px;\n    color: #d9d9d9;\n    background-color: #404040;\n    border: none;\n    margin-bottom: 2px; }\n  .terminal-body input:focus {\n    outline: none; }\n\n.terminal-input {\n  display: flex;\n  flex-direction: row;\n  justify-content: flex-start;\n  align-items: center;\n  margin-left: 3px; }\n", ""]);
+exports.push([module.i, ".terminal {\n  width: 32%;\n  height: 40%;\n  background-color: #404040;\n  color: none;\n  border: none;\n  border-radius: 6px;\n  max-width: 400px;\n  font-size: 14px;\n  align-self: flex-end; }\n  .terminal header {\n    display: flex;\n    flex-direction: row;\n    justify-content: flex-start;\n    align-items: center;\n    width: 100%;\n    height: 9%;\n    background-color: #666666;\n    color: #bfbfbf;\n    border: none;\n    border-radius: 5px 5px 0 0;\n    border-bottom: 1px solid #808080; }\n  @media (max-width: 420px) {\n    .terminal {\n      display: none; } }\n\n.circle-1 {\n  width: 13px;\n  height: 13px;\n  border-radius: 50%;\n  margin-left: 8px;\n  background-color: #ff5050;\n  box-shadow: 0.2px 0.5px #e60000; }\n\n.circle-2 {\n  width: 13px;\n  height: 13px;\n  border-radius: 50%;\n  margin-left: 6px;\n  background-color: #ffcc00;\n  box-shadow: 0.2px 0.5px #b38f00; }\n\n.circle-3 {\n  margin-right: 7%;\n  width: 13px;\n  height: 13px;\n  border-radius: 50%;\n  margin-left: 6px;\n  background-color: #47d147;\n  box-shadow: 0.2px 0.5px #196619; }\n\n.terminal-body {\n  color: #d9d9d9;\n  height: 90%;\n  overflow-y: scroll; }\n  .terminal-body p {\n    margin-left: 5px;\n    color: #8c8c8c; }\n  .terminal-body input {\n    width: auto;\n    margin-top: 2px;\n    margin-left: 3px;\n    color: #d9d9d9;\n    background-color: #404040;\n    border: none;\n    margin-bottom: 2px; }\n  .terminal-body input:focus {\n    outline: none; }\n\n.terminal-input {\n  display: flex;\n  flex-direction: row;\n  justify-content: flex-start;\n  align-items: center;\n  margin-left: 3px; }\n\nbody {\n  font-family: 'Open Sans', sans-serif; }\n\n.container {\n  width: 100vw;\n  height: 100vh;\n  background-color: #42C997; }\n\nbody {\n  font-family: 'Open Sans', sans-serif; }\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 43 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(15)(false);
-// imports
-
-
-// module
-exports.push([module.i, "/*\n\tHTML5 Reset :: style.css\n\t----------------------------------------------------------\n\tWe have learned much from/been inspired by/taken code where offered from:\n\n\tEric Meyer\t\t\t\t\t:: http://meyerweb.com\n\tHTML5 Doctor\t\t\t\t:: http://html5doctor.com\n\tand the HTML5 Boilerplate\t:: http://html5boilerplate.com\n\n-------------------------------------------------------------------------------*/\n\n/* Let's default this puppy out\n-------------------------------------------------------------------------------*/\n\nhtml, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {\n    margin: 0;\n    padding: 0;\n    border: 0;\n    font-size: 100%;\n    font-weight: normal;\n    vertical-align: baseline;\n    background: transparent;\n}\n\nmain, article, aside, figure, footer, header, nav, section, details, summary {display: block;}\n\n/* Handle box-sizing while better addressing child elements:\n   http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */\nhtml {\n    box-sizing: border-box;\n}\n\n*,\n*:before,\n*:after {\n    box-sizing: inherit;\n}\n\n/* consider resetting the default cursor: https://gist.github.com/murtaugh/5247154 */\n\n/* Responsive images and other embedded objects */\n/* if you don't have full control over `img` tags (if you have to overcome attributes), consider adding height: auto */\nimg,\nobject,\nembed {max-width: 100%;}\n\n/*\n   Note: keeping IMG here will cause problems if you're using foreground images as sprites.\n\tIn fact, it *will* cause problems with Google Maps' controls at small size.\n\tIf this is the case for you, try uncommenting the following:\n\n#map img {\n\t\tmax-width: none;\n}\n*/\n\n/* force a vertical scrollbar to prevent a jumpy page */\nhtml {overflow-y: scroll;}\n\n/* we use a lot of ULs that aren't bulleted.\n\tyou'll have to restore the bullets within content,\n\twhich is fine because they're probably customized anyway */\nul {list-style: none;}\n\nblockquote, q {quotes: none;}\n\nblockquote:before,\nblockquote:after,\nq:before,\nq:after {content: ''; content: none;}\n\na {margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent;}\n\ndel {text-decoration: line-through;}\n\nabbr[title], dfn[title] {border-bottom: 1px dotted #000; cursor: help;}\n\n/* tables still need cellspacing=\"0\" in the markup */\ntable {border-collapse: separate; border-spacing: 0;}\nth {font-weight: bold; vertical-align: bottom;}\ntd {font-weight: normal; vertical-align: top;}\n\nhr {display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0;}\n\ninput, select {vertical-align: middle;}\n\npre {\n    white-space: pre; /* CSS2 */\n    white-space: pre-wrap; /* CSS 2.1 */\n    white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */\n    word-wrap: break-word; /* IE */\n}\n\ninput[type=\"radio\"] {vertical-align: text-bottom;}\ninput[type=\"checkbox\"] {vertical-align: bottom;}\n.ie7 input[type=\"checkbox\"] {vertical-align: baseline;}\n.ie6 input {vertical-align: text-bottom;}\n\nselect, input, textarea {font: 99% sans-serif;}\n\ntable {font-size: inherit; font: 100%;}\n\nsmall {font-size: 85%;}\n\nstrong {font-weight: bold;}\n\ntd, td img {vertical-align: top;}\n\n/* Make sure sup and sub don't mess with your line-heights http://gist.github.com/413930 */\nsub, sup {font-size: 75%; line-height: 0; position: relative;}\nsup {top: -0.5em;}\nsub {bottom: -0.25em;}\n\n/* standardize any monospaced elements */\npre, code, kbd, samp {font-family: monospace, sans-serif;}\n\n/* hand cursor on clickable elements */\n.clickable,\nlabel,\ninput[type=button],\ninput[type=submit],\ninput[type=file],\nbutton {cursor: pointer;}\n\n/* Webkit browsers add a 2px margin outside the chrome of form elements */\nbutton, input, select, textarea {margin: 0;}\n\n/* make buttons play nice in IE */\nbutton,\ninput[type=button] {width: auto; overflow: visible;}\n\n/* scale images in IE7 more attractively */\n.ie7 img {-ms-interpolation-mode: bicubic;}\n\n/* prevent BG image flicker upon hover\n   (commented out as usage is rare, and the filter syntax messes with some pre-processors)\n.ie6 html {filter: expression(document.execCommand(\"BackgroundImageCache\", false, true));}\n*/\n\n/* let's clear some floats */\n.clearfix:after { content: \" \"; display: block; clear: both; }", ""]);
-
-// exports
-
-
-/***/ }),
+/* 43 */,
 /* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -20321,6 +20196,20 @@ module.exports = function (css) {
 	// send back the fixed css
 	return fixedCss;
 };
+
+
+/***/ }),
+/* 46 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(15)(false);
+// imports
+
+
+// module
+exports.push([module.i, "/*\n\tHTML5 Reset :: style.css\n\t----------------------------------------------------------\n\tWe have learned much from/been inspired by/taken code where offered from:\n\n\tEric Meyer\t\t\t\t\t:: http://meyerweb.com\n\tHTML5 Doctor\t\t\t\t:: http://html5doctor.com\n\tand the HTML5 Boilerplate\t:: http://html5boilerplate.com\n\n-------------------------------------------------------------------------------*/\n\n/* Let's default this puppy out\n-------------------------------------------------------------------------------*/\n\nhtml, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {\n    margin: 0;\n    padding: 0;\n    border: 0;\n    font-size: 100%;\n    font-weight: normal;\n    vertical-align: baseline;\n    background: transparent;\n}\n\nmain, article, aside, figure, footer, header, nav, section, details, summary {display: block;}\n\n/* Handle box-sizing while better addressing child elements:\n   http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */\nhtml {\n    box-sizing: border-box;\n}\n\n*,\n*:before,\n*:after {\n    box-sizing: inherit;\n}\n\n/* consider resetting the default cursor: https://gist.github.com/murtaugh/5247154 */\n\n/* Responsive images and other embedded objects */\n/* if you don't have full control over `img` tags (if you have to overcome attributes), consider adding height: auto */\nimg,\nobject,\nembed {max-width: 100%;}\n\n/*\n   Note: keeping IMG here will cause problems if you're using foreground images as sprites.\n\tIn fact, it *will* cause problems with Google Maps' controls at small size.\n\tIf this is the case for you, try uncommenting the following:\n\n#map img {\n\t\tmax-width: none;\n}\n*/\n\n/* force a vertical scrollbar to prevent a jumpy page */\nhtml {overflow-y: scroll;}\n\n/* we use a lot of ULs that aren't bulleted.\n\tyou'll have to restore the bullets within content,\n\twhich is fine because they're probably customized anyway */\nul {list-style: none;}\n\nblockquote, q {quotes: none;}\n\nblockquote:before,\nblockquote:after,\nq:before,\nq:after {content: ''; content: none;}\n\na {margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent;}\n\ndel {text-decoration: line-through;}\n\nabbr[title], dfn[title] {border-bottom: 1px dotted #000; cursor: help;}\n\n/* tables still need cellspacing=\"0\" in the markup */\ntable {border-collapse: separate; border-spacing: 0;}\nth {font-weight: bold; vertical-align: bottom;}\ntd {font-weight: normal; vertical-align: top;}\n\nhr {display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0;}\n\ninput, select {vertical-align: middle;}\n\npre {\n    white-space: pre; /* CSS2 */\n    white-space: pre-wrap; /* CSS 2.1 */\n    white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */\n    word-wrap: break-word; /* IE */\n}\n\ninput[type=\"radio\"] {vertical-align: text-bottom;}\ninput[type=\"checkbox\"] {vertical-align: bottom;}\n.ie7 input[type=\"checkbox\"] {vertical-align: baseline;}\n.ie6 input {vertical-align: text-bottom;}\n\nselect, input, textarea {font: 99% sans-serif;}\n\ntable {font-size: inherit; font: 100%;}\n\nsmall {font-size: 85%;}\n\nstrong {font-weight: bold;}\n\ntd, td img {vertical-align: top;}\n\n/* Make sure sup and sub don't mess with your line-heights http://gist.github.com/413930 */\nsub, sup {font-size: 75%; line-height: 0; position: relative;}\nsup {top: -0.5em;}\nsub {bottom: -0.25em;}\n\n/* standardize any monospaced elements */\npre, code, kbd, samp {font-family: monospace, sans-serif;}\n\n/* hand cursor on clickable elements */\n.clickable,\nlabel,\ninput[type=button],\ninput[type=submit],\ninput[type=file],\nbutton {cursor: pointer;}\n\n/* Webkit browsers add a 2px margin outside the chrome of form elements */\nbutton, input, select, textarea {margin: 0;}\n\n/* make buttons play nice in IE */\nbutton,\ninput[type=button] {width: auto; overflow: visible;}\n\n/* scale images in IE7 more attractively */\n.ie7 img {-ms-interpolation-mode: bicubic;}\n\n/* prevent BG image flicker upon hover\n   (commented out as usage is rare, and the filter syntax messes with some pre-processors)\n.ie6 html {filter: expression(document.execCommand(\"BackgroundImageCache\", false, true));}\n*/\n\n/* let's clear some floats */\n.clearfix:after { content: \" \"; display: block; clear: both; }", ""]);
+
+// exports
 
 
 /***/ })

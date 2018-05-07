@@ -1,70 +1,25 @@
-@import './reset.css';
+//helpers
+@import "./helpers/mixins.scss";
+@import "./helpers/parameters.scss";
+@import "./helpers/reset.css";
+
+//layouts
+@import "./layouts/main-page.scss";
+@import "./layouts/projects.scss";
+@import "./layouts/personal-info.scss";
+@import "./layouts/contact.scss";
+
+//pages
+@import "./pages/main-page.scss";
+@import "./pages/projects.scss";
+@import "./pages/personal-info.scss";
+@import "./pages/contact.scss";
+@import "./pages/terminal.scss";
+@import "./pages/container.scss";
 
 // ----------------------------------------- //
 // -------variables/mixins/extends --------- //
 // ----------------------------------------- //
-
-$textColor: #d9d9d9;
-$border: 1px solid #333333;
-$headerBorder: 1px solid #808080;
-$projectRadius: 9px 9px 0 0;
-$columnRadius: 10px;
-$brgColor: #404040;
-$brgColor2: white;
-$brgColor3: #ffd633;
-$brgColor4: #47d147;
-$radius: 6px;
-$mobileWidth: 420px;
-
-@mixin sizing ($width, $height){
-  height: $height;
-  width: $width;
-}
-
-@mixin circle ($color, $margin, $shadowColor){
-  width: 13px;
-  height: 13px;
-  border-radius: 50%;
-  margin-left: $margin;
-  background-color: $color;
-  box-shadow: 0.2px 0.5px $shadowColor;
-}
-
-@mixin flex($direction, $justify, $align) {
-  display: flex;
-  flex-direction: $direction;
-  justify-content: $justify;
-  align-items: $align;
-}
-
-@mixin baseStyles ($width, $height, $backColor, $textColor, $border, $borderRadius) {
-  width: $width;
-  height: $height;
-  background-color: $backColor;
-  color: $textColor;
-  border: $border;
-  border-radius: $borderRadius;
-}
-
-@mixin headerStyles ($fontSize) {
-  font-size: $fontSize;
-  text-transform: uppercase;
-  font-weight: 900;
-  text-align: center;
-}
-
-@mixin smallLogoStyles ($height, $width, $url) {
-  background-image: $url;
-  background-size: $height $width;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-@mixin categoryContent ($weight, $size, $color) {
-  font-weight: $weight;
-  font-size: $size;
-  color: $color;
-}
 
 // ----------------------------------------- //
 // ------------ global classes ------------- //
@@ -74,870 +29,811 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
-.container {
-  width: 97.5%;
-}
-
-.col-1 {
-  width: 33%;
-  @media (max-width: $mobileWidth) {
-    width: 100%;
-  }
-}
-
-.col-2 {
-  width: 66%;
-  @media (max-width: $mobileWidth) {
-    width: 100%;
-  }
-}
-
-.col-3 {
-  width: 32.5%;
-  @media (max-width: $mobileWidth) {
-    width: 100%;
-  }
-}
+//.container {
+//  width: 97.5%;
+//}
+//
+//.col-1 {
+//  width: 33%;
+//  @media (max-width: $mobileWidth) {
+//    width: 100%;
+//  }
+//}
+//
+//.col-2 {
+//  width: 66%;
+//  @media (max-width: $mobileWidth) {
+//    width: 100%;
+//  }
+//}
+//
+//.col-3 {
+//  width: 32.5%;
+//  @media (max-width: $mobileWidth) {
+//    width: 100%;
+//  }
+//}
 
 // ----------------------------------------- //
 // ------------ main-component ------------- //
 // ----------------------------------------- //
 
-.main-component {
-  @include sizing(100%, 100vh);
-  @include flex(row, center, center);
-  background: linear-gradient(#eef2f3, #8e9eab);
-}
+//.main-component {
+//  @include sizing(100%, 100vh);
+//  @include flex(row, center, center);
+//  //background: linear-gradient(#eef2f3, #8e9eab);
+//}
 
 // ----------------------------------------- //
 // -------------- container ---------------- //
 // ----------------------------------------- //
-
-#container-animation-flex {
-  @include flex(column, center, center);
-}
-
-#container-website-flex {
-  @include flex(row, space-between, flex-start);
-}
-
-.main-container {
-  @include sizing(99%, 99%);
-  @media (max-width: $mobileWidth) {
-    @include sizing(100%, 100%);
-    @include flex (column, flex-start, flex-start);
-  }
-}
-
-.container-wrapper {
-  @include sizing(100%, 100%);
-}
-
-.animation-wrapper {
-  @include sizing(700px, 700px);
-  @include flex(column, center, center);
-  animation: circle-appear 1.5s linear 1 forwards,
-  rotate 0.4s 2.4s linear 1 forwards;
-}
-
-.animation-circles {
-  @include flex(row, center, center);
-}
-
-.name {
-  position: absolute;
-  font-size: 40px;
-  font-weight: 900;
-  text-transform: uppercase;
-  color: $brgColor;
-  opacity: 0;
-  animation: name-position 1s 4.7s linear 1 forwards;
-}
-
-.title {
-  position: absolute;
-  font-size: 40px;
-  font-weight: 900;
-  text-transform: uppercase;
-  color: $brgColor;
-  opacity: 0;
-  animation: title-position 1s 5s linear 1 forwards;
-}
-
-@keyframes rotate {
-  100% {
-    transform: rotate(90deg);
-  }
-}
-
-.S1 {
-  @include sizing(30px, 60px);
-  background-color: $brgColor;
-  border-bottom-left-radius: 60px;
-  border-top-left-radius: 60px;
-  animation: circle-slide-left 0.3s 1.7s ease-in 1 forwards,
-  shape-and-move-left 0.3s 2s linear 1 forwards, final-position-left 0.3s 4s linear 1 forwards;
-}
-
-.S2 {
-  @include sizing(0, 60px);
-  background-color: $brgColor;
-  animation: circle-middle-appear 0.3s 1.7s ease-in 1 forwards,
-  shape-middle 0.3s 2s linear 1 forwards, final-position-center 0.3s 4s linear 1 forwards;
-}
-
-.S3 {
-  @include sizing(30px, 60px);
-  background-color: $brgColor;
-  border-bottom-right-radius: 60px;
-  border-top-right-radius: 60px;
-  animation: circle-slide-right 0.3s 1.7s ease-in 1 forwards,
-  shape-and-move-right 0.3s 2s linear 1 forwards, final-position-right 0.3s 4s linear 1 forwards;
-}
-
-.line {
-  opacity: 0;
-  width: 20px;
-  height: 7px;
-  background-color: $brgColor;
-  animation: line-position 0.3s 4.5s linear 1 forwards;
-}
-
-@keyframes circle-appear {
-  0% {
-    transform: translate(0,-400px);
-    opacity: 0;
-  }
-  30% {
-    opacity: 0;
-  }
-  40% {
-    opacity: 1;
-  }
-  50% {
-    transform: translate(0, 0);
-  }
-  60% {
-    transform: translate(0, -30px);
-  }
-  70% {
-    transform: translate(0, 0);
-  }
-  77% {
-    transform: translate(0, -20px);
-  }
-  84% {
-    transform: translate(0, 0);
-  }
-  89% {
-    transform: translate(0, -10px);
-  }
-  94% {
-    transform: translate(0, 0);
-  }
-  97% {
-    transform: translate(0, -5px);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
-}
-
-@keyframes circle-slide-left {
- 100% {
-   border-radius: 100px 0 0 100px;
-   @include sizing(100px, 60px);
- }
-}
-
-@keyframes circle-slide-right {
-  100% {
-    border-radius: 0 100px 100px 0;
-    @include sizing(100px, 60px);
-  }
-}
-
-@keyframes circle-middle-appear {
-  100% {
-    @include sizing(60px, 60px);
-  }
-}
-
-@keyframes shape-and-move-left {
-  0% {
-    border-radius: 100px 0 0 100px;
-    @include sizing(100px, 60px);
-  }
-  100% {
-    background-color: #ff5050;
-    @include sizing(60px, 60px);
-    border-radius: 50%;
-    transform: translate(-80px, 0);
-  }
-}
-
-@keyframes shape-and-move-right {
-  0% {
-    border-radius: 0 100px 100px 0;
-    @include sizing(100px, 60px);
-  }
-  100% {
-    background-color: #47d147;
-    @include sizing(60px, 60px);
-    border-radius: 50%;
-    transform: translate(80px, 0);
-  }
-}
-
-@keyframes shape-middle {
-  100% {
-    background-color: #ffcc00;
-    border-radius: 50%;
-  }
-}
-
-@keyframes final-position-left {
-  0% {
-    @include sizing(60px, 60px);
-    transform: translate(-80px, 0);
-  }
-  100% {
-    @include sizing(40px, 40px);
-    transform: translate(-27px, 280px);
-  }
-}
-
-@keyframes final-position-center {
-  0% {
-    @include sizing(60px, 60px);
-    transform: translate(0, 0);
-  }
-  100% {
-    @include sizing(40px, 40px);
-    transform: translate(0, 280px);
-  }
-}
-
-@keyframes final-position-right {
-  0% {
-    @include sizing(60px, 60px);
-    transform: translate(80px, 0);
-  }
-  100% {
-    @include sizing(40px, 40px);
-    transform: translate(27px, 280px);
-  }
-}
-
-@keyframes line-position {
-  100%{
-    opacity: 1;
-    transform: translate(0, 265px);
-    width: 190px;
-  }
-}
-
-@keyframes name-position {
-  0%{
-    opacity: 0;
-    transform: rotate(-90deg) translate(350px, -35px);
-  }
-  70% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-    transform: rotate(-90deg) translate(-36px, -35px);
-  }
-}
-
-@keyframes title-position {
-  0%{
-    opacity: 0;
-    transform: rotate(-90deg) translate(450px, 28px);
-  }
-  70% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-    transform: rotate(-90deg) translate(71px, 28px);
-  }
-}
-
-.mobile-menu {
-  display: none;
-  @media (max-width: $mobileWidth) {
-    display: block;
-    @include baseStyles(100%, 50px, #666666, none, 0 0 0 4px solid #bfbfbf, none);
-    @include flex(row, space-between, center);
-    h3 {
-      @include baseStyles(40%, 100%, none, #bfbfbf, none, none);
-      line-height: 50px;
-      text-align: center;
-      font-size: 25px;
-      font-weight: 500;
-    }
-    .mac-circles {
-      @include sizing(30%, 100%);
-      @include flex (row, flex-start, center);
-      .circle-1 {
-        @include sizing(23px, 23px);
-      }
-      .circle-2 {
-        @include sizing(23px, 23px);
-      }
-      .circle-4 {
-        @include sizing(23px, 23px);
-      }
-    }
-    .menu-burger {
-      @include sizing(30%, 75%);
-      @include flex (column, space-between, flex-end);
-      .menu-bar {
-        margin-right: 7px;
-        @include baseStyles(60px, 7px, $brgColor, none, none, 50px);
-      }
-    }
-  }
-}
-
-.mobile-menu-list {
-  @media (max-width: $mobileWidth) {
-    width: 100%;
-    .mobile-menu-list-position {
-      font-size: 21px;
-      text-align: center;
-      line-height: 36px;
-      vertical-align: middle;
-      @include baseStyles(100%, 35px, #666666, #bfbfbf, none, none);
-    }
-  }
-}
+//
+//#container-animation-flex {
+//  @include flex(column, center, center);
+//}
+//
+//#container-website-flex {
+//  @include flex(row, space-between, flex-start);
+//}
+//
+//.main-container {
+//  @include sizing(99%, 99%);
+//  @media (max-width: $mobileWidth) {
+//    @include sizing(100%, 100%);
+//    @include flex (column, flex-start, flex-start);
+//  }
+//}
+//
+//.container-wrapper {
+//  @include sizing(100%, 100%);
+//}
+//
+//.animation-wrapper {
+//  @include sizing(700px, 700px);
+//  @include flex(column, center, center);
+//  animation: circle-appear 1.5s linear 1 forwards,
+//  rotate 0.4s 2.4s linear 1 forwards;
+//}
+//
+//.animation-circles {
+//  @include flex(row, center, center);
+//}
+//
+//.name {
+//  position: absolute;
+//  font-size: 40px;
+//  font-weight: 900;
+//  text-transform: uppercase;
+//  color: $brgColor;
+//  opacity: 0;
+//  animation: name-position 1s 4.7s linear 1 forwards;
+//}
+//
+//.title {
+//  position: absolute;
+//  font-size: 40px;
+//  font-weight: 900;
+//  text-transform: uppercase;
+//  color: $brgColor;
+//  opacity: 0;
+//  animation: title-position 1s 5s linear 1 forwards;
+//}
+//
+//@keyframes rotate {
+//  100% {
+//    transform: rotate(90deg);
+//  }
+//}
+//
+//.S1 {
+//  @include sizing(30px, 60px);
+//  background-color: $brgColor;
+//  border-bottom-left-radius: 60px;
+//  border-top-left-radius: 60px;
+//  animation: circle-slide-left 0.3s 1.7s ease-in 1 forwards,
+//  shape-and-move-left 0.3s 2s linear 1 forwards, final-position-left 0.3s 4s linear 1 forwards;
+//}
+//
+//.S2 {
+//  @include sizing(0, 60px);
+//  background-color: $brgColor;
+//  animation: circle-middle-appear 0.3s 1.7s ease-in 1 forwards,
+//  shape-middle 0.3s 2s linear 1 forwards, final-position-center 0.3s 4s linear 1 forwards;
+//}
+//
+//.S3 {
+//  @include sizing(30px, 60px);
+//  background-color: $brgColor;
+//  border-bottom-right-radius: 60px;
+//  border-top-right-radius: 60px;
+//  animation: circle-slide-right 0.3s 1.7s ease-in 1 forwards,
+//  shape-and-move-right 0.3s 2s linear 1 forwards, final-position-right 0.3s 4s linear 1 forwards;
+//}
+//
+//.line {
+//  opacity: 0;
+//  width: 20px;
+//  height: 7px;
+//  background-color: $brgColor;
+//  animation: line-position 0.3s 4.5s linear 1 forwards;
+//}
+//
+//@keyframes circle-appear {
+//  0% {
+//    transform: translate(0,-400px);
+//    opacity: 0;
+//  }
+//  30% {
+//    opacity: 0;
+//  }
+//  40% {
+//    opacity: 1;
+//  }
+//  50% {
+//    transform: translate(0, 0);
+//  }
+//  60% {
+//    transform: translate(0, -30px);
+//  }
+//  70% {
+//    transform: translate(0, 0);
+//  }
+//  77% {
+//    transform: translate(0, -20px);
+//  }
+//  84% {
+//    transform: translate(0, 0);
+//  }
+//  89% {
+//    transform: translate(0, -10px);
+//  }
+//  94% {
+//    transform: translate(0, 0);
+//  }
+//  97% {
+//    transform: translate(0, -5px);
+//  }
+//  100% {
+//    transform: translate(0, 0);
+//  }
+//}
+//
+//@keyframes circle-slide-left {
+// 100% {
+//   border-radius: 100px 0 0 100px;
+//   @include sizing(100px, 60px);
+// }
+//}
+//
+//@keyframes circle-slide-right {
+//  100% {
+//    border-radius: 0 100px 100px 0;
+//    @include sizing(100px, 60px);
+//  }
+//}
+//
+//@keyframes circle-middle-appear {
+//  100% {
+//    @include sizing(60px, 60px);
+//  }
+//}
+//
+//@keyframes shape-and-move-left {
+//  0% {
+//    border-radius: 100px 0 0 100px;
+//    @include sizing(100px, 60px);
+//  }
+//  100% {
+//    background-color: #ff5050;
+//    @include sizing(60px, 60px);
+//    border-radius: 50%;
+//    transform: translate(-80px, 0);
+//  }
+//}
+//
+//@keyframes shape-and-move-right {
+//  0% {
+//    border-radius: 0 100px 100px 0;
+//    @include sizing(100px, 60px);
+//  }
+//  100% {
+//    background-color: #47d147;
+//    @include sizing(60px, 60px);
+//    border-radius: 50%;
+//    transform: translate(80px, 0);
+//  }
+//}
+//
+//@keyframes shape-middle {
+//  100% {
+//    background-color: #ffcc00;
+//    border-radius: 50%;
+//  }
+//}
+//
+//@keyframes final-position-left {
+//  0% {
+//    @include sizing(60px, 60px);
+//    transform: translate(-80px, 0);
+//  }
+//  100% {
+//    @include sizing(40px, 40px);
+//    transform: translate(-27px, 280px);
+//  }
+//}
+//
+//@keyframes final-position-center {
+//  0% {
+//    @include sizing(60px, 60px);
+//    transform: translate(0, 0);
+//  }
+//  100% {
+//    @include sizing(40px, 40px);
+//    transform: translate(0, 280px);
+//  }
+//}
+//
+//@keyframes final-position-right {
+//  0% {
+//    @include sizing(60px, 60px);
+//    transform: translate(80px, 0);
+//  }
+//  100% {
+//    @include sizing(40px, 40px);
+//    transform: translate(27px, 280px);
+//  }
+//}
+//
+//@keyframes line-position {
+//  100%{
+//    opacity: 1;
+//    transform: translate(0, 265px);
+//    width: 190px;
+//  }
+//}
+//
+//@keyframes name-position {
+//  0%{
+//    opacity: 0;
+//    transform: rotate(-90deg) translate(350px, -35px);
+//  }
+//  70% {
+//    opacity: 0;
+//  }
+//  100% {
+//    opacity: 1;
+//    transform: rotate(-90deg) translate(-36px, -35px);
+//  }
+//}
+//
+//@keyframes title-position {
+//  0%{
+//    opacity: 0;
+//    transform: rotate(-90deg) translate(450px, 28px);
+//  }
+//  70% {
+//    opacity: 0;
+//  }
+//  100% {
+//    opacity: 1;
+//    transform: rotate(-90deg) translate(71px, 28px);
+//  }
+//}
+//
+//.mobile-menu {
+//  display: none;
+//  @media (max-width: $mobileWidth) {
+//    display: block;
+//    @include baseStyles(100%, 50px, #666666, none, 0 0 0 4px solid #bfbfbf, none);
+//    @include flex(row, space-between, center);
+//    h3 {
+//      @include baseStyles(40%, 100%, none, #bfbfbf, none, none);
+//      line-height: 50px;
+//      text-align: center;
+//      font-size: 25px;
+//      font-weight: 500;
+//    }
+//    .mac-circles {
+//      @include sizing(30%, 100%);
+//      @include flex (row, flex-start, center);
+//      .circle-1 {
+//        @include sizing(23px, 23px);
+//      }
+//      .circle-2 {
+//        @include sizing(23px, 23px);
+//      }
+//      .circle-4 {
+//        @include sizing(23px, 23px);
+//      }
+//    }
+//    .menu-burger {
+//      @include sizing(30%, 75%);
+//      @include flex (column, space-between, flex-end);
+//      .menu-bar {
+//        margin-right: 7px;
+//        @include baseStyles(60px, 7px, $brgColor, none, none, 50px);
+//      }
+//    }
+//  }
+//}
+//
+//.mobile-menu-list {
+//  @media (max-width: $mobileWidth) {
+//    width: 100%;
+//    .mobile-menu-list-position {
+//      font-size: 21px;
+//      text-align: center;
+//      line-height: 36px;
+//      vertical-align: middle;
+//      @include baseStyles(100%, 35px, #666666, #bfbfbf, none, none);
+//    }
+//  }
+//}
 
 // ----------------------------------------- //
 // -------------- content ------------------ //
 // ----------------------------------------- //
 
-.content {
-  @include baseStyles(67.5%, none, $brgColor, none, none, $radius);
-  max-width: 1400px;
-  header {
-    @include flex(row, flex-start, center);
-    @include baseStyles(100%, 4%, #666666, #bfbfbf, none , 5px 5px 0 0 );
-    border-bottom: $headerBorder;
-    @media (max-width: $mobileWidth) {
-      border-radius: 0;
-    }
-    h1 {
-      text-align: center;
-      width: 20%;
-      @media (max-width: $mobileWidth) {
-        font-size: 140%;
-        width: 50%;
-      }
-    }
-  }
-  @media (max-width: $mobileWidth) {
-    @include sizing(100%, none);
-    border: none;
-    border-radius: 0;
-    header {
-      display: none;
-    }
-  }
-}
-
-.main-content {
-  @include flex(row, center, flex-start);
-  margin-top: 8px;
-  margin-bottom: 8px;
-  @media (max-width: $mobileWidth) {
-    margin-top: 4px;
-  }
-}
-
-.circle-4 {
-  margin-right: 33%;
-  @include circle(#47d147, 6px, #196619);
-  @media (max-width: $mobileWidth) {
-    margin-right: 8%;
-  }
-}
+//.content {
+//  @include baseStyles(67.5%, none, $brgColor, none, none, $radius);
+//  max-width: 1400px;
+//  header {
+//    @include flex(row, flex-start, center);
+//    @include baseStyles(100%, 4%, #666666, #bfbfbf, none , 5px 5px 0 0 );
+//    border-bottom: $headerBorder;
+//    @media (max-width: $mobileWidth) {
+//      border-radius: 0;
+//    }
+//    h1 {
+//      text-align: center;
+//      width: 20%;
+//      @media (max-width: $mobileWidth) {
+//        font-size: 140%;
+//        width: 50%;
+//      }
+//    }
+//  }
+//  @media (max-width: $mobileWidth) {
+//    @include sizing(100%, none);
+//    border: none;
+//    border-radius: 0;
+//    header {
+//      display: none;
+//    }
+//  }
+//}
+//
+//.main-content {
+//  @include flex(row, center, flex-start);
+//  margin-top: 8px;
+//  margin-bottom: 8px;
+//  @media (max-width: $mobileWidth) {
+//    margin-top: 4px;
+//  }
+//}
+//
+//.circle-4 {
+//  margin-right: 33%;
+//  @include circle(#47d147, 6px, #196619);
+//  @media (max-width: $mobileWidth) {
+//    margin-right: 8%;
+//  }
+//}
 
 // ----------------------------------------- //
 // -------------- AboutMe ------------------ //
 // ----------------------------------------- //
 
-.bio {
-  @include flex(row, space-between, flex-start);
-  @media (max-width: $mobileWidth) {
-    @include flex (column, flex-start, center);
-  }
-}
-
-.bio-data {
-  @include flex(column, space-between, flex-start);
-  @include baseStyles(100%, none, $brgColor3, $brgColor, none, $columnRadius);
-  @media (max-width: $mobileWidth) {
-    @include sizing(100%, none);
-  }
-  .bio-picture {
-    @include flex(row, center, center);
-    @include baseStyles(100%,350px, $brgColor2, none, none, $columnRadius);
-    @media (max-width: $mobileWidth) {
-      @include sizing(100%, 440px);
-    }
-    .picture {
-      @include baseStyles(95%, 95%, none, none, $headerBorder, $columnRadius);
-      @include smallLogoStyles(100%, 100%, url("./imgs/IMG_0414.png"));
-    }
-  }
-}
-
-.bio-description {
-  @include flex(column, flex-start, flex-start);
-  @include baseStyles(100%, 460px, $brgColor4, $brgColor, none, $columnRadius);
-  @media (max-width: $mobileWidth) {
-    @include sizing(100%, 100%);
-    margin-top: 4px;
-  }
-  .bio-text {
-    @include flex(row, center, flex-start);
-    @include baseStyles(100%, 100%, $brgColor2, none, none, $columnRadius);
-    p {
-      width: 95%;
-      font-size: 110%;
-      margin-top: 3%;
-      @media (max-width: $mobileWidth) {
-        font-size: 150%;
-      }
-    }
-  }
-  h1  {
-    line-height: 250%;
-    vertical-align: middle;
-    @include baseStyles(100%, 15%, none, none, none, 9px 9px 0 0);
-    @include headerStyles(170%);
-    @media (max-width: $mobileWidth) {
-      line-height: 140%;
-    }
-  }
-}
+//.bio {
+//  @include flex(row, space-between, flex-start);
+//  @media (max-width: $mobileWidth) {
+//    @include flex (column, flex-start, center);
+//  }
+//}
+//
+//.bio-data {
+//  @include flex(column, space-between, flex-start);
+//  @include baseStyles(100%, none, $brgColor3, $brgColor, none, $columnRadius);
+//  @media (max-width: $mobileWidth) {
+//    @include sizing(100%, none);
+//  }
+//  .bio-picture {
+//    @include flex(row, center, center);
+//    @include baseStyles(100%,350px, $brgColor2, none, none, $columnRadius);
+//    @media (max-width: $mobileWidth) {
+//      @include sizing(100%, 440px);
+//    }
+//    .picture {
+//      @include baseStyles(95%, 95%, none, none, $headerBorder, $columnRadius);
+//      @include smallLogoStyles(100%, 100%, url("./imgs/IMG_0414.png"));
+//    }
+//  }
+//}
+//
+//.bio-description {
+//  @include flex(column, flex-start, flex-start);
+//  @include baseStyles(100%, 460px, $brgColor4, $brgColor, none, $columnRadius);
+//  @media (max-width: $mobileWidth) {
+//    @include sizing(100%, 100%);
+//    margin-top: 4px;
+//  }
+//  .bio-text {
+//    @include flex(row, center, flex-start);
+//    @include baseStyles(100%, 100%, $brgColor2, none, none, $columnRadius);
+//    p {
+//      width: 95%;
+//      font-size: 110%;
+//      margin-top: 3%;
+//      @media (max-width: $mobileWidth) {
+//        font-size: 150%;
+//      }
+//    }
+//  }
+//  h1  {
+//    line-height: 250%;
+//    vertical-align: middle;
+//    @include baseStyles(100%, 15%, none, none, none, 9px 9px 0 0);
+//    @include headerStyles(170%);
+//    @media (max-width: $mobileWidth) {
+//      line-height: 140%;
+//    }
+//  }
+//}
 
 // ----------------------------------------- //
 // -------------- ContactList -------------- //
 // ----------------------------------------- //
 
-.bio-contact {
-  @include flex( column, center, center);
-  @include baseStyles(100%, 100%, $brgColor3, none, none, 0 0 9px 9px);
-  margin-top: 12px;
-  @media (max-width: $mobileWidth) {
-    margin-top: 8px;
-    font-size: 23px;
-    h3 {
-      margin-top: 12px;
-    }
-  }
-  .contact-list {
-    margin-top: 5px;
-    margin-bottom: 5px;
-    @include sizing(60%, 27%);
-    @include flex(row, space-between, flex-start);
-    @media (max-width: $mobileWidth) {
-      @include sizing(85%, 100%);
-    }
-    .contact-logo {
-      @include baseStyles(35px, 35px, $brgColor2, none, none, 50%);
-      @media (max-width: $mobileWidth) {
-        @include sizing(60px, 60px);
-      }
-    }
-    .github {
-      @include smallLogoStyles(99%, 99.5%, url("./imgs/gitHub-logo2.png"));
-    }
-    .linkedin {
-      @include smallLogoStyles(102.5%, 100%, url("./imgs/linkedin-logo.png"));
-    }
-    .gmail {
-      .mail-expander {
-        @include baseStyles(300px, 100%, white, none, none, 50px);
-        font-size: 14px;
-        animation: expand 0.3s linear 1 forwards;
-        @media (max-width: $mobileWidth) {
-          animation: expand-mobile 0.2s linear 1 forwards;
-        }
-      }
-      z-index: 1;
-      @include smallLogoStyles(100%, 100%, url("./imgs/gmail-logo.png"));
-      .logo-gmail-doubler {
-        position: relative;
-        @include sizing(35px, 35px);
-        @include smallLogoStyles(100%, 100%, url("./imgs/gmail-logo.png"));
-        .mail {
-          position: absolute;
-          top: 7px;
-          right: -216px;
-          @media (max-width: $mobileWidth) {
-            font-size: 19px;
-            top: 16px;
-            right: -290px;
-          }
-        }
-        @media (max-width: $mobileWidth) {
-          @include sizing(60px, 60px);
-        }
-      }
-    }
-    @media (max-width: $mobileWidth) {
-     margin: 5px 0 10px 0;
-    }
-  }
-  h1 {
-    @include headerStyles(140%);
-  }
-}
-
-#slide-out-animation {
-  animation: slide-left 0.3s linear 1 forwards;
-  @media (max-width: $mobileWidth) {
-    animation: slide-left-mobile 0.3s linear 1 forwards;
-  }
-}
-
-#slide-in-animation {
-  animation: slide-right 0.3s linear 1 forwards;
-  @media (max-width: $mobileWidth) {
-    animation: slide-right-mobile 0.3s linear 1 forwards;
-  }
-}
-
-#display-block {
-  display: block;
-}
-
-#display-none {
-  display: none;
-}
-
-@keyframes slide-right {
-  0%{
-    transform: translate(-48px,0);
-  }
-  100%{
-    transform: translate(0, 0);
-  }
-}
-
-@keyframes slide-left {
-  100% {
-    transform: translate(-48px, 0);
-  }
-}
-
-@keyframes slide-left-mobile {
-  100% {
-    transform: translate(-23px, 0);
-  }
-}
-
-@keyframes slide-right-mobile {
-  0% {
-    transform: translate(-23px, 0);
-  }
-  100%{
-    transform: translate(-0, 0);
-  }
-}
-
-@keyframes expand {
-  0% {
-    width: 35px;
-  }
-  30% {
-  }
-  100% {
-    width: 260px;
-  }
-}
-
-@keyframes expand-mobile {
-  0% {
-    width: 57px;
-  }
-  30% {
-  }
-  100% {
-    width: 355px;
-  }
-}
+//.bio-contact {
+//  @include flex( column, center, center);
+//  @include baseStyles(100%, 100%, $brgColor3, none, none, 0 0 9px 9px);
+//  margin-top: 12px;
+//  @media (max-width: $mobileWidth) {
+//    margin-top: 8px;
+//    font-size: 23px;
+//    h3 {
+//      margin-top: 12px;
+//    }
+//  }
+//  .contact-list {
+//    margin-top: 5px;
+//    margin-bottom: 5px;
+//    @include sizing(60%, 27%);
+//    @include flex(row, space-between, flex-start);
+//    @media (max-width: $mobileWidth) {
+//      @include sizing(85%, 100%);
+//    }
+//    .contact-logo {
+//      @include baseStyles(35px, 35px, $brgColor2, none, none, 50%);
+//      @media (max-width: $mobileWidth) {
+//        @include sizing(60px, 60px);
+//      }
+//    }
+//    .github {
+//      @include smallLogoStyles(99%, 99.5%, url("./imgs/gitHub-logo2.png"));
+//    }
+//    .linkedin {
+//      @include smallLogoStyles(102.5%, 100%, url("./imgs/linkedin-logo.png"));
+//    }
+//    .gmail {
+//      .mail-expander {
+//        @include baseStyles(300px, 100%, white, none, none, 50px);
+//        font-size: 14px;
+//        animation: expand 0.3s linear 1 forwards;
+//        @media (max-width: $mobileWidth) {
+//          animation: expand-mobile 0.2s linear 1 forwards;
+//        }
+//      }
+//      z-index: 1;
+//      @include smallLogoStyles(100%, 100%, url("./imgs/gmail-logo.png"));
+//      .logo-gmail-doubler {
+//        position: relative;
+//        @include sizing(35px, 35px);
+//        @include smallLogoStyles(100%, 100%, url("./imgs/gmail-logo.png"));
+//        .mail {
+//          position: absolute;
+//          top: 7px;
+//          right: -216px;
+//          @media (max-width: $mobileWidth) {
+//            font-size: 19px;
+//            top: 16px;
+//            right: -290px;
+//          }
+//        }
+//        @media (max-width: $mobileWidth) {
+//          @include sizing(60px, 60px);
+//        }
+//      }
+//    }
+//    @media (max-width: $mobileWidth) {
+//     margin: 5px 0 10px 0;
+//    }
+//  }
+//  h1 {
+//    @include headerStyles(140%);
+//  }
+//}
+//
+//#slide-out-animation {
+//  animation: slide-left 0.3s linear 1 forwards;
+//  @media (max-width: $mobileWidth) {
+//    animation: slide-left-mobile 0.3s linear 1 forwards;
+//  }
+//}
+//
+//#slide-in-animation {
+//  animation: slide-right 0.3s linear 1 forwards;
+//  @media (max-width: $mobileWidth) {
+//    animation: slide-right-mobile 0.3s linear 1 forwards;
+//  }
+//}
+//
+//#display-block {
+//  display: block;
+//}
+//
+//#display-none {
+//  display: none;
+//}
+//
+//@keyframes slide-right {
+//  0%{
+//    transform: translate(-48px,0);
+//  }
+//  100%{
+//    transform: translate(0, 0);
+//  }
+//}
+//
+//@keyframes slide-left {
+//  100% {
+//    transform: translate(-48px, 0);
+//  }
+//}
+//
+//@keyframes slide-left-mobile {
+//  100% {
+//    transform: translate(-23px, 0);
+//  }
+//}
+//
+//@keyframes slide-right-mobile {
+//  0% {
+//    transform: translate(-23px, 0);
+//  }
+//  100%{
+//    transform: translate(-0, 0);
+//  }
+//}
+//
+//@keyframes expand {
+//  0% {
+//    width: 35px;
+//  }
+//  30% {
+//  }
+//  100% {
+//    width: 260px;
+//  }
+//}
+//
+//@keyframes expand-mobile {
+//  0% {
+//    width: 57px;
+//  }
+//  30% {
+//  }
+//  100% {
+//    width: 355px;
+//  }
+//}
 
 // ----------------------------------------- //
 // ------------- Projects ------------------ //
 // ----------------------------------------- //
 
-.projects {
-  @include flex(row, space-between, flex-start);
-  @media (max-width: $mobileWidth) {
-    @include flex(column, flex-start, flex-start);
-  }
-}
-
-.project {
-  @include baseStyles(100%, 100%, $brgColor2, none, none, $columnRadius);
-  h2 {
-    text-align: center;
-    @include baseStyles(100%, 5%, #ff5050, white, none, 0 0 10px 10px);
-    position: relative;
-  }
-  @media (max-width: $mobileWidth) {
-    margin-top: 2px;
-    margin-bottom: 2px;
-  }
-}
-
-.wrapper {
-  background-color: #ffd633;
-  @media (max-width: $mobileWidth) {
-    font-size: 25px;
-  }
-}
-
-.github-link {
-  top: -20px;
-  right: 10px;
-  position: absolute;
-  @media (max-width: $mobileWidth) {
-    top: - 26px;
-    right: 15px;
-  }
-}
-
-.github-logo {
-  @include baseStyles(37px, 37px, white, none, $headerBorder, 50%);
-  @media (max-width: $mobileWidth) {
-    @include sizing(50px, 50px);
-  }
-  @include smallLogoStyles(99%, 99%, url("./imgs/gitHub-logo2.png"));
-}
-
-.project-preview {
-  @include baseStyles(100%, 180px, #ff5050, none, none, 10px 10px 0 0);
-  @media (max-width: $mobileWidth) {
-    @include sizing(100%, 220px);
-  }
-}
-
-.Pokemon-Game {
-  @include baseStyles(100%, 100%, none, none, none, $columnRadius);
-  @include smallLogoStyles(100%, 105%, url("./imgs/pick-pokemon2.png"));
-}
-
-.Portfolio-Page {
-  @include baseStyles(100%, 100%, none, none, none, $columnRadius);
-  @include smallLogoStyles(100%, 100%, url("./imgs/terminal-kopia.png"));
-}
-
-.Sit-On-Chair {
-  @include baseStyles(100%, 100%, none, none, none, $columnRadius);
-  @include smallLogoStyles(100%, 100%, url("./imgs/sitOnChair.png"));
-}
-
-.project-technologies {
-  @include flex(row, center, center);
-  @include baseStyles(100%, 10%, #ffd633, none, none, 0 0 10px 10px);
-}
-
-.project-list-of-tech {
-  width: 80%;
-  margin-top: 3px;
-  margin-bottom: 3px;
-  @include flex(row, space-between, center);
-  .small-logo {
-    @include baseStyles(40px, 40px, $brgColor2, none, $headerBorder, 50%);
-    @media (max-width: $mobileWidth) {
-      @include sizing(50px, 50px);
-    }
-  }
-  .react {
-    @include smallLogoStyles(80%, 70%, url("./imgs/react-log.png"));
-  }
-  .redux {
-    @include smallLogoStyles(104%, 92%, url("./imgs/redux-logo.png"));
-  }
-  .js {
-    @include smallLogoStyles(65%, 80%, url("./imgs/js-logo.png"));
-  }
-  .sass {
-    @include smallLogoStyles(72.5%, 50%, url("./imgs/sass-log.png"));
-  }
-  .html {
-    @include smallLogoStyles(79%, 75%, url("./imgs/HTML_Logo.png"));
-  }
-  .css {
-    @include smallLogoStyles(56%, 78%, url("./imgs/CSS3_logo.png"));
-  }
-}
-
-.project-description {
-  @include flex(none, center, flex-start);
-  p {
-    margin-top: 5px;
-    font-size: 15px;
-    height: 210px;
-    width: 90%;
-    font-weight: 500;
-    color: $brgColor;
-    @media (max-width: $mobileWidth) {
-      height: 292px;
-      font-size: 21px;
-    }
-  }
-}
-
-// ----------------------------------------- //
-// ------------- PersonalInfo -------------- //
-// ----------------------------------------- //
-
-.personalInfo {
-  @include flex(row, space-between, flex-start);
-  @media (max-width: $mobileWidth) {
-    @include flex(column, flext-start, flex-start);
-  }
-}
-
-.category {
-  @include baseStyles(100%, 460px, $brgColor3, none, none, $columnRadius);
-  @media(max-width: $mobileWidth) {
-    margin-top: 2px;
-    margin-bottom: 2px;
-    height: 580px;
-  }
-  h2 {
-    font-size: 20px;
-    font-weight: 900;
-    line-height: 45px;
-    vertical-align: middle;
-    text-align: center;
-    @include baseStyles(100%, 10%, $brgColor3, $brgColor, none, 10px 10px 0 0);
-    @media (max-width: $mobileWidth) {
-      font-size: 36px;
-      line-height: 55px;
-    }
-  }
-}
-
-.category-info-border {
-  @include baseStyles(100%, 90%, #ff5050, none, none, $columnRadius);
-  .category-info-inner-border {
-    @include flex(column, flex-end, flex-start);
-    @include baseStyles(100%, 100%, #ff5050, none, none, $columnRadius);
-  }
-  .category-info {
-    @include flex(row, center, center);
-    @include baseStyles(100%, 98%, $brgColor2, none, none, $columnRadius);
-    .category-info-wrapper {
-      @include sizing(95%, 94%);
-    }
-  }
-}
-
-.category-skill {
-  @include sizing(100%, 17%);
-  h3 {
-    @include categoryContent(700, 18px, $brgColor);
-    @media (max-width: $mobileWidth) {
-      font-size: 26px;
-    }
-  }
-  p {
-    color:#808080;
-    @media (max-width: $mobileWidth) {
-      font-size: 20px;
-    }
-  }
-}
-
-.category-step {
-  @include sizing(100%, 35%);
-  h3 {
-    @include categoryContent(700, 18px, $brgColor);
-    @media (max-width: $mobileWidth) {
-      font-size: 26px;
-    }
-  }
-  h4 {
-    color: #404040;
-    font-size: 15px;
-    @media (max-width: $mobileWidth) {
-      font-size: 19px;
-    }
-  }
-  p {
-    font-size: 14px;
-    color:#808080;
-    @media (max-width: $mobileWidth) {
-      font-size: 17px;
-    }
-  }
-}
-
-// ----------------------------------------- //
-// -------------- terminal ----------------- //
-// ----------------------------------------- //
-
-.terminal {
-  @include baseStyles(32%, 40%, $brgColor, none, none, $radius);
-  max-width: 400px;
-  font-size: 14px;
-  align-self: flex-end;
-  header {
-    @include flex(row, flex-start,center);
-    @include baseStyles(100%, 9%, #666666, #bfbfbf, none, 5px 5px 0 0);
-    border-bottom: $headerBorder;
-  }
-  @media (max-width: $mobileWidth) {
-    display: none;
-  }
-}
-
-.circle-1 {
-  @include circle(#ff5050, 8px, #e60000)
-}
-
-.circle-2 {
-  @include circle(#ffcc00, 6px, #b38f00)
-}
-
-.circle-3 {
-  margin-right: 7%;
-  @include circle(#47d147, 6px, #196619)
-}
-
-.terminal-body {
-  color: $textColor;
-  height: 90%;
-  overflow-y: scroll;
-  p {
-    margin-left: 5px;
-    color: #8c8c8c;
-  }
-  input {
-    width: auto;
-    margin-top: 2px;
-    margin-left: 3px;
-    color: $textColor;
-    background-color: $brgColor;
-    border: none;
-    margin-bottom: 2px;
-  }
-  input:focus {
-    outline: none;
-  }
-}
-
-.terminal-input {
-  @include flex(row, flex-start, center);
-  margin-left: 3px;
-}
+//.projects {
+//  @include flex(row, space-between, flex-start);
+//  @media (max-width: $mobileWidth) {
+//    @include flex(column, flex-start, flex-start);
+//  }
+//}
+//
+//.project {
+//  @include baseStyles(100%, 100%, $brgColor2, none, none, $columnRadius);
+//  h2 {
+//    text-align: center;
+//    @include baseStyles(100%, 5%, #ff5050, white, none, 0 0 10px 10px);
+//    position: relative;
+//  }
+//  @media (max-width: $mobileWidth) {
+//    margin-top: 2px;
+//    margin-bottom: 2px;
+//  }
+//}
+//
+//.wrapper {
+//  background-color: #ffd633;
+//  @media (max-width: $mobileWidth) {
+//    font-size: 25px;
+//  }
+//}
+//
+//.github-link {
+//  top: -20px;
+//  right: 10px;
+//  position: absolute;
+//  @media (max-width: $mobileWidth) {
+//    top: - 26px;
+//    right: 15px;
+//  }
+//}
+//
+//.github-logo {
+//  @include baseStyles(37px, 37px, white, none, $headerBorder, 50%);
+//  @media (max-width: $mobileWidth) {
+//    @include sizing(50px, 50px);
+//  }
+//  @include smallLogoStyles(99%, 99%, url("./imgs/gitHub-logo2.png"));
+//}
+//
+//.project-preview {
+//  @include baseStyles(100%, 180px, #ff5050, none, none, 10px 10px 0 0);
+//  @media (max-width: $mobileWidth) {
+//    @include sizing(100%, 220px);
+//  }
+//}
+//
+//.Pokemon-Game {
+//  @include baseStyles(100%, 100%, none, none, none, $columnRadius);
+//  @include smallLogoStyles(100%, 105%, url("./imgs/pick-pokemon2.png"));
+//}
+//
+//.Portfolio-Page {
+//  @include baseStyles(100%, 100%, none, none, none, $columnRadius);
+//  @include smallLogoStyles(100%, 100%, url("./imgs/terminal-kopia.png"));
+//}
+//
+//.Sit-On-Chair {
+//  @include baseStyles(100%, 100%, none, none, none, $columnRadius);
+//  @include smallLogoStyles(100%, 100%, url("./imgs/sitOnChair.png"));
+//}
+//
+//.project-technologies {
+//  @include flex(row, center, center);
+//  @include baseStyles(100%, 10%, #ffd633, none, none, 0 0 10px 10px);
+//}
+//
+//.project-list-of-tech {
+//  width: 80%;
+//  margin-top: 3px;
+//  margin-bottom: 3px;
+//  @include flex(row, space-between, center);
+//  .small-logo {
+//    @include baseStyles(40px, 40px, $brgColor2, none, $headerBorder, 50%);
+//    @media (max-width: $mobileWidth) {
+//      @include sizing(50px, 50px);
+//    }
+//  }
+//  .react {
+//    @include smallLogoStyles(80%, 70%, url("./imgs/react-log.png"));
+//  }
+//  .redux {
+//    @include smallLogoStyles(104%, 92%, url("./imgs/redux-logo.png"));
+//  }
+//  .js {
+//    @include smallLogoStyles(65%, 80%, url("./imgs/js-logo.png"));
+//  }
+//  .sass {
+//    @include smallLogoStyles(72.5%, 50%, url("./imgs/sass-log.png"));
+//  }
+//  .html {
+//    @include smallLogoStyles(79%, 75%, url("./imgs/HTML_Logo.png"));
+//  }
+//  .css {
+//    @include smallLogoStyles(56%, 78%, url("./imgs/CSS3_logo.png"));
+//  }
+//}
+//
+//.project-description {
+//  @include flex(none, center, flex-start);
+//  p {
+//    margin-top: 5px;
+//    font-size: 15px;
+//    height: 210px;
+//    width: 90%;
+//    font-weight: 500;
+//    color: $brgColor;
+//    @media (max-width: $mobileWidth) {
+//      height: 292px;
+//      font-size: 21px;
+//    }
+//  }
+//}
+//
+//// ----------------------------------------- //
+//// ------------- PersonalInfo -------------- //
+//// ----------------------------------------- //
+//
+//.personalInfo {
+//  @include flex(row, space-between, flex-start);
+//  @media (max-width: $mobileWidth) {
+//    @include flex(column, flext-start, flex-start);
+//  }
+//}
+//
+//.category {
+//  @include baseStyles(100%, 460px, $brgColor3, none, none, $columnRadius);
+//  @media(max-width: $mobileWidth) {
+//    margin-top: 2px;
+//    margin-bottom: 2px;
+//    height: 580px;
+//  }
+//  h2 {
+//    font-size: 20px;
+//    font-weight: 900;
+//    line-height: 45px;
+//    vertical-align: middle;
+//    text-align: center;
+//    @include baseStyles(100%, 10%, $brgColor3, $brgColor, none, 10px 10px 0 0);
+//    @media (max-width: $mobileWidth) {
+//      font-size: 36px;
+//      line-height: 55px;
+//    }
+//  }
+//}
+//
+//.category-info-border {
+//  @include baseStyles(100%, 90%, #ff5050, none, none, $columnRadius);
+//  .category-info-inner-border {
+//    @include flex(column, flex-end, flex-start);
+//    @include baseStyles(100%, 100%, #ff5050, none, none, $columnRadius);
+//  }
+//  .category-info {
+//    @include flex(row, center, center);
+//    @include baseStyles(100%, 98%, $brgColor2, none, none, $columnRadius);
+//    .category-info-wrapper {
+//      @include sizing(95%, 94%);
+//    }
+//  }
+//}
+//
+//.category-skill {
+//  @include sizing(100%, 17%);
+//  h3 {
+//    @include categoryContent(700, 18px, $brgColor);
+//    @media (max-width: $mobileWidth) {
+//      font-size: 26px;
+//    }
+//  }
+//  p {
+//    color:#808080;
+//    @media (max-width: $mobileWidth) {
+//      font-size: 20px;
+//    }
+//  }
+//}
+//
+//.category-step {
+//  @include sizing(100%, 35%);
+//  h3 {
+//    @include categoryContent(700, 18px, $brgColor);
+//    @media (max-width: $mobileWidth) {
+//      font-size: 26px;
+//    }
+//  }
+//  h4 {
+//    color: #404040;
+//    font-size: 15px;
+//    @media (max-width: $mobileWidth) {
+//      font-size: 19px;
+//    }
+//  }
+//  p {
+//    font-size: 14px;
+//    color:#808080;
+//    @media (max-width: $mobileWidth) {
+//      font-size: 17px;
+//    }
+//  }
+//}
