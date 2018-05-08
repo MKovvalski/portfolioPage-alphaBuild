@@ -7,6 +7,44 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: $color-primary;
+  position: relative;
+}
+
+.navigation-tag {
+  z-index: 5;
+  line-height: 48px;
+  vertical-align: middle;
+  font-size: 27px;
+  letter-spacing: 3px;
+  font-weight: 800;
+  color: $color-font-text-links;
+  text-transform: uppercase;
+  position: absolute;
+  width: 200px;
+  height: 50px;
+  padding-left: 20px;
+  background-color: $color-headers;
+  top: 61.5%;
+  right: 0;
+  box-shadow: $box-shadow-resting;
+  &:before {
+    position: absolute;
+    content: "";
+    top: -28%;
+    left: -18%;
+    width: 0;
+    border-top: 40px solid transparent;
+    border-bottom: 40px solid transparent;
+    border-right: 40px solid $color-headers;
+  }
+}
+
+.tag-text {
+  border: 2px solid red;
+  width: 249px;
+  transform: rotate(90deg);
+  margin-right: 20px;
+  transform-origin: 0 0;
 }
 
 .main-content {

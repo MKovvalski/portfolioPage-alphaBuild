@@ -9,6 +9,7 @@ class Container extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            animateId: "",
             screenToRender: "",
             title: "AboutMe",
             titlesArray: ["AboutMe", "Projects", "PersonalInfo"],
@@ -45,11 +46,23 @@ class Container extends React.Component {
             })
     };
 
+    sendAnimationID = () => {
+        this.setState({
+            animateId: "slide-in"
+        })
+    };
+
+    sendAnimationID2 = () => {
+        this.setState({
+          animateId: "slide-out"
+        })
+    };
 
     render () {
         return <div className = "container" id = {this.state.flexID}>
+                <div className = "navigation-tag" onMouseLeave={()=>this.sendAnimationID2()} onMouseOver={()=>this.sendAnimationID()}>navigate</div>
                 <Content MenuClick = {this.handleMenuClick} renderScreen = {this.state.title}/>
-                <Terminal titleText = {this.state.title} renderInfo = {this.handleInput}/>
+                <Terminal animateId = {this.state.animateId} titleText = {this.state.title} renderInfo = {this.handleInput}/>
         </div>
     }
 }

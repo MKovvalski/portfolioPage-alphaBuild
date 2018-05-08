@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 16);
+/******/ 	return __webpack_require__(__webpack_require__.s = 15);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -71,9 +71,9 @@
 /* WEBPACK VAR INJECTION */(function(process) {
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(17);
+  module.exports = __webpack_require__(16);
 } else {
-  module.exports = __webpack_require__(18);
+  module.exports = __webpack_require__(17);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
@@ -561,8 +561,7 @@ module.exports = warning;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 7 */,
-/* 8 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -578,7 +577,7 @@ module.exports = warning;
 if (process.env.NODE_ENV !== 'production') {
   var invariant = __webpack_require__(5);
   var warning = __webpack_require__(6);
-  var ReactPropTypesSecret = __webpack_require__(19);
+  var ReactPropTypesSecret = __webpack_require__(18);
   var loggedTypeFailures = {};
 }
 
@@ -629,7 +628,7 @@ module.exports = checkPropTypes;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 9 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -668,7 +667,7 @@ var ExecutionEnvironment = {
 module.exports = ExecutionEnvironment;
 
 /***/ }),
-/* 10 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -749,7 +748,7 @@ module.exports = EventListener;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 11 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -791,7 +790,7 @@ function getActiveElement(doc) /*?DOMElement*/{
 module.exports = getActiveElement;
 
 /***/ }),
-/* 12 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -862,7 +861,7 @@ function shallowEqual(objA, objB) {
 module.exports = shallowEqual;
 
 /***/ }),
-/* 13 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -877,7 +876,7 @@ module.exports = shallowEqual;
  * 
  */
 
-var isTextNode = __webpack_require__(22);
+var isTextNode = __webpack_require__(21);
 
 /*eslint-disable no-bitwise */
 
@@ -905,7 +904,7 @@ function containsNode(outerNode, innerNode) {
 module.exports = containsNode;
 
 /***/ }),
-/* 14 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -935,7 +934,7 @@ function focusNode(node) {
 module.exports = focusNode;
 
 /***/ }),
-/* 15 */
+/* 14 */
 /***/ (function(module, exports) {
 
 /*
@@ -1017,7 +1016,7 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 16 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1027,18 +1026,18 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(20);
+var _reactDom = __webpack_require__(19);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _mainComponent = __webpack_require__(29);
+var _mainComponent = __webpack_require__(28);
 
 var _mainComponent2 = _interopRequireDefault(_mainComponent);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 //importing presets
-__webpack_require__(41);
+__webpack_require__(40);
 
 //importing components
 
@@ -1052,7 +1051,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /***/ }),
-/* 17 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1080,7 +1079,7 @@ isValidElement:K,version:"16.2.0",__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_F
 
 
 /***/ }),
-/* 18 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1106,7 +1105,7 @@ var emptyObject = __webpack_require__(4);
 var invariant = __webpack_require__(5);
 var warning = __webpack_require__(6);
 var emptyFunction = __webpack_require__(2);
-var checkPropTypes = __webpack_require__(8);
+var checkPropTypes = __webpack_require__(7);
 
 // TODO: this is special because it gets imported during build.
 
@@ -2445,7 +2444,7 @@ module.exports = react;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 19 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2464,7 +2463,7 @@ module.exports = ReactPropTypesSecret;
 
 
 /***/ }),
-/* 20 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2502,15 +2501,15 @@ if (process.env.NODE_ENV === 'production') {
   // DCE check should happen before ReactDOM bundle executes so that
   // DevTools can report bad minification during injection.
   checkDCE();
-  module.exports = __webpack_require__(21);
+  module.exports = __webpack_require__(20);
 } else {
-  module.exports = __webpack_require__(24);
+  module.exports = __webpack_require__(23);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 21 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2526,7 +2525,7 @@ if (process.env.NODE_ENV === 'production') {
 /*
  Modernizr 3.0.0pre (Custom Build) | MIT
 */
-var aa=__webpack_require__(0),l=__webpack_require__(9),B=__webpack_require__(3),C=__webpack_require__(2),ba=__webpack_require__(10),da=__webpack_require__(11),ea=__webpack_require__(12),fa=__webpack_require__(13),ia=__webpack_require__(14),D=__webpack_require__(4);
+var aa=__webpack_require__(0),l=__webpack_require__(8),B=__webpack_require__(3),C=__webpack_require__(2),ba=__webpack_require__(9),da=__webpack_require__(10),ea=__webpack_require__(11),fa=__webpack_require__(12),ia=__webpack_require__(13),D=__webpack_require__(4);
 function E(a){for(var b=arguments.length-1,c="Minified React error #"+a+"; visit http://facebook.github.io/react/docs/error-decoder.html?invariant\x3d"+a,d=0;d<b;d++)c+="\x26args[]\x3d"+encodeURIComponent(arguments[d+1]);b=Error(c+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.");b.name="Invariant Violation";b.framesToPop=1;throw b;}aa?void 0:E("227");
 var oa={children:!0,dangerouslySetInnerHTML:!0,defaultValue:!0,defaultChecked:!0,innerHTML:!0,suppressContentEditableWarning:!0,suppressHydrationWarning:!0,style:!0};function pa(a,b){return(a&b)===b}
 var ta={MUST_USE_PROPERTY:1,HAS_BOOLEAN_VALUE:4,HAS_NUMERIC_VALUE:8,HAS_POSITIVE_NUMERIC_VALUE:24,HAS_OVERLOADED_BOOLEAN_VALUE:32,HAS_STRING_BOOLEAN_VALUE:64,injectDOMPropertyConfig:function(a){var b=ta,c=a.Properties||{},d=a.DOMAttributeNamespaces||{},e=a.DOMAttributeNames||{};a=a.DOMMutationMethods||{};for(var f in c){ua.hasOwnProperty(f)?E("48",f):void 0;var g=f.toLowerCase(),h=c[f];g={attributeName:g,attributeNamespace:null,propertyName:f,mutationMethod:null,mustUseProperty:pa(h,b.MUST_USE_PROPERTY),
@@ -2746,7 +2745,7 @@ Z.injectIntoDevTools({findFiberByHostInstance:pb,bundleType:0,version:"16.2.0",r
 
 
 /***/ }),
-/* 22 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2761,7 +2760,7 @@ Z.injectIntoDevTools({findFiberByHostInstance:pb,bundleType:0,version:"16.2.0",r
  * @typechecks
  */
 
-var isNode = __webpack_require__(23);
+var isNode = __webpack_require__(22);
 
 /**
  * @param {*} object The object to check.
@@ -2774,7 +2773,7 @@ function isTextNode(object) {
 module.exports = isTextNode;
 
 /***/ }),
-/* 23 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2802,7 +2801,7 @@ function isNode(object) {
 module.exports = isNode;
 
 /***/ }),
-/* 24 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2826,18 +2825,18 @@ if (process.env.NODE_ENV !== "production") {
 var React = __webpack_require__(0);
 var invariant = __webpack_require__(5);
 var warning = __webpack_require__(6);
-var ExecutionEnvironment = __webpack_require__(9);
+var ExecutionEnvironment = __webpack_require__(8);
 var _assign = __webpack_require__(3);
 var emptyFunction = __webpack_require__(2);
-var EventListener = __webpack_require__(10);
-var getActiveElement = __webpack_require__(11);
-var shallowEqual = __webpack_require__(12);
-var containsNode = __webpack_require__(13);
-var focusNode = __webpack_require__(14);
+var EventListener = __webpack_require__(9);
+var getActiveElement = __webpack_require__(10);
+var shallowEqual = __webpack_require__(11);
+var containsNode = __webpack_require__(12);
+var focusNode = __webpack_require__(13);
 var emptyObject = __webpack_require__(4);
-var checkPropTypes = __webpack_require__(8);
-var hyphenateStyleName = __webpack_require__(25);
-var camelizeStyleName = __webpack_require__(27);
+var checkPropTypes = __webpack_require__(7);
+var hyphenateStyleName = __webpack_require__(24);
+var camelizeStyleName = __webpack_require__(26);
 
 /**
  * WARNING: DO NOT manually require this module.
@@ -18204,7 +18203,7 @@ module.exports = reactDom;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 25 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18219,7 +18218,7 @@ module.exports = reactDom;
 
 
 
-var hyphenate = __webpack_require__(26);
+var hyphenate = __webpack_require__(25);
 
 var msPattern = /^ms-/;
 
@@ -18246,7 +18245,7 @@ function hyphenateStyleName(string) {
 module.exports = hyphenateStyleName;
 
 /***/ }),
-/* 26 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18282,7 +18281,7 @@ function hyphenate(string) {
 module.exports = hyphenate;
 
 /***/ }),
-/* 27 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18297,7 +18296,7 @@ module.exports = hyphenate;
 
 
 
-var camelize = __webpack_require__(28);
+var camelize = __webpack_require__(27);
 
 var msPattern = /^-ms-/;
 
@@ -18325,7 +18324,7 @@ function camelizeStyleName(string) {
 module.exports = camelizeStyleName;
 
 /***/ }),
-/* 28 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18360,7 +18359,7 @@ function camelize(string) {
 module.exports = camelize;
 
 /***/ }),
-/* 29 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18376,7 +18375,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _container = __webpack_require__(30);
+var _container = __webpack_require__(29);
 
 var _container2 = _interopRequireDefault(_container);
 
@@ -18418,7 +18417,7 @@ var MainComponent = function (_React$Component) {
 exports.default = MainComponent;
 
 /***/ }),
-/* 30 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18434,11 +18433,11 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _terminal = __webpack_require__(31);
+var _terminal = __webpack_require__(30);
 
 var _terminal2 = _interopRequireDefault(_terminal);
 
-var _content = __webpack_require__(32);
+var _content = __webpack_require__(31);
 
 var _content2 = _interopRequireDefault(_content);
 
@@ -18491,7 +18490,20 @@ var Container = function (_React$Component) {
             });
         };
 
+        _this.sendAnimationID = function () {
+            _this.setState({
+                animateId: "slide-in"
+            });
+        };
+
+        _this.sendAnimationID2 = function () {
+            _this.setState({
+                animateId: "slide-out"
+            });
+        };
+
         _this.state = {
+            animateId: "",
             screenToRender: "",
             title: "AboutMe",
             titlesArray: ["AboutMe", "Projects", "PersonalInfo"],
@@ -18503,11 +18515,22 @@ var Container = function (_React$Component) {
     _createClass(Container, [{
         key: "render",
         value: function render() {
+            var _this2 = this;
+
             return _react2.default.createElement(
                 "div",
                 { className: "container", id: this.state.flexID },
+                _react2.default.createElement(
+                    "div",
+                    { className: "navigation-tag", onMouseLeave: function onMouseLeave() {
+                            return _this2.sendAnimationID2();
+                        }, onMouseOver: function onMouseOver() {
+                            return _this2.sendAnimationID();
+                        } },
+                    "navigate"
+                ),
                 _react2.default.createElement(_content2.default, { MenuClick: this.handleMenuClick, renderScreen: this.state.title }),
-                _react2.default.createElement(_terminal2.default, { titleText: this.state.title, renderInfo: this.handleInput })
+                _react2.default.createElement(_terminal2.default, { animateId: this.state.animateId, titleText: this.state.title, renderInfo: this.handleInput })
             );
         }
     }]);
@@ -18518,7 +18541,7 @@ var Container = function (_React$Component) {
 exports.default = Container;
 
 /***/ }),
-/* 31 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18708,59 +18731,66 @@ var Terminal = function (_React$Component) {
 
         _this.state = {
             renderScreen: "",
-            placeholder: "type here...",
             listOfCommands: []
         };
         return _this;
     }
 
     _createClass(Terminal, [{
-        key: "componentDidMount",
-        value: function componentDidMount() {
-            var _this2 = this;
-
-            this.timoutId = setInterval(function () {
-                if (_this2.state.placeholder === "type here...") {
-                    _this2.setState({
-                        placeholder: ""
-                    });
-                } else {
-                    _this2.setState({
-                        placeholder: "type here..."
-                    });
-                }
-            }, 700);
-        }
-    }, {
-        key: "componentDidUpdate",
-        value: function componentDidUpdate() {
-            if (this.state.listOfCommands.length >= 1) {
-                clearInterval(this.timoutId);
-            }
-        }
-    }, {
         key: "render",
         value: function render() {
-            var _this3 = this;
+            var _this2 = this;
 
-            var a = "penis";
+            console.log(this.props.animateId);
             return _react2.default.createElement(
                 "div",
-                { className: "terminal" },
+                { className: "main-terminal", id: this.props.animateId },
                 _react2.default.createElement(
-                    "header",
-                    null,
-                    _react2.default.createElement("div", { className: "circle-1" }),
-                    _react2.default.createElement("div", { className: "circle-2" }),
-                    _react2.default.createElement("div", { className: "circle-3" }),
-                    "MateuszKowalski -- bash --80x24"
+                    "div",
+                    { className: "terminal-header" },
+                    _react2.default.createElement(
+                        "div",
+                        { className: "circles" },
+                        _react2.default.createElement(
+                            "div",
+                            { className: "circle-1" },
+                            _react2.default.createElement(
+                                "span",
+                                { className: "visually-hidden" },
+                                "circle"
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "div",
+                            { className: "circle-2" },
+                            _react2.default.createElement(
+                                "span",
+                                { className: "visually-hidden" },
+                                "circle"
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "div",
+                            { className: "circle-3" },
+                            _react2.default.createElement(
+                                "span",
+                                { className: "visually-hidden" },
+                                "circle"
+                            )
+                        )
+                    ),
+                    _react2.default.createElement(
+                        "h2",
+                        { className: "terminal-title" },
+                        "MateuszKowalski -- bash --80x24"
+                    )
                 ),
                 _react2.default.createElement(
                     "div",
                     { className: "terminal-body" },
                     _react2.default.createElement(
                         "ul",
-                        null,
+                        { className: "terminal-list-of-commands" },
                         this.state.listOfCommands.map(function (command, i) {
                             return _react2.default.createElement(
                                 "li",
@@ -18771,24 +18801,24 @@ var Terminal = function (_React$Component) {
                     ),
                     _react2.default.createElement(
                         "div",
-                        { className: "terminal-input" },
-                        "mateusz-kowalski: ",
+                        { className: "terminal-input-wrapper" },
+                        "MKowalski: ",
                         this.props.titleText,
-                        " ",
-                        _react2.default.createElement("input", { placeholder: this.state.placeholder, type: "text", value: this.state.renderScreen, onChange: this.handleChange, onKeyUp: function onKeyUp(e) {
-                                return _this3.handleInfoTransfer(e);
+                        " Coding$ ",
+                        _react2.default.createElement("input", { className: "terminal-input", placeholder: "type in a command", type: "text", value: this.state.renderScreen, onChange: this.handleChange, onKeyUp: function onKeyUp(e) {
+                                return _this2.handleInfoTransfer(e);
                             } })
                     ),
                     _react2.default.createElement(
                         "p",
-                        null,
+                        { className: "terminal-instruction" },
                         "//input \"cd\" and \"name of the file\" and confirm with \"enter\"",
                         _react2.default.createElement("br", null),
                         "//example: cd AboutMe ",
                         _react2.default.createElement("br", null),
                         "//type in \"ls\" to display available files ",
                         _react2.default.createElement("br", null),
-                        "//type in \"clear to clear Terminal history"
+                        "//type in \"clear\" to clear Terminal history"
                     )
                 )
             );
@@ -18801,7 +18831,7 @@ var Terminal = function (_React$Component) {
 exports.default = Terminal;
 
 /***/ }),
-/* 32 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18817,15 +18847,15 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _aboutMe = __webpack_require__(33);
+var _aboutMe = __webpack_require__(32);
 
 var _aboutMe2 = _interopRequireDefault(_aboutMe);
 
-var _projects = __webpack_require__(35);
+var _projects = __webpack_require__(34);
 
 var _projects2 = _interopRequireDefault(_projects);
 
-var _personalInfo = __webpack_require__(37);
+var _personalInfo = __webpack_require__(36);
 
 var _personalInfo2 = _interopRequireDefault(_personalInfo);
 
@@ -18926,7 +18956,7 @@ var Content = function (_React$Component) {
 exports.default = Content;
 
 /***/ }),
-/* 33 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18942,7 +18972,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _contactList = __webpack_require__(34);
+var _contactList = __webpack_require__(33);
 
 var _contactList2 = _interopRequireDefault(_contactList);
 
@@ -18999,7 +19029,7 @@ var AboutMe = function (_React$Component) {
 exports.default = AboutMe;
 
 /***/ }),
-/* 34 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19080,7 +19110,7 @@ var ContactList = function (_React$Component) {
 exports.default = ContactList;
 
 /***/ }),
-/* 35 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19096,7 +19126,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _project = __webpack_require__(36);
+var _project = __webpack_require__(35);
 
 var _project2 = _interopRequireDefault(_project);
 
@@ -19193,7 +19223,7 @@ var Projects = function (_React$Component) {
 exports.default = Projects;
 
 /***/ }),
-/* 36 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19324,7 +19354,7 @@ var Project = function (_React$Component) {
 exports.default = Project;
 
 /***/ }),
-/* 37 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19340,15 +19370,15 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _skills = __webpack_require__(38);
+var _skills = __webpack_require__(37);
 
 var _skills2 = _interopRequireDefault(_skills);
 
-var _education = __webpack_require__(39);
+var _education = __webpack_require__(38);
 
 var _education2 = _interopRequireDefault(_education);
 
-var _experience = __webpack_require__(40);
+var _experience = __webpack_require__(39);
 
 var _experience2 = _interopRequireDefault(_experience);
 
@@ -19397,7 +19427,7 @@ var PersonalInfo = function (_React$Component) {
 exports.default = PersonalInfo;
 
 /***/ }),
-/* 38 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19525,7 +19555,7 @@ var Skills = function (_React$Component) {
 exports.default = Skills;
 
 /***/ }),
-/* 39 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19640,7 +19670,7 @@ var Education = function (_React$Component) {
 exports.default = Education;
 
 /***/ }),
-/* 40 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19736,13 +19766,13 @@ var Experience = function (_React$Component) {
 exports.default = Experience;
 
 /***/ }),
-/* 41 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(42);
+var content = __webpack_require__(41);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -19750,7 +19780,7 @@ var transform;
 var options = {"hmr":true}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(44)(content, options);
+var update = __webpack_require__(43)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -19767,24 +19797,24 @@ if(false) {
 }
 
 /***/ }),
-/* 42 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(15)(false);
+exports = module.exports = __webpack_require__(14)(false);
 // imports
-exports.i(__webpack_require__(43), "");
+exports.i(__webpack_require__(42), "");
 
 // module
-exports.push([module.i, ".main-about-me {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center; }\n\n.name-and-title {\n  width: 100%;\n  height: 65%;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: flex-end; }\n\n.big-icon {\n  width: 85px;\n  height: 85px;\n  margin-right: 10px;\n  margin-bottom: 127px;\n  background-color: #cccccc; }\n\n.name-wrapper {\n  margin-bottom: 110px;\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-start;\n  align-items: flex-start; }\n\n.name-and-surname {\n  font-size: 60px;\n  font-weight: 900;\n  color: #595959;\n  letter-spacing: 1px;\n  text-transform: uppercase; }\n\n.position {\n  margin-top: -15px;\n  font-size: 44px;\n  font-weight: 700;\n  color: white;\n  letter-spacing: 0.5px;\n  text-transform: uppercase; }\n\n.main-contact-list {\n  width: 100%;\n  height: 35%;\n  border-top: 2px solid #F78E69;\n  background-color: white;\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-start;\n  align-items: center; }\n\n.contact-list {\n  width: 50%;\n  margin-top: 20px;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: center; }\n\n.contact-logo {\n  width: 65px;\n  height: 65px;\n  background-color: #595959;\n  border-radius: 50%; }\n\n.short-bio {\n  width: 68%;\n  margin-top: 30px;\n  text-align: center; }\n\n.main-projects {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  position: relative; }\n  .main-projects:after {\n    position: absolute;\n    content: \"\";\n    top: 40%;\n    width: 100%;\n    height: 70%;\n    background-color: white;\n    z-index: 1; }\n\n.projects {\n  width: 85%;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: flex-start;\n  z-index: 2; }\n\n.project {\n  width: 24%;\n  min-width: 250px;\n  position: relative;\n  box-shadow: 0px 13px 21px -7px rgba(0, 0, 0, 0.3);\n  transition: all 0.3s;\n  background-color: white; }\n  .project:hover {\n    box-shadow: 0px 13px 21px 5px rgba(0, 0, 0, 0.3); }\n\n.project-peek {\n  width: 100%;\n  height: 240px;\n  object-fit: cover;\n  border-bottom: 2px solid #bababa;\n  background-color: grey; }\n\n.project-github-link {\n  width: 45px;\n  height: 45px;\n  border-radius: 50%;\n  background-color: white;\n  position: absolute;\n  z-index: 3;\n  top: 43%;\n  right: 2%;\n  object-fit: cover; }\n\n.project-title {\n  line-height: 45px;\n  vertical-align: middle;\n  font-size: 23px;\n  text-transform: uppercase;\n  text-align: center;\n  font-weight: 800;\n  color: #595959;\n  background-color: #F7ED85;\n  border-bottom: 2px solid #F78E69; }\n\n.project-tech-list {\n  margin-top: -5px;\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: center; }\n\n.tech-logo {\n  width: 50px;\n  height: 50px;\n  margin-top: 7px;\n  margin-bottom: 5px;\n  border: 2px solid grey; }\n\n.tech-img {\n  width: 100%;\n  height: 100%;\n  object-fit: cover; }\n\n.project-description {\n  text-align: center;\n  padding-top: 1px;\n  padding-left: 8px;\n  padding-right: 8px;\n  min-height: 170px; }\n\n.main-personal-info {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  position: relative; }\n  .main-personal-info:after {\n    position: absolute;\n    content: \"\";\n    top: 40%;\n    width: 100%;\n    height: 70%;\n    background-color: white;\n    z-index: 1; }\n\n.information {\n  width: 70%;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: flex-start;\n  z-index: 2; }\n\n.info-category {\n  width: 31%;\n  min-width: 250px;\n  position: relative;\n  box-shadow: 0px 13px 21px -7px rgba(0, 0, 0, 0.3);\n  transition: all 0.3s;\n  background-color: white; }\n  .info-category:hover {\n    box-shadow: 0px 13px 21px 5px rgba(0, 0, 0, 0.3); }\n\n.info-category-title {\n  line-height: 45px;\n  vertical-align: middle;\n  font-size: 23px;\n  text-transform: uppercase;\n  text-align: center;\n  font-weight: 800;\n  color: #595959;\n  margin-bottom: 3px;\n  background-color: #F7ED85;\n  border-bottom: 2px solid #F78E69; }\n\n.category-elements-list {\n  width: 100%;\n  min-height: 390px;\n  margin-top: 15px;\n  padding-left: 10px;\n  display: flex;\n  flex-direction: column;\n  justify-content: sace-between;\n  align-items: flex-start; }\n\n.skill {\n  width: 100%;\n  margin-bottom: 25px; }\n\n.skill-title {\n  font-weight: 500;\n  color: #333333;\n  font-size: 17px; }\n\n.skill-content {\n  color: #999999; }\n\n.education-step {\n  margin-bottom: 10px; }\n\n.step-title {\n  font-weight: 500;\n  color: #333333;\n  font-size: 17px; }\n\n.step-data {\n  color: #737373;\n  font-size: 15px; }\n\n.step-description {\n  color: #999999;\n  font-size: 14px; }\n\n.career-step {\n  margin-bottom: 10px; }\n\nbody {\n  font-family: \"Open Sans\", sans-serif; }\n\n.container {\n  width: 100vw;\n  height: 100vh;\n  background-color: #46C4F2; }\n\n.main-content {\n  width: 100%;\n  height: 100%; }\n\n.visually-hidden {\n  border: 0;\n  clip: rect(0 0 0 0);\n  -webkit-clip-path: inset(50%);\n  clip-path: inset(50%);\n  height: 1px;\n  margin: -1px;\n  overflow: hidden;\n  padding: 0;\n  position: absolute;\n  width: 1px;\n  white-space: nowrap; }\n\nbody {\n  font-family: 'Open Sans', sans-serif; }\n", ""]);
+exports.push([module.i, ".main-about-me {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center; }\n\n.name-and-title {\n  width: 100%;\n  height: 65%;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: flex-end; }\n\n.big-icon {\n  width: 85px;\n  height: 85px;\n  margin-right: 10px;\n  margin-bottom: 127px;\n  background-color: #cccccc; }\n\n.name-wrapper {\n  margin-bottom: 110px;\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-start;\n  align-items: flex-start; }\n\n.name-and-surname {\n  font-size: 60px;\n  font-weight: 900;\n  color: #595959;\n  letter-spacing: 1px;\n  text-transform: uppercase; }\n\n.position {\n  margin-top: -15px;\n  font-size: 44px;\n  font-weight: 700;\n  color: white;\n  letter-spacing: 0.5px;\n  text-transform: uppercase; }\n\n.main-contact-list {\n  width: 100%;\n  height: 35%;\n  border-top: 2px solid #F78E69;\n  background-color: white;\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-start;\n  align-items: center; }\n\n.contact-list {\n  width: 50%;\n  margin-top: 20px;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: center; }\n\n.contact-logo {\n  width: 65px;\n  height: 65px;\n  background-color: #595959;\n  border-radius: 50%; }\n\n.short-bio {\n  width: 68%;\n  margin-top: 30px;\n  text-align: center;\n  color: #595959; }\n\n.main-projects {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  position: relative; }\n  .main-projects:after {\n    position: absolute;\n    content: \"\";\n    top: 40%;\n    width: 100%;\n    height: 70%;\n    background-color: white;\n    z-index: 1; }\n\n.projects {\n  width: 90%;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: flex-start;\n  z-index: 2; }\n\n.project {\n  width: 24%;\n  min-width: 250px;\n  position: relative;\n  box-shadow: 0px 13px 21px -7px rgba(0, 0, 0, 0.3);\n  transition: all 0.3s;\n  background-color: white; }\n  .project:hover {\n    box-shadow: 0px 13px 21px 5px rgba(0, 0, 0, 0.3); }\n\n.project-peek {\n  width: 100%;\n  height: 240px;\n  object-fit: cover;\n  border-bottom: 2px solid #bababa;\n  background-color: grey; }\n\n.project-github-link {\n  width: 45px;\n  height: 45px;\n  border-radius: 50%;\n  background-color: white;\n  position: absolute;\n  z-index: 3;\n  top: 43%;\n  right: 2%;\n  object-fit: cover; }\n\n.project-title {\n  line-height: 45px;\n  vertical-align: middle;\n  font-size: 23px;\n  text-transform: uppercase;\n  text-align: center;\n  font-weight: 800;\n  color: #595959;\n  background-color: #F7ED85;\n  border-bottom: 2px solid #F78E69; }\n\n.project-tech-list {\n  margin-top: -5px;\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: center; }\n\n.tech-logo {\n  width: 50px;\n  height: 50px;\n  margin-top: 7px;\n  margin-bottom: 5px;\n  border: 2px solid grey; }\n\n.tech-img {\n  width: 100%;\n  height: 100%;\n  object-fit: cover; }\n\n.project-description {\n  color: #595959;\n  text-align: center;\n  padding-top: 1px;\n  padding-left: 8px;\n  padding-right: 8px;\n  min-height: 170px; }\n\n.main-personal-info {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  position: relative; }\n  .main-personal-info:after {\n    position: absolute;\n    content: \"\";\n    top: 40%;\n    width: 100%;\n    height: 70%;\n    background-color: white;\n    z-index: 1; }\n\n.information {\n  width: 70%;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: flex-start;\n  z-index: 2; }\n\n.info-category {\n  width: 31%;\n  min-width: 250px;\n  position: relative;\n  box-shadow: 0px 13px 21px -7px rgba(0, 0, 0, 0.3);\n  transition: all 0.3s;\n  background-color: white; }\n  .info-category:hover {\n    box-shadow: 0px 13px 21px 5px rgba(0, 0, 0, 0.3); }\n\n.info-category-title {\n  line-height: 45px;\n  vertical-align: middle;\n  font-size: 23px;\n  text-transform: uppercase;\n  text-align: center;\n  font-weight: 800;\n  color: #595959;\n  margin-bottom: 3px;\n  background-color: #F7ED85;\n  border-bottom: 2px solid #F78E69; }\n\n.category-elements-list {\n  width: 100%;\n  min-height: 390px;\n  margin-top: 15px;\n  padding-left: 10px;\n  display: flex;\n  flex-direction: column;\n  justify-content: sace-between;\n  align-items: flex-start; }\n\n.skill {\n  width: 100%;\n  margin-bottom: 25px; }\n\n.skill-title {\n  font-weight: 500;\n  color: #333333;\n  font-size: 17px; }\n\n.skill-content {\n  color: #999999; }\n\n.education-step {\n  margin-bottom: 10px; }\n\n.step-title {\n  font-weight: 500;\n  color: #333333;\n  font-size: 17px; }\n\n.step-data {\n  color: #737373;\n  font-size: 15px; }\n\n.step-description {\n  color: #999999;\n  font-size: 14px; }\n\n.career-step {\n  margin-bottom: 10px; }\n\n.main-terminal {\n  width: 400px;\n  height: 250px;\n  background-color: white;\n  position: fixed;\n  top: 40%;\n  right: 40%;\n  border-radius: 5px;\n  overflow: hidden;\n  overflow-x: scroll;\n  z-index: 4; }\n\n.terminal-header {\n  width: 100%;\n  background: linear-gradient(0deg, #e6e6e6 0%, white 100%, white 100%);\n  border-radius: 4px 4px 0 0;\n  border-top: 1px solid #f2f2f2;\n  border-bottom: 1px solid #a6a6a6;\n  display: flex;\n  flex-direction: row;\n  justify-content: flex-start;\n  align-items: center; }\n\n.circles {\n  width: 15%;\n  margin-left: 7px;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  align-items: center; }\n\n.circle-1 {\n  width: 13px;\n  height: 13px;\n  border-radius: 50%;\n  background-color: #ff5050; }\n\n.circle-2 {\n  width: 13px;\n  height: 13px;\n  border-radius: 50%;\n  background-color: #ffcc00; }\n\n.circle-3 {\n  margin-right: 7%;\n  width: 13px;\n  height: 13px;\n  border-radius: 50%;\n  background-color: #47d147; }\n\n.terminal-title {\n  font-size: 15px;\n  color: #333333;\n  line-height: 25px;\n  vertical-align: middle;\n  margin-left: 20px; }\n\n.terminal-body {\n  font-size: 14px;\n  padding-top: 4px;\n  padding-left: 4px;\n  color: #333333; }\n\n.terminal-input {\n  margin-top: -3px;\n  color: #333333;\n  border: none; }\n  .terminal-input:focus {\n    outline: none; }\n\n.terminal-instruction {\n  color: #999999; }\n\n#slide-in {\n  animation: slide-in 0.7s linear 1 forwards; }\n\n#slide-out {\n  animation: slide-out 0.7s linear 1 forwards; }\n\n@keyframes slide-in {\n  100% {\n    transform: translate(-1000px, 0); } }\n\n@keyframes slide-out {\n  0% {\n    transform: translate(-1000px, 0); }\n  100% {\n    transform: translate(0, 0); } }\n\nbody {\n  font-family: \"Open Sans\", sans-serif; }\n\n.container {\n  width: 100vw;\n  height: 100vh;\n  background-color: #46C4F2;\n  position: relative; }\n\n.navigation-tag {\n  z-index: 5;\n  line-height: 48px;\n  vertical-align: middle;\n  font-size: 27px;\n  letter-spacing: 3px;\n  font-weight: 800;\n  color: #333333;\n  text-transform: uppercase;\n  position: absolute;\n  width: 200px;\n  height: 50px;\n  padding-left: 20px;\n  background-color: #F7ED85;\n  top: 61.5%;\n  right: 0;\n  box-shadow: 0px 13px 21px -7px rgba(0, 0, 0, 0.3); }\n  .navigation-tag:before {\n    position: absolute;\n    content: \"\";\n    top: -28%;\n    left: -18%;\n    width: 0;\n    border-top: 40px solid transparent;\n    border-bottom: 40px solid transparent;\n    border-right: 40px solid #F7ED85; }\n\n.tag-text {\n  border: 2px solid red;\n  width: 249px;\n  transform: rotate(90deg);\n  margin-right: 20px;\n  transform-origin: 0 0; }\n\n.main-content {\n  width: 100%;\n  height: 100%; }\n\n.visually-hidden {\n  border: 0;\n  clip: rect(0 0 0 0);\n  -webkit-clip-path: inset(50%);\n  clip-path: inset(50%);\n  height: 1px;\n  margin: -1px;\n  overflow: hidden;\n  padding: 0;\n  position: absolute;\n  width: 1px;\n  white-space: nowrap; }\n\nbody {\n  font-family: 'Open Sans', sans-serif; }\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 43 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(15)(false);
+exports = module.exports = __webpack_require__(14)(false);
 // imports
 
 
@@ -19795,7 +19825,7 @@ exports.push([module.i, "/*\n\tHTML5 Reset :: style.css\n\t---------------------
 
 
 /***/ }),
-/* 44 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -19851,7 +19881,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(45);
+var	fixUrls = __webpack_require__(44);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -20167,7 +20197,7 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 45 */
+/* 44 */
 /***/ (function(module, exports) {
 
 

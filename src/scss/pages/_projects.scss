@@ -17,7 +17,7 @@
 }
 
 .projects {
-  width: 85%;
+  width: 90%;
   @include flex-box(row, space-around, flex-start);
   z-index: 2;
 }
@@ -62,7 +62,7 @@
   text-align: center;
   font-weight: 800;
   color: $color-tertiary;
-  background-color: #F7ED85;
+  background-color: $color-headers;
   border-bottom: 2px solid #F78E69;
 }
 .project-tech-list {
@@ -84,6 +84,7 @@
 }
 
 .project-description {
+  color: $color-tertiary;
   text-align: center;
   padding-top: 1px;
   padding-left: 8px;

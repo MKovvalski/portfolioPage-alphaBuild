@@ -1,11 +1,9 @@
 
-@mixin circle ($color, $margin, $shadowColor){
+@mixin circle ($color, $shadowColor){
   width: 13px;
   height: 13px;
   border-radius: 50%;
-  margin-left: $margin;
   background-color: $color;
-  box-shadow: 0.2px 0.5px $shadowColor;
 }
 
 @mixin flex-box($direction, $justify, $align) {

@@ -5,28 +5,7 @@ class Terminal extends React.Component {
         super(props);
         this.state = {
             renderScreen: "",
-            placeholder: "type here...",
             listOfCommands: [],
-        }
-    }
-
-    componentDidMount () {
-        this.timoutId = setInterval(() => {
-            if (this.state.placeholder === "type here...") {
-                this.setState({
-                    placeholder: ""
-                })
-            } else {
-                this.setState({
-                    placeholder: "type here..."
-                })
-            }
-        },700)
-    }
-
-    componentDidUpdate () {
-        if (this.state.listOfCommands.length >= 1) {
-            clearInterval(this.timoutId);
         }
     }
 
@@ -132,27 +111,29 @@ class Terminal extends React.Component {
     };
 
     render () {
-        const a = "penis";
-        return <div className = "terminal">
-                <header>
-                    <div className = "circle-1"/>
-                    <div className = "circle-2"/>
-                    <div className = "circle-3"/>
-                    MateuszKowalski -- bash --80x24</header>
-                    <div className = "terminal-body">
-                        <ul>
-                            {this.state.listOfCommands.map((command, i) => {
-                                return <li key = {i}>{command}</li>
-                            })}
-                        </ul>
-                        <div className = "terminal-input">mateusz-kowalski: {this.props.titleText} <input placeholder = {this.state.placeholder} type="text" value = {this.state.renderScreen} onChange={this.handleChange} onKeyUp = {e => this.handleInfoTransfer(e)}/></div>
-                        <p>//input "cd" and "name of the file" and confirm with "enter"<br/>
-                            //example: cd AboutMe <br/>
-                            //type in "ls" to display available files <br/>
-                            //type in "clear to clear Terminal history
-                        </p>
+        console.log(this.props.animateId);
+        return <div className = "main-terminal" id = {this.props.animateId}>
+                <div className = "terminal-header">
+                    <div className = "circles">
+                        <div className = "circle-1"><span className = "visually-hidden">circle</span></div>
+                        <div className = "circle-2"><span className = "visually-hidden">circle</span></div>
+                        <div className = "circle-3"><span className = "visually-hidden">circle</span></div>
                     </div>
-
+                    <h2 className = "terminal-title">MateuszKowalski -- bash --80x24</h2>
+                </div>
+                <div className = "terminal-body">
+                    <ul className = "terminal-list-of-commands">
+                        {this.state.listOfCommands.map((command, i) => {
+                            return <li key = {i}>{command}</li>
+                        })}
+                    </ul>
+                    <div className = "terminal-input-wrapper">MKowalski: {this.props.titleText} Coding$ <input className = "terminal-input" placeholder = "type in a command" type="text" value = {this.state.renderScreen} onChange={this.handleChange} onKeyUp = {e => this.handleInfoTransfer(e)}/></div>
+                    <p className = "terminal-instruction">//input "cd" and "name of the file" and confirm with "enter"<br/>
+                        //example: cd AboutMe <br/>
+                        //type in "ls" to display available files <br/>
+                        //type in "clear" to clear Terminal history
+                    </p>
+                </div>
         </div>
     }
 }
