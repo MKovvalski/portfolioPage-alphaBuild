@@ -18556,7 +18556,7 @@ var Container = function (_React$Component) {
 
         _this.state = {
             screenToRender: "",
-            title: "AboutMe",
+            title: "Projects",
             titlesArray: ["AboutMe", "Projects", "PersonalInfo"],
             flexID: "container-animation-flex"
         };
@@ -19199,6 +19199,40 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+var projects = [{
+    title: "Pokemon Game",
+    liveLink: "https://mateuszkowalskicl.github.io/PokemonGame-simplified/",
+    projectImgSrc: "../../../../imgs/previews/Logo-Pokemon.png",
+    projectImgAlt: "pokemon game",
+    githubLink: "https://github.com/MateuszKowalskiCL/PokemonGame-simplified",
+    techList: ["react", "redux", "js", "sass"],
+    description: "My first take on combining React with Redux. Sass requires rework. App simulates Pokemon Battles and acurately recreated damage calculation mechanics."
+}, {
+    title: "Old Portfolio Page",
+    liveLink: "https://mateuszkowalskicl.github.io/portfolioPage-alphaBuild/",
+    projectImgSrc: "../../../../imgs/previews/portfolio.png",
+    projectImgAlt: "",
+    githubLink: "https://github.com/MateuszKowalskiCL/portfolioPage",
+    techList: ["react", "js", "sass"],
+    description: "Website was my first real encounter with RWD and Sass. Usual navigation was replaced by mock up of terminal with most of its functionality. Currently, design is being changed to more modern one"
+}, {
+    title: "New Portfolio Page",
+    liveLink: "https://mateuszkowalskicl.github.io/PortfolioPage-finalBuild/#header",
+    projectImgSrc: "../../../../imgs/previews/portfolio-final.png",
+    projectImgAlt: "new portfolio page",
+    githubLink: "https://github.com/MateuszKowalskiCL/PortfolioPage-finalBuild",
+    techList: ["js", "html", "sass"],
+    description: "Build to allow potential employers to get to know me and my projects better. Inspired with flat design. Written in ES6 and Sass."
+}, {
+    title: "SitOnChair",
+    liveLink: "https://mateuszkowalskicl.github.io/sitOnChairPrime/",
+    projectImgSrc: "../../../../imgs/previews/tile.png",
+    projectImgAlt: "sitOnChair",
+    githubLink: "https://github.com/MateuszKowalskiCL/sitOnChairPrime",
+    techList: ["js", "html", "css"],
+    description: "Coded during Coders Lab boot camp. In future, will receive rework into ES6, Sass and proper RWD"
+}];
+
 var Projects = function (_React$Component) {
     _inherits(Projects, _React$Component);
 
@@ -19207,20 +19241,19 @@ var Projects = function (_React$Component) {
 
         var _this = _possibleConstructorReturn(this, (Projects.__proto__ || Object.getPrototypeOf(Projects)).call(this, props));
 
-        _this.state = {
-            pokemonLogos: ["react", "redux", "js", "sass"],
-            portfolioLogos: ["react", "js", "sass"],
-            sitOnChairLogos: ["js", "html", "css"],
-            pokemonDesc: "The Pokemon-Game recreates turn based battles of Pokemon, including all attack mechanics. The game is based on JS and was build in React framework with support of Redux library. In the future, I am planning to add separate animations for all pokemon moves and expand battle mechanics.",
-            portfolioDesc: "My Portfolio Page serves dual purpose - to allow potential employer to know be better as well as showcase my skills and projects. Site's navigation is build around terminal and commands used in it. Main tech used in the website was React framework and Sass style language.",
-            sitOnChairDesc: "Sit-on-Chair was first project I ever made . The Website was build entirely in HTML, pure CSS and JS. Despite it being so simple, it allowed me to, for the first time, use combine skills of all mentioned before languages. I am planning to rewrite site's JS script and implement Sass.",
-            pokemonLink: "https://github.com/MateuszKowalskiCL/PokemonGame-simplified",
-            portfolioLink: "https://github.com/MateuszKowalskiCL/portfolioPage",
-            sitOnChairLink: "https://github.com/MateuszKowalskiCL/sitOnChairPrime",
-            pokemonWebLink: "https://mateuszkowalskicl.github.io/PokemonGame-simplified/",
-            portfolioWebLink: "none",
-            sitOnChairWebLink: "https://mateuszkowalskicl.github.io/sitOnChairPrime/"
+        _this.renderProjects = function () {
+            return projects.map(function (i, e) {
+                return _react2.default.createElement(_project2.default, { projectLiveLink: e.liveLink,
+                    projectImgScr: e.projectImgSrc,
+                    projectAltImg: e.projectImgAlt,
+                    projectGitHubLink: e.githubLink,
+                    projectTitle: e.title,
+                    techList: e.techList,
+                    description: e.description });
+            });
         };
+
+        _this.state = {};
         return _this;
     }
 
@@ -19228,26 +19261,17 @@ var Projects = function (_React$Component) {
         key: "render",
         value: function render() {
             return _react2.default.createElement(
-                "div",
-                { className: "container" },
+                "section",
+                { className: "main-projects" },
+                _react2.default.createElement(
+                    "h2",
+                    { className: "visually-hidden" },
+                    "projects"
+                ),
                 _react2.default.createElement(
                     "div",
                     { className: "projects" },
-                    _react2.default.createElement(
-                        "div",
-                        { className: "col-3" },
-                        _react2.default.createElement(_project2.default, { webLink: this.state.pokemonWebLink, hubLink: this.state.pokemonLink, desc: this.state.pokemonDesc, project: "Pokemon-Game", logos: this.state.pokemonLogos })
-                    ),
-                    _react2.default.createElement(
-                        "div",
-                        { className: "col-3" },
-                        _react2.default.createElement(_project2.default, { webLink: this.state.portfolioWebLink, hubLink: this.state.portfolioLink, desc: this.state.portfolioDesc, project: "Portfolio-Page", logos: this.state.portfolioLogos })
-                    ),
-                    _react2.default.createElement(
-                        "div",
-                        { className: "col-3" },
-                        _react2.default.createElement(_project2.default, { webLink: this.state.sitOnChairWebLink, hubLink: this.state.sitOnChairLink, desc: this.state.sitOnChairDesc, project: "Sit-On-Chair", logos: this.state.sitOnChairLogos })
-                    )
+                    this.renderProjects()
                 )
             );
         }
@@ -19297,11 +19321,8 @@ var Project = function (_React$Component) {
             args[_key] = arguments[_key];
         }
 
-        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Project.__proto__ || Object.getPrototypeOf(Project)).call.apply(_ref, [this].concat(args))), _this), _this.renderLogos = function () {
-            return _this.props.logos.map(function (logo) {
-                var a = "small-logo " + logo;
-                return _react2.default.createElement("li", { key: logo, className: a });
-            });
+        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Project.__proto__ || Object.getPrototypeOf(Project)).call.apply(_ref, [this].concat(args))), _this), _this.renderTechList = function () {
+            _this.props.techList.map(function () {});
         }, _temp), _possibleConstructorReturn(_this, _ret);
     }
 
@@ -19309,48 +19330,32 @@ var Project = function (_React$Component) {
         key: "render",
         value: function render() {
             return _react2.default.createElement(
-                "div",
+                "article",
                 { className: "project" },
                 _react2.default.createElement(
-                    "div",
-                    { className: "project-preview" },
-                    _react2.default.createElement(
-                        "a",
-                        { href: this.props.webLink, target: "_blank" },
-                        _react2.default.createElement("div", { className: this.props.project })
-                    )
+                    "a",
+                    { href: this.props.projectLiveLink },
+                    _react2.default.createElement("img", { className: "project-peek", src: this.props.projectImgSrc, alt: this.props.projectImgAlt })
                 ),
                 _react2.default.createElement(
-                    "div",
-                    { className: "wrapper" },
-                    _react2.default.createElement(
-                        "h2",
-                        null,
-                        this.props.project,
-                        _react2.default.createElement(
-                            "a",
-                            { className: "github-link", href: this.props.hubLink, target: "_blank" },
-                            _react2.default.createElement("div", { className: "github-logo" })
-                        )
-                    )
+                    "a",
+                    { href: this.props.projectGithubLink },
+                    _react2.default.createElement("img", { src: "/", alt: "github-logo" })
                 ),
                 _react2.default.createElement(
-                    "div",
-                    { className: "project-technologies" },
-                    _react2.default.createElement(
-                        "ul",
-                        { className: "project-list-of-tech" },
-                        this.renderLogos()
-                    )
+                    "h3",
+                    { className: "project-title" },
+                    this.props.projectTitle
                 ),
                 _react2.default.createElement(
-                    "div",
+                    "ul",
+                    { className: "project-tech-list" },
+                    "tutaj wyrenderowa\u0107 logo da\u0107 switch z odpowiednimi href dla img"
+                ),
+                _react2.default.createElement(
+                    "p",
                     { className: "project-description" },
-                    _react2.default.createElement(
-                        "p",
-                        null,
-                        this.props.desc
-                    )
+                    this.props.description
                 )
             );
         }
@@ -19714,7 +19719,7 @@ exports = module.exports = __webpack_require__(15)(false);
 exports.i(__webpack_require__(43), "");
 
 // module
-exports.push([module.i, ".main-about-me {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center; }\n\n.name-and-title {\n  width: 100%;\n  height: 65%;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: flex-end; }\n\n.big-icon {\n  width: 85px;\n  height: 85px;\n  margin-right: 10px;\n  margin-bottom: 127px;\n  background-color: #cccccc; }\n\n.name-wrapper {\n  margin-bottom: 110px;\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-start;\n  align-items: flex-start; }\n\n.name-and-surname {\n  font-size: 60px;\n  font-weight: 900;\n  color: #595959;\n  letter-spacing: 1px;\n  text-transform: uppercase; }\n\n.position {\n  margin-top: -15px;\n  font-size: 44px;\n  font-weight: 700;\n  color: white;\n  letter-spacing: 0.5px;\n  text-transform: uppercase; }\n\n.main-contact-list {\n  width: 100%;\n  height: 35%;\n  background-color: white;\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-start;\n  align-items: center; }\n\n.contact-list {\n  width: 50%;\n  margin-top: 20px;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: center; }\n\n.contact-logo {\n  width: 65px;\n  height: 65px;\n  background-color: #595959;\n  border-radius: 50%; }\n\n.short-bio {\n  width: 68%;\n  margin-top: 30px;\n  text-align: center; }\n\nbody {\n  font-family: \"Open Sans\", sans-serif; }\n\n.container {\n  width: 100vw;\n  height: 100vh;\n  background-color: #42C997; }\n\n.main-content {\n  width: 100%;\n  height: 100%; }\n\nbody {\n  font-family: 'Open Sans', sans-serif; }\n", ""]);
+exports.push([module.i, ".main-about-me {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center; }\n\n.name-and-title {\n  width: 100%;\n  height: 65%;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: flex-end; }\n\n.big-icon {\n  width: 85px;\n  height: 85px;\n  margin-right: 10px;\n  margin-bottom: 127px;\n  background-color: #cccccc; }\n\n.name-wrapper {\n  margin-bottom: 110px;\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-start;\n  align-items: flex-start; }\n\n.name-and-surname {\n  font-size: 60px;\n  font-weight: 900;\n  color: #595959;\n  letter-spacing: 1px;\n  text-transform: uppercase; }\n\n.position {\n  margin-top: -15px;\n  font-size: 44px;\n  font-weight: 700;\n  color: white;\n  letter-spacing: 0.5px;\n  text-transform: uppercase; }\n\n.main-contact-list {\n  width: 100%;\n  height: 35%;\n  background-color: white;\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-start;\n  align-items: center; }\n\n.contact-list {\n  width: 50%;\n  margin-top: 20px;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: center; }\n\n.contact-logo {\n  width: 65px;\n  height: 65px;\n  background-color: #595959;\n  border-radius: 50%; }\n\n.short-bio {\n  width: 68%;\n  margin-top: 30px;\n  text-align: center; }\n\n.main-projects {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  position: relative;\n  border: 2px solid red; }\n  .main-projects:after {\n    border: 2px solid red;\n    position: absolute;\n    content: \"\";\n    top: 40%;\n    width: 100%;\n    height: 70%;\n    background-color: white;\n    z-index: 1; }\n\n.projects {\n  width: 70%;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: center;\n  border: 2px solid red;\n  z-index: 2; }\n\nbody {\n  font-family: \"Open Sans\", sans-serif; }\n\n.container {\n  width: 100vw;\n  height: 100vh;\n  background-color: #46C4F2; }\n\n.main-content {\n  width: 100%;\n  height: 100%; }\n\n.visually-hidden {\n  border: 0;\n  clip: rect(0 0 0 0);\n  -webkit-clip-path: inset(50%);\n  clip-path: inset(50%);\n  height: 1px;\n  margin: -1px;\n  overflow: hidden;\n  padding: 0;\n  position: absolute;\n  width: 1px;\n  white-space: nowrap; }\n\nbody {\n  font-family: 'Open Sans', sans-serif; }\n", ""]);
 
 // exports
 

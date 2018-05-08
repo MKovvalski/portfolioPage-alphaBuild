@@ -2,39 +2,27 @@ import React from 'react';
 
 class Project extends React.Component {
 
-    renderLogos = () => {
-      return this.props.logos.map((logo) => {
-          const a = "small-logo " + logo;
-          return <li key = {logo} className = {a}/>
+    renderTechList = () => {
+      this.props.techList.map( () => {
+
       })
     };
 
     render () {
-        return <div className = "project">
-                    <div className = "project-preview">
-                        <a href = {this.props.webLink} target = "_blank">
-                            <div className = {this.props.project}/>
-                        </a>
-                    </div>
-                    <div className = "wrapper">
-                        <h2>
-                            {this.props.project}
-                            <a className = "github-link" href = {this.props.hubLink} target = "_blank">
-                                <div className = "github-logo"/>
-                            </a>
-                        </h2>
-                    </div>
-                    <div className = "project-technologies">
-                        <ul className = "project-list-of-tech">
-                                {this.renderLogos()}
-                        </ul>
-                    </div>
-                    <div className = "project-description">
-                        <p>
-                            {this.props.desc}
-                        </p>
-                    </div>
-        </div>
+        return <article className = "project">
+                    <a href = {this.props.projectLiveLink}>
+                        <img className = "project-peek" src= {this.props.projectImgSrc} alt= {this.props.projectImgAlt}/>
+                    </a>
+                    <a href= {this.props.projectGithubLink}><img src = "/" alt= "github-logo"/></a>
+                    {/*github src będzie stałe dla wszystkich projektów - nie potrzebuje src*/}
+                    <h3 className = "project-title">{this.props.projectTitle}</h3>
+                    <ul className = "project-tech-list">
+                        tutaj wyrenderować logo dać switch z odpowiednimi href dla img
+                    </ul>
+                    <p className = "project-description">
+                        {this.props.description}
+                    </p>
+        </article>
     }
 }
 

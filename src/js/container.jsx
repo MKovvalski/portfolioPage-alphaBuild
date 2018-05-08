@@ -10,7 +10,7 @@ class Container extends React.Component {
         super(props);
         this.state = {
             screenToRender: "",
-            title: "AboutMe",
+            title: "Projects",
             titlesArray: ["AboutMe", "Projects", "PersonalInfo"],
             flexID: "container-animation-flex",
         }
