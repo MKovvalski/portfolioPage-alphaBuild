@@ -5,20 +5,14 @@ import Experience from "./experience.jsx";
 
 class PersonalInfo extends React.Component {
     render () {
-        return <div className = "container">
-                <div className = "personalInfo">
-                    <div className = "col-3">
-                        <Skills/>
-                    </div>
-                    <div className = "col-3">
-                        <Education/>
-                    </div>
-                    <div className = "col-3">
-                       <Experience/>
-                    </div>
-
-                </div>
-        </div>
+        return <section className = "main-personal-info">
+            <h2 className = "visually-hidden">personalInfo</h2>
+            <div className = "information">
+                <Skills/>
+                <Education/>
+                <Experience/>
+            </div>
+        </section>
     }
 }
 

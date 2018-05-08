@@ -1,25 +1,32 @@
 import React from 'react';
-import Skill from "./category-content.jsx";
 
 class Skills extends React.Component {
     render () {
-        return <div className = "category">
-                    <h2>Skills</h2>
-                    <div className = "category-info-border">
-                        <div className = "category-info-inner-border">
-                            <div className = "category-info">
-                                <div className = "category-info-wrapper">
-                                    <Skill class = "category-skill" skillName = "Programming Languages" skillText = "JavaScript, ES6, HTML5, CSS3"/>
-                                    <Skill class = "category-skill" skillName = "Frameworks/Libraries" skillText = "React, Redux, JQuery"/>
-                                    <Skill class = "category-skill" skillName = "Toolkits/Module-bundlers" skillText = "Gulp,Webpack"/>
-                                    <Skill class = "category-skill" skillName = "IDE" skillText = "WebStorm"/>
-                                    <Skill class = "category-skill" skillName = "Others" skillText = "Sass, RWD"/>
-                                    <Skill class = "category-skill" skillName = "Currently Learning" skillText = "React-Morph,VUE.JS "/>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-        </div>
+        return <article className = "info-category">
+            <h3 className = "info-category-title">Skills</h3>
+            <ul className = "category-elements-list">
+               <li className = "skill">
+                   <h4 className = "skill-title">Programming Languages</h4>
+                   <span className = "skill-content">JavaScript, ES6, HTML5, CSS3</span>
+               </li>
+                <li className = "skill">
+                    <h4 className = "skill-title">Frameworks/Libraries</h4>
+                    <span className = "skill-content">React, Redux, JQuery</span>
+                </li>
+                <li className = "skill">
+                    <h4 className = "skill-title">Toolkits/Module-bundlers</h4>
+                    <span className = "skill-content">Gulp,Webpack</span>
+                </li>
+                <li className = "skill">
+                    <h4 className = "skill-title">IDE</h4>
+                    <span className = "skill-content">WebStorm</span>
+                </li>
+                <li className = "skill">
+                    <h4 className = "skill-title">Others</h4>
+                    <span className = "skill-content">Sass, RWD</span>
+                </li>
+            </ul>
+        </article>
     }
 }
 

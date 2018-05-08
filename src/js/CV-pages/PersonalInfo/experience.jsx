@@ -1,21 +1,22 @@
 import React from 'react';
-import Job from './category-content.jsx';
 
 class Experience extends React.Component {
     render () {
-        return <div className = "category">
-                    <h2>Exerience</h2>
-                    <div className = "category-info-border">
-                        <div className = "category-info-inner-border">
-                            <div className = "category-info">
-                                <div className = "category-info-wrapper">
-                                    <Job class = "category-step" skillName = "Tajemnice Imprez" skillName2 = "Event Manager | January, 2017 - Current" skillText = "Managing events alongside other managers while maintaining previous responsibilities"/>
-                                    <Job class = "category-step" skillName  = "Tajemnice Imprez" skillName2 = "Event Manager Assistant | October,2014 – December,206" skillText = "In charge of assembling event team and assigning tasks given by event manager"/>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-        </div>
+        return <article className = "info-category">
+            <h3 className = "info-category-title">experience</h3>
+            <ul className = "category-elements-list">
+                <li className = "career-step">
+                    <h4 className = "step-title">Tajemnice Imprez</h4>
+                    <span className = "step-data">Event Manager | January, 2017 - Current</span>
+                    <p className = "step-description">Managing events alongside other managers while maintaining previous responsibilities</p>
+                </li>
+                <li className = "career-step">
+                    <h4 className = "step-title">Tajemnice Imprez</h4>
+                    <span className = "step-data">Event Manager Assistant | October,2014 – December,206</span>
+                    <p className = "step-description">In charge of assembling event team and assigning tasks given by event manager</p>
+                </li>
+            </ul>
+        </article>
     }
 }
 

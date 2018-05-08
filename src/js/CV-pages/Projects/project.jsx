@@ -31,12 +31,12 @@ class Project extends React.Component {
 
     render () {
         return <article className = "project">
+                    <h3 className = "project-title">{this.props.projectTitle}</h3>
                     <a href = {this.props.projectLiveLink}>
                         <img className = "project-peek" src= {this.props.projectImgSrc} alt= ""/>
                         {/*dopisać tu alt = this.props.projectImgAlt*/}
                     </a>
                     <a href= {this.props.projectGithubLink}><img className = "project-github-link" src = "../../../../imgs/svg/github.svg" alt= "github-logo"/></a>
-                    <h3 className = "project-title">{this.props.projectTitle}</h3>
                     <ul className = "project-tech-list">
                         {this.renderTechList()}
                     </ul>

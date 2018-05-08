@@ -16,7 +16,7 @@ class ContactList extends React.Component {
                 <li className = "contact-logo"><img src="" alt="resume"/></li>
             </ul>
             <p className = "short-bio">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur cum cumque fugit in voluptatem. Alias consequatur deleniti doloremque, dolores ea fuga inventore itaque, nisi officia provident, quod temporibus vitae voluptate?
+                My name is Mateusz and I am an enterprise management graduate from Warsaw, who currently works as a event manager. I enjoy facing projects that challenge me and force me to develop. When writing code, I focus on creating solutions that may not be the simplest to understand but solve the problem in most elegant and maintainable way.
             </p>
         </section>
     }

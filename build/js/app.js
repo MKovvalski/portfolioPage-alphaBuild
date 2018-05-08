@@ -561,70 +561,7 @@ module.exports = warning;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 7 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Skill = function (_React$Component) {
-    _inherits(Skill, _React$Component);
-
-    function Skill() {
-        _classCallCheck(this, Skill);
-
-        return _possibleConstructorReturn(this, (Skill.__proto__ || Object.getPrototypeOf(Skill)).apply(this, arguments));
-    }
-
-    _createClass(Skill, [{
-        key: 'render',
-        value: function render() {
-            return _react2.default.createElement(
-                'div',
-                { className: this.props.class },
-                _react2.default.createElement(
-                    'h3',
-                    null,
-                    this.props.skillName
-                ),
-                _react2.default.createElement(
-                    'h4',
-                    null,
-                    this.props.skillName2
-                ),
-                _react2.default.createElement(
-                    'p',
-                    null,
-                    this.props.skillText
-                )
-            );
-        }
-    }]);
-
-    return Skill;
-}(_react2.default.Component);
-
-exports.default = Skill;
-
-/***/ }),
+/* 7 */,
 /* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18556,7 +18493,7 @@ var Container = function (_React$Component) {
 
         _this.state = {
             screenToRender: "",
-            title: "Projects",
+            title: "AboutMe",
             titlesArray: ["AboutMe", "Projects", "PersonalInfo"],
             flexID: "container-animation-flex"
         };
@@ -18565,34 +18502,6 @@ var Container = function (_React$Component) {
 
     _createClass(Container, [{
         key: "render",
-
-
-        // timeoutID = setTimeout(() => {
-        //     this.setState ({
-        //         flexID: "container-website-flex"
-        //     })
-        // },8500);
-
-        // ContainerRender = () => {
-        //     if (this.state.flexID === "container-animation-flex") {
-        //         return  <div className = "animation-wrapper">
-        //                 <div className = "line"/>
-        //                 <h1 className = "name" >mateusz kowalski</h1>
-        //                 <h1 className = "title">Junior Front-End Developer</h1>
-        //                 <div className = "animation-circles">
-        //                     <div className = "S1"/>
-        //                     <div className = "S2"/>
-        //                     <div className = "S3"/>
-        //                 </div>
-        //             </div>
-        //     } else {
-        //         return <div className = "container-wrapper" id ={this.state.flexID}>
-        //             <Content MenuClick = {this.handleMenuClick} renderScreen = {this.state.title}/>
-        //             <Terminal titleText = {this.state.title} renderInfo = {this.handleInput}/>
-        //         </div>
-        //     }
-        // };
-
         value: function render() {
             return _react2.default.createElement(
                 "div",
@@ -19159,7 +19068,7 @@ var ContactList = function (_React$Component) {
                 _react2.default.createElement(
                     "p",
                     { className: "short-bio" },
-                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur cum cumque fugit in voluptatem. Alias consequatur deleniti doloremque, dolores ea fuga inventore itaque, nisi officia provident, quod temporibus vitae voluptate?"
+                    "My name is Mateusz and I am an enterprise management graduate from Warsaw, who currently works as a event manager. I enjoy facing projects that challenge me and force me to develop. When writing code, I focus on creating solutions that may not be the simplest to understand but solve the problem in most elegant and maintainable way."
                 )
             );
         }
@@ -19381,6 +19290,11 @@ var Project = function (_React$Component) {
                 "article",
                 { className: "project" },
                 _react2.default.createElement(
+                    "h3",
+                    { className: "project-title" },
+                    this.props.projectTitle
+                ),
+                _react2.default.createElement(
                     "a",
                     { href: this.props.projectLiveLink },
                     _react2.default.createElement("img", { className: "project-peek", src: this.props.projectImgSrc, alt: "" })
@@ -19389,11 +19303,6 @@ var Project = function (_React$Component) {
                     "a",
                     { href: this.props.projectGithubLink },
                     _react2.default.createElement("img", { className: "project-github-link", src: "../../../../imgs/svg/github.svg", alt: "github-logo" })
-                ),
-                _react2.default.createElement(
-                    "h3",
-                    { className: "project-title" },
-                    this.props.projectTitle
                 ),
                 _react2.default.createElement(
                     "ul",
@@ -19464,26 +19373,19 @@ var PersonalInfo = function (_React$Component) {
         key: 'render',
         value: function render() {
             return _react2.default.createElement(
-                'div',
-                { className: 'container' },
+                'section',
+                { className: 'main-personal-info' },
+                _react2.default.createElement(
+                    'h2',
+                    { className: 'visually-hidden' },
+                    'personalInfo'
+                ),
                 _react2.default.createElement(
                     'div',
-                    { className: 'personalInfo' },
-                    _react2.default.createElement(
-                        'div',
-                        { className: 'col-3' },
-                        _react2.default.createElement(_skills2.default, null)
-                    ),
-                    _react2.default.createElement(
-                        'div',
-                        { className: 'col-3' },
-                        _react2.default.createElement(_education2.default, null)
-                    ),
-                    _react2.default.createElement(
-                        'div',
-                        { className: 'col-3' },
-                        _react2.default.createElement(_experience2.default, null)
-                    )
+                    { className: 'information' },
+                    _react2.default.createElement(_skills2.default, null),
+                    _react2.default.createElement(_education2.default, null),
+                    _react2.default.createElement(_experience2.default, null)
                 )
             );
         }
@@ -19511,10 +19413,6 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _categoryContent = __webpack_require__(7);
-
-var _categoryContent2 = _interopRequireDefault(_categoryContent);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -19536,32 +19434,84 @@ var Skills = function (_React$Component) {
         key: "render",
         value: function render() {
             return _react2.default.createElement(
-                "div",
-                { className: "category" },
+                "article",
+                { className: "info-category" },
                 _react2.default.createElement(
-                    "h2",
-                    null,
+                    "h3",
+                    { className: "info-category-title" },
                     "Skills"
                 ),
                 _react2.default.createElement(
-                    "div",
-                    { className: "category-info-border" },
+                    "ul",
+                    { className: "category-elements-list" },
                     _react2.default.createElement(
-                        "div",
-                        { className: "category-info-inner-border" },
+                        "li",
+                        { className: "skill" },
                         _react2.default.createElement(
-                            "div",
-                            { className: "category-info" },
-                            _react2.default.createElement(
-                                "div",
-                                { className: "category-info-wrapper" },
-                                _react2.default.createElement(_categoryContent2.default, { "class": "category-skill", skillName: "Programming Languages", skillText: "JavaScript, ES6, HTML5, CSS3" }),
-                                _react2.default.createElement(_categoryContent2.default, { "class": "category-skill", skillName: "Frameworks/Libraries", skillText: "React, Redux, JQuery" }),
-                                _react2.default.createElement(_categoryContent2.default, { "class": "category-skill", skillName: "Toolkits/Module-bundlers", skillText: "Gulp,Webpack" }),
-                                _react2.default.createElement(_categoryContent2.default, { "class": "category-skill", skillName: "IDE", skillText: "WebStorm" }),
-                                _react2.default.createElement(_categoryContent2.default, { "class": "category-skill", skillName: "Others", skillText: "Sass, RWD" }),
-                                _react2.default.createElement(_categoryContent2.default, { "class": "category-skill", skillName: "Currently Learning", skillText: "React-Morph,VUE.JS " })
-                            )
+                            "h4",
+                            { className: "skill-title" },
+                            "Programming Languages"
+                        ),
+                        _react2.default.createElement(
+                            "span",
+                            { className: "skill-content" },
+                            "JavaScript, ES6, HTML5, CSS3"
+                        )
+                    ),
+                    _react2.default.createElement(
+                        "li",
+                        { className: "skill" },
+                        _react2.default.createElement(
+                            "h4",
+                            { className: "skill-title" },
+                            "Frameworks/Libraries"
+                        ),
+                        _react2.default.createElement(
+                            "span",
+                            { className: "skill-content" },
+                            "React, Redux, JQuery"
+                        )
+                    ),
+                    _react2.default.createElement(
+                        "li",
+                        { className: "skill" },
+                        _react2.default.createElement(
+                            "h4",
+                            { className: "skill-title" },
+                            "Toolkits/Module-bundlers"
+                        ),
+                        _react2.default.createElement(
+                            "span",
+                            { className: "skill-content" },
+                            "Gulp,Webpack"
+                        )
+                    ),
+                    _react2.default.createElement(
+                        "li",
+                        { className: "skill" },
+                        _react2.default.createElement(
+                            "h4",
+                            { className: "skill-title" },
+                            "IDE"
+                        ),
+                        _react2.default.createElement(
+                            "span",
+                            { className: "skill-content" },
+                            "WebStorm"
+                        )
+                    ),
+                    _react2.default.createElement(
+                        "li",
+                        { className: "skill" },
+                        _react2.default.createElement(
+                            "h4",
+                            { className: "skill-title" },
+                            "Others"
+                        ),
+                        _react2.default.createElement(
+                            "span",
+                            { className: "skill-content" },
+                            "Sass, RWD"
                         )
                     )
                 )
@@ -19591,10 +19541,6 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _categoryContent = __webpack_require__(7);
-
-var _categoryContent2 = _interopRequireDefault(_categoryContent);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -19613,32 +19559,74 @@ var Education = function (_React$Component) {
     }
 
     _createClass(Education, [{
-        key: 'render',
+        key: "render",
         value: function render() {
             return _react2.default.createElement(
-                'div',
-                { className: 'category' },
+                "article",
+                { className: "info-category" },
                 _react2.default.createElement(
-                    'h2',
-                    null,
-                    'Education'
+                    "h3",
+                    { className: "info-category-title" },
+                    "Education"
                 ),
                 _react2.default.createElement(
-                    'div',
-                    { className: 'category-info-border' },
+                    "ul",
+                    { className: "category-elements-list" },
                     _react2.default.createElement(
-                        'div',
-                        { className: 'category-info-inner-border' },
+                        "li",
+                        { className: "education-step" },
                         _react2.default.createElement(
-                            'div',
-                            { className: 'category-info' },
-                            _react2.default.createElement(
-                                'div',
-                                { className: 'category-info-wrapper' },
-                                _react2.default.createElement(_categoryContent2.default, { 'class': 'category-step', skillName: 'Kozminski University', skillName2: 'Project Management | September,2018 \u2013 June,2020', skillText: 'Master in Project Management will be of great use as I hope to progress in my career' }),
-                                _react2.default.createElement(_categoryContent2.default, { 'class': 'category-step', skillName: 'Coders Lab', skillName2: 'JavaScript Developer: React | December,2017 \u2013 January,2018', skillText: 'Warsaw based programming Boot-Camp containing of 320 hours of coding through 9 weeks' }),
-                                _react2.default.createElement(_categoryContent2.default, { 'class': 'category-step', skillName: 'Kozminski Universtiy', skillName2: 'Enterprise Management | September,2014 \u2013 June,2017', skillText: 'Licentiate in risk in project management in event industry' })
-                            )
+                            "h4",
+                            { className: "step-title" },
+                            "Kozminski University"
+                        ),
+                        _react2.default.createElement(
+                            "span",
+                            { className: "step-data" },
+                            "Project Management | September,2018 \u2013 June,2020"
+                        ),
+                        _react2.default.createElement(
+                            "p",
+                            { className: "step-description" },
+                            "Master in Project Management will be of great use as I hope to progress in my career"
+                        )
+                    ),
+                    _react2.default.createElement(
+                        "li",
+                        { className: "education-step" },
+                        _react2.default.createElement(
+                            "h4",
+                            { className: "step-title" },
+                            "Coders Lab"
+                        ),
+                        _react2.default.createElement(
+                            "span",
+                            { className: "step-data" },
+                            "JavaScript Developer: React | December,2017 \u2013 January,2018"
+                        ),
+                        _react2.default.createElement(
+                            "p",
+                            { className: "step-description" },
+                            "Warsaw based programming Boot-Camp containing of 320 hours of coding through 9 weeks"
+                        )
+                    ),
+                    _react2.default.createElement(
+                        "li",
+                        { className: "education-step" },
+                        _react2.default.createElement(
+                            "h4",
+                            { className: "step-title" },
+                            "Kozminski Universtiy"
+                        ),
+                        _react2.default.createElement(
+                            "span",
+                            { className: "step-data" },
+                            "Enterprise Management | September,2014 \u2013 June,2017"
+                        ),
+                        _react2.default.createElement(
+                            "p",
+                            { className: "step-description" },
+                            "Licentiate in risk in project management in event industry"
                         )
                     )
                 )
@@ -19668,10 +19656,6 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _categoryContent = __webpack_require__(7);
-
-var _categoryContent2 = _interopRequireDefault(_categoryContent);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -19690,31 +19674,55 @@ var Experience = function (_React$Component) {
     }
 
     _createClass(Experience, [{
-        key: 'render',
+        key: "render",
         value: function render() {
             return _react2.default.createElement(
-                'div',
-                { className: 'category' },
+                "article",
+                { className: "info-category" },
                 _react2.default.createElement(
-                    'h2',
-                    null,
-                    'Exerience'
+                    "h3",
+                    { className: "info-category-title" },
+                    "experience"
                 ),
                 _react2.default.createElement(
-                    'div',
-                    { className: 'category-info-border' },
+                    "ul",
+                    { className: "category-elements-list" },
                     _react2.default.createElement(
-                        'div',
-                        { className: 'category-info-inner-border' },
+                        "li",
+                        { className: "career-step" },
                         _react2.default.createElement(
-                            'div',
-                            { className: 'category-info' },
-                            _react2.default.createElement(
-                                'div',
-                                { className: 'category-info-wrapper' },
-                                _react2.default.createElement(_categoryContent2.default, { 'class': 'category-step', skillName: 'Tajemnice Imprez', skillName2: 'Event Manager | January, 2017 - Current', skillText: 'Managing events alongside other managers while maintaining previous responsibilities' }),
-                                _react2.default.createElement(_categoryContent2.default, { 'class': 'category-step', skillName: 'Tajemnice Imprez', skillName2: 'Event Manager Assistant | October,2014 \u2013 December,206', skillText: 'In charge of assembling event team and assigning tasks given by event manager' })
-                            )
+                            "h4",
+                            { className: "step-title" },
+                            "Tajemnice Imprez"
+                        ),
+                        _react2.default.createElement(
+                            "span",
+                            { className: "step-data" },
+                            "Event Manager | January, 2017 - Current"
+                        ),
+                        _react2.default.createElement(
+                            "p",
+                            { className: "step-description" },
+                            "Managing events alongside other managers while maintaining previous responsibilities"
+                        )
+                    ),
+                    _react2.default.createElement(
+                        "li",
+                        { className: "career-step" },
+                        _react2.default.createElement(
+                            "h4",
+                            { className: "step-title" },
+                            "Tajemnice Imprez"
+                        ),
+                        _react2.default.createElement(
+                            "span",
+                            { className: "step-data" },
+                            "Event Manager Assistant | October,2014 \u2013 December,206"
+                        ),
+                        _react2.default.createElement(
+                            "p",
+                            { className: "step-description" },
+                            "In charge of assembling event team and assigning tasks given by event manager"
                         )
                     )
                 )
@@ -19767,7 +19775,7 @@ exports = module.exports = __webpack_require__(15)(false);
 exports.i(__webpack_require__(43), "");
 
 // module
-exports.push([module.i, ".main-about-me {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center; }\n\n.name-and-title {\n  width: 100%;\n  height: 65%;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: flex-end; }\n\n.big-icon {\n  width: 85px;\n  height: 85px;\n  margin-right: 10px;\n  margin-bottom: 127px;\n  background-color: #cccccc; }\n\n.name-wrapper {\n  margin-bottom: 110px;\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-start;\n  align-items: flex-start; }\n\n.name-and-surname {\n  font-size: 60px;\n  font-weight: 900;\n  color: #595959;\n  letter-spacing: 1px;\n  text-transform: uppercase; }\n\n.position {\n  margin-top: -15px;\n  font-size: 44px;\n  font-weight: 700;\n  color: white;\n  letter-spacing: 0.5px;\n  text-transform: uppercase; }\n\n.main-contact-list {\n  width: 100%;\n  height: 35%;\n  background-color: white;\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-start;\n  align-items: center; }\n\n.contact-list {\n  width: 50%;\n  margin-top: 20px;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: center; }\n\n.contact-logo {\n  width: 65px;\n  height: 65px;\n  background-color: #595959;\n  border-radius: 50%; }\n\n.short-bio {\n  width: 68%;\n  margin-top: 30px;\n  text-align: center; }\n\n.main-projects {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  position: relative; }\n  .main-projects:after {\n    position: absolute;\n    content: \"\";\n    top: 40%;\n    width: 100%;\n    height: 70%;\n    background-color: white;\n    z-index: 1; }\n\n.projects {\n  width: 85%;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: flex-start;\n  z-index: 2; }\n\n.project {\n  width: 24%;\n  min-width: 250px;\n  position: relative;\n  box-shadow: 0px 13px 21px -7px rgba(0, 0, 0, 0.3);\n  transition: all 0.3s;\n  background-color: white; }\n  .project:hover {\n    box-shadow: 0px 13px 21px 5px rgba(0, 0, 0, 0.3); }\n\n.project-peek {\n  width: 100%;\n  height: 240px;\n  object-fit: cover;\n  border-bottom: 2px solid #bababa;\n  background-color: grey; }\n\n.project-github-link {\n  width: 45px;\n  height: 45px;\n  border-radius: 50%;\n  background-color: white;\n  position: absolute;\n  z-index: 3;\n  top: 36%;\n  right: 2%;\n  object-fit: cover; }\n\n.project-title {\n  font-size: 18px;\n  font-weight: 800;\n  padding-bottom: 5px;\n  border-bottom: 2px solid #bababa;\n  text-transform: uppercase;\n  color: #595959;\n  text-align: center; }\n\n.project-tech-list {\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: center; }\n\n.tech-logo {\n  width: 50px;\n  height: 50px;\n  margin-top: 7px;\n  margin-bottom: 5px;\n  border: 2px solid grey; }\n\n.tech-img {\n  width: 100%;\n  height: 100%;\n  object-fit: cover; }\n\n.project-description {\n  text-align: center;\n  padding-top: 1px;\n  padding-left: 8px;\n  padding-right: 8px;\n  min-height: 180px; }\n\nbody {\n  font-family: \"Open Sans\", sans-serif; }\n\n.container {\n  width: 100vw;\n  height: 100vh;\n  background-color: #46C4F2; }\n\n.main-content {\n  width: 100%;\n  height: 100%; }\n\n.visually-hidden {\n  border: 0;\n  clip: rect(0 0 0 0);\n  -webkit-clip-path: inset(50%);\n  clip-path: inset(50%);\n  height: 1px;\n  margin: -1px;\n  overflow: hidden;\n  padding: 0;\n  position: absolute;\n  width: 1px;\n  white-space: nowrap; }\n\nbody {\n  font-family: 'Open Sans', sans-serif; }\n", ""]);
+exports.push([module.i, ".main-about-me {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center; }\n\n.name-and-title {\n  width: 100%;\n  height: 65%;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: flex-end; }\n\n.big-icon {\n  width: 85px;\n  height: 85px;\n  margin-right: 10px;\n  margin-bottom: 127px;\n  background-color: #cccccc; }\n\n.name-wrapper {\n  margin-bottom: 110px;\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-start;\n  align-items: flex-start; }\n\n.name-and-surname {\n  font-size: 60px;\n  font-weight: 900;\n  color: #595959;\n  letter-spacing: 1px;\n  text-transform: uppercase; }\n\n.position {\n  margin-top: -15px;\n  font-size: 44px;\n  font-weight: 700;\n  color: white;\n  letter-spacing: 0.5px;\n  text-transform: uppercase; }\n\n.main-contact-list {\n  width: 100%;\n  height: 35%;\n  border-top: 2px solid #F78E69;\n  background-color: white;\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-start;\n  align-items: center; }\n\n.contact-list {\n  width: 50%;\n  margin-top: 20px;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: center; }\n\n.contact-logo {\n  width: 65px;\n  height: 65px;\n  background-color: #595959;\n  border-radius: 50%; }\n\n.short-bio {\n  width: 68%;\n  margin-top: 30px;\n  text-align: center; }\n\n.main-projects {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  position: relative; }\n  .main-projects:after {\n    position: absolute;\n    content: \"\";\n    top: 40%;\n    width: 100%;\n    height: 70%;\n    background-color: white;\n    z-index: 1; }\n\n.projects {\n  width: 85%;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: flex-start;\n  z-index: 2; }\n\n.project {\n  width: 24%;\n  min-width: 250px;\n  position: relative;\n  box-shadow: 0px 13px 21px -7px rgba(0, 0, 0, 0.3);\n  transition: all 0.3s;\n  background-color: white; }\n  .project:hover {\n    box-shadow: 0px 13px 21px 5px rgba(0, 0, 0, 0.3); }\n\n.project-peek {\n  width: 100%;\n  height: 240px;\n  object-fit: cover;\n  border-bottom: 2px solid #bababa;\n  background-color: grey; }\n\n.project-github-link {\n  width: 45px;\n  height: 45px;\n  border-radius: 50%;\n  background-color: white;\n  position: absolute;\n  z-index: 3;\n  top: 43%;\n  right: 2%;\n  object-fit: cover; }\n\n.project-title {\n  line-height: 45px;\n  vertical-align: middle;\n  font-size: 23px;\n  text-transform: uppercase;\n  text-align: center;\n  font-weight: 800;\n  color: #595959;\n  background-color: #F7ED85;\n  border-bottom: 2px solid #F78E69; }\n\n.project-tech-list {\n  margin-top: -5px;\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: center; }\n\n.tech-logo {\n  width: 50px;\n  height: 50px;\n  margin-top: 7px;\n  margin-bottom: 5px;\n  border: 2px solid grey; }\n\n.tech-img {\n  width: 100%;\n  height: 100%;\n  object-fit: cover; }\n\n.project-description {\n  text-align: center;\n  padding-top: 1px;\n  padding-left: 8px;\n  padding-right: 8px;\n  min-height: 170px; }\n\n.main-personal-info {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  position: relative; }\n  .main-personal-info:after {\n    position: absolute;\n    content: \"\";\n    top: 40%;\n    width: 100%;\n    height: 70%;\n    background-color: white;\n    z-index: 1; }\n\n.information {\n  width: 70%;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: flex-start;\n  z-index: 2; }\n\n.info-category {\n  width: 31%;\n  min-width: 250px;\n  position: relative;\n  box-shadow: 0px 13px 21px -7px rgba(0, 0, 0, 0.3);\n  transition: all 0.3s;\n  background-color: white; }\n  .info-category:hover {\n    box-shadow: 0px 13px 21px 5px rgba(0, 0, 0, 0.3); }\n\n.info-category-title {\n  line-height: 45px;\n  vertical-align: middle;\n  font-size: 23px;\n  text-transform: uppercase;\n  text-align: center;\n  font-weight: 800;\n  color: #595959;\n  margin-bottom: 3px;\n  background-color: #F7ED85;\n  border-bottom: 2px solid #F78E69; }\n\n.category-elements-list {\n  width: 100%;\n  min-height: 390px;\n  margin-top: 15px;\n  padding-left: 10px;\n  display: flex;\n  flex-direction: column;\n  justify-content: sace-between;\n  align-items: flex-start; }\n\n.skill {\n  width: 100%;\n  margin-bottom: 25px; }\n\n.skill-title {\n  font-weight: 500;\n  color: #333333;\n  font-size: 17px; }\n\n.skill-content {\n  color: #999999; }\n\n.education-step {\n  margin-bottom: 10px; }\n\n.step-title {\n  font-weight: 500;\n  color: #333333;\n  font-size: 17px; }\n\n.step-data {\n  color: #737373;\n  font-size: 15px; }\n\n.step-description {\n  color: #999999;\n  font-size: 14px; }\n\n.career-step {\n  margin-bottom: 10px; }\n\nbody {\n  font-family: \"Open Sans\", sans-serif; }\n\n.container {\n  width: 100vw;\n  height: 100vh;\n  background-color: #46C4F2; }\n\n.main-content {\n  width: 100%;\n  height: 100%; }\n\n.visually-hidden {\n  border: 0;\n  clip: rect(0 0 0 0);\n  -webkit-clip-path: inset(50%);\n  clip-path: inset(50%);\n  height: 1px;\n  margin: -1px;\n  overflow: hidden;\n  padding: 0;\n  position: absolute;\n  width: 1px;\n  white-space: nowrap; }\n\nbody {\n  font-family: 'Open Sans', sans-serif; }\n", ""]);
 
 // exports
 

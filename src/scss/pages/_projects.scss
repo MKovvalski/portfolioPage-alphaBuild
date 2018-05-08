@@ -49,21 +49,24 @@
   background-color: white;
   position: absolute;
   z-index: 3;
-  top: 36%;
+  top: 43%;
   right: 2%;
   object-fit: cover;
 }
 
 .project-title {
-  font-size: 18px;
-  font-weight: 800;
-  padding-bottom: 5px;
-  border-bottom: $border-projects-images;
+  line-height: 45px;
+  vertical-align: middle;
+  font-size: 23px;
   text-transform: uppercase;
-  color: $color-tertiary;
   text-align: center;
+  font-weight: 800;
+  color: $color-tertiary;
+  background-color: #F7ED85;
+  border-bottom: 2px solid #F78E69;
 }
 .project-tech-list {
+  margin-top: -5px;
   width: 100%;
   @include flex-box(row, space-around, center);
 }
@@ -85,5 +88,5 @@
   padding-top: 1px;
   padding-left: 8px;
   padding-right: 8px;
-  min-height: 180px;
+  min-height: 170px;
 }
