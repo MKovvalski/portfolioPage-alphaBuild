@@ -19211,7 +19211,7 @@ var projects = [{
     title: "Old Portfolio Page",
     liveLink: "https://mateuszkowalskicl.github.io/portfolioPage-alphaBuild/",
     projectImgSrc: "../../../../imgs/previews/portfolio.png",
-    projectImgAlt: "",
+    projectImgAlt: "oldPrtfolioPage",
     githubLink: "https://github.com/MateuszKowalskiCL/portfolioPage",
     techList: ["react", "js", "sass"],
     description: "Website was my first real encounter with RWD and Sass. Usual navigation was replaced by mock up of terminal with most of its functionality. Currently, design is being changed to more modern one"
@@ -19242,10 +19242,11 @@ var Projects = function (_React$Component) {
         var _this = _possibleConstructorReturn(this, (Projects.__proto__ || Object.getPrototypeOf(Projects)).call(this, props));
 
         _this.renderProjects = function () {
-            return projects.map(function (i, e) {
-                return _react2.default.createElement(_project2.default, { projectLiveLink: e.liveLink,
+            return projects.map(function (e, i) {
+                return _react2.default.createElement(_project2.default, { key: i,
+                    projectLiveLink: e.liveLink,
                     projectImgScr: e.projectImgSrc,
-                    projectAltImg: e.projectImgAlt,
+                    projectImgAlt: e.projectImgAlt,
                     projectGitHubLink: e.githubLink,
                     projectTitle: e.title,
                     techList: e.techList,
@@ -19322,7 +19323,54 @@ var Project = function (_React$Component) {
         }
 
         return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Project.__proto__ || Object.getPrototypeOf(Project)).call.apply(_ref, [this].concat(args))), _this), _this.renderTechList = function () {
-            _this.props.techList.map(function () {});
+            return _this.props.techList.map(function (tech, i) {
+                switch (tech) {
+                    case "html":
+                        return _react2.default.createElement(
+                            "li",
+                            { className: "tech-logo", key: i },
+                            _react2.default.createElement("img", { className: "tech-img", src: "../../../../imgs/svg/html-5.svg", alt: "html" })
+                        );
+                        break;
+                    case "css":
+                        return _react2.default.createElement(
+                            "li",
+                            { className: "tech-logo", key: i },
+                            _react2.default.createElement("img", { className: "tech-img", src: "../../../../imgs/svg/css-3.svg", alt: "css" })
+                        );
+                        break;
+                    case "js":
+                        return _react2.default.createElement(
+                            "li",
+                            { className: "tech-logo", key: i },
+                            _react2.default.createElement("img", { className: "tech-img", src: "../../../../imgs/svg/logo-javascript.svg", alt: "js" })
+                        );
+                        break;
+                    case "sass":
+                        return _react2.default.createElement(
+                            "li",
+                            { className: "tech-logo", key: i },
+                            _react2.default.createElement("img", { className: "tech-img", src: "../../../../imgs/svg/sass-logo-2.svg", alt: "sass" })
+                        );
+                        break;
+                    case "react":
+                        return _react2.default.createElement(
+                            "li",
+                            { className: "tech-logo", key: i },
+                            _react2.default.createElement("img", { className: "tech-img", src: "../../../../imgs/svg/logo.svg", alt: "react" })
+                        );
+                        break;
+                    case "redux":
+                        return _react2.default.createElement(
+                            "li",
+                            { className: "tech-logo", key: i },
+                            _react2.default.createElement("img", { className: "tech-img", src: "../../../../imgs/svg/redux.svg", alt: "redux" })
+                        );
+                        break;
+                    default:
+                        return null;
+                }
+            });
         }, _temp), _possibleConstructorReturn(_this, _ret);
     }
 
@@ -19335,12 +19383,12 @@ var Project = function (_React$Component) {
                 _react2.default.createElement(
                     "a",
                     { href: this.props.projectLiveLink },
-                    _react2.default.createElement("img", { className: "project-peek", src: this.props.projectImgSrc, alt: this.props.projectImgAlt })
+                    _react2.default.createElement("img", { className: "project-peek", src: this.props.projectImgSrc, alt: "" })
                 ),
                 _react2.default.createElement(
                     "a",
                     { href: this.props.projectGithubLink },
-                    _react2.default.createElement("img", { src: "/", alt: "github-logo" })
+                    _react2.default.createElement("img", { className: "project-github-link", src: "../../../../imgs/svg/github.svg", alt: "github-logo" })
                 ),
                 _react2.default.createElement(
                     "h3",
@@ -19350,7 +19398,7 @@ var Project = function (_React$Component) {
                 _react2.default.createElement(
                     "ul",
                     { className: "project-tech-list" },
-                    "tutaj wyrenderowa\u0107 logo da\u0107 switch z odpowiednimi href dla img"
+                    this.renderTechList()
                 ),
                 _react2.default.createElement(
                     "p",
@@ -19719,7 +19767,7 @@ exports = module.exports = __webpack_require__(15)(false);
 exports.i(__webpack_require__(43), "");
 
 // module
-exports.push([module.i, ".main-about-me {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center; }\n\n.name-and-title {\n  width: 100%;\n  height: 65%;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: flex-end; }\n\n.big-icon {\n  width: 85px;\n  height: 85px;\n  margin-right: 10px;\n  margin-bottom: 127px;\n  background-color: #cccccc; }\n\n.name-wrapper {\n  margin-bottom: 110px;\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-start;\n  align-items: flex-start; }\n\n.name-and-surname {\n  font-size: 60px;\n  font-weight: 900;\n  color: #595959;\n  letter-spacing: 1px;\n  text-transform: uppercase; }\n\n.position {\n  margin-top: -15px;\n  font-size: 44px;\n  font-weight: 700;\n  color: white;\n  letter-spacing: 0.5px;\n  text-transform: uppercase; }\n\n.main-contact-list {\n  width: 100%;\n  height: 35%;\n  background-color: white;\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-start;\n  align-items: center; }\n\n.contact-list {\n  width: 50%;\n  margin-top: 20px;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: center; }\n\n.contact-logo {\n  width: 65px;\n  height: 65px;\n  background-color: #595959;\n  border-radius: 50%; }\n\n.short-bio {\n  width: 68%;\n  margin-top: 30px;\n  text-align: center; }\n\n.main-projects {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  position: relative;\n  border: 2px solid red; }\n  .main-projects:after {\n    border: 2px solid red;\n    position: absolute;\n    content: \"\";\n    top: 40%;\n    width: 100%;\n    height: 70%;\n    background-color: white;\n    z-index: 1; }\n\n.projects {\n  width: 70%;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: center;\n  border: 2px solid red;\n  z-index: 2; }\n\nbody {\n  font-family: \"Open Sans\", sans-serif; }\n\n.container {\n  width: 100vw;\n  height: 100vh;\n  background-color: #46C4F2; }\n\n.main-content {\n  width: 100%;\n  height: 100%; }\n\n.visually-hidden {\n  border: 0;\n  clip: rect(0 0 0 0);\n  -webkit-clip-path: inset(50%);\n  clip-path: inset(50%);\n  height: 1px;\n  margin: -1px;\n  overflow: hidden;\n  padding: 0;\n  position: absolute;\n  width: 1px;\n  white-space: nowrap; }\n\nbody {\n  font-family: 'Open Sans', sans-serif; }\n", ""]);
+exports.push([module.i, ".main-about-me {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center; }\n\n.name-and-title {\n  width: 100%;\n  height: 65%;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: flex-end; }\n\n.big-icon {\n  width: 85px;\n  height: 85px;\n  margin-right: 10px;\n  margin-bottom: 127px;\n  background-color: #cccccc; }\n\n.name-wrapper {\n  margin-bottom: 110px;\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-start;\n  align-items: flex-start; }\n\n.name-and-surname {\n  font-size: 60px;\n  font-weight: 900;\n  color: #595959;\n  letter-spacing: 1px;\n  text-transform: uppercase; }\n\n.position {\n  margin-top: -15px;\n  font-size: 44px;\n  font-weight: 700;\n  color: white;\n  letter-spacing: 0.5px;\n  text-transform: uppercase; }\n\n.main-contact-list {\n  width: 100%;\n  height: 35%;\n  background-color: white;\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-start;\n  align-items: center; }\n\n.contact-list {\n  width: 50%;\n  margin-top: 20px;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: center; }\n\n.contact-logo {\n  width: 65px;\n  height: 65px;\n  background-color: #595959;\n  border-radius: 50%; }\n\n.short-bio {\n  width: 68%;\n  margin-top: 30px;\n  text-align: center; }\n\n.main-projects {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  position: relative; }\n  .main-projects:after {\n    position: absolute;\n    content: \"\";\n    top: 40%;\n    width: 100%;\n    height: 70%;\n    background-color: white;\n    z-index: 1; }\n\n.projects {\n  width: 85%;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: flex-start;\n  z-index: 2; }\n\n.project {\n  width: 24%;\n  min-width: 250px;\n  position: relative;\n  box-shadow: 0px 13px 21px -7px rgba(0, 0, 0, 0.3);\n  transition: all 0.3s;\n  background-color: white; }\n  .project:hover {\n    box-shadow: 0px 13px 21px 5px rgba(0, 0, 0, 0.3); }\n\n.project-peek {\n  width: 100%;\n  height: 240px;\n  object-fit: cover;\n  border-bottom: 2px solid #bababa;\n  background-color: grey; }\n\n.project-github-link {\n  width: 45px;\n  height: 45px;\n  border-radius: 50%;\n  background-color: white;\n  position: absolute;\n  z-index: 3;\n  top: 36%;\n  right: 2%;\n  object-fit: cover; }\n\n.project-title {\n  font-size: 18px;\n  font-weight: 800;\n  padding-bottom: 5px;\n  border-bottom: 2px solid #bababa;\n  text-transform: uppercase;\n  color: #595959;\n  text-align: center; }\n\n.project-tech-list {\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: center; }\n\n.tech-logo {\n  width: 50px;\n  height: 50px;\n  margin-top: 7px;\n  margin-bottom: 5px;\n  border: 2px solid grey; }\n\n.tech-img {\n  width: 100%;\n  height: 100%;\n  object-fit: cover; }\n\n.project-description {\n  text-align: center;\n  padding-top: 1px;\n  padding-left: 8px;\n  padding-right: 8px;\n  min-height: 180px; }\n\nbody {\n  font-family: \"Open Sans\", sans-serif; }\n\n.container {\n  width: 100vw;\n  height: 100vh;\n  background-color: #46C4F2; }\n\n.main-content {\n  width: 100%;\n  height: 100%; }\n\n.visually-hidden {\n  border: 0;\n  clip: rect(0 0 0 0);\n  -webkit-clip-path: inset(50%);\n  clip-path: inset(50%);\n  height: 1px;\n  margin: -1px;\n  overflow: hidden;\n  padding: 0;\n  position: absolute;\n  width: 1px;\n  white-space: nowrap; }\n\nbody {\n  font-family: 'Open Sans', sans-serif; }\n", ""]);
 
 // exports
 

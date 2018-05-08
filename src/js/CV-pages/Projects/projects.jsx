@@ -15,7 +15,7 @@ const projects = [
         title: "Old Portfolio Page",
         liveLink: "https://mateuszkowalskicl.github.io/portfolioPage-alphaBuild/",
         projectImgSrc: "../../../../imgs/previews/portfolio.png",
-        projectImgAlt: "",
+        projectImgAlt: "oldPrtfolioPage",
         githubLink: "https://github.com/MateuszKowalskiCL/portfolioPage",
         techList: ["react", "js", "sass"],
         description: "Website was my first real encounter with RWD and Sass. Usual navigation was replaced by mock up of terminal with most of its functionality. Currently, design is being changed to more modern one",
@@ -46,10 +46,11 @@ class Projects extends React.Component {
         this.state = {};
     }
     renderProjects = () => {
-        return projects.map ((i, e) => {
-            return <Project projectLiveLink = {e.liveLink}
+        return projects.map ((e, i) => {
+            return <Project key = {i}
+                            projectLiveLink = {e.liveLink}
                             projectImgScr = {e.projectImgSrc}
-                            projectAltImg = {e.projectImgAlt}
+                            projectImgAlt = {e.projectImgAlt}
                             projectGitHubLink = {e.githubLink}
                             projectTitle = {e.title}
                             techList = {e.techList}

@@ -5,9 +5,7 @@
   height: 100%;
   @include flex-box(row, center, center);
   position: relative;
-  border: 2px solid red;
   &:after {
-    border: 2px solid red;
     position: absolute;
     content: "";
     top: 40%;
@@ -19,8 +17,73 @@
 }
 
 .projects {
-  width: 70%;
-  @include flex-box(row, space-around, center);
-  border: 2px solid red;
+  width: 85%;
+  @include flex-box(row, space-around, flex-start);
   z-index: 2;
+}
+
+.project {
+  width: 24%;
+  min-width: 250px;
+  position: relative;
+  box-shadow: $box-shadow-resting;
+  transition: all 0.3s;
+  background-color: $color-secondary;
+  &:hover {
+    box-shadow: $box-shadow-hover;
+  }
+}
+
+.project-peek {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-bottom: $border-projects-images;
+  background-color: grey;
+}
+
+.project-github-link {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  z-index: 3;
+  top: 36%;
+  right: 2%;
+  object-fit: cover;
+}
+
+.project-title {
+  font-size: 18px;
+  font-weight: 800;
+  padding-bottom: 5px;
+  border-bottom: $border-projects-images;
+  text-transform: uppercase;
+  color: $color-tertiary;
+  text-align: center;
+}
+.project-tech-list {
+  width: 100%;
+  @include flex-box(row, space-around, center);
+}
+.tech-logo {
+  width: 50px;
+  height: 50px;
+  margin-top: 7px;
+  margin-bottom: 5px;
+  border: 2px solid grey;
+}
+.tech-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-description {
+  text-align: center;
+  padding-top: 1px;
+  padding-left: 8px;
+  padding-right: 8px;
+  min-height: 180px;
 }
