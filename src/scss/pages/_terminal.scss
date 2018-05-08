@@ -1,62 +1,66 @@
 //styling terminal
 
 .main-terminal {
-  width: 400px;
-  height: 250px;
+  width: 365px;
+  height: 52px;
   background-color: white;
   position: fixed;
-  top: 40%;
-  right: 40%;
+  top: 2%;
+  left: 1%;
   border-radius: 5px;
   overflow: hidden;
-  overflow-x: scroll;
   z-index: 4;
+  box-shadow: $box-shadow-resting;
+  animation: test-ani 1s 1s linear 1 forwards;
 }
 
-.terminal-header {
-  width: 100%;
-  background: linear-gradient(0deg, rgba(230,230,230,1) 0%, rgba(255,255,255,1) 100%, rgba(255,255,255,1) 100%);
-  border-radius: 4px 4px 0 0;
-  border-top: 1px solid #f2f2f2;
-  border-bottom: 1px solid #a6a6a6;
-  @include flex-box(row, flex-start, center);
+#roll-down {
+  animation: roll-down 0.2s linear 1 forwards;
 }
 
-.circles {
-  width: 15%;
-  margin-left: 7px;
-  @include flex-box(row, space-between, center);
+#roll-up {
+  animation: roll-up 0.2s linear 1 forwards;
 }
 
-.circle-1 {
-  @include circle(#ff5050, #e60000)
+@keyframes roll-down {
+  100% {
+    height: 180px;
+  }
 }
 
-.circle-2 {
-  @include circle(#ffcc00, #b38f00)
-}
-
-.circle-3 {
-  margin-right: 7%;
-  @include circle(#47d147, #196619)
+@keyframes roll-up {
+  0% {
+    height: 180px;
+  }
+  100% {
+    height: 52px;
+  }
 }
 
 .terminal-title {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #a6a6a6;
+  background-color: $color-headers;
+  border-radius: 4px 4px 0 0;
   font-size: 15px;
+  font-weight: 500;
   color: $color-font-text-links;
   line-height: 25px;
   vertical-align: middle;
-  margin-left: 20px;
 }
 
 .terminal-body {
+  height: 150px;
   font-size: 14px;
   padding-top: 4px;
   padding-left: 4px;
   color: $color-font-text-links;
+  overflow-x: scroll;
 }
 
 .terminal-input{
+  width: 125px;
   margin-top: -3px;
   color: $color-font-text-links;
   border: none;

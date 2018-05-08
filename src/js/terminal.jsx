@@ -4,6 +4,7 @@ class Terminal extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            animateId: "none",
             renderScreen: "",
             listOfCommands: [],
         }
@@ -43,7 +44,7 @@ class Terminal extends React.Component {
                );
                this.displayText();
                this.setState({
-                   renderScreen: ""
+                   renderScreen: "",
                })
            }
        }
@@ -110,30 +111,34 @@ class Terminal extends React.Component {
         }
     };
 
+    rollDownId = () => {
+        this.setState({
+            animateId: "roll-down"
+        })
+    };
+
+    rollUpId = () => {
+        this.setState({
+            animateId: "roll-up"
+        })
+    };
+
     render () {
-        console.log(this.props.animateId);
-        return <div className = "main-terminal" id = {this.props.animateId}>
-                <div className = "terminal-header">
-                    <div className = "circles">
-                        <div className = "circle-1"><span className = "visually-hidden">circle</span></div>
-                        <div className = "circle-2"><span className = "visually-hidden">circle</span></div>
-                        <div className = "circle-3"><span className = "visually-hidden">circle</span></div>
-                    </div>
-                    <h2 className = "terminal-title">MateuszKowalski -- bash --80x24</h2>
-                </div>
-                <div className = "terminal-body">
-                    <ul className = "terminal-list-of-commands">
-                        {this.state.listOfCommands.map((command, i) => {
-                            return <li key = {i}>{command}</li>
-                        })}
-                    </ul>
-                    <div className = "terminal-input-wrapper">MKowalski: {this.props.titleText} Coding$ <input className = "terminal-input" placeholder = "type in a command" type="text" value = {this.state.renderScreen} onChange={this.handleChange} onKeyUp = {e => this.handleInfoTransfer(e)}/></div>
-                    <p className = "terminal-instruction">//input "cd" and "name of the file" and confirm with "enter"<br/>
-                        //example: cd AboutMe <br/>
-                        //type in "ls" to display available files <br/>
-                        //type in "clear" to clear Terminal history
-                    </p>
-                </div>
+        return <div className = "main-terminal" onMouseOver = {() => this.rollDownId()} onMouseLeave={() => this.rollUpId()} id = {this.state.animateId}>
+            <h3 className = "terminal-title">Terminal</h3>
+            <div className = "terminal-body">
+                <div className = "terminal-input-wrapper">MKowalski: {this.props.titleText} Coding$ <input className = "terminal-input" placeholder = "type in a command" type="text" value = {this.state.renderScreen} onChange={this.handleChange} onKeyUp = {e => this.handleInfoTransfer(e)}/></div>
+                <ul className = "terminal-list-of-commands">
+                    {this.state.listOfCommands.map((command, i) => {
+                        return <li key = {i}>{command}</li>
+                    })}
+                </ul>
+                <p className = "terminal-instruction">//input "cd" and "name of the file" and confirm with "enter"<br/>
+                    //example: cd AboutMe <br/>
+                    //type in "ls" to display available files <br/>
+                    //type in "clear" to clear Terminal history
+                </p>
+            </div>
         </div>
     }
 }

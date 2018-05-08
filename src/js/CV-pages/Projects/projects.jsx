@@ -5,7 +5,7 @@ const projects = [
     {
         title: "Pokemon Game",
         liveLink: "https://mateuszkowalskicl.github.io/PokemonGame-simplified/",
-        projectImgSrc: "../../../../imgs/previews/Logo-Pokemon.png",
+        projectImgSrc: "imgs/previews/Logo-Pokemon.png",
         projectImgAlt: "pokemon game",
         githubLink: "https://github.com/MateuszKowalskiCL/PokemonGame-simplified",
         techList: ["react", "redux", "js", "sass"],
@@ -14,7 +14,7 @@ const projects = [
     {
         title: "Old Portfolio Page",
         liveLink: "https://mateuszkowalskicl.github.io/portfolioPage-alphaBuild/",
-        projectImgSrc: "../../../../imgs/previews/portfolio.png",
+        projectImgSrc: "imgs/previews/portfolio.png",
         projectImgAlt: "oldPrtfolioPage",
         githubLink: "https://github.com/MateuszKowalskiCL/portfolioPage",
         techList: ["react", "js", "sass"],
@@ -23,7 +23,7 @@ const projects = [
     {
         title: "New Portfolio Page",
         liveLink: "https://mateuszkowalskicl.github.io/PortfolioPage-finalBuild/#header",
-        projectImgSrc: "../../../../imgs/previews/portfolio-final.png",
+        projectImgSrc: "imgs/previews/portfolio-final.png",
         projectImgAlt: "new portfolio page",
         githubLink: "https://github.com/MateuszKowalskiCL/PortfolioPage-finalBuild",
         techList: ["js", "html", "sass"],
@@ -32,7 +32,7 @@ const projects = [
     {
         title: "SitOnChair",
         liveLink: "https://mateuszkowalskicl.github.io/sitOnChairPrime/",
-        projectImgSrc: "../../../../imgs/previews/tile.png",
+        projectImgSrc: "imgs/previews/tile.png",
         projectImgAlt: "sitOnChair",
         githubLink: "https://github.com/MateuszKowalskiCL/sitOnChairPrime",
         techList: ["js", "html", "css"],
@@ -49,9 +49,9 @@ class Projects extends React.Component {
         return projects.map ((e, i) => {
             return <Project key = {i}
                             projectLiveLink = {e.liveLink}
-                            projectImgScr = {e.projectImgSrc}
+                            projectImgSrc = {e.projectImgSrc}
                             projectImgAlt = {e.projectImgAlt}
-                            projectGitHubLink = {e.githubLink}
+                            projectGithubLink = {e.githubLink}
                             projectTitle = {e.title}
                             techList = {e.techList}
                             description = {e.description}/>
