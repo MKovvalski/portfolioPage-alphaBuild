@@ -19018,13 +19018,55 @@ var ContactList = function (_React$Component) {
 
         var _this = _possibleConstructorReturn(this, (ContactList.__proto__ || Object.getPrototypeOf(ContactList)).call(this, props));
 
-        _this.state = {};
+        _this.expandCvText = function () {
+            _this.setState({
+                animateId: "expand"
+            });
+        };
+
+        _this.shrinkCVText = function () {
+            _this.setState({
+                animateId: "shrink"
+            });
+        };
+
+        _this.expandTextGmail = function () {
+            _this.setState({
+                animateIdGmail: "expand"
+            });
+        };
+
+        _this.shrinkTextGmail = function () {
+            _this.setState({
+                animateIdGmail: "shrink"
+            });
+        };
+
+        _this.copyEmailAddress = function () {
+            var range = document.createRange();
+            range.selectNode(document.querySelector(".mail-text"));
+            window.getSelection().addRange(range);
+            try {
+                var successful = document.execCommand('copy');
+                var msg = successful ? 'successful' : 'unsuccessful';
+            } catch (err) {
+                console.log('Oops, unable to copy');
+            }
+            window.getSelection().removeAllRanges();
+        };
+
+        _this.state = {
+            animateId: "",
+            animateIdGmail: ""
+        };
         return _this;
     }
 
     _createClass(ContactList, [{
         key: "render",
         value: function render() {
+            var _this2 = this;
+
             return _react2.default.createElement(
                 "section",
                 { className: "main-contact-list" },
@@ -19033,23 +19075,60 @@ var ContactList = function (_React$Component) {
                     { className: "contact-list" },
                     _react2.default.createElement(
                         "li",
-                        { className: "contact-logo" },
-                        _react2.default.createElement("img", { src: "imgs/svg/gmail.svg", alt: "gmail" })
+                        { className: "header-gmail-logo", onClick: function onClick() {
+                                return _this2.copyEmailAddress();
+                            }, onMouseLeave: function onMouseLeave() {
+                                return _this2.shrinkTextGmail();
+                            }, onMouseEnter: function onMouseEnter() {
+                                return _this2.expandTextGmail();
+                            } },
+                        _react2.default.createElement(
+                            "span",
+                            { className: "visually-hidden mail-text" },
+                            "matt.kowalski.public@gmail.com"
+                        ),
+                        _react2.default.createElement("img", { className: "gmail-logo", src: "imgs/svg/gmail.svg", alt: "gmail" }),
+                        _react2.default.createElement(
+                            "div",
+                            { className: "mail-expand", id: this.state.animateIdGmail },
+                            "click to copy my email address"
+                        )
                     ),
                     _react2.default.createElement(
                         "li",
                         { className: "contact-logo" },
-                        _react2.default.createElement("img", { src: "imgs/svg/linkedin.svg", alt: "linkedin" })
+                        _react2.default.createElement(
+                            "a",
+                            { target: "_blank", href: "http://www.linkedin.com/in/mateusz-kowalski-62b758113/" },
+                            _react2.default.createElement("img", { src: "imgs/svg/linkedin.svg", alt: "linkedin" })
+                        )
                     ),
                     _react2.default.createElement(
                         "li",
                         { className: "contact-logo" },
-                        _react2.default.createElement("img", { src: "imgs/svg/github.svg", alt: "github" })
+                        _react2.default.createElement(
+                            "a",
+                            { target: "_blank", href: "http://github.com/MateuszKowalskiCL" },
+                            _react2.default.createElement("img", { src: "imgs/svg/github.svg", alt: "github" })
+                        )
                     ),
                     _react2.default.createElement(
                         "li",
-                        { className: "contact-logo" },
-                        _react2.default.createElement("img", { src: "imgs/svg/cv.svg", alt: "resume" })
+                        { className: "header-cv-logo", onMouseLeave: function onMouseLeave() {
+                                return _this2.shrinkCVText();
+                            }, onMouseEnter: function onMouseEnter() {
+                                return _this2.expandCvText();
+                            } },
+                        _react2.default.createElement(
+                            "a",
+                            { target: "_blank", href: "Mateusz-Kowalski-Resume.pdf", download: "mateusz-kowalski-resume" },
+                            _react2.default.createElement("img", { className: "cv-logo", src: "imgs/svg/cv.svg", alt: "resume" }),
+                            _react2.default.createElement(
+                                "div",
+                                { className: "cv-expand", id: this.state.animateId },
+                                "click to download my resume"
+                            )
+                        )
                     )
                 ),
                 _react2.default.createElement(
@@ -19246,7 +19325,7 @@ var Project = function (_React$Component) {
                         return _react2.default.createElement(
                             "li",
                             { className: "tech-logo", key: i },
-                            _react2.default.createElement("img", { className: "tech-img", src: "imgs/svg/sass-logo-2.svg", alt: "sass" })
+                            _react2.default.createElement("img", { className: "tech-img", src: "imgs/svg/sass-color.svg", alt: "sass" })
                         );
                         break;
                     case "react":
@@ -19288,8 +19367,8 @@ var Project = function (_React$Component) {
                 ),
                 _react2.default.createElement(
                     "a",
-                    { href: this.props.projectGithubLink },
-                    _react2.default.createElement("img", { className: "project-github-link", src: "imgs/svg/github.svg", alt: "github-logo", target: "_blank" })
+                    { target: "_blank", href: this.props.projectGithubLink },
+                    _react2.default.createElement("img", { className: "project-github-link", src: "imgs/svg/github.svg", alt: "github-logo" })
                 ),
                 _react2.default.createElement(
                     "ul",
@@ -19762,7 +19841,7 @@ exports = module.exports = __webpack_require__(14)(false);
 exports.i(__webpack_require__(42), "");
 
 // module
-exports.push([module.i, ".main-about-me {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center; }\n\n.name-and-title {\n  width: 100%;\n  height: 65%;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: flex-end; }\n\n.big-icon {\n  width: 85px;\n  height: 85px;\n  margin-bottom: 127px; }\n\n.name-wrapper {\n  margin-bottom: 110px;\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-start;\n  align-items: flex-start; }\n\n.name-and-surname {\n  font-size: 60px;\n  font-weight: 900;\n  color: #595959;\n  letter-spacing: 1px;\n  text-transform: uppercase; }\n\n.position {\n  margin-top: -15px;\n  font-size: 44px;\n  font-weight: 700;\n  color: white;\n  letter-spacing: 0.5px;\n  text-transform: uppercase; }\n\n.main-contact-list {\n  width: 100%;\n  height: 35%;\n  border-top: 2px solid #F78E69;\n  background-color: white;\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-start;\n  align-items: center; }\n\n.contact-list {\n  width: 50%;\n  margin-top: 20px;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: center; }\n\n.contact-logo {\n  width: 65px;\n  height: 65px;\n  border-radius: 50%; }\n\n.short-bio {\n  width: 68%;\n  margin-top: 30px;\n  text-align: center;\n  color: #595959; }\n\n.main-projects {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  position: relative; }\n  .main-projects:after {\n    position: absolute;\n    content: \"\";\n    top: 40%;\n    width: 100%;\n    height: 70%;\n    background-color: white;\n    z-index: 1; }\n\n.projects {\n  width: 90%;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: flex-start;\n  z-index: 2; }\n\n.project {\n  width: 24%;\n  min-width: 250px;\n  position: relative;\n  box-shadow: 0px 13px 21px -7px rgba(0, 0, 0, 0.3);\n  transition: all 0.3s;\n  background-color: white; }\n  .project:hover {\n    box-shadow: 0px 13px 21px 5px rgba(0, 0, 0, 0.3); }\n\n.project-peek {\n  width: 100%;\n  height: 240px;\n  object-fit: cover;\n  border-bottom: 2px solid #bababa; }\n\n.project-github-link {\n  width: 45px;\n  height: 45px;\n  border-radius: 50%;\n  background-color: white;\n  position: absolute;\n  z-index: 3;\n  top: 46%;\n  right: 2%;\n  object-fit: cover; }\n\n.project-title {\n  line-height: 45px;\n  vertical-align: middle;\n  font-size: 23px;\n  text-transform: uppercase;\n  text-align: center;\n  font-weight: 800;\n  color: #595959;\n  background-color: #F7ED85;\n  border-bottom: 2px solid #F78E69; }\n\n.project-tech-list {\n  margin-top: -5px;\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: center; }\n\n.tech-logo {\n  width: 40px;\n  height: 40px;\n  margin-top: 7px;\n  margin-bottom: 5px;\n  object-fit: cover; }\n\n.tech-img {\n  width: 100%;\n  height: 100%; }\n\n.project-description {\n  color: #595959;\n  text-align: center;\n  padding-top: 1px;\n  padding-left: 8px;\n  padding-right: 8px;\n  min-height: 170px; }\n\n.main-personal-info {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  position: relative; }\n  .main-personal-info:after {\n    position: absolute;\n    content: \"\";\n    top: 40%;\n    width: 100%;\n    height: 70%;\n    background-color: white;\n    z-index: 1; }\n\n.information {\n  width: 70%;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: flex-start;\n  z-index: 2; }\n\n.info-category {\n  width: 31%;\n  min-width: 250px;\n  position: relative;\n  box-shadow: 0px 13px 21px -7px rgba(0, 0, 0, 0.3);\n  transition: all 0.3s;\n  background-color: white; }\n  .info-category:hover {\n    box-shadow: 0px 13px 21px 5px rgba(0, 0, 0, 0.3); }\n\n.info-category-title {\n  line-height: 45px;\n  vertical-align: middle;\n  font-size: 23px;\n  text-transform: uppercase;\n  text-align: center;\n  font-weight: 800;\n  color: #595959;\n  margin-bottom: 3px;\n  background-color: #F7ED85;\n  border-bottom: 2px solid #F78E69; }\n\n.category-elements-list {\n  width: 100%;\n  min-height: 390px;\n  margin-top: 15px;\n  padding-left: 10px;\n  display: flex;\n  flex-direction: column;\n  justify-content: sace-between;\n  align-items: flex-start; }\n\n.skill {\n  width: 100%;\n  margin-bottom: 25px; }\n\n.skill-title {\n  font-weight: 500;\n  color: #333333;\n  font-size: 17px; }\n\n.skill-content {\n  color: #999999; }\n\n.education-step {\n  margin-bottom: 10px; }\n\n.step-title {\n  font-weight: 500;\n  color: #333333;\n  font-size: 17px; }\n\n.step-data {\n  color: #737373;\n  font-size: 15px; }\n\n.step-description {\n  color: #999999;\n  font-size: 14px; }\n\n.career-step {\n  margin-bottom: 10px; }\n\n.main-terminal {\n  width: 365px;\n  height: 52px;\n  background-color: white;\n  position: fixed;\n  top: 2%;\n  left: 1%;\n  border-radius: 5px;\n  overflow: hidden;\n  z-index: 4;\n  box-shadow: 0px 13px 21px -7px rgba(0, 0, 0, 0.3);\n  animation: test-ani 1s 1s linear 1 forwards; }\n\n#roll-down {\n  animation: roll-down 0.2s linear 1 forwards; }\n\n#roll-up {\n  animation: roll-up 0.2s linear 1 forwards; }\n\n@keyframes roll-down {\n  100% {\n    height: 180px; } }\n\n@keyframes roll-up {\n  0% {\n    height: 180px; }\n  100% {\n    height: 52px; } }\n\n.terminal-title {\n  width: 100%;\n  text-align: center;\n  border-bottom: 1px solid #a6a6a6;\n  background-color: #F7ED85;\n  border-radius: 4px 4px 0 0;\n  font-size: 15px;\n  font-weight: 500;\n  color: #333333;\n  line-height: 25px;\n  vertical-align: middle; }\n\n.terminal-body {\n  height: 150px;\n  font-size: 14px;\n  padding-top: 4px;\n  padding-left: 4px;\n  color: #333333;\n  overflow-x: scroll; }\n\n.terminal-input {\n  width: 125px;\n  margin-top: -3px;\n  color: #333333;\n  border: none; }\n  .terminal-input:focus {\n    outline: none; }\n\n.terminal-instruction {\n  color: #999999; }\n\n#slide-in {\n  animation: slide-in 0.7s linear 1 forwards; }\n\n#slide-out {\n  animation: slide-out 0.7s linear 1 forwards; }\n\n@keyframes slide-in {\n  100% {\n    transform: translate(-1000px, 0); } }\n\n@keyframes slide-out {\n  0% {\n    transform: translate(-1000px, 0); }\n  100% {\n    transform: translate(0, 0); } }\n\nbody {\n  font-family: \"Open Sans\", sans-serif; }\n\n.container {\n  width: 100vw;\n  height: 100vh;\n  background-color: #46C4F2;\n  position: relative; }\n\n.main-content {\n  width: 100%;\n  height: 100%; }\n\n.visually-hidden {\n  border: 0;\n  clip: rect(0 0 0 0);\n  -webkit-clip-path: inset(50%);\n  clip-path: inset(50%);\n  height: 1px;\n  margin: -1px;\n  overflow: hidden;\n  padding: 0;\n  position: absolute;\n  width: 1px;\n  white-space: nowrap; }\n\nbody {\n  font-family: 'Open Sans', sans-serif; }\n", ""]);
+exports.push([module.i, ".main-about-me {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center; }\n\n.name-and-title {\n  width: 100%;\n  height: 65%;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: flex-end; }\n\n.big-icon {\n  width: 85px;\n  height: 85px;\n  margin-bottom: 127px; }\n\n.name-wrapper {\n  margin-bottom: 110px;\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-start;\n  align-items: flex-start; }\n\n.name-and-surname {\n  font-size: 60px;\n  font-weight: 900;\n  color: #595959;\n  letter-spacing: 1px;\n  text-transform: uppercase; }\n\n.position {\n  margin-top: -15px;\n  font-size: 44px;\n  font-weight: 700;\n  color: white;\n  letter-spacing: 0.5px;\n  text-transform: uppercase; }\n\n.main-contact-list {\n  width: 100%;\n  height: 35%;\n  border-top: 2px solid #F78E69;\n  background-color: white;\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-start;\n  align-items: center; }\n\n.contact-list {\n  width: 50%;\n  margin-top: 20px;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: center; }\n\n.contact-logo {\n  width: 65px;\n  height: 65px;\n  border-radius: 50%;\n  box-shadow: 0px 13px 21px -7px rgba(0, 0, 0, 0.3); }\n  .contact-logo:hover {\n    box-shadow: 0px 13px 21px 5px rgba(0, 0, 0, 0.3); }\n\n.short-bio {\n  width: 68%;\n  margin-top: 30px;\n  text-align: center;\n  color: #595959; }\n\n.header-gmail-logo {\n  cursor: pointer;\n  border-radius: 50%;\n  position: relative;\n  width: 65px;\n  height: 65px;\n  box-shadow: 0px 13px 21px -7px rgba(0, 0, 0, 0.3); }\n  .header-gmail-logo:hover {\n    box-shadow: 0px 13px 21px 5px rgba(0, 0, 0, 0.3); }\n  .header-gmail-logo img {\n    position: relative;\n    z-index: 3; }\n\n.header-cv-logo {\n  cursor: pointer;\n  border-radius: 50%;\n  position: relative;\n  width: 65px;\n  height: 65px;\n  box-shadow: 0px 13px 21px -7px rgba(0, 0, 0, 0.3); }\n  .header-cv-logo:hover {\n    box-shadow: 0px 13px 21px 5px rgba(0, 0, 0, 0.3); }\n  .header-cv-logo img {\n    position: relative;\n    z-index: 3; }\n\n.cv-logo {\n  cursor: pointer; }\n\n.gmail-logo {\n  cursor: pointer; }\n\n.mail-expand {\n  overflow: hidden;\n  cursor: pointer;\n  width: 65px;\n  height: 65px;\n  position: absolute;\n  right: 0;\n  top: 0;\n  z-index: 1;\n  border-radius: 60px;\n  text-transform: lowercase;\n  line-height: 60px;\n  vertical-align: middle;\n  font-size: 19px;\n  font-weight: 500;\n  color: #595959;\n  text-align: center;\n  padding-right: 60px;\n  background-color: #F7ED85; }\n\n.cv-expand {\n  overflow: hidden;\n  cursor: pointer;\n  width: 65px;\n  height: 65px;\n  position: absolute;\n  left: 0;\n  top: 0;\n  z-index: 1;\n  border-radius: 60px;\n  text-transform: lowercase;\n  line-height: 60px;\n  vertical-align: middle;\n  font-size: 19px;\n  font-weight: 500;\n  color: #595959;\n  text-align: center;\n  padding-left: 60px;\n  background-color: #F7ED85; }\n\n#expand {\n  animation: expand 0.15s linear 1 forwards; }\n\n#shrink {\n  animation: shrink 0.1s linear 1 forwards; }\n\n@keyframes expand {\n  0% {\n    width: 65px; }\n  100% {\n    width: 350px; } }\n\n@keyframes shrink {\n  0% {\n    width: 350px; }\n  100% {\n    width: 65px; } }\n\n@keyframes pulse {\n  0% {\n    box-shadow: 0px 2px 21px -15px #fff9e6; }\n  50% {\n    box-shadow: 0px 2px 21px 6px #fff9e6; }\n  100% {\n    box-shadow: 0px 2px 21px -15px #fff9e6; } }\n\n.main-projects {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  position: relative; }\n  .main-projects:after {\n    position: absolute;\n    content: \"\";\n    top: 40%;\n    width: 100%;\n    height: 70%;\n    background-color: white;\n    z-index: 1; }\n\n.projects {\n  width: 90%;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: flex-start;\n  z-index: 2; }\n\n.project {\n  width: 24%;\n  min-width: 250px;\n  position: relative;\n  box-shadow: 0px 13px 21px -7px rgba(0, 0, 0, 0.3);\n  transition: all 0.3s;\n  background-color: white; }\n  .project:hover {\n    box-shadow: 0px 13px 21px 5px rgba(0, 0, 0, 0.3); }\n\n.project-peek {\n  width: 100%;\n  height: 240px;\n  object-fit: cover;\n  border-bottom: 2px solid #bababa; }\n\n.project-github-link {\n  width: 45px;\n  height: 45px;\n  border-radius: 50%;\n  background-color: white;\n  position: absolute;\n  z-index: 3;\n  top: 46%;\n  right: 2%;\n  object-fit: cover; }\n\n.project-title {\n  line-height: 45px;\n  vertical-align: middle;\n  font-size: 23px;\n  text-transform: uppercase;\n  text-align: center;\n  font-weight: 800;\n  color: #595959;\n  background-color: #F7ED85;\n  border-bottom: 2px solid #F78E69; }\n\n.project-tech-list {\n  margin-top: -5px;\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: center; }\n\n.tech-logo {\n  width: 35px;\n  height: 35px;\n  margin-top: 7px;\n  margin-bottom: 5px;\n  object-fit: cover; }\n\n.tech-img {\n  width: 100%;\n  height: 100%; }\n\n.project-description {\n  color: #595959;\n  text-align: center;\n  padding-top: 1px;\n  padding-left: 8px;\n  padding-right: 8px;\n  min-height: 170px; }\n\n.main-personal-info {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  position: relative; }\n  .main-personal-info:after {\n    position: absolute;\n    content: \"\";\n    top: 40%;\n    width: 100%;\n    height: 70%;\n    background-color: white;\n    z-index: 1; }\n\n.information {\n  width: 70%;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: flex-start;\n  z-index: 2; }\n\n.info-category {\n  width: 31%;\n  min-width: 250px;\n  position: relative;\n  box-shadow: 0px 13px 21px -7px rgba(0, 0, 0, 0.3);\n  transition: all 0.3s;\n  background-color: white; }\n  .info-category:hover {\n    box-shadow: 0px 13px 21px 5px rgba(0, 0, 0, 0.3); }\n\n.info-category-title {\n  line-height: 45px;\n  vertical-align: middle;\n  font-size: 23px;\n  text-transform: uppercase;\n  text-align: center;\n  font-weight: 800;\n  color: #595959;\n  margin-bottom: 3px;\n  background-color: #F7ED85;\n  border-bottom: 2px solid #F78E69; }\n\n.category-elements-list {\n  width: 100%;\n  min-height: 390px;\n  margin-top: 15px;\n  padding-left: 10px;\n  display: flex;\n  flex-direction: column;\n  justify-content: sace-between;\n  align-items: flex-start; }\n\n.skill {\n  width: 100%;\n  margin-bottom: 25px; }\n\n.skill-title {\n  font-weight: 500;\n  color: #333333;\n  font-size: 17px; }\n\n.skill-content {\n  color: #999999; }\n\n.education-step {\n  margin-bottom: 10px; }\n\n.step-title {\n  font-weight: 500;\n  color: #333333;\n  font-size: 17px; }\n\n.step-data {\n  color: #737373;\n  font-size: 15px; }\n\n.step-description {\n  color: #999999;\n  font-size: 14px; }\n\n.career-step {\n  margin-bottom: 10px; }\n\n.main-terminal {\n  width: 365px;\n  height: 52px;\n  background-color: white;\n  position: fixed;\n  top: 2%;\n  left: 1%;\n  border-radius: 5px;\n  overflow: hidden;\n  z-index: 4;\n  box-shadow: 0px 13px 21px -7px rgba(0, 0, 0, 0.3);\n  animation: test-ani 1s 1s linear 1 forwards; }\n\n#roll-down {\n  animation: roll-down 0.2s linear 1 forwards; }\n\n#roll-up {\n  animation: roll-up 0.2s linear 1 forwards; }\n\n@keyframes roll-down {\n  100% {\n    height: 180px; } }\n\n@keyframes roll-up {\n  0% {\n    height: 180px; }\n  100% {\n    height: 52px; } }\n\n.terminal-title {\n  width: 100%;\n  text-align: center;\n  border-bottom: 1px solid #a6a6a6;\n  background-color: #F7ED85;\n  border-radius: 4px 4px 0 0;\n  font-size: 15px;\n  font-weight: 500;\n  color: #333333;\n  line-height: 25px;\n  vertical-align: middle; }\n\n.terminal-body {\n  height: 150px;\n  font-size: 14px;\n  padding-top: 4px;\n  padding-left: 4px;\n  color: #333333;\n  overflow-x: scroll; }\n\n.terminal-input {\n  width: 125px;\n  margin-top: -3px;\n  color: #333333;\n  border: none; }\n  .terminal-input:focus {\n    outline: none; }\n\n.terminal-instruction {\n  color: #999999; }\n\n#slide-in {\n  animation: slide-in 0.7s linear 1 forwards; }\n\n#slide-out {\n  animation: slide-out 0.7s linear 1 forwards; }\n\n@keyframes slide-in {\n  100% {\n    transform: translate(-1000px, 0); } }\n\n@keyframes slide-out {\n  0% {\n    transform: translate(-1000px, 0); }\n  100% {\n    transform: translate(0, 0); } }\n\nbody {\n  font-family: \"Open Sans\", sans-serif; }\n\n.container {\n  width: 100vw;\n  height: 100vh;\n  background-color: #46C4F2;\n  position: relative; }\n\n.main-content {\n  width: 100%;\n  height: 100%; }\n\n.visually-hidden {\n  border: 0;\n  clip: rect(0 0 0 0);\n  -webkit-clip-path: inset(50%);\n  clip-path: inset(50%);\n  height: 1px;\n  margin: -1px;\n  overflow: hidden;\n  padding: 0;\n  position: absolute;\n  width: 1px;\n  white-space: nowrap; }\n\nbody {\n  font-family: 'Open Sans', sans-serif; }\n", ""]);
 
 // exports
 

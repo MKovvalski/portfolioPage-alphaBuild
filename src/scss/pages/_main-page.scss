@@ -58,7 +58,11 @@
 .contact-logo {
   width: 65px;
   height: 65px;
-  border-radius: 50%
+  border-radius: 50%;
+  box-shadow: $box-shadow-resting;
+  &:hover {
+    box-shadow: $box-shadow-hover;
+  }
 }
 
 .short-bio {
@@ -66,4 +70,144 @@
   margin-top: 30px;
   text-align: center;
   color: $color-font-title;
+}
+
+.header-gmail-logo {
+  cursor: pointer;
+  border-radius: 50%;
+  position: relative;
+  width: 65px;
+  height: 65px;
+  box-shadow: $box-shadow-resting;
+  &:hover {
+    box-shadow: $box-shadow-hover;
+  }
+  img {
+    position: relative;
+    z-index: 3;
+  }
+}
+
+
+.header-cv-logo {
+  cursor: pointer;
+  border-radius: 50%;
+  position: relative;
+  width: 65px;
+  height: 65px;
+  box-shadow: $box-shadow-resting;
+  &:hover {
+    box-shadow: $box-shadow-hover;
+  }
+  img {
+    position: relative;
+    z-index: 3;
+  }
+}
+
+.cv-logo {
+  cursor: pointer;
+}
+
+.gmail-logo {
+  cursor: pointer;
+}
+
+.mail-expand {
+  overflow: hidden;
+  cursor: pointer;
+  width: 65px;
+  height: 65px;
+  position: absolute;
+  right: 0;
+  top:0;
+  z-index: 1;
+  border-radius: 60px;
+  text-transform: lowercase;
+  line-height: 60px;
+  vertical-align: middle;
+  font-size: 19px;
+  font-weight: 500;
+  color: $color-font-title;
+  text-align: center;
+  padding-right: 60px;
+  background-color: $color-headers;
+}
+
+.cv-expand {
+  overflow: hidden;
+  cursor: pointer;
+  width: 65px;
+  height: 65px;
+  position: absolute;
+  left: 0;
+  top:0;
+  z-index: 1;
+  border-radius: 60px;
+  text-transform: lowercase;
+  line-height: 60px;
+  vertical-align: middle;
+  font-size: 19px;
+  font-weight: 500;
+  color: $color-font-title;
+  text-align: center;
+  padding-left: 60px;
+  background-color: $color-headers;
+}
+
+
+//  -- animations for gmail logo -- //
+
+// id's for email
+
+#expand {
+  animation: expand 0.15s linear 1 forwards;
+  //@include respond-to(mobile)  {
+  //  animation: none;
+  //};
+  //@include respond-to(tablet) {
+  //  animation: none
+  //}
+}
+
+#shrink {
+  animation: shrink 0.1s linear 1 forwards;
+  //@include respond-to(mobile) {
+  //  animation: none;
+  //}
+  //@include respond-to(tablet) {
+  //  animation: none;
+  //}
+}
+
+// animations for mail
+
+@keyframes expand {
+  0% {
+    width: 65px;
+  }
+  100% {
+    width: 350px;
+  }
+}
+
+@keyframes shrink {
+  0% {
+    width: 350px;
+  }
+  100% {
+    width: 65px;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0px 2px 21px -15px #fff9e6;
+  }
+  50% {
+    box-shadow: 0px 2px 21px 6px #fff9e6;
+  }
+  100% {
+    box-shadow: 0px 2px 21px -15px #fff9e6;
+  }
 }

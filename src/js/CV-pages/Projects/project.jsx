@@ -15,7 +15,7 @@ class Project extends React.Component {
                   return <li className = "tech-logo" key = {i}><img className = "tech-img" src = "imgs/svg/logo-javascript.svg" alt= "js"/></li>;
                   break;
               case "sass":
-                  return <li className = "tech-logo" key = {i}><img className = "tech-img" src = "imgs/svg/sass-logo-2.svg" alt= "sass"/></li>;
+                  return <li className = "tech-logo" key = {i}><img className = "tech-img" src = "imgs/svg/sass-color.svg" alt= "sass"/></li>;
                   break;
               case "react":
                   return <li className = "tech-logo" key = {i}><img className = "tech-img" src = "imgs/svg/logo.svg" alt= "react"/></li>;
@@ -35,7 +35,7 @@ class Project extends React.Component {
                     <a href = {this.props.projectLiveLink}>
                         <img className = "project-peek" src= {this.props.projectImgSrc} alt= ""/>
                     </a>
-                    <a href= {this.props.projectGithubLink}><img className = "project-github-link" src = "imgs/svg/github.svg" alt= "github-logo" target = "_blank"/></a>
+                    <a target = "_blank" href= {this.props.projectGithubLink}><img className = "project-github-link" src = "imgs/svg/github.svg" alt= "github-logo"/></a>
                     <ul className = "project-tech-list">
                         {this.renderTechList()}
                     </ul>

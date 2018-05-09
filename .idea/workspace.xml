@@ -2,19 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="874f3a74-86f5-44b0-84ec-4a953047a6a6" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Mateusz-Kowalski-Resume.pdf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/js/app.js" afterPath="$PROJECT_DIR$/build/js/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/js/app.js.map" afterPath="$PROJECT_DIR$/build/js/app.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/CV-pages/AboutMe/about-me.jsx" afterPath="$PROJECT_DIR$/src/js/CV-pages/AboutMe/about-me.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/CV-pages/AboutMe/contact-list.jsx" afterPath="$PROJECT_DIR$/src/js/CV-pages/AboutMe/contact-list.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/CV-pages/Projects/project.jsx" afterPath="$PROJECT_DIR$/src/js/CV-pages/Projects/project.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/CV-pages/Projects/projects.jsx" afterPath="$PROJECT_DIR$/src/js/CV-pages/Projects/projects.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/container.jsx" afterPath="$PROJECT_DIR$/src/js/container.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/terminal.jsx" afterPath="$PROJECT_DIR$/src/js/terminal.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/scss/pages/_container.scss" afterPath="$PROJECT_DIR$/src/scss/pages/_container.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/scss/helpers/_parameters.scss" afterPath="$PROJECT_DIR$/src/scss/helpers/_parameters.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/scss/pages/_main-page.scss" afterPath="$PROJECT_DIR$/src/scss/pages/_main-page.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/scss/pages/_projects.scss" afterPath="$PROJECT_DIR$/src/scss/pages/_projects.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/scss/pages/_terminal.scss" afterPath="$PROJECT_DIR$/src/scss/pages/_terminal.scss" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -31,38 +27,18 @@
       <file leaf-file-name="_main-page.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scss/pages/_main-page.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
-              <caret line="59" column="15" lean-forward="false" selection-start-line="59" selection-start-column="15" selection-end-line="59" selection-end-column="15" />
+            <state relative-caret-position="563">
+              <caret line="150" column="16" lean-forward="false" selection-start-line="150" selection-start-column="16" selection-end-line="150" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_container.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/scss/pages/_container.scss">
+      <file leaf-file-name="contact-list.jsx" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/js/CV-pages/AboutMe/contact-list.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="projects.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/js/CV-pages/Projects/projects.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="50" column="24" lean-forward="true" selection-start-line="50" selection-start-column="24" selection-end-line="50" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="project.jsx" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/js/CV-pages/Projects/project.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="482">
-              <caret line="39" column="47" lean-forward="true" selection-start-line="39" selection-start-column="47" selection-end-line="39" selection-end-column="47" />
+            <state relative-caret-position="990">
+              <caret line="55" column="20" lean-forward="false" selection-start-line="55" selection-start-column="20" selection-end-line="55" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -119,15 +95,15 @@
         <option value="$PROJECT_DIR$/src/scss/helpers/_mixins.scss" />
         <option value="$PROJECT_DIR$/src/js/terminal.jsx" />
         <option value="$PROJECT_DIR$/src/scss/pages/_terminal.scss" />
-        <option value="$PROJECT_DIR$/src/scss/helpers/_parameters.scss" />
         <option value="$PROJECT_DIR$/src/js/CV-pages/AboutMe/about-me.jsx" />
-        <option value="$PROJECT_DIR$/src/js/CV-pages/AboutMe/contact-list.jsx" />
-        <option value="$PROJECT_DIR$/src/scss/pages/_main-page.scss" />
-        <option value="$PROJECT_DIR$/src/scss/pages/_projects.scss" />
         <option value="$PROJECT_DIR$/src/js/container.jsx" />
         <option value="$PROJECT_DIR$/src/scss/pages/_container.scss" />
         <option value="$PROJECT_DIR$/src/js/CV-pages/Projects/projects.jsx" />
+        <option value="$PROJECT_DIR$/src/scss/pages/_projects.scss" />
         <option value="$PROJECT_DIR$/src/js/CV-pages/Projects/project.jsx" />
+        <option value="$PROJECT_DIR$/src/scss/helpers/_parameters.scss" />
+        <option value="$PROJECT_DIR$/src/scss/pages/_main-page.scss" />
+        <option value="$PROJECT_DIR$/src/js/CV-pages/AboutMe/contact-list.jsx" />
       </list>
     </option>
   </component>
@@ -201,15 +177,14 @@
               <item name="portfolioPage" type="b2602c69:ProjectViewProjectNode" />
               <item name="portfolioPage" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="CV-pages" type="462c0819:PsiDirectoryNode" />
-              <item name="Projects" type="462c0819:PsiDirectoryNode" />
+              <item name="scss" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="portfolioPage" type="b2602c69:ProjectViewProjectNode" />
               <item name="portfolioPage" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="scss" type="462c0819:PsiDirectoryNode" />
+              <item name="helpers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="portfolioPage" type="b2602c69:ProjectViewProjectNode" />
@@ -243,9 +218,9 @@
       <recent name="$PROJECT_DIR$/src/js" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/scss/layouts" />
       <recent name="$PROJECT_DIR$/src/scss" />
-      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
@@ -280,12 +255,12 @@
       <workItem from="1524075052601" duration="601000" />
       <workItem from="1524668362498" duration="897000" />
       <workItem from="1525695536364" duration="6604000" />
-      <workItem from="1525704196371" duration="24795000" />
+      <workItem from="1525704196371" duration="28707000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="257467000" />
+    <option name="totallyTimeSpent" value="261379000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -567,22 +542,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scss/pages/_terminal.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="60" column="0" lean-forward="true" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scss/helpers/_parameters.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/terminal.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="279">
@@ -607,30 +566,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/CV-pages/AboutMe/contact-list.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="68" lean-forward="false" selection-start-line="15" selection-start-column="68" selection-end-line="15" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scss/pages/_container.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scss/pages/_main-page.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="59" column="15" lean-forward="false" selection-start-line="59" selection-start-column="15" selection-end-line="59" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/container.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="460">
@@ -642,10 +577,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scss/pages/_projects.scss">
+    <entry file="file://$PROJECT_DIR$/src/scss/pages/_terminal.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="10" lean-forward="false" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
+        <state relative-caret-position="643">
+          <caret line="60" column="0" lean-forward="true" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scss/pages/_container.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -660,8 +603,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/js/CV-pages/Projects/project.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="39" column="47" lean-forward="true" selection-start-line="39" selection-start-column="47" selection-end-line="39" selection-end-column="47" />
+        <state relative-caret-position="270">
+          <caret line="40" column="25" lean-forward="true" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
+          <folding>
+            <element signature="e#96#1409#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scss/pages/_projects.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="64" column="27" lean-forward="false" selection-start-line="64" selection-start-column="27" selection-end-line="64" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scss/helpers/_parameters.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="24" lean-forward="false" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scss/pages/_main-page.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="563">
+          <caret line="150" column="16" lean-forward="false" selection-start-line="150" selection-start-column="16" selection-end-line="150" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/CV-pages/AboutMe/contact-list.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="990">
+          <caret line="55" column="20" lean-forward="false" selection-start-line="55" selection-start-column="20" selection-end-line="55" selection-end-column="20" />
           <folding />
         </state>
       </provider>
