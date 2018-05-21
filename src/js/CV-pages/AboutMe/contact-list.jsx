@@ -57,7 +57,7 @@ class ContactList extends React.Component {
                 <li className = "contact-logo"><a target = "_blank" href="http://www.linkedin.com/in/mateusz-kowalski-62b758113/"><img src="imgs/svg/linkedin.svg" alt="linkedin"/></a></li>
                 <li className = "contact-logo"><a target = "_blank" href="http://github.com/MateuszKowalskiCL"><img src="imgs/svg/github.svg" alt="github"/></a></li>
                 <li className = "header-cv-logo" onMouseLeave={() => this.shrinkCVText()} onMouseEnter={() =>this.expandCvText()}>
-                    <a target = "_blank" href="Mateusz-Kowalski-Resume.pdf" download="mateusz-kowalski-resume">
+                    <a target = "_blank" href="MKowalski-resume.pdf" download="mateusz-kowalski-resume">
                         <img className = "cv-logo" src="imgs/svg/cv.svg" alt="resume"/>
                         <div className = "cv-expand" id = {this.state.animateId}>click to download my resume</div>
                     </a>

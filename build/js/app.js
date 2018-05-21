@@ -19161,7 +19161,7 @@ var ContactList = function (_React$Component) {
                             } },
                         _react2.default.createElement(
                             "a",
-                            { target: "_blank", href: "Mateusz-Kowalski-Resume.pdf", download: "mateusz-kowalski-resume" },
+                            { target: "_blank", href: "MKowalski-resume.pdf", download: "mateusz-kowalski-resume" },
                             _react2.default.createElement("img", { className: "cv-logo", src: "imgs/svg/cv.svg", alt: "resume" }),
                             _react2.default.createElement(
                                 "div",
