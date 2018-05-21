@@ -1,0 +1,60 @@
+
+.main-personal-info {
+  @include respond-to(mobile) {
+    height: 100%;
+    &:after {
+      content: none;
+    }
+  }
+}
+
+.information {
+  @include respond-to(mobile) {
+    width: 100%;
+    margin-top: 12vh;
+    @include flex-box(column, center, center);
+  }
+}
+
+.info-category {
+  @include respond-to(mobile) {
+    width: 85%;
+    margin-bottom: 5vh;
+  }
+}
+
+.info-category-title {
+  @include respond-to(mobile) {
+    font-size: 25px;
+  }
+}
+
+.step-title {
+  @include respond-to(mobile) {
+    font-size: 20px;
+  }
+}
+
+.skill-title {
+  @include respond-to(mobile) {
+    font-size: 20px;
+  }
+}
+
+.skill-content {
+  @include respond-to(mobile) {
+    font-size: 18px;
+  }
+}
+
+.step-data {
+  @include respond-to(mobile) {
+    font-size: 18px;
+  }
+}
+
+.step-description {
+  @include respond-to(mobile) {
+    font-size: 16px;
+  }
+}

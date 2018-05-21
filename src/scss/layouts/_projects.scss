@@ -1,0 +1,38 @@
+
+.main-projects {
+  @include respond-to(mobile) {
+    height: 100%;
+    &:after {
+      content: none;
+    }
+  }
+}
+
+.projects {
+  @include respond-to(mobile) {
+    width: 100%;
+    margin-top: 12vh;
+    @include flex-box(column, center, center);
+  }
+}
+
+.project {
+  @include respond-to(mobile) {
+    width: 85%;
+    margin-bottom: 5vh;
+  }
+}
+
+.project-github-link {
+  @include respond-to(mobile) {
+    top: 42%;
+  }
+}
+
+.project-description {
+  @include respond-to(mobile) {
+    font-size: 21px;
+    min-height: 210px;
+  }
+}
+

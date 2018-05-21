@@ -50,6 +50,8 @@
   @include respond-to(mobile) {
     width: 15vw;
     height: 15vw;
+    z-index: 3;
+    background-color: white;
   }
 }
 

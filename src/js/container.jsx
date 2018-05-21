@@ -11,7 +11,6 @@ class Container extends React.Component {
         this.state = {
             screenToRender: "",
             title: "AboutMe",
-            titlesArray: ["AboutMe", "Projects", "PersonalInfo"],
             mobileNavWidth: "main-nav"
         }
     }
