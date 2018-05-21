@@ -1,0 +1,6 @@
+
+.main-terminal {
+  @include respond-to(mobile) {
+    display: none;
+  }
+}

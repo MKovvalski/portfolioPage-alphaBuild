@@ -16,36 +16,6 @@ class Content extends React.Component {
 
     }
 
-    handleMenuClick = (page) => {
-      if (typeof this.props.MenuClick === "function") {
-          this.props.MenuClick(page);
-      }
-      this.setState ({
-         menuDisplay: "none"
-      })
-    };
-
-    handleMenuDisplay = () => {
-      switch (this.state.menuDisplay) {
-          case "none":
-              this.setState({
-                  menuDisplay: "block"
-              });
-              break;
-          case "block":
-              this.setState({
-                  menuDisplay: "none"
-              });
-              break;
-      }
-    };
-
-    generateMenuList = () => {
-        return this.state.titlesArray.map((page) => {
-            return <li className = "mobile-menu-list-position" key = {page} onClick={() => this.handleMenuClick(page)}>{page}</li>
-        })
-    };
-
     handleRender = (renderScreen) => {
         switch(renderScreen) {
             case "AboutMe":
@@ -64,29 +34,7 @@ class Content extends React.Component {
 
     render () {
        return <div className = "main-content">
-           {/*<nav className = "mobile-menu">*/}
-               {/*<div className = "mac-circles">*/}
-                   {/*<div className = "circle-1"/>*/}
-                   {/*<div className = "circle-2"/>*/}
-                   {/*<div className = "circle-4"/>*/}
-               {/*</div>*/}
-               {/*<h3>{this.props.renderScreen}</h3>*/}
-               {/*<div className = "menu-burger" onClick = {() => this.handleMenuDisplay()}>*/}
-                   {/*<div className = "menu-bar"/>*/}
-                   {/*<div className = "menu-bar"/>*/}
-                   {/*<div className = "menu-bar"/>*/}
-               {/*</div>*/}
-           {/*</nav>*/}
-           {/*<ul className = "mobile-menu-list" style = {{display: this.state.menuDisplay}}>*/}
-               {/*{this.generateMenuList()}*/}
-           {/*</ul>*/}
-           {/*<header>*/}
-               {/*<div className = "circle-1"/>*/}
-               {/*<div className = "circle-2"/>*/}
-               {/*<div className = "circle-4"/>*/}
-               {/*<h1>{this.props.renderScreen}</h1>*/}
-           {/*</header>*/}
-               {this.handleRender(this.props.renderScreen)}
+           {this.handleRender(this.props.renderScreen)}
        </div>
     }
 }

@@ -9,34 +9,12 @@ class Container extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            animateId: "",
             screenToRender: "",
             title: "AboutMe",
             titlesArray: ["AboutMe", "Projects", "PersonalInfo"],
+            mobileNavWidth: "main-nav"
         }
     }
-
-    MenuClickSetState = (page) => {
-        this.setState({
-            title: page,
-        });
-    };
-
-    handleMenuClick = (page) => {
-      switch(page) {
-          case "AboutMe":
-             this.MenuClickSetState(page);
-          break;
-          case "Projects":
-              this.MenuClickSetState(page);
-              break;
-          case "PersonalInfo":
-              this.MenuClickSetState(page);
-              break;
-          default:
-              return null
-      }
-    };
 
     handleInput = (screen, title) => {
             this.setState ({
@@ -45,10 +23,65 @@ class Container extends React.Component {
             })
     };
 
+    onClickMenu = (e) => {
+        switch(e.target.innerHTML) {
+            case "About Me":
+                this.setState({
+                    title: "AboutMe"
+                });
+                break;
+            case "Projects":
+                this.setState({
+                    title: "Projects"
+                });
+                break;
+            case "Personal Info":
+                this.setState({
+                    title: "PersonalInfo"
+                });
+                break;
+            default:
+                return null
+        }
+        this.setState({
+            mobileNavWidth: "main-nav"
+        });
+    };
+
+    toggleMenu = () => {
+        switch (this.state.mobileNavWidth) {
+            case "main-nav":
+            this.setState({
+                mobileNavWidth: this.state.mobileNavWidth +" main-nav-expanded"
+            });
+            break;
+            case "main-nav main-nav-expanded":
+                this.setState({
+                    mobileNavWidth: "main-nav"
+                });
+                break;
+            default:
+                return null
+        }
+    };
+
     render () {
-        return <div className = "container" id = {this.state.flexID}>
+        return <div className = "container">
+            <nav className = {this.state.mobileNavWidth}>
+                <button onClick={() => this.toggleMenu()} className = "nav-button">
+                    <span className ="visually-hidden">menu</span>
+                    <span className = "burger-bar"/>
+                    <span className = "burger-bar"/>
+                    <span className = "burger-bar"/>
+                </button>
+                <ul className = "nav-list">
+                    <li><a className = "nav-link" onClick={(e) => this.onClickMenu(e)} href="#">About Me</a></li>
+                    <li><a className = "nav-link" onClick={(e) => this.onClickMenu(e)} href="#">Projects</a></li>
+                    <li><a className = "nav-link" onClick={(e) => this.onClickMenu(e)} href="#">Personal Info</a></li>
+                </ul>
+            </nav>
             <Content MenuClick = {this.handleMenuClick} renderScreen = {this.state.title}/>
-            <Terminal animateId = {this.state.animateId} titleText = {this.state.title} renderInfo = {this.handleInput}/>
+            <Terminal titleText = {this.state.title} renderInfo = {this.handleInput}/>
         </div>
     }
 }

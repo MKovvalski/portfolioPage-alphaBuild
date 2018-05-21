@@ -21,7 +21,6 @@ class ContactList extends React.Component {
         })
     };
 
-
     expandTextGmail = () => {
         this.setState({
             animateIdGmail: "expand"

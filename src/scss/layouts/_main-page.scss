@@ -1,0 +1,106 @@
+
+.main-about-me {
+  @include respond-to(mobile) {
+    height: 100%;
+  }
+}
+
+.name-and-title {
+  @include respond-to(mobile) {
+    height: 87vh;
+    @include flex-box(column, center, center);
+  }
+}
+
+.name-wrapper {
+  @include respond-to(mobile) {
+    margin: 0;
+  }
+}
+
+.name-and-surname {
+  @include respond-to(mobile) {
+    text-align: center;
+    font-size: 50px;
+  }
+}
+
+.position {
+  @include respond-to(mobile) {
+    margin: 0;
+    font-size: 35px;
+    text-align: center;
+  }
+}
+
+.main-contact-list {
+  @include respond-to(mobile) {
+    height: 100%;
+  }
+}
+
+.contact-list {
+  @include respond-to(mobile) {
+    margin-top: 15px;
+    width: 95%;
+  }
+}
+
+.contact-logo {
+  @include respond-to(mobile) {
+    width: 15vw;
+    height: 15vw;
+  }
+}
+
+.header-gmail-logo {
+  @include respond-to(mobile) {
+    width: 15vw;
+    height: 15vw;
+  }
+}
+
+.mail-expand {
+  @include respond-to(mobile) {
+    display: none;
+  }
+}
+
+.cv-expand {
+  @include respond-to(mobile) {
+    display: none;
+  }
+}
+
+
+.header-cv-logo {
+  @include respond-to(mobile) {
+    width: 15vw;
+    height: 15vw;
+  }
+}
+
+.big-icon {
+  @include respond-to(mobile) {
+    display: none;
+  }
+}
+
+.short-bio {
+  @include respond-to(mobile) {
+    width: 97%;
+    font-size: 26px;
+    margin-bottom: 10px;
+    position: relative;
+    &:before {
+      position: absolute;
+      content: "";
+      width: 40%;
+      height: 3px;
+      background-color: $color-borders;
+      top: -20px;
+      right: 30%;
+    }
+  }
+}
+
