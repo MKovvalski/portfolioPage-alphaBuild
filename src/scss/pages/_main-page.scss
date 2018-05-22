@@ -16,13 +16,13 @@
   position: absolute;
   width: 180px;
   height: 190px;
-  top: 28%;
+  top: 28vh;
   z-index: 1
 }
 
 .name-wrapper {
   z-index: 2;
-  margin-bottom: 110px;
+  margin-bottom: 16vh;
   @include flex-box(column, flex-start, flex-start);
 }
 
