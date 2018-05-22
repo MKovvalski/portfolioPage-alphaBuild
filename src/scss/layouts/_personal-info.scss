@@ -6,6 +6,12 @@
       content: none;
     }
   }
+  @include respond-to(tablet) {
+    height: 100%;
+    &:after {
+      content: none;
+    }
+  }
 }
 
 .information {
@@ -14,12 +20,21 @@
     margin-top: 12vh;
     @include flex-box(column, center, center);
   }
+  @include respond-to(tablet) {
+    width: 100%;
+    margin-top: 7vh;
+    flex-wrap: wrap;
+  }
 }
 
 .info-category {
   @include respond-to(mobile) {
     width: 85%;
     margin-bottom: 5vh;
+  }
+  @include respond-to(tablet) {
+    width: 300px;
+    margin-bottom: 2vh;
   }
 }
 

@@ -6,6 +6,12 @@
       content: none;
     }
   }
+  @include respond-to(tablet) {
+    height: 100%;
+    &:after {
+      content: none;
+    }
+  }
 }
 
 .projects {
@@ -14,12 +20,20 @@
     margin-top: 12vh;
     @include flex-box(column, center, center);
   }
+  @include respond-to(tablet) {
+    margin-top: 8vh;
+    flex-wrap: wrap;
+  }
 }
 
 .project {
   @include respond-to(mobile) {
     width: 85%;
     margin-bottom: 5vh;
+  }
+  @include respond-to(tablet) {
+    width: 300px;
+    margin-bottom: 2vh;
   }
 }
 

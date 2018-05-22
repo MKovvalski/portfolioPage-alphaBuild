@@ -13,17 +13,22 @@
 }
 
 .big-icon {
-  width: 7vw;
-  height: 7vw;
-  margin-bottom: 127px;
+  position: absolute;
+  width: 180px;
+  height: 190px;
+  top: 28%;
+  z-index: 1
 }
 
 .name-wrapper {
+  z-index: 2;
   margin-bottom: 110px;
   @include flex-box(column, flex-start, flex-start);
 }
 
 .name-and-surname {
+  width: 100%;
+  text-align: center;
   font-size: 60px;
   font-weight: 900;
   color: $color-font-title;
@@ -32,6 +37,8 @@
 }
 
 .position {
+  width: 100%;
+  text-align: center;
   margin-top: -15px;
   font-size: 44px;
   font-weight: 700;
@@ -51,6 +58,7 @@
 
 .contact-list {
   width: 50%;
+  margin-top: 3vh;
   @include flex-box(row, space-around, center);
 }
 

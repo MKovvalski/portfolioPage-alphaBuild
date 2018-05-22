@@ -3,6 +3,9 @@
   @include respond-to(mobile) {
     height: 100%;
   }
+  @include respond-to(tablet) {
+    height: 100%;
+  }
 }
 
 .name-and-title {
@@ -10,10 +13,17 @@
     height: 87vh;
     @include flex-box(column, center, center);
   }
+  @include respond-to(tablet) {
+    height: 70vh;
+    @include flex-box(column, center, center);
+  }
 }
 
 .name-wrapper {
   @include respond-to(mobile) {
+    margin: 0;
+  }
+  @include respond-to(tablet) {
     margin: 0;
   }
 }
@@ -23,6 +33,10 @@
     text-align: center;
     font-size: 50px;
   }
+  @include respond-to(tablet) {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .position {
@@ -31,11 +45,19 @@
     font-size: 35px;
     text-align: center;
   }
+  @include respond-to(tablet) {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .main-contact-list {
   @include respond-to(mobile) {
     height: 100%;
+  }
+  @include respond-to(tablet) {
+    height: 30vh;
   }
 }
 
@@ -43,6 +65,10 @@
   @include respond-to(mobile) {
     margin-top: 15px;
     width: 95%;
+  }
+  @include respond-to(tablet) {
+    margin-top: 3vh;
+    width: 80%;
   }
 }
 
@@ -66,10 +92,16 @@
   @include respond-to(mobile) {
     display: none;
   }
+  @include respond-to(tablet) {
+    display: none;
+  }
 }
 
 .cv-expand {
   @include respond-to(mobile) {
+    display: none;
+  }
+  @include respond-to(tablet) {
     display: none;
   }
 }
@@ -84,7 +116,14 @@
 
 .big-icon {
   @include respond-to(mobile) {
-    display: none;
+    top: 12%;
+    width: 300px;
+    height: 300px;
+  }
+  @include respond-to(tablet) {
+    width: 200px;
+    height: 200px;
+    top: 26%;
   }
 }
 
@@ -103,6 +142,10 @@
       top: -20px;
       right: 30%;
     }
+  }
+  @include respond-to(tablet) {
+    width: 85%;
+    font-size: 20px;
   }
 }
 
